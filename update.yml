@@ -1,0 +1,59 @@
+name: Update food prices, Gemini topics, and publish site
+on:
+  schedule:
+    # 10:23 JST daily (best effort, not guaranteed)
+    - cron: '23 1 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: shun-food-update
+  cancel-in-progress: false
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Preflight check
+        run: python scripts/preflight.py
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Check official markets and Gemini sources (Tue/Thu/Sat for AI)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-2.5-flash-lite
+          MAX_AI_REQUESTS: '6'
+          FORCE_GEMINI: ${{ github.event_name == 'workflow_dispatch' }}
+        run: python scripts/run_refresh.py --live
+      - name: Make standalone and published page
+        run: |
+          python scripts/build_standalone.py
+          python scripts/build_site.py
+      - name: Record successfully downloaded content
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: refresh market statistics and source-linked topics'
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Publish website
+        id: deploy
+        uses: actions/deploy-pages@v4
