@@ -8,7 +8,7 @@
     "lastCheckedAt": "2026-10-30",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-10-30T21:56:00+09:00",
+    "updatedAt": "2026-11-11T05:05:12+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -61,16 +61,23 @@
     "priceObservationPeriod": "2026年10月中旬",
     "priceSourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/pdf/26102h_syuyo.pdf",
     "aiState": "Gemini APIの自動検索はAPIキー未登録で未実行。",
-    "fishPriceObservationPeriod": "2026年10月第4週（10月23～29日）",
-    "fishPriceSourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
+    "fishPriceObservationPeriod": "2026年11月第1週",
+    "fishPriceSourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
     "fishRatioDisclaimer": "豊洲市場2021～25年10月第4週の魚種・銘柄別中値を各年1点で単純平均した参考平年比（規格差に注意）",
     "fishPriceCount": 11,
-    "autoRefreshConfigured": false,
+    "autoRefreshConfigured": true,
     "autoRefreshStatus": {
-      "vegetableFruit": "not_connected",
-      "fish": "not_connected",
-      "gemini": "api_key_missing"
-    }
+      "vegetableFruit": "error",
+      "fish": "ok",
+      "gemini": "ok"
+    },
+    "lastFishCheckedAt": "2026-11-11T05:05:12+00:00",
+    "topicCursor": 6,
+    "topicCursorMonth": "2026-11",
+    "lastTopicAttemptAt": "2026-11-11T05:05:13+00:00",
+    "lastAutomaticCheckAt": "2026-11-11T05:05:13+00:00",
+    "lastFishSuccessAt": "2026-11-11T05:05:13+00:00",
+    "lastGeminiSuccessAt": "2026-11-11T05:05:13+00:00"
   },
   "foods": [
     {
@@ -3282,24 +3289,18 @@
     },
     {
       "foodId": "f-094",
-      "price": 1863,
+      "price": 1512,
       "unit": "円/kg",
-      "normalPrice": 1002.2,
-      "normalRatio": 186,
+      "normalPrice": null,
+      "normalRatio": null,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 99,
-      "yearAgoRatio": 205,
+      "yearAgoRatio": 159,
       "history": [
-        1539,
-        1269,
-        1890,
-        1863
+        1512
       ],
       "historyLabels": [
-        "10月第1週",
-        "10月第2週",
-        "10月第3週",
-        "10月第4週"
+        "11月第1週"
       ],
       "historyRecords": [
         {
@@ -3323,64 +3324,42 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf"
         }
       ],
-      "historicalYears": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "historicalPrices": [
-        1361,
-        929,
-        1188,
-        626,
-        907
-      ],
-      "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023104.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024104",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025104-pdf"
-      ],
+      "historicalYears": [],
+      "historicalPrices": [],
+      "historicalSources": [],
       "sample": false,
-      "market": "東京都中央卸売市場・豊洲市場",
-      "sourceType": "東京都中央卸売市場「水産物の週間市況」",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-      "period": "2026年10月第4週（10月23～29日）",
+      "market": "豊洲市場",
+      "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+      "period": "2026年11月第1週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
-      "publishedAt": "2026-10-30",
-      "retrievedAt": "2026-10-30",
-      "statisticalItem": "生（冷凍・解凍は含めない）",
-      "brandDetail": "北海道産・約130–140g/尾",
-      "priceStatistic": "週間市況の卸売価格（中値、円/kg）",
-      "note": "豊洲市場の週間市況「中値」。野菜・果物の市場平均価格とは集計方法が異なります。参考平年比は過去5年（2021～25年）の同月第4週の中値を単純平均した独自指標。各年で入荷産地・サイズ・等級が変わり、厳密な同一規格比較ではありません。小売価格ではありません。",
+      "publishedAt": null,
+      "retrievedAt": "2026-11-11",
+      "statisticalItem": "サンマ",
+      "brandDetail": "宮 城 生・130-140g/尾",
+      "priceStatistic": "豊洲市場・中値（円/kg）",
+      "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 0.135,
-      "pieceWeightSpec": "約130～140g/尾",
-      "pieceWeightBasis": "市場公表のサイズ帯の中央値（135g）"
+      "pieceWeightSpec": "130-140g/尾",
+      "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
+      "stale": false,
+      "normalRatioBasis": "比較年数不足"
     },
     {
       "foodId": "f-097",
-      "price": 799,
+      "price": 756,
       "unit": "円/kg",
-      "normalPrice": 501,
-      "normalRatio": 159,
+      "normalPrice": null,
+      "normalRatio": null,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 121,
-      "yearAgoRatio": 123,
+      "yearAgoRatio": 117,
       "history": [
-        702,
-        724,
-        659,
-        799
+        756
       ],
       "historyLabels": [
-        "10月第1週",
-        "10月第2週",
-        "10月第3週",
-        "10月第4週"
+        "11月第1週"
       ],
       "historyRecords": [
         {
@@ -3404,64 +3383,42 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf"
         }
       ],
-      "historicalYears": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "historicalPrices": [
-        486,
-        421,
-        432,
-        518,
-        648
-      ],
-      "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023104.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024104",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025104-pdf"
-      ],
+      "historicalYears": [],
+      "historicalPrices": [],
+      "historicalSources": [],
       "sample": false,
-      "market": "東京都中央卸売市場・豊洲市場",
-      "sourceType": "東京都中央卸売市場「水産物の週間市況」",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-      "period": "2026年10月第4週（10月23～29日）",
+      "market": "豊洲市場",
+      "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+      "period": "2026年11月第1週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
-      "publishedAt": "2026-10-30",
-      "retrievedAt": "2026-10-30",
-      "statisticalItem": "生鮮・サバ",
-      "brandDetail": "宮城産・7–10入/5kg",
-      "priceStatistic": "週間市況の卸売価格（中値、円/kg）",
-      "note": "豊洲市場の週間市況「中値」。野菜・果物の市場平均価格とは集計方法が異なります。参考平年比は過去5年（2021～25年）の同月第4週の中値を単純平均した独自指標。各年で入荷産地・サイズ・等級が変わり、厳密な同一規格比較ではありません。小売価格ではありません。",
+      "publishedAt": null,
+      "retrievedAt": "2026-11-11",
+      "statisticalItem": "サバ",
+      "brandDetail": "千 葉 －・7-10入/5kg",
+      "priceStatistic": "豊洲市場・中値（円/kg）",
+      "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 0.58823529,
-      "pieceWeightSpec": "5kg箱に7～10尾",
-      "pieceWeightBasis": "箱の総重量÷平均尾数8.5尾（約588g）"
+      "pieceWeightSpec": "7-10入/5kg",
+      "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
+      "stale": false,
+      "normalRatioBasis": "比較年数不足"
     },
     {
       "foodId": "f-098",
-      "price": 670,
+      "price": 702,
       "unit": "円/kg",
-      "normalPrice": 748,
-      "normalRatio": 90,
+      "normalPrice": null,
+      "normalRatio": null,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 113,
-      "yearAgoRatio": 91,
+      "yearAgoRatio": 103,
       "history": [
-        626,
-        583,
-        594,
-        670
+        702
       ],
       "historyLabels": [
-        "10月第1週",
-        "10月第2週",
-        "10月第3週",
-        "10月第4週"
+        "11月第1週"
       ],
       "historyRecords": [
         {
@@ -3485,64 +3442,42 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf"
         }
       ],
-      "historicalYears": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "historicalPrices": [
-        842,
-        1062,
-        497,
-        605,
-        734
-      ],
-      "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023104.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024104",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025104-pdf"
-      ],
+      "historicalYears": [],
+      "historicalPrices": [],
+      "historicalSources": [],
       "sample": false,
-      "market": "東京都中央卸売市場・豊洲市場",
-      "sourceType": "東京都中央卸売市場「水産物の週間市況」",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-      "period": "2026年10月第4週（10月23～29日）",
+      "market": "豊洲市場",
+      "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+      "period": "2026年11月第1週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
-      "publishedAt": "2026-10-30",
-      "retrievedAt": "2026-10-30",
-      "statisticalItem": "生鮮・中型",
-      "brandDetail": "鳥取産・約200–250g/尾",
-      "priceStatistic": "週間市況の卸売価格（中値、円/kg）",
-      "note": "豊洲市場の週間市況「中値」。野菜・果物の市場平均価格とは集計方法が異なります。参考平年比は過去5年（2021～25年）の同月第4週の中値を単純平均した独自指標。各年で入荷産地・サイズ・等級が変わり、厳密な同一規格比較ではありません。小売価格ではありません。",
+      "publishedAt": null,
+      "retrievedAt": "2026-11-11",
+      "statisticalItem": "アジ",
+      "brandDetail": "鳥取ほか 中・200-250g/尾",
+      "priceStatistic": "豊洲市場・中値（円/kg）",
+      "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 0.225,
-      "pieceWeightSpec": "約200～250g/尾",
-      "pieceWeightBasis": "市場公表のサイズ帯の中央値（225g）"
+      "pieceWeightSpec": "200-250g/尾",
+      "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
+      "stale": false,
+      "normalRatioBasis": "比較年数不足"
     },
     {
       "foodId": "f-099",
-      "price": 680,
+      "price": 734,
       "unit": "円/kg",
-      "normalPrice": 388.6,
-      "normalRatio": 175,
+      "normalPrice": null,
+      "normalRatio": null,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 132,
-      "yearAgoRatio": 206,
+      "yearAgoRatio": 174,
       "history": [
-        626,
-        557,
-        514,
-        680
+        734
       ],
       "historyLabels": [
-        "10月第1週",
-        "10月第2週",
-        "10月第3週",
-        "10月第4週"
+        "11月第1週"
       ],
       "historyRecords": [
         {
@@ -3566,64 +3501,42 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf"
         }
       ],
-      "historicalYears": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "historicalPrices": [
-        328,
-        410,
-        346,
-        529,
-        330
-      ],
-      "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023104.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024104",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025104-pdf"
-      ],
+      "historicalYears": [],
+      "historicalPrices": [],
+      "historicalSources": [],
       "sample": false,
-      "market": "東京都中央卸売市場・豊洲市場",
-      "sourceType": "東京都中央卸売市場「水産物の週間市況」",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-      "period": "2026年10月第4週（10月23～29日）",
+      "market": "豊洲市場",
+      "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+      "period": "2026年11月第1週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
-      "publishedAt": "2026-10-30",
-      "retrievedAt": "2026-10-30",
-      "statisticalItem": "生鮮・イワシ",
-      "brandDetail": "鹿児島産・約60–100g/尾",
-      "priceStatistic": "週間市況の卸売価格（中値、円/kg）",
-      "note": "豊洲市場の週間市況「中値」。野菜・果物の市場平均価格とは集計方法が異なります。参考平年比は過去5年（2021～25年）の同月第4週の中値を単純平均した独自指標。各年で入荷産地・サイズ・等級が変わり、厳密な同一規格比較ではありません。小売価格ではありません。",
+      "publishedAt": null,
+      "retrievedAt": "2026-11-11",
+      "statisticalItem": "イワシ",
+      "brandDetail": "鹿児島 ほ か －・60-100g/尾",
+      "priceStatistic": "豊洲市場・中値（円/kg）",
+      "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 0.08,
-      "pieceWeightSpec": "約60～100g/尾",
-      "pieceWeightBasis": "市場公表のサイズ帯の中央値（80g）"
+      "pieceWeightSpec": "60-100g/尾",
+      "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
+      "stale": false,
+      "normalRatioBasis": "比較年数不足"
     },
     {
       "foodId": "f-095",
-      "price": 1382,
+      "price": 1426,
       "unit": "円/kg",
-      "normalPrice": 943.8,
-      "normalRatio": 146,
+      "normalPrice": null,
+      "normalRatio": null,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 94,
-      "yearAgoRatio": 96,
+      "yearAgoRatio": 120,
       "history": [
-        886,
-        1318,
-        1469,
-        1382
+        1426
       ],
       "historyLabels": [
-        "10月第1週",
-        "10月第2週",
-        "10月第3週",
-        "10月第4週"
+        "11月第1週"
       ],
       "historyRecords": [
         {
@@ -3647,64 +3560,42 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf"
         }
       ],
-      "historicalYears": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "historicalPrices": [
-        756,
-        1069,
-        691,
-        756,
-        1447
-      ],
-      "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023104.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024104",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025104-pdf"
-      ],
+      "historicalYears": [],
+      "historicalPrices": [],
+      "historicalSources": [],
       "sample": false,
-      "market": "東京都中央卸売市場・豊洲市場",
-      "sourceType": "東京都中央卸売市場「水産物の週間市況」",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-      "period": "2026年10月第4週（10月23～29日）",
+      "market": "豊洲市場",
+      "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+      "period": "2026年11月第1週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
-      "publishedAt": "2026-10-30",
-      "retrievedAt": "2026-10-30",
-      "statisticalItem": "生鮮・カツオ",
-      "brandDetail": "宮城産・約2.5–4kg/尾",
-      "priceStatistic": "週間市況の卸売価格（中値、円/kg）",
-      "note": "豊洲市場の週間市況「中値」。野菜・果物の市場平均価格とは集計方法が異なります。参考平年比は過去5年（2021～25年）の同月第4週の中値を単純平均した独自指標。各年で入荷産地・サイズ・等級が変わり、厳密な同一規格比較ではありません。小売価格ではありません。",
-      "pieceWeightKg": 3.25,
-      "pieceWeightSpec": "約2.5～4kg/尾",
-      "pieceWeightBasis": "市場公表のサイズ帯の中央値（3.25kg）"
+      "publishedAt": null,
+      "retrievedAt": "2026-11-11",
+      "statisticalItem": "カツオ",
+      "brandDetail": "宮城ほか －・3-4kg/尾",
+      "priceStatistic": "豊洲市場・中値（円/kg）",
+      "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
+      "pieceWeightKg": 3.5,
+      "pieceWeightSpec": "3-4kg/尾",
+      "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
+      "stale": false,
+      "normalRatioBasis": "比較年数不足"
     },
     {
       "foodId": "f-102",
-      "price": 4417,
+      "price": 4549,
       "unit": "円/kg",
-      "normalPrice": 5585,
-      "normalRatio": 79,
+      "normalPrice": null,
+      "normalRatio": null,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 89,
-      "yearAgoRatio": 96,
+      "yearAgoRatio": 76,
       "history": [
-        5361,
-        4137,
-        4974,
-        4417
+        4549
       ],
       "historyLabels": [
-        "10月第1週",
-        "10月第2週",
-        "10月第3週",
-        "10月第4週"
+        "11月第1週"
       ],
       "historyRecords": [
         {
@@ -3728,64 +3619,42 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf"
         }
       ],
-      "historicalYears": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "historicalPrices": [
-        5756,
-        6702,
-        5926,
-        4955,
-        4586
-      ],
-      "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023104.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024104",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025104-pdf"
-      ],
+      "historicalYears": [],
+      "historicalPrices": [],
+      "historicalSources": [],
       "sample": false,
-      "market": "東京都中央卸売市場・豊洲市場",
-      "sourceType": "東京都中央卸売市場「水産物の週間市況」",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-      "period": "2026年10月第4週（10月23～29日）",
+      "market": "豊洲市場",
+      "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+      "period": "2026年11月第1週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
-      "publishedAt": "2026-10-30",
-      "retrievedAt": "2026-10-30",
-      "statisticalItem": "生鮮マグロ（各地）",
-      "brandDetail": "生鮮・各地",
-      "priceStatistic": "週間市況の卸売価格（中値、円/kg）",
-      "note": "豊洲市場の週間市況「中値」。野菜・果物の市場平均価格とは集計方法が異なります。参考平年比は過去5年（2021～25年）の同月第4週の中値を単純平均した独自指標。各年で入荷産地・サイズ・等級が変わり、厳密な同一規格比較ではありません。小売価格ではありません。",
+      "publishedAt": null,
+      "retrievedAt": "2026-11-11",
+      "statisticalItem": "マグロ",
+      "brandDetail": "各 地 生・-",
+      "priceStatistic": "豊洲市場・中値（円/kg）",
+      "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": null,
-      "pieceWeightSpec": "サイズ情報がなく1尾換算不可",
-      "pieceWeightBasis": "公的市況から1尾の標準重量を確認できないため、円/kgだけを表示"
+      "pieceWeightSpec": "-",
+      "pieceWeightBasis": "市場のサイズ情報がないため換算できません",
+      "stale": false,
+      "normalRatioBasis": "比較年数不足"
     },
     {
       "foodId": "f-105",
       "price": 756,
       "unit": "円/kg",
-      "normalPrice": 686.4,
-      "normalRatio": 110,
+      "normalPrice": null,
+      "normalRatio": null,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 119,
-      "yearAgoRatio": 108,
+      "yearAgoRatio": 119,
       "history": [
-        567,
-        621,
-        635,
         756
       ],
       "historyLabels": [
-        "10月第1週",
-        "10月第2週",
-        "10月第3週",
-        "10月第4週"
+        "11月第1週"
       ],
       "historyRecords": [
         {
@@ -3809,64 +3678,42 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf"
         }
       ],
-      "historicalYears": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "historicalPrices": [
-        648,
-        426,
-        864,
-        792,
-        702
-      ],
-      "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023104.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024104",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025104-pdf"
-      ],
+      "historicalYears": [],
+      "historicalPrices": [],
+      "historicalSources": [],
       "sample": false,
-      "market": "東京都中央卸売市場・豊洲市場",
-      "sourceType": "東京都中央卸売市場「水産物の週間市況」",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-      "period": "2026年10月第4週（10月23～29日）",
+      "market": "豊洲市場",
+      "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+      "period": "2026年11月第1週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
-      "publishedAt": "2026-10-30",
-      "retrievedAt": "2026-10-30",
-      "statisticalItem": "生鮮・マガレイ",
-      "brandDetail": "北海道産・マ",
-      "priceStatistic": "週間市況の卸売価格（中値、円/kg）",
-      "note": "豊洲市場の週間市況「中値」。野菜・果物の市場平均価格とは集計方法が異なります。参考平年比は過去5年（2021～25年）の同月第4週の中値を単純平均した独自指標。各年で入荷産地・サイズ・等級が変わり、厳密な同一規格比較ではありません。小売価格ではありません。",
+      "publishedAt": null,
+      "retrievedAt": "2026-11-11",
+      "statisticalItem": "カレイ",
+      "brandDetail": "北海道 マ・-",
+      "priceStatistic": "豊洲市場・中値（円/kg）",
+      "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": null,
-      "pieceWeightSpec": "サイズ情報がなく1尾換算不可",
-      "pieceWeightBasis": "公的市況から1尾の標準重量を確認できないため、円/kgだけを表示"
+      "pieceWeightSpec": "-",
+      "pieceWeightBasis": "市場のサイズ情報がないため換算できません",
+      "stale": false,
+      "normalRatioBasis": "比較年数不足"
     },
     {
       "foodId": "f-110",
-      "price": 2246,
+      "price": 2311,
       "unit": "円/kg",
-      "normalPrice": 2224.6,
-      "normalRatio": 101,
+      "normalPrice": null,
+      "normalRatio": null,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 100,
-      "yearAgoRatio": 93,
+      "yearAgoRatio": 96,
       "history": [
-        2203,
-        2311,
-        2246,
-        2246
+        2311
       ],
       "historyLabels": [
-        "10月第1週",
-        "10月第2週",
-        "10月第3週",
-        "10月第4週"
+        "11月第1週"
       ],
       "historyRecords": [
         {
@@ -3890,64 +3737,42 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf"
         }
       ],
-      "historicalYears": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "historicalPrices": [
-        1814,
-        2160,
-        2160,
-        2570,
-        2419
-      ],
-      "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023104.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024104",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025104-pdf"
-      ],
+      "historicalYears": [],
+      "historicalPrices": [],
+      "historicalSources": [],
       "sample": false,
-      "market": "東京都中央卸売市場・豊洲市場",
-      "sourceType": "東京都中央卸売市場「水産物の週間市況」",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-      "period": "2026年10月第4週（10月23～29日）",
+      "market": "豊洲市場",
+      "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+      "period": "2026年11月第1週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
-      "publishedAt": "2026-10-30",
-      "retrievedAt": "2026-10-30",
-      "statisticalItem": "生鮮・キンメダイ",
-      "brandDetail": "東京ほか・0.5–1.5kg/尾",
-      "priceStatistic": "週間市況の卸売価格（中値、円/kg）",
-      "note": "豊洲市場の週間市況「中値」。野菜・果物の市場平均価格とは集計方法が異なります。参考平年比は過去5年（2021～25年）の同月第4週の中値を単純平均した独自指標。各年で入荷産地・サイズ・等級が変わり、厳密な同一規格比較ではありません。小売価格ではありません。",
+      "publishedAt": null,
+      "retrievedAt": "2026-11-11",
+      "statisticalItem": "キンメダイ",
+      "brandDetail": "東京ほか －・0.5-1.5kg/尾",
+      "priceStatistic": "豊洲市場・中値（円/kg）",
+      "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 1.0,
-      "pieceWeightSpec": "約0.5～1.5kg/尾",
-      "pieceWeightBasis": "市場公表のサイズ帯の中央値（1.0kg）"
+      "pieceWeightSpec": "0.5-1.5kg/尾",
+      "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
+      "stale": false,
+      "normalRatioBasis": "比較年数不足"
     },
     {
       "foodId": "f-132",
-      "price": 1210,
+      "price": 1102,
       "unit": "円/kg",
-      "normalPrice": 1282.2,
-      "normalRatio": 94,
+      "normalPrice": null,
+      "normalRatio": null,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 128,
-      "yearAgoRatio": 110,
+      "yearAgoRatio": 80,
       "history": [
-        864,
-        1296,
-        942,
-        1210
+        1102
       ],
       "historyLabels": [
-        "10月第1週",
-        "10月第2週",
-        "10月第3週",
-        "10月第4週"
+        "11月第1週"
       ],
       "historyRecords": [
         {
@@ -3971,64 +3796,42 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf"
         }
       ],
-      "historicalYears": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "historicalPrices": [
-        1262,
-        1266,
-        1210,
-        1577,
-        1096
-      ],
-      "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023104.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024104",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025104-pdf"
-      ],
+      "historicalYears": [],
+      "historicalPrices": [],
+      "historicalSources": [],
       "sample": false,
-      "market": "東京都中央卸売市場・豊洲市場",
-      "sourceType": "東京都中央卸売市場「水産物の週間市況」",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-      "period": "2026年10月第4週（10月23～29日）",
+      "market": "豊洲市場",
+      "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+      "period": "2026年11月第1週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
-      "publishedAt": "2026-10-30",
-      "retrievedAt": "2026-10-30",
-      "statisticalItem": "生鮮・スルメイカ",
-      "brandDetail": "青森ほか・25–30入/5kg",
-      "priceStatistic": "週間市況の卸売価格（中値、円/kg）",
-      "note": "豊洲市場の週間市況「中値」。野菜・果物の市場平均価格とは集計方法が異なります。参考平年比は過去5年（2021～25年）の同月第4週の中値を単純平均した独自指標。各年で入荷産地・サイズ・等級が変わり、厳密な同一規格比較ではありません。小売価格ではありません。",
+      "publishedAt": null,
+      "retrievedAt": "2026-11-11",
+      "statisticalItem": "スルメイカ",
+      "brandDetail": "青森ほか －・25-30入/5kg",
+      "priceStatistic": "豊洲市場・中値（円/kg）",
+      "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 0.18181818,
-      "pieceWeightSpec": "5kg箱に25～30杯",
-      "pieceWeightBasis": "箱の総重量÷平均杯数27.5杯（約182g）"
+      "pieceWeightSpec": "25-30入/5kg",
+      "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
+      "stale": false,
+      "normalRatioBasis": "比較年数不足"
     },
     {
       "foodId": "f-121",
-      "price": 4504,
+      "price": 4840,
       "unit": "円/kg",
-      "normalPrice": 2806.2,
-      "normalRatio": 161,
+      "normalPrice": null,
+      "normalRatio": null,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 103,
-      "yearAgoRatio": 124,
+      "yearAgoRatio": 136,
       "history": [
-        5090,
-        6706,
-        4392,
-        4504
+        4840
       ],
       "historyLabels": [
-        "10月第1週",
-        "10月第2週",
-        "10月第3週",
-        "10月第4週"
+        "11月第1週"
       ],
       "historyRecords": [
         {
@@ -4052,64 +3855,42 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf"
         }
       ],
-      "historicalYears": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "historicalPrices": [
-        2076,
-        2488,
-        2743,
-        3102,
-        3622
-      ],
-      "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023104.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024104",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025104-pdf"
-      ],
+      "historicalYears": [],
+      "historicalPrices": [],
+      "historicalSources": [],
       "sample": false,
-      "market": "東京都中央卸売市場・豊洲市場",
-      "sourceType": "東京都中央卸売市場「水産物の週間市況」",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-      "period": "2026年10月第4週（10月23～29日）",
+      "market": "豊洲市場",
+      "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+      "period": "2026年11月第1週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
-      "publishedAt": "2026-10-30",
-      "retrievedAt": "2026-10-30",
-      "statisticalItem": "むきカキ（三陸産）",
-      "brandDetail": "三陸産・むき身（殻付きではない）",
-      "priceStatistic": "週間市況の卸売価格（中値、円/kg）",
-      "note": "豊洲市場の週間市況「中値」。野菜・果物の市場平均価格とは集計方法が異なります。参考平年比は過去5年（2021～25年）の同月第4週の中値を単純平均した独自指標。各年で入荷産地・サイズ・等級が変わり、厳密な同一規格比較ではありません。小売価格ではありません。",
+      "publishedAt": null,
+      "retrievedAt": "2026-11-11",
+      "statisticalItem": "カキ",
+      "brandDetail": "三 陸 －・-",
+      "priceStatistic": "豊洲市場・中値（円/kg）",
+      "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": null,
-      "pieceWeightSpec": "むき身（1個への換算不可）",
-      "pieceWeightBasis": "公的市況から1尾の標準重量を確認できないため、円/kgだけを表示"
+      "pieceWeightSpec": "-",
+      "pieceWeightBasis": "市場のサイズ情報がないため換算できません",
+      "stale": false,
+      "normalRatioBasis": "比較年数不足"
     },
     {
       "foodId": "f-144",
       "price": 1728,
       "unit": "円/kg",
-      "normalPrice": 1463.4,
-      "normalRatio": 118,
+      "normalPrice": null,
+      "normalRatio": null,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 100,
       "yearAgoRatio": 86,
       "history": [
-        1728,
-        1728,
-        1728,
         1728
       ],
       "historyLabels": [
-        "10月第1週",
-        "10月第2週",
-        "10月第3週",
-        "10月第4週"
+        "11月第1週"
       ],
       "historyRecords": [
         {
@@ -4133,43 +3914,27 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf"
         }
       ],
-      "historicalYears": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "historicalPrices": [
-        1350,
-        1566,
-        1215,
-        1188,
-        1998
-      ],
-      "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022104.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023104.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024104",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025104-pdf"
-      ],
+      "historicalYears": [],
+      "historicalPrices": [],
+      "historicalSources": [],
       "sample": false,
-      "market": "東京都中央卸売市場・豊洲市場",
-      "sourceType": "東京都中央卸売市場「水産物の週間市況」",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-      "period": "2026年10月第4週（10月23～29日）",
+      "market": "豊洲市場",
+      "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+      "period": "2026年11月第1週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
-      "publishedAt": "2026-10-30",
-      "retrievedAt": "2026-10-30",
-      "statisticalItem": "ハマチ・野〆",
-      "brandDetail": "愛媛ほか・5–6kg/尾",
-      "priceStatistic": "週間市況の卸売価格（中値、円/kg）",
-      "note": "豊洲市場の週間市況「中値」。野菜・果物の市場平均価格とは集計方法が異なります。参考平年比は過去5年（2021～25年）の同月第4週の中値を単純平均した独自指標。各年で入荷産地・サイズ・等級が変わり、厳密な同一規格比較ではありません。小売価格ではありません。",
+      "publishedAt": null,
+      "retrievedAt": "2026-11-11",
+      "statisticalItem": "ハマチ",
+      "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
+      "priceStatistic": "豊洲市場・中値（円/kg）",
+      "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 5.5,
-      "pieceWeightSpec": "約5～6kg/尾",
-      "pieceWeightBasis": "市場公表のサイズ帯の中央値（5.5kg）"
+      "pieceWeightSpec": "5-6kg/尾",
+      "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
+      "stale": false,
+      "normalRatioBasis": "比較年数不足"
     }
   ],
   "topics": [
