@@ -71,38 +71,80 @@ def number(value):
         return n if 0<n<100000 else None
     except (ValueError,TypeError):return None
 
-def parse_csv(blob,food_names):
-    """Conservative parser: requires explicit field headers '品目' and '卸売価格'.
+def _ratio_verified_position(row, known):
+    """Read the official MAFF *data* layout, even when headers are multi-row.
 
-    Handles a 1-line header or a two-line header whose column names are
-    shared between adjacent rows. If unverifiable, returns empty dict.
+    Its main-market table has the sequence quantity(t), value(1,000 yen),
+    price(yen/kg).  The quotient value/quantity must reproduce the price.
+    A correctly named item PLUS this arithmetic invariant is required; do not
+    infer a price from year-on-year percentages or an unrelated numeric column.
     """
-    rows=list(csv.reader(io.StringIO(decode_csv(blob))))
-    known=set(food_names);out={}
-    for i,row in enumerate(rows):
-        norm=[re.sub(r'\s+','',s) for s in row]
-        namecols=[k for k,v in enumerate(norm) if ('品目' in v or '野菜及び果実' in v) and ('価格' not in v)]
-        pricecols=[k for k,v in enumerate(norm) if '卸売価格' in v and ('比' not in v and '前年' not in v)]
-        # A two-row header is merged only if indices unambiguously align.
-        if namecols and not pricecols and i+1<len(rows):
-            pricecols=[k for k,v in enumerate(rows[i+1]) if '卸売価格' in v and '比' not in v]
-        if not namecols or not pricecols: continue
-        # Official table may have two price columns: wholesale price itself
-        # and the prior-year comparison. Use only the *first*, following
-        # quantity and amount. Never read the last comparison column.
-        priceidx=pricecols[0]
-        header=' '.join(norm)
-        preceding=' '.join(norm[max(0,priceidx-2):priceidx])
-        if len(pricecols)>1 and not ('卸売数量' in header and '卸売価額' in header):
+    if not row:
+        return None
+    lead = [(i, normalize(cell)) for i, cell in enumerate(row[:5]) if str(cell).strip()]
+    match = next(((i, name) for i, name in lead if name in known), None)
+    if not match:
+        return None
+    name_i, name = match
+    # Certain CSV exports have blank separator cells between the three values.
+    # Restrict search to the leading six *numeric* cells, not the ratio columns.
+    numbers = []
+    for k in range(name_i + 1, min(len(row), name_i + 13)):
+        raw = str(row[k]).strip().replace(',', '').replace('，', '')
+        try:
+            val = float(raw)
+        except ValueError:
             continue
-        nameidx=namecols[0]
-        for data_row in rows[i+1:]:
-            if max(nameidx,priceidx)>=len(data_row):continue
-            name=normalize(data_row[nameidx])
-            if name not in known:continue
-            val=number(data_row[priceidx])
-            if val is not None:out[name]=round(val,1)
-        if out:return out
+        if 0 < val < 10_000_000_000:
+            numbers.append((k, val))
+        if len(numbers) >= 6:
+            break
+    for triple in zip(numbers, numbers[1:], numbers[2:]):
+        (_, quantity), (_, amount), (_, price) = triple
+        if quantity <= 0 or amount <= quantity or not 10 <= price < 100_000:
+            continue
+        # MAFF table: t, thousand-yen, yen/kg.  Quantities rounded to
+        # whole tonnes can introduce a modest discrepancy for tiny volumes.
+        implied = amount / quantity
+        if abs(implied - price) <= max(3.0, price * 0.035):
+            return name, float(price)
+    return None
+
+
+def parse_csv(blob, food_names):
+    """Parse MAFF main-market CSV with explicit or numerically verified layout.
+
+    Older site parser only accepted a single row carrying both 品目 and 卸売価格;
+    the official table uses merged/multiple header lines. Its real numeric
+    table layout is validated against the MAFF publication definition.
+    """
+    rows = list(csv.reader(io.StringIO(decode_csv(blob))))
+    known = set(food_names)
+    out = {}
+    for row in rows:
+        result = _ratio_verified_position(row, known)
+        if result:
+            out[result[0]] = round(result[1], 1)
+    # Fallback for explicitly labelled normalized CSV distributions (test and
+    # optional alternative CSV formats): only if first strategy found none.
+    if out:
+        return out
+    for i, row in enumerate(rows):
+        h = [re.sub(r'[\s\u3000（）()]+', '', c) for c in row]
+        names = [j for j, c in enumerate(h) if c in ('品目','野菜及び果実')]
+        price = [j for j, c in enumerate(h) if ('卸売価格' in c and '比' not in c and '前年' not in c)]
+        if not names or not price:
+            continue
+        ix, px = names[0], price[0]
+        # Here the header itself explicitly verifies which column is price.
+        for record in rows[i + 1:]:
+            if max(ix, px) >= len(record):
+                continue
+            n = normalize(record[ix]); value = number(record[px])
+            if n in known and value is not None:
+                out[n] = round(value, 1)
+        if out:
+            break
     return out
 
 def save(obj):
@@ -184,8 +226,8 @@ def update_live(obj):
             row['historicalYears']=[x[0] for x in pairs]
             row['historicalPrices']=[x[1] for x in pairs]
             row['historicalSources']=[x[2] for x in pairs]
-    # Chart four most recently released ten-day periods of the same year (never synthetic).
-    recent=sorted(k for k in all_urls if k[0]==stamp[0] and k<=stamp)[-4:]
+    # Chart up to twelve released ten-day periods (never synthetic).
+    recent=sorted(k for k in all_urls if k[0]==stamp[0] and k<=stamp)[-12:]
     recent_data=[]
     for s in recent:
         if s==stamp: data=latest
@@ -219,7 +261,7 @@ def main():
     args=ap.parse_args();obj=json.loads(DATA.read_text(encoding='utf-8'))
     if args.inspect_csv:ingest_csv(obj,args.inspect_csv)
     elif args.live:
-        result=update_live(obj);save(obj);print('Updated',result,'official prices (with 3+ comparable years)')
+        result=update_live(obj);save(obj);print('Updated',result,'official prices; reference ratios:',sum(p.get('normalRatio') is not None and not p.get('stale') for p in obj['prices'] if p['foodId'].startswith(('v-','fr-'))))
     else:print('Use --inspect-csv or --live. No data changed.')
 
 if __name__=='__main__':main()
