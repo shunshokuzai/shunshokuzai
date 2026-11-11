@@ -82,3 +82,12 @@
 .weight-controls input{width:104px;height:35px;border:1px solid #c9decf;background:white;border-radius:7px;padding:5px 8px;font:inherit}
 .weight-controls button{padding:8px 11px;border-radius:8px;border:0;background:#387749;color:white;font-weight:700;font-size:11px}
 @media(max-width:720px){.feature-visual{height:110px;min-height:110px;flex-basis:110px}.feature-card .card-body{padding:12px}.card-line{align-items:flex-start}.food-row .number .kg-fallback{font-size:9px}.weight-controls label{width:100%}}
+
+/* v0.7: topic cards show observed market prices, not only classification dots. */
+.preview-price{display:inline-block;color:#2d6242;font-size:11px;line-height:1.45;margin:0 0 7px}
+.preview-price b{font-weight:800}
+.preview-price.muted{color:#748778}
+.preview-price .old-price{font-size:10px;background:#fff3e3;color:#956627;padding:2px 5px;border-radius:4px}
+.feature-card .preview-price{min-height:17px;margin-bottom:7px}
+.topic-body .preview-price{margin-bottom:5px}
+.update-warning{border:1px solid #ebbf85;background:#fff4e6;color:#754a22;border-radius:11px;padding:11px 14px;margin:0 0 13px;font-size:12px;font-weight:600;line-height:1.65}
