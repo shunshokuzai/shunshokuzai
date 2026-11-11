@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from update_data import parse_csv,apply_prices
 from update_fish import compute_ratio,parse_rows,url_index,apply_fish,parse_piece_size
-from update_topics import grounded_result
+from update_topics import ai_summarize, forecast_items, merge_report, extract_summary
 
 class FakeResponse:
     def __init__(self,x):self.x=x
@@ -59,13 +59,32 @@ class PipelineTests(unittest.TestCase):
         by={p['foodId']:p for p in obj['prices']}
         self.assertEqual(by['v-001']['normalRatio'],125)
         self.assertTrue(by['v-002']['stale']);self.assertIsNone(by['v-002']['normalRatio'])
-    def test_gemini_rejects_unsupported_summary(self):
-        payload={'candidates':[{'content':{'parts':[{'text':'2026年の状況について、詳細な情報が発表されている。'}]},
-          'groundingMetadata':{'groundingChunks':[]}}]}
-        with patch('urllib.request.urlopen',return_value=FakeResponse(json.dumps(payload).encode())):
-            self.assertIsNone(grounded_result('キャベツ','key','gemini-2.5-flash-lite',2026))
-        payload['candidates'][0]['groundingMetadata']['groundingChunks']=[{'web':{'uri':'https://www.maff.go.jp/test','title':'農林水産省'}}]
-        with patch('urllib.request.urlopen',return_value=FakeResponse(json.dumps(payload).encode())):
-            self.assertIsNotNone(grounded_result('キャベツ','key','gemini-2.5-flash-lite',2026))
+    def test_maff_official_forecast_row(self):
+        data=json.loads((ROOT/'data/seed.json').read_text(encoding='utf-8'))
+        sample='''<table><tr><th>品目</th><th>主産地</th><th>今後の生育及び入荷見通し</th><th>11月の価格見通し</th></tr>
+        <tr><td>キャベツ</td><td>千葉(43%)</td><td>長雨により生育の遅れがみられ、出荷量は平年を下回る見込み。</td><td>平年を上回って推移</td></tr></table>'''
+        rows=forecast_items(sample.encode('utf-8'),data['foods'],'https://www.maff.go.jp/j/press/a.html','2026-10-30')
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['food']['name'],'キャベツ')
+        self.assertIn('長雨',extract_summary(rows[0]['excerpt']))
+
+    def test_gemini_source_first_does_not_search(self):
+        payload={'candidates':[{'content':{'parts':[{'text':'キャベツは長雨の影響で生育が遅れ、出荷量は平年を下回る見込み。市場価格は高めに推移する予測です。'}]}}]}
+        with patch('urllib.request.urlopen',return_value=FakeResponse(json.dumps(payload).encode())) as mocked:
+            result=ai_summarize('出荷量が平年を下回る見込み。','key')
+            self.assertIn('キャベツ',result)
+            req=mocked.call_args.args[0]
+            self.assertNotIn(b'google_search',req.data)
+            self.assertIn('gemini-3.1-flash-lite',req.full_url)
+
+    def test_official_report_fallback_and_deduplication(self):
+        obj={'foods':[], 'topics':[],'metadata':{}}
+        item={'food':{'id':'v-001','name':'キャベツ'},'url':'https://www.maff.go.jp/j/test',
+              'publishedAt':'2026-10-30','excerpt':'出荷・生育について：長雨で生育が遅れ、出荷量が平年を下回る見込み。\n価格の見通し：上昇の見込み。'}
+        result=merge_report(obj,[item],key='',model='test',request_limit=0)
+        self.assertEqual(result['added'],1)
+        self.assertEqual(len(obj['topics']),1)
+        self.assertFalse(obj['topics'][0]['aiGenerated'])
+        self.assertEqual(merge_report(obj,[item],key='',model='test',request_limit=0)['added'],0)
 
 if __name__=='__main__':unittest.main()
