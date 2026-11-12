@@ -93,7 +93,7 @@ def ai_summarize(excerpt, key, model=MODEL, timeout=40):
     req = urllib.request.Request(API.format(model=model),
         data=json.dumps(payload).encode('utf-8'),
         headers={'Content-Type':'application/json','x-goog-api-key':key}, method='POST')
-     try:
+    try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             result = json.load(r)
     except urllib.error.HTTPError as e:
