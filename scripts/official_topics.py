@@ -36,13 +36,14 @@ def commentary_items(text, foods, category, stamp, url):
     if not markers:
         return []
     section = re.sub(r'\s+', '', text[markers[-1].end():])
-    if len(section) < 40:
+    if len(section) < 24:
         return []
     sentences = [s + '。' for s in section.split('。') if s.strip()]
     candidates = [f for f in foods if f['category'] == category]
     result = []
     for food in candidates:
-        aliases = [food['name'], *ALIASES.get(food['name'], [])]
+        aliases = (['日本なし', '日本ナシ', '和梨', 'なしは', 'なしの', 'なしが'] if food['name']=='なし'
+                   else [food['name'], *ALIASES.get(food['name'], [])])
         selected = []
         for i, sentence in enumerate(sentences):
             if not any(alias in sentence for alias in aliases):

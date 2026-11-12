@@ -73,13 +73,13 @@ let vegReady=D.prices.filter(p=>foodMap.get(p.foodId)?.category!=='fish'&&p.norm
 let fishReady=D.prices.filter(p=>foodMap.get(p.foodId)?.category==='fish'&&p.normalRatio!=null&&!p.stale).length;
 let aiCount=D.topics.filter(t=>t.aiGenerated).length;
 let refresh=m.autoRefreshStatus||{};
-let statusLabel=(k)=>({ok:'取得処理成功',error:'取得失敗・前回の情報を維持',not_connected:'未設定',api_key_missing:'APIキー未登録',not_scheduled:'本日は更新対象外'}[refresh[k]]||'未確認');
+let statusLabel=(k)=>({ok:'取得処理成功',error:'取得失敗・前回の情報を維持',not_connected:'未設定',api_key_missing:'APIキー未登録',not_scheduled:'本日は更新対象外',daily_limit:'本日の上限に達したため原文抜粋を掲載',no_new_sources:'新しい原文なし',sources_only:'公的原文の抜粋を掲載'}[refresh[k]]||'未確認');
 let statuses=[['青果の実際の卸売価格',`${veg}品目（${m.priceObservationPeriod||'未取得'}）`],
 ['魚の卸売価格と価格推移',`${fish}品目（${m.fishPriceObservationPeriod||'未取得'}）`],
 ['魚の参考平年比・判定',`${fishReady}品目が計算済み`],
 ['青果の平年比・判定',`${vegReady}品目が計算済み`],
 ['旬の話題（公的資料）',`${officialTopics()}件`],
-['Gemini検索＋AI要約',`${aiCount}件掲載（自動更新：${statusLabel('gemini')}）`],
+['Geminiによる原文要約',`${aiCount}件掲載（自動更新：${statusLabel('gemini')}）`],
 ['青果統計の自動更新',statusLabel('vegetableFruit')],
 ['魚の統計の自動更新',statusLabel('fish')],
 ['旬カレンダー','一般的な目安を掲載']];return `${topline('情報の見方・出典','集計方法が異なる青果と魚の価格を区別し、参考平年比の限界も明示します。','DATA TRANSPARENCY')}

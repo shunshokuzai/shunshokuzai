@@ -24,6 +24,7 @@ jobs:
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
       - run: python scripts/preflight.py
       - run: node --check app.js && node --check search.js
+      - run: node --test tests/test_ui.cjs
   official-prices:
     if: github.event_name == 'push'
     needs: tests
