@@ -5,10 +5,10 @@
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
     "version": "0.5.0",
-    "lastCheckedAt": "2026-11-12T11:59:08+00:00",
+    "lastCheckedAt": "2026-11-12T12:07:45+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-12T11:59:26+00:00",
+    "updatedAt": "2026-11-12T12:07:57+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -56,7 +56,7 @@
         "purpose": "ふじの熟度調査と収穫情報"
       }
     ],
-    "lastTopicRetrievedAt": "2026-11-12T04:31:34+00:00",
+    "lastTopicRetrievedAt": "2026-11-12T12:07:57+00:00",
     "dataCutoffAt": "2026-10-30",
     "priceObservationPeriod": "2026年10月下旬",
     "priceSourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
@@ -71,20 +71,27 @@
       "fish": "ok",
       "gemini": "ok"
     },
-    "lastFishCheckedAt": "2026-11-12T11:59:26+00:00",
+    "lastFishCheckedAt": "2026-11-12T12:07:51+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
-    "lastTopicAttemptAt": "2026-11-12T04:31:34+00:00",
+    "lastTopicAttemptAt": "2026-11-12T12:07:57+00:00",
     "lastAutomaticCheckAt": "2026-11-12T04:31:34+00:00",
     "lastFishSuccessAt": "2026-11-12T04:31:34+00:00",
     "lastGeminiSuccessAt": "2026-11-12T04:31:34+00:00",
-    "topicSourceCountLastRun": 15,
-    "topicAddedLastRun": 6,
-    "topicGeminiSucceededLastRun": 6,
+    "topicSourceCountLastRun": 18,
+    "topicAddedLastRun": 3,
+    "topicGeminiSucceededLastRun": 0,
     "topicGeminiFailedLastRun": 0,
     "lastVegetableFruitSuccessAt": "2026-11-12T04:31:34+00:00",
     "produceReferenceRatioCount": 51,
-    "fishReferenceRatioCount": 11
+    "fishReferenceRatioCount": 11,
+    "aiRequestBudget": {
+      "date": "2026-11-12",
+      "attempted": 6,
+      "dailyLimit": 6
+    },
+    "topicSourceErrorsLastRun": [],
+    "topicGeminiStateLastRun": "sources_only"
   },
   "foods": [
     {
@@ -11518,6 +11525,75 @@
   ],
   "topics": [
     {
+      "id": "tokyo-fish-2026-11-1-f-121",
+      "foodId": "f-121",
+      "title": "カキ：2026年11月第1週の入荷・市場動向",
+      "summary": "ムキカキの数量は2倍に増加、三陸産の価格は0.5割強高。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第1週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第1週",
+      "sourceFingerprint": "3fa4e115b5d8028100b4f350ddd85b33a8a15bd32eb17180d90ff84ca9638e59",
+      "aiGenerated": false,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-12T12:07:57+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-1-f-098",
+      "foodId": "f-098",
+      "title": "アジ：2026年11月第1週の入荷・市場動向",
+      "summary": "、アジは中型が鳥取と長崎、中小型が千葉と鳥取主体に入荷。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第1週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第1週",
+      "sourceFingerprint": "bad032277231253da8c10d2da18fb42e2fb50edf303433f662bbce94daa84f54",
+      "aiGenerated": false,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-12T12:07:57+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-1-f-094",
+      "foodId": "f-094",
+      "title": "サンマ：2026年11月第1週の入荷・市場動向",
+      "summary": "サンマは宮城主体に入荷。前週に比べ数量は62%減少、生サンマの価格は2割弱安。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第1週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第1週",
+      "sourceFingerprint": "f989ed238da2deb4004e7f973da8a48204919f949b5960f7d9b85bd7013cb2c7",
+      "aiGenerated": false,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-12T12:07:57+00:00"
+    },
+    {
       "id": "forecast-2026-10-30-v-028",
       "foodId": "v-028",
       "title": "長ねぎ：11月の生育・出荷見通し",
@@ -11536,7 +11612,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": true,
       "tag": "Gemini要約（一次資料から・未検証）",
-      "retrievedAt": "2026-11-12T04:31:34+00:00"
+      "retrievedAt": "2026-11-12T04:31:34+00:00",
+      "sourceFingerprint": "bdb5db9aa4481ceff77358993e50221ae89c5050c7dead979898c2e0fe188111"
     },
     {
       "id": "forecast-2026-10-30-v-005",
@@ -11557,7 +11634,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": true,
       "tag": "Gemini要約（一次資料から・未検証）",
-      "retrievedAt": "2026-11-12T04:31:32+00:00"
+      "retrievedAt": "2026-11-12T04:31:32+00:00",
+      "sourceFingerprint": "cb46ba559a4428e44b2c294c42cf529bb3f6dc1ecea3a0f5df07f0132f3a460b"
     },
     {
       "id": "forecast-2026-10-30-v-001",
@@ -11578,7 +11656,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": true,
       "tag": "Gemini要約（一次資料から・未検証）",
-      "retrievedAt": "2026-11-12T04:31:30+00:00"
+      "retrievedAt": "2026-11-12T04:31:30+00:00",
+      "sourceFingerprint": "0f4f550df63306adf5bc5c9e8a31e3fc40e01d8d1f2756c8e1f5a6ffe40d3584"
     },
     {
       "id": "forecast-2026-10-30-v-002",
@@ -11599,7 +11678,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": true,
       "tag": "Gemini要約（一次資料から・未検証）",
-      "retrievedAt": "2026-11-12T04:31:24+00:00"
+      "retrievedAt": "2026-11-12T04:31:24+00:00",
+      "sourceFingerprint": "fb02b7fbbbba4ed8e0f73de3ff4d13b3fed6ba6afb271bc6f346f4d79e3f6ac7"
     },
     {
       "id": "forecast-2026-10-30-v-004",
@@ -11620,7 +11700,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": true,
       "tag": "Gemini要約（一次資料から・未検証）",
-      "retrievedAt": "2026-11-12T04:31:23+00:00"
+      "retrievedAt": "2026-11-12T04:31:23+00:00",
+      "sourceFingerprint": "1614b6248c0a5bc53ab950d7debacf08c50d5e85bfdc15e2f076bff6bd336d85"
     },
     {
       "id": "forecast-2026-10-30-v-003",
@@ -11641,7 +11722,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": true,
       "tag": "Gemini要約（一次資料から・未検証）",
-      "retrievedAt": "2026-11-12T04:31:22+00:00"
+      "retrievedAt": "2026-11-12T04:31:22+00:00",
+      "sourceFingerprint": "e0a2b1f348317c7d6d9ac1d9199b67f8de27d3bc64b91076e9c83b6eeeb4addd"
     },
     {
       "id": "forecast-2026-10-30-v-027",
@@ -11662,7 +11744,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": false,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
+      "retrievedAt": "2026-11-12T03:40:38+00:00",
+      "sourceFingerprint": "983c1ae4f4c36d77d2ad98a5cf43c02e3a253798a9fbac565ae0813e6df6daf4"
     },
     {
       "id": "forecast-2026-10-30-v-022",
@@ -11683,7 +11766,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": false,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
+      "retrievedAt": "2026-11-12T03:40:38+00:00",
+      "sourceFingerprint": "9e1a089dde8fd08a6d027a2bfb97a051c40c07e8108b80833ead1a943524451a"
     },
     {
       "id": "forecast-2026-10-30-v-021",
@@ -11704,7 +11788,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": false,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
+      "retrievedAt": "2026-11-12T03:40:38+00:00",
+      "sourceFingerprint": "9d821e295ab8304dea7da35a58a5d560fccf3652a556cf37557716321260e444"
     },
     {
       "id": "forecast-2026-10-30-v-014",
@@ -11725,7 +11810,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": false,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
+      "retrievedAt": "2026-11-12T03:40:38+00:00",
+      "sourceFingerprint": "5f2ce00e7b3ecaa3191e7170da6055a0dfdb4339308c4b54448559f38311c5a4"
     },
     {
       "id": "forecast-2026-10-30-v-010",
@@ -11746,7 +11832,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": false,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
+      "retrievedAt": "2026-11-12T03:40:38+00:00",
+      "sourceFingerprint": "853d91b591c10d6e641a63fc874529db3343f17089dbd3ebd4fac9793417582b"
     },
     {
       "id": "forecast-2026-10-30-v-013",
@@ -11767,7 +11854,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": false,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
+      "retrievedAt": "2026-11-12T03:40:38+00:00",
+      "sourceFingerprint": "a8bce9e6b13eb3e7ceb3ad0102dd4bfde0079f89b217a76a4c18daccf53533c9"
     },
     {
       "id": "forecast-2026-10-30-v-012",
@@ -11788,7 +11876,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": false,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
+      "retrievedAt": "2026-11-12T03:40:38+00:00",
+      "sourceFingerprint": "4b3f88c85a0b59ed9f8ecfef101355245350e44f571a184d3447e85f283add78"
     },
     {
       "id": "forecast-2026-10-30-v-009",
@@ -11809,7 +11898,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": false,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
+      "retrievedAt": "2026-11-12T03:40:38+00:00",
+      "sourceFingerprint": "61d479678dbabd585b62f15087e32e3976aef8a987a05d6b59d19d2aa0841d67"
     },
     {
       "id": "forecast-2026-10-30-v-007",
@@ -11830,7 +11920,8 @@
       "observedPeriod": "11月の見通し",
       "aiGenerated": false,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
+      "retrievedAt": "2026-11-12T03:40:38+00:00",
+      "sourceFingerprint": "9f0495f3bd9b12a5ca009325f315c33872c0caa1276afa36d4dc967b6f5c7d98"
     },
     {
       "id": "official-v-001",
