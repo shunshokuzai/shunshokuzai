@@ -5,10 +5,10 @@
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
     "version": "0.9.0",
-    "lastCheckedAt": "2026-11-12T13:52:12+00:00",
+    "lastCheckedAt": "2026-11-12T13:54:55+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-12T13:52:17+00:00",
+    "updatedAt": "2026-11-12T13:55:00+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -73,18 +73,18 @@
       "topics": "ok",
       "gemini": "daily_limit"
     },
-    "lastFishCheckedAt": "2026-11-12T13:52:17+00:00",
+    "lastFishCheckedAt": "2026-11-12T13:55:00+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
-    "lastTopicAttemptAt": "2026-11-12T13:52:24+00:00",
-    "lastAutomaticCheckAt": "2026-11-12T13:52:24+00:00",
-    "lastFishSuccessAt": "2026-11-12T13:52:24+00:00",
+    "lastTopicAttemptAt": "2026-11-12T13:55:08+00:00",
+    "lastAutomaticCheckAt": "2026-11-12T13:55:08+00:00",
+    "lastFishSuccessAt": "2026-11-12T13:55:08+00:00",
     "lastGeminiSuccessAt": "2026-11-12T04:31:34+00:00",
     "topicSourceCountLastRun": 27,
     "topicAddedLastRun": 0,
     "topicGeminiSucceededLastRun": 0,
     "topicGeminiFailedLastRun": 0,
-    "lastVegetableFruitSuccessAt": "2026-11-12T13:52:24+00:00",
+    "lastVegetableFruitSuccessAt": "2026-11-12T13:55:08+00:00",
     "produceReferenceRatioCount": 51,
     "fishReferenceRatioCount": 11,
     "aiRequestBudget": {
@@ -94,25 +94,25 @@
     },
     "topicSourceErrorsLastRun": [],
     "topicGeminiStateLastRun": "daily_limit",
-    "lastTopicsSuccessAt": "2026-11-12T13:52:24+00:00",
+    "lastTopicsSuccessAt": "2026-11-12T13:55:08+00:00",
     "lastStepResults": {
       "vegetableFruit": {
         "status": "ok",
-        "checkedAt": "2026-11-12T13:52:24+00:00",
+        "checkedAt": "2026-11-12T13:55:08+00:00",
         "activePriceCount": 54,
         "referenceRatioCount": 51,
         "chartPointCount": 648
       },
       "fish": {
         "status": "ok",
-        "checkedAt": "2026-11-12T13:52:24+00:00",
+        "checkedAt": "2026-11-12T13:55:08+00:00",
         "activePriceCount": 11,
         "referenceRatioCount": 11,
         "chartPointCount": 88
       },
       "topics": {
         "status": "ok",
-        "checkedAt": "2026-11-12T13:52:24+00:00",
+        "checkedAt": "2026-11-12T13:55:08+00:00",
         "sourceItemCount": 27,
         "addedOrUpdatedCount": 0,
         "aiState": "daily_limit",
@@ -120,7 +120,7 @@
       },
       "history": {
         "status": "ok",
-        "checkedAt": "2026-11-12T13:52:24+00:00",
+        "checkedAt": "2026-11-12T13:55:08+00:00",
         "attempted": 0,
         "succeeded": 0,
         "failed": 0,
@@ -222,9 +222,47 @@
             }
           }
         }
+      },
+      {
+        "checkedAt": "2026-11-12T13:55:08+00:00",
+        "steps": {
+          "vegetableFruit": {
+            "status": "ok",
+            "checkedAt": "2026-11-12T13:55:08+00:00",
+            "activePriceCount": 54,
+            "referenceRatioCount": 51,
+            "chartPointCount": 648
+          },
+          "fish": {
+            "status": "ok",
+            "checkedAt": "2026-11-12T13:55:08+00:00",
+            "activePriceCount": 11,
+            "referenceRatioCount": 11,
+            "chartPointCount": 88
+          },
+          "topics": {
+            "status": "ok",
+            "checkedAt": "2026-11-12T13:55:08+00:00",
+            "sourceItemCount": 27,
+            "addedOrUpdatedCount": 0,
+            "aiState": "daily_limit",
+            "aiRequestsToday": 6
+          },
+          "history": {
+            "status": "ok",
+            "checkedAt": "2026-11-12T13:55:08+00:00",
+            "attempted": 0,
+            "succeeded": 0,
+            "failed": 0,
+            "cachedReports": {
+              "produce": 138,
+              "fish": 304
+            }
+          }
+        }
       }
     ],
-    "longHistoryUpdatedAt": "2026-11-12T13:52:19+00:00",
+    "longHistoryUpdatedAt": "2026-11-12T13:55:02+00:00",
     "historyBackfillLastRun": {
       "attempted": 0,
       "succeeded": 0,
