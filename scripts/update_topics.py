@@ -93,8 +93,15 @@ def ai_summarize(excerpt, key, model=MODEL, timeout=40):
     req = urllib.request.Request(API.format(model=model),
         data=json.dumps(payload).encode('utf-8'),
         headers={'Content-Type':'application/json','x-goog-api-key':key}, method='POST')
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        result = json.load(r)
+     try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            result = json.load(r)
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", errors="replace")
+        raise RuntimeError(
+            f"Gemini API HTTP {e.code}: {detail[:800]}"
+        ) from e
+
     parts = (result.get('candidates') or [{}])[0].get('content',{}).get('parts',[])
     text = re.sub(r'\s+',' ',''.join(p.get('text','') for p in parts if isinstance(p,dict))).strip()
     if not 28 <= len(text) <= 240:
