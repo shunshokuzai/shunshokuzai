@@ -5,10 +5,10 @@
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
     "version": "0.5.0",
-    "lastCheckedAt": "2026-11-12T03:40:24+00:00",
+    "lastCheckedAt": "2026-11-12T04:16:33+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-12T03:40:38+00:00",
+    "updatedAt": "2026-11-12T04:16:45+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -56,7 +56,7 @@
         "purpose": "ふじの熟度調査と収穫情報"
       }
     ],
-    "lastTopicRetrievedAt": "2026-11-12T03:40:38+00:00",
+    "lastTopicRetrievedAt": "2026-11-12T04:16:45+00:00",
     "dataCutoffAt": "2026-10-30",
     "priceObservationPeriod": "2026年10月下旬",
     "priceSourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
@@ -71,18 +71,18 @@
       "fish": "ok",
       "gemini": "error"
     },
-    "lastFishCheckedAt": "2026-11-12T03:40:36+00:00",
+    "lastFishCheckedAt": "2026-11-12T04:16:43+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
-    "lastTopicAttemptAt": "2026-11-12T03:40:38+00:00",
-    "lastAutomaticCheckAt": "2026-11-12T03:40:38+00:00",
-    "lastFishSuccessAt": "2026-11-12T03:40:38+00:00",
+    "lastTopicAttemptAt": "2026-11-12T04:16:45+00:00",
+    "lastAutomaticCheckAt": "2026-11-12T04:16:45+00:00",
+    "lastFishSuccessAt": "2026-11-12T04:16:45+00:00",
     "lastGeminiSuccessAt": "2026-11-11T05:05:13+00:00",
     "topicSourceCountLastRun": 15,
-    "topicAddedLastRun": 15,
+    "topicAddedLastRun": 6,
     "topicGeminiSucceededLastRun": 0,
     "topicGeminiFailedLastRun": 6,
-    "lastVegetableFruitSuccessAt": "2026-11-12T03:40:38+00:00"
+    "lastVegetableFruitSuccessAt": "2026-11-12T04:16:45+00:00"
   },
   "foods": [
     {
@@ -5418,6 +5418,132 @@
   ],
   "topics": [
     {
+      "id": "forecast-2026-10-30-v-028",
+      "foodId": "v-028",
+      "title": "長ねぎ：11月の生育・出荷見通し",
+      "summary": "北海道産・秋田県産・青森県産の出荷が減少し、茨城県産の出荷が増加する。北海道産・東北産の生育は順調。茨城県産は9月の長雨や日照不足の影響で生育不良がみられる。全体として、11月前半の出荷数量・価格は平年並みで推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "11月の見通し",
+      "aiGenerated": false,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-12T04:16:45+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-005",
+      "foodId": "v-005",
+      "title": "ほうれんそう：11月の生育・出荷見通し",
+      "summary": "主産地の生育は概ね順調であり、11月の出荷数量・価格は平年並みで推移する見込み。。価格見通し：平年並みで推移",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "11月の見通し",
+      "aiGenerated": false,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-12T04:16:45+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-001",
+      "foodId": "v-001",
+      "title": "キャベツ：11月の生育・出荷見通し",
+      "summary": "群馬県産の出荷が減少し、千葉県産・茨城県産・愛知県産中心の出荷へと切り替わる。群馬県産は11月上旬に出荷が終了する見込み。千葉県産・茨城県産・愛知県産は9月の長雨や日照不足の影響で定植作業の遅れや生育遅れが発生しているほか、小玉傾向がみられている。 全体として、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "11月の見通し",
+      "aiGenerated": false,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-12T04:16:44+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-002",
+      "foodId": "v-002",
+      "title": "はくさい：11月の生育・出荷見通し",
+      "summary": "長野県産の出荷が減少し、茨城県産中心の出荷へと切り替わる。長野県産は11月中旬に出荷が終了する見込み。茨城県産は9月の長雨や日照不足の影響で生育遅れや肥大の鈍化がみられる。11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。。価格見通し：平年を上回って推移",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "11月の見通し",
+      "aiGenerated": false,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-12T04:16:44+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-004",
+      "foodId": "v-004",
+      "title": "にんじん：11月の生育・出荷見通し",
+      "summary": "北海道産中心の出荷から、千葉県産中心の出荷へと切り替わる。北海道産・青森県産は11月中旬に出荷が終了する見込み。千葉県産は8月の豪雨や9月の台風による再播種、また9月の長雨や日照不足の影響により生育遅れや肥大の鈍化がみられており、出荷数量は平年を下回る見込み。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "11月の見通し",
+      "aiGenerated": false,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-12T04:16:44+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-003",
+      "foodId": "v-003",
+      "title": "だいこん：11月の生育・出荷見通し",
+      "summary": "北海道産・青森県産の出荷が減少し、千葉県産・神奈川県産中心の出荷に切り替わる。千葉県産・神奈川県産は9月の長雨や台風の影響で播種ができなかった圃場がみられるほか、生育遅れや生理障害が発生しており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。。価格見通し：平年を上回って推移",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "11月の見通し",
+      "aiGenerated": false,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-12T04:16:44+00:00"
+    },
+    {
       "id": "forecast-2026-10-30-v-027",
       "foodId": "v-027",
       "title": "たまねぎ：11月の生育・出荷見通し",
@@ -5605,132 +5731,6 @@
       "aiGenerated": false,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
       "retrievedAt": "2026-11-12T03:40:38+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-028",
-      "foodId": "v-028",
-      "title": "長ねぎ：11月の生育・出荷見通し",
-      "summary": "北海道産・秋田県産・青森県産の出荷が減少し、茨城県産の出荷が増加する。北海道産・東北産の生育は順調。茨城県産は9月の長雨や日照不足の影響で生育不良がみられる。全体として、11月前半の出荷数量・価格は平年並みで推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "11月の見通し",
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-005",
-      "foodId": "v-005",
-      "title": "ほうれんそう：11月の生育・出荷見通し",
-      "summary": "主産地の生育は概ね順調であり、11月の出荷数量・価格は平年並みで推移する見込み。。価格見通し：平年並みで推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "11月の見通し",
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-001",
-      "foodId": "v-001",
-      "title": "キャベツ：11月の生育・出荷見通し",
-      "summary": "群馬県産の出荷が減少し、千葉県産・茨城県産・愛知県産中心の出荷へと切り替わる。群馬県産は11月上旬に出荷が終了する見込み。千葉県産・茨城県産・愛知県産は9月の長雨や日照不足の影響で定植作業の遅れや生育遅れが発生しているほか、小玉傾向がみられている。 全体として、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "11月の見通し",
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-002",
-      "foodId": "v-002",
-      "title": "はくさい：11月の生育・出荷見通し",
-      "summary": "長野県産の出荷が減少し、茨城県産中心の出荷へと切り替わる。長野県産は11月中旬に出荷が終了する見込み。茨城県産は9月の長雨や日照不足の影響で生育遅れや肥大の鈍化がみられる。11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。。価格見通し：平年を上回って推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "11月の見通し",
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-004",
-      "foodId": "v-004",
-      "title": "にんじん：11月の生育・出荷見通し",
-      "summary": "北海道産中心の出荷から、千葉県産中心の出荷へと切り替わる。北海道産・青森県産は11月中旬に出荷が終了する見込み。千葉県産は8月の豪雨や9月の台風による再播種、また9月の長雨や日照不足の影響により生育遅れや肥大の鈍化がみられており、出荷数量は平年を下回る見込み。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "11月の見通し",
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:38+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-003",
-      "foodId": "v-003",
-      "title": "だいこん：11月の生育・出荷見通し",
-      "summary": "北海道産・青森県産の出荷が減少し、千葉県産・神奈川県産中心の出荷に切り替わる。千葉県産・神奈川県産は9月の長雨や台風の影響で播種ができなかった圃場がみられるほか、生育遅れや生理障害が発生しており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。。価格見通し：平年を上回って推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "11月の見通し",
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T03:40:37+00:00"
     },
     {
       "id": "official-v-001",
