@@ -5,10 +5,10 @@
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
     "version": "0.9.0",
-    "lastCheckedAt": "2026-11-12T14:25:03+00:00",
+    "lastCheckedAt": "2026-11-12T14:31:05+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-12T14:25:33+00:00",
+    "updatedAt": "2026-11-12T14:31:10+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -73,15 +73,15 @@
       "topics": "ok",
       "gemini": "daily_limit"
     },
-    "lastFishCheckedAt": "2026-11-12T14:25:13+00:00",
+    "lastFishCheckedAt": "2026-11-12T14:31:10+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
-    "lastTopicAttemptAt": "2026-11-12T14:25:33+00:00",
+    "lastTopicAttemptAt": "2026-11-12T14:31:27+00:00",
     "lastAutomaticCheckAt": "2026-11-12T13:55:08+00:00",
     "lastFishSuccessAt": "2026-11-12T13:55:08+00:00",
     "lastGeminiSuccessAt": "2026-11-12T04:31:34+00:00",
     "topicSourceCountLastRun": 35,
-    "topicAddedLastRun": 35,
+    "topicAddedLastRun": 0,
     "topicGeminiSucceededLastRun": 0,
     "topicGeminiFailedLastRun": 0,
     "lastVegetableFruitSuccessAt": "2026-11-12T13:55:08+00:00",
@@ -262,10 +262,10 @@
         }
       }
     ],
-    "longHistoryUpdatedAt": "2026-11-12T14:26:05+00:00",
+    "longHistoryUpdatedAt": "2026-11-12T14:31:29+00:00",
     "historyBackfillLastRun": {
-      "attempted": 123,
-      "succeeded": 123,
+      "attempted": 0,
+      "succeeded": 0,
       "failed": 0,
       "cachedReports": {
         "produce": 138,
@@ -22136,8 +22136,8 @@
       "previousRatio": null,
       "yearAgoRatio": 100.4,
       "history": [
-        463.0,
-        398.0,
+        288.0,
+        288.0,
         304.0,
         600.0,
         1499.0,
@@ -23399,12 +23399,12 @@
       "historyPeriods": [
         [
           2026,
-          5,
+          6,
           2
         ],
         [
           2026,
-          5,
+          6,
           3
         ],
         [
@@ -23459,8 +23459,8 @@
         ]
       ],
       "historySources": [
-        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26052h_syuyo.csv",
-        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26053h_syuyo.csv",
+        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26062h_syuyo.csv",
+        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26063h_syuyo.csv",
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26071h_syuyo.csv",
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26072h_syuyo.csv",
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26073h_syuyo.csv",
@@ -23473,8 +23473,8 @@
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv"
       ],
       "historyLabels": [
-        "2026年5月中旬",
-        "2026年5月下旬",
+        "2026年6月中旬",
+        "2026年6月下旬",
         "2026年7月上旬",
         "2026年7月中旬",
         "2026年7月下旬",
@@ -64741,7 +64741,7 @@
         2026
       ],
       "longHistoryFrequency": "ten_day",
-      "statisticalItem": "みかん"
+      "statisticalItem": "みかん計（国産果実）"
     },
     {
       "foodId": "f-054",
@@ -66269,7 +66269,7 @@
         2026
       ],
       "longHistoryFrequency": "ten_day",
-      "statisticalItem": "りんご"
+      "statisticalItem": "りんご計（国産果実）"
     },
     {
       "foodId": "f-067",
@@ -67537,7 +67537,7 @@
         2026
       ],
       "longHistoryFrequency": "ten_day",
-      "statisticalItem": "なし"
+      "statisticalItem": "日本なし計（国産果実）"
     },
     {
       "foodId": "f-068",
@@ -67548,9 +67548,9 @@
       "previousRatio": null,
       "yearAgoRatio": 84.0,
       "history": [
-        538.0,
-        445.0,
-        470.0,
+        280.0,
+        294.0,
+        312.0,
         447.0,
         418.0,
         380.0,
@@ -67570,7 +67570,7 @@
       "retrievedAt": "2026-11-12",
       "sample": false,
       "market": "主要卸売市場計",
-      "statisticalItem": "西洋なし",
+      "statisticalItem": "西洋なし（国産果実）",
       "note": "平年比は過去5年同旬の資料が3年分以上揃った場合の単純平均による参考値。農林水産省の公式平年比ではありません。市場構成等の差に注意。",
       "stale": false,
       "longHistory": [
@@ -68440,19 +68440,19 @@
       "historicalSampleCount": 3,
       "historyPeriods": [
         [
-          2023,
-          10,
+          2026,
+          2,
+          2
+        ],
+        [
+          2026,
+          2,
           3
         ],
         [
-          2024,
-          10,
-          3
-        ],
-        [
-          2025,
-          10,
-          3
+          2026,
+          3,
+          1
         ],
         [
           2026,
@@ -68501,9 +68501,9 @@
         ]
       ],
       "historySources": [
-        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23103h_syuyo.csv",
-        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2024/csv/24103h_syuyo.csv",
-        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2025/csv/25103h_syuyo.csv",
+        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26022h_syuyo.csv",
+        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26023h_syuyo.csv",
+        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26031h_syuyo.csv",
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26081h_syuyo.csv",
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26082h_syuyo.csv",
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26083h_syuyo.csv",
@@ -68515,9 +68515,9 @@
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv"
       ],
       "historyLabels": [
-        "2023年10月下旬",
-        "2024年10月下旬",
-        "2025年10月下旬",
+        "2026年2月中旬",
+        "2026年2月下旬",
+        "2026年3月上旬",
         "2026年8月上旬",
         "2026年8月中旬",
         "2026年8月下旬",
@@ -69785,7 +69785,7 @@
         2026
       ],
       "longHistoryFrequency": "ten_day",
-      "statisticalItem": "かき"
+      "statisticalItem": "かき計（国産果実）"
     },
     {
       "foodId": "f-073",
@@ -69818,7 +69818,7 @@
       "retrievedAt": "2026-11-12",
       "sample": false,
       "market": "主要卸売市場計",
-      "statisticalItem": "もも",
+      "statisticalItem": "もも（国産果実）",
       "note": "平年比は過去5年同旬の資料が3年分以上揃った場合の単純平均による参考値。農林水産省の公式平年比ではありません。市場構成等の差に注意。",
       "stale": false,
       "longHistory": [
@@ -70948,7 +70948,7 @@
       "retrievedAt": "2026-11-12",
       "sample": false,
       "market": "主要卸売市場計",
-      "statisticalItem": "すもも",
+      "statisticalItem": "すもも（国産果実）",
       "note": "平年比は過去5年同旬の資料が3年分以上揃った場合の単純平均による参考値。農林水産省の公式平年比ではありません。市場構成等の差に注意。",
       "stale": false,
       "longHistory": [
@@ -73303,7 +73303,7 @@
         2026
       ],
       "longHistoryFrequency": "ten_day",
-      "statisticalItem": "ぶどう"
+      "statisticalItem": "ぶどう計（国産果実）"
     },
     {
       "foodId": "f-066",
@@ -74401,7 +74401,7 @@
         2026
       ],
       "longHistoryFrequency": "ten_day",
-      "statisticalItem": "巨峰"
+      "statisticalItem": "巨峰（国産果実）"
     },
     {
       "foodId": "f-065",
@@ -74827,7 +74827,7 @@
         2026
       ],
       "longHistoryFrequency": "ten_day",
-      "statisticalItem": "シャインマスカット"
+      "statisticalItem": "シャインマスカット（国産果実）"
     },
     {
       "foodId": "f-069",
@@ -74839,10 +74839,10 @@
       "previousRatio": null,
       "yearAgoRatio": 208.7,
       "history": [
-        667.0,
-        882.0,
-        830.0,
         749.0,
+        1004.0,
+        917.0,
+        1173.0,
         641.0,
         821.0,
         821.0,
@@ -74864,10 +74864,10 @@
       "stale": false,
       "note": "平年比は過去5年同旬の資料が3年分以上揃った場合の単純平均による参考値。農林水産省の公式平年比ではありません。市場構成等の差に注意。",
       "historyLabels": [
-        "2025年10月下旬",
-        "2025年11月上旬",
-        "2025年11月中旬",
         "2025年11月下旬",
+        "2025年12月上旬",
+        "2025年12月中旬",
+        "2025年12月下旬",
         "2026年8月中旬",
         "2026年8月下旬",
         "2026年9月上旬",
@@ -74895,22 +74895,22 @@
       "historyPeriods": [
         [
           2025,
-          10,
+          11,
           3
         ],
         [
           2025,
-          11,
+          12,
           1
         ],
         [
           2025,
-          11,
+          12,
           2
         ],
         [
           2025,
-          11,
+          12,
           3
         ],
         [
@@ -74955,10 +74955,10 @@
         ]
       ],
       "historySources": [
-        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2025/csv/25103h_syuyo.csv",
-        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2025/csv/25111h_syuyo.csv",
-        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2025/csv/25112h_syuyo.csv",
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2025/csv/25113h_syuyo.csv",
+        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2025/csv/25121h_syuyo.csv",
+        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2025/csv/25122h_syuyo.csv",
+        "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2025/csv/25123h_syuyo.csv",
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26082h_syuyo.csv",
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26083h_syuyo.csv",
         "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26091h_syuyo.csv",
@@ -75485,7 +75485,7 @@
         2026
       ],
       "longHistoryFrequency": "ten_day",
-      "statisticalItem": "くり"
+      "statisticalItem": "くり（国産果実）"
     },
     {
       "foodId": "f-072",
@@ -77013,7 +77013,7 @@
         2026
       ],
       "longHistoryFrequency": "ten_day",
-      "statisticalItem": "いちご"
+      "statisticalItem": "いちご（国産果実）"
     },
     {
       "foodId": "f-080",
@@ -80069,7 +80069,7 @@
         2026
       ],
       "longHistoryFrequency": "ten_day",
-      "statisticalItem": "すいか"
+      "statisticalItem": "すいか（国産果実）"
     },
     {
       "foodId": "f-071",
