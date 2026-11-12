@@ -10,7 +10,7 @@ import urllib.error
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from market_history import MarketHistory, valid_price
-from update_data import DATA, decode_csv, fetch, normalize, official_csv_url, parse_csv, save
+from update_data import DATA, decode_csv, fetch, normalize, official_csv_url, parse_csv, save, same_produce_schema, cache_produce, IMPORTED_FRUIT
 from update_fish import INDEX, read_weekly, url_index
 
 
@@ -103,6 +103,8 @@ def attach_long_history(obj, archive):
         sequence = {stamp: i for i, stamp in enumerate(sorted(expected))}
         points = []
         for record in records:
+            if kind == 'produce' and food['name'] in IMPORTED_FRUIT | {'メロン'} and not same_produce_schema(record):
+                continue
             stamp = record['stamp']
             if tuple(stamp) < start:
                 continue
@@ -143,7 +145,8 @@ def backfill(obj, archive, limit=24, seconds=420):
                        for month in range(1, 13) for ten in (1, 2, 3)}
         pending = []
         for stamp, url in listing.items():
-            if stamp[0] < end[0]-5 or stamp > end or archive.get(kind, stamp):
+            cached = archive.get(kind,stamp)
+            if stamp[0] < end[0]-5 or stamp > end or (cached and (kind=='fish' or same_produce_schema(cached))):
                 continue
             key = kind + ':' + '-'.join(map(str, stamp))
             prior = failures.get(key, {})
@@ -190,7 +193,8 @@ def backfill(obj, archive, limit=24, seconds=420):
                                  'sourceUrl': url,
                                  'retryAfter': (today+dt.timedelta(days=7)).isoformat()}
             else:
-                archive.put(kind, stamp, url, values)
+                if kind=='produce':cache_produce(archive,stamp,url,values)
+                else:archive.put(kind, stamp, url, values)
                 failures.pop(key, None)
                 result['succeeded'] += 1
             # Checkpoint each completed report; an interrupted run loses no

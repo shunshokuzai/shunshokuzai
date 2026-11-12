@@ -13,6 +13,7 @@ import os
 import re
 import sys
 import time
+import math
 import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
@@ -24,6 +25,8 @@ DATA=BASE/'data'/'seed.json'
 USER_AGENT='ShunShokuzaiPrototype/0.1 (Public data prototype; respectful requests)'
 CSV_RE=re.compile(r'/(\d{2})(\d{2})([123])h_syuyo\.csv$',re.I)
 YEARS_BACK=5
+PRODUCE_SCHEMA = 2
+IMPORTED_FRUIT = {'キウイフルーツ', 'レモン', 'グレープフルーツ', 'パイナップル'}
 ALIASES={'かんしょ':'さつまいも','ばれいしょ':'じゃがいも','みかん計':'みかん','りんご計':'りんご','かき計':'かき','ぶどう計':'ぶどう','日本なし':'なし','日本なし計':'なし','りんご計':'りんご','かき計':'かき','ぶどう計':'ぶどう','日本なし計':'なし','洋なし':'洋なし','かんしょ':'さつまいも','ばれいしょ':'じゃがいも','みずな':'水菜','こまつな':'小松菜','ねぎ':'長ねぎ','しゅんぎく':'春菊','セルリー':'セロリ','ちんげんさい':'チンゲンサイ','スイートコーン':'とうもろこし','生しいたけ':'しいたけ','えのきだけ':'えのきたけ','トマト':'トマト','だいこん':'だいこん','にんじん':'にんじん','ねぎ':'長ねぎ','さといも':'さといも','はくさい':'はくさい','キャベツ':'キャベツ'}
 
 def now_iso():return dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')
@@ -62,7 +65,53 @@ def decode_csv(blob):
 
 def normalize(name):
     name=re.sub(r'[\s\u3000]+','',str(name))
+    name={'西洋なし':'洋なし','メロン計':'メロン'}.get(name,name)
     return ALIASES.get(name,name)
+
+
+def same_produce_schema(record):
+    return bool(record and record.get('schemaVersion') == PRODUCE_SCHEMA)
+
+
+def cache_produce(archive, stamp, source, values):
+    archive.put('produce', stamp, source, values)
+    archive.get('produce', stamp)['schemaVersion'] = PRODUCE_SCHEMA
+
+
+def commodity_label(name):
+    if name in IMPORTED_FRUIT:
+        return name+'（輸入果実）'
+    return {'メロン':'メロン計（国産果実）','洋なし':'西洋なし'}.get(name,name)
+
+
+def coded_price(row, known):
+    """Validate the official item-code layout, including rounding intervals.
+
+    Published tonnes, thousand yen and yen/kg are independently rounded.
+    For tiny lots a fixed percent tolerance wrongly discards valid quotes.
+    The possible quantity intervals must intersect instead.
+    """
+    if len(row)<5 or not re.fullmatch(r'\d{5}',row[1].strip()):
+        return None
+    name=normalize(row[0]); code=int(row[1].strip())
+    if name not in known:
+        return None
+    if name in IMPORTED_FRUIT and not 50000<=code<60000:
+        return None
+    if name=='メロン' and code!=47000:
+        return None
+    try:
+        quantity,amount,price=[float(str(v).replace(',','').strip()) for v in row[2:5]]
+    except (ValueError,TypeError):
+        return None
+    if not all(math.isfinite(v) for v in (quantity,amount,price)) or quantity<0 or amount<=0 or not valid_price(price):
+        return None
+    # Full-tonne display: true quantity within half a tonne. Unit-price and
+    # amount rounding contribute their own half-unit intervals.
+    lower=max(0,(amount-.5)/(price+.5));upper=(amount+.5)/max(.5,price-.5)
+    if max(0,quantity-.5)>upper or quantity+.5<lower:
+        return None
+    return name, price
 
 def number(value):
     value=str(value).strip().replace(',','').replace('，','').replace('円','')
@@ -122,13 +171,16 @@ def parse_csv(blob, food_names):
     rows = list(csv.reader(io.StringIO(decode_csv(blob))))
     known = set(food_names)
     out = {}
+    coded = any(len(row)>1 and re.fullmatch(r'\d{5}', row[1].strip()) for row in rows)
     for row in rows:
-        result = _ratio_verified_position(row, known)
+        result = coded_price(row,known) if coded else _ratio_verified_position(row, known)
         if result:
+            if result[0] in out and out[result[0]]!=round(result[1],1):
+                raise ValueError('Conflicting commodity rows; refusing to mix market series')
             out[result[0]] = round(result[1], 1)
     # Fallback for explicitly labelled normalized CSV distributions (test and
     # optional alternative CSV formats): only if first strategy found none.
-    if out:
+    if out or coded:
         return out
     for i, row in enumerate(rows):
         h = [re.sub(r'[\s\u3000（）()]+', '', c) for c in row]
@@ -178,7 +230,7 @@ def apply_prices(obj,prices,history_by_name,stamp,source_url):
           'history':previous.get('history',[]), 'sourceType':'農林水産省 青果物卸売市場調査（旬別）',
           'sourceUrl':source_url,'period':f'{stamp[0]}年{stamp[1]}月 {("上旬","中旬","下旬")[stamp[2]-1]}',
           'publishedAt':None,'retrievedAt':dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date().isoformat(),
-          'sample':False,'market':'主要卸売市場計','priceStatistic':'主要卸売市場計・卸売平均価格（円/kg）','historicalSampleCount':len(hist),'stale':False,
+          'sample':False,'market':'主要卸売市場計','statisticalItem':commodity_label(name),'priceStatistic':'主要卸売市場計・卸売平均価格（円/kg）','historicalSampleCount':len(hist),'stale':False,
           'note':'平年比は過去5年同旬の資料が3年分以上揃った場合の単純平均による参考値。農林水産省の公式平年比ではありません。市場構成等の差に注意。'}
         changed+=1
     if not changed:raise ValueError('No recognizable prices: keeping existing data')
@@ -217,7 +269,7 @@ def update_live(obj, archive=None):
     known=[f['name'] for f in obj['foods'] if f['category']!='fish']
     latest=parse_csv(fetch(source),known)
     if len(latest)<8:raise ValueError(f'CSV schema requires validation: parsed {len(latest)} known food prices; nothing published')
-    archive.put('produce',stamp,source,latest)
+    cache_produce(archive,stamp,source,latest)
     # Historical comparator: exact matching month and ten-day period for the previous 5 years.
     history_by_name={name:[] for name in latest}; comparison_detail={name:[] for name in latest}
     for year in range(stamp[0]-YEARS_BACK,stamp[0]):
@@ -225,7 +277,7 @@ def update_live(obj, archive=None):
         link=all_urls.get(past_stamp) or official_csv_url(past_stamp)
         try:
             cached=archive.get('produce',past_stamp)
-            if cached:
+            if same_produce_schema(cached):
                 past=cached['values'];link=cached['sourceUrl']
             else:
                 raw=fetch(link)
@@ -233,7 +285,7 @@ def update_live(obj, archive=None):
                     raise ValueError('Historical CSV does not identify the same market aggregate')
                 past=parse_csv(raw,known)
                 if len(past)<8:raise ValueError('Historical CSV schema unverified')
-                archive.put('produce',past_stamp,link,past)
+                cache_produce(archive,past_stamp,link,past)
             for name in latest:
                 if name in past:
                     history_by_name[name].append(past[name]);comparison_detail[name].append((year,past[name],link))
@@ -258,9 +310,9 @@ def update_live(obj, archive=None):
         else:
             try:
                 cached=archive.get('produce',s)
-                data=cached['values'] if cached else parse_csv(fetch(all_urls[s]),known)
+                data=cached['values'] if same_produce_schema(cached) else parse_csv(fetch(all_urls[s]),known)
                 if len(data)<8:raise ValueError('Recent CSV schema unverified')
-                archive.put('produce',s,all_urls[s],data)
+                cache_produce(archive,s,all_urls[s],data)
             except Exception as exc:
                 print('WARN recent price graph',s,exc,file=sys.stderr);continue
         recent_data.append((s,data))

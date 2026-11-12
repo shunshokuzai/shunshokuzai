@@ -13,6 +13,7 @@ def main():
     latest = MarketHistory().records('produce')[-1]
     raw = fetch(latest['sourceUrl'])
     rows = list(csv.reader(io.StringIO(decode_csv(raw))))
+    print('OFFICIAL CSV HEADERS', json.dumps(rows[:6],ensure_ascii=False))
     unmapped = []
     for row in rows:
         labels = {normalize(c) for c in row[:5] if c.strip()}
