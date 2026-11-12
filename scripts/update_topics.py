@@ -192,13 +192,15 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
                       file=sys.stderr)
         new = {
             'id':ident, 'foodId':f['id'],
-            'title':item.get('title') or f"{f['name']}：{int(item['publishedAt'][5:7])+1 if int(item['publishedAt'][5:7])<12 else 1}月の生育・出荷見通し",
+            'title':item.get('title') or f"{f['name']}：{item.get('observedPeriod') or '生育・出荷の公的情報'}",
             'summary':summary, 'kind':'ai_source_summary' if generated else 'official_excerpt',
             'verified':not generated, 'yearSpecific':True,
             'sources':[{'name':item.get('sourceName','農林水産省・野菜の生育状況及び価格見通し'),
                         'title':item.get('sourceTitle','野菜の生育状況及び価格見通し'),
                         'url':item['url'],'publishedAt':item['publishedAt']}],
-            'publishedAt':item['publishedAt'], 'observedPeriod':item.get('observedPeriod') or f'{(dt.date.fromisoformat(item["publishedAt"]).replace(day=1)+dt.timedelta(days=32)).month}月の見通し',
+            'publishedAt':item['publishedAt'], 'observedPeriod':item.get('observedPeriod') or (
+                f'{(dt.date.fromisoformat(item["publishedAt"]).replace(day=1)+dt.timedelta(days=32)).month}月の見通し'
+                if item.get('publishedAt') else '資料参照（対象期間未確認）'),
             'sourceFingerprint':fingerprint,
             'summaryVersion': SUMMARY_VERSION,
             'sourceExcerpt': item['excerpt'],
