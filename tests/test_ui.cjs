@@ -11,6 +11,28 @@ function context(){
   vm.runInContext(weight+series+status+';this.series=chartSeries;this.status=priceStatus;',ctx);
   return ctx;
 }
+function historyContext(){
+  const ctx=vm.createContext({now:new Date('2026-11-12'),escaped:s=>String(s).replace(/</g,'&lt;'),urlSafe:s=>s,formatCurrency:s=>String(s)});
+  vm.runInContext(source.slice(source.indexOf('function adjacentHistory('),source.indexOf('function topicEvidence(')),ctx);
+  return ctx;
+}
+test('long-term graphs split missing periods and retain month/year boundaries',()=>{
+  const ctx=historyContext();
+  assert.equal(ctx.historySegments([{period:[2021,1,1]},{period:[2021,1,3]},{period:[2021,2,1]}],'produce').length,2);
+  assert.equal(ctx.historySegments([{period:[2021,12,3]},{period:[2022,1,1]}],'produce').length,1);
+  assert.equal(ctx.historySegments([{period:[2021,1,4]},{period:[2021,2,1]}],'fish').length,1);
+  assert.equal(ctx.historySegments([{period:[2021,1,1]},{period:[2021,2,1]}],'fish').length,2);
+});
+test('year overlay exposes missing years, units, original values and source links',()=>{
+  const ctx=historyContext();
+  const html=ctx.longHistoryPanel({longHistoryRange:[2021,2026],longHistory:[{period:[2021,1,1],price:100,sourceUrl:'https://www.maff.go.jp/one'},{period:[2026,1,1],price:200,sourceUrl:'https://www.maff.go.jp/two'}]},{id:'v',name:'キャベツ',category:'vegetable'},'seasonal');
+  assert.ok(html.includes('2022年（未取得）'));
+  assert.ok(html.includes('卸売・円/kg'));
+  assert.ok(html.includes('https://www.maff.go.jp/one'));
+  assert.ok(html.includes('2021年1月上旬'));
+  assert.ok(html.includes('2時点'));
+  assert.ok(!html.includes('NaN'));
+});
 test('fish trend uses the weight published for each week',()=>{
   const result=context().series({price:1000,pieceWeightKg:.2,history:[1000,1000],historyPieceWeights:[.1,.2]}, {id:'f',name:'サンマ',category:'fish'});
   assert.deepEqual(Array.from(result.vals),[100,200]);

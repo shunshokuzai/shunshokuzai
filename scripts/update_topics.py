@@ -24,6 +24,7 @@ from update_data import BASE, DATA, fetch, now_iso, normalize, save
 API = 'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent'
 MODEL = 'gemini-3.1-flash-lite'
 MAFF_DOMAIN = 'www.maff.go.jp'
+SUMMARY_VERSION = 2
 
 
 def recent_forecast_url(today, getter=fetch):
@@ -68,8 +69,16 @@ def forecast_items(html, foods, url, published):
         if len(details) < 28 or not any(k in details for k in ('出荷','生育','収穫','入荷','産地','小玉','作業','肥大')):
             continue
         excerpt = f'出荷・生育について：{details[:1000]}\n価格の見通し：{outlook[:240]}'
+        target = dt.date.fromisoformat(published).replace(day=1) + dt.timedelta(days=32)
+        title = soup.title.get_text(' ', strip=True).split('：')[0] if soup.title else '野菜の生育状況及び価格見通し'
         rows.append({'food': allowed[name], 'url': url, 'publishedAt': published,
-                     'excerpt': excerpt, 'outlook': outlook})
+                     'excerpt': excerpt, 'outlook': outlook,
+                     'sourceTitle': title, 'observedPeriod': f'{target.year}年{target.month}月の見通し',
+                     'scope': '資料に記載の主産地（産地・卸売会社等への聞き取り）',
+                     'reportType': '生育・出荷状況と今後の見通し',
+                     'limitations': '聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。',
+                     'evidenceSections': [{'label': '生育・出荷', 'text': details[:1000]},
+                                          {'label': '価格の見通し', 'text': outlook[:240]}]})
     return list({x['food']['id']: x for x in rows}.values())
 
 
@@ -77,6 +86,7 @@ def extract_summary(excerpt):
     """Fallback excerpt, explicitly attributed to the official publication."""
     text = excerpt.replace('出荷・生育について：', '').replace('\n価格の見通し：', '。価格見通し：')
     text = re.sub(r'\s+', ' ', text)
+    text = re.sub(r'。+', '。', text).strip()
     # Avoid chopping the middle of a claim when possible.
     if len(text) > 165:
         p = text.rfind('。', 80, 165)
@@ -84,11 +94,32 @@ def extract_summary(excerpt):
     return text
 
 
+def validate_summary(text, excerpt):
+    """Reject detectable unsupported numbers and changes in certainty.
+
+    This is a limited automatic check, not a claim of semantic verification.
+    Full source excerpts remain visible next to every generated summary.
+    """
+    normalized = lambda value: unicodedata.normalize('NFKC', value).replace(',', '')
+    numeric = lambda value: set(re.findall(r'\d+(?:\.\d+)?', normalized(value)))
+    if not numeric(text).issubset(numeric(excerpt)):
+        raise ValueError('Gemini summary introduced numbers absent from the source')
+    for metric in ('出荷量', '入荷量', '価格', '生育'):
+        claims = [s for s in re.split('[。\n]', text) if metric in s]
+        evidence = [s for s in re.split('[。\n]', excerpt) if metric in s]
+        if evidence and all(re.search('見通し|見込|予想|予測', s) for s in evidence):
+            if any(not re.search('見通し|見込|予想|予測|予定', s) for s in claims):
+                raise ValueError('Gemini summary converted an outlook into an observed result')
+    return text
+
+
 def ai_summarize(excerpt, key, model=MODEL, timeout=40):
     """Summarize an observed public source. No tools, paid-only search or URLs."""
     prompt = ('以下は公的機関が実際に公表した文章です。記載されている事実だけを使い、'
         '食材の生育・入荷・市場動向について100～150字程度で要約してください。'
-        '見通しを確定した結果のように書かない。資料にない数値や地域を加えない。'
+        '主産地、生育または入荷の現状、変動理由、今後の見通しのうち原文にある項目を優先する。'
+        '市場への入荷量を全国の収穫量・漁獲量と言い換えない。前週比と前年比を混同しない。'
+        '見通しを確定した結果のように書かない。資料にない数値や地域、原因を加えない。'
         '余計な挨拶・注釈・Markdownは付けない。\n\n' + excerpt)
     payload = {'contents':[{'parts':[{'text':prompt}]}],
                'generationConfig':{'temperature':0.1,'maxOutputTokens':450}}
@@ -105,10 +136,7 @@ def ai_summarize(excerpt, key, model=MODEL, timeout=40):
     text = re.sub(r'\s+',' ',''.join(p.get('text','') for p in parts if isinstance(p,dict))).strip()
     if not 28 <= len(text) <= 240:
         raise ValueError('Gemini returned no usable text')
-    numeric=lambda s:set(re.findall(r'\d+(?:\.\d+)?',unicodedata.normalize('NFKC',s).replace(',','')))
-    if not numeric(text).issubset(numeric(excerpt)):
-        raise ValueError('Gemini summary introduced numbers absent from the source')
-    return text
+    return validate_summary(text, excerpt)
 
 
 def requests_used_today(metadata,today):
@@ -139,10 +167,17 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
         # An official excerpt can be upgraded into an AI summary on a later
         # run, without producing duplicate articles for the same report.
         unchanged = old and old.get('sourceFingerprint') == fingerprint
-        if unchanged and (old.get('aiGenerated') or not key or blocked or attempts >= request_limit):
+        skip_ai = unchanged and (old.get('aiGenerated') or not key or blocked or attempts >= request_limit)
+        if skip_ai and old.get('summaryVersion') == SUMMARY_VERSION:
             continue
-        summary = extract_summary(item['excerpt']); generated = False
-        if key and not blocked and attempts < request_limit:
+        summary = old['summary'] if unchanged and old.get('aiGenerated') else extract_summary(item['excerpt'])
+        generated = bool(unchanged and old.get('aiGenerated'))
+        if generated:
+            try:
+                validate_summary(summary, item['excerpt'])
+            except ValueError:
+                summary = extract_summary(item['excerpt']); generated = False
+        if not skip_ai and key and not blocked and attempts < request_limit:
             if on_attempt:on_attempt()
             attempts += 1
             try:
@@ -165,6 +200,13 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
                         'url':item['url'],'publishedAt':item['publishedAt']}],
             'publishedAt':item['publishedAt'], 'observedPeriod':item.get('observedPeriod') or f'{(dt.date.fromisoformat(item["publishedAt"]).replace(day=1)+dt.timedelta(days=32)).month}月の見通し',
             'sourceFingerprint':fingerprint,
+            'summaryVersion': SUMMARY_VERSION,
+            'sourceExcerpt': item['excerpt'],
+            'scope': item.get('scope', '資料に記載の対象地域'),
+            'reportType': item.get('reportType', '公的資料の記述'),
+            'evidenceSections': item.get('evidenceSections', [{'label': '原文の該当箇所', 'text': item['excerpt']}]),
+            'limitations': item.get('limitations', '品目全体の全国的な状況を保証する資料ではありません。'),
+            'automaticChecks': ['数値の原文照合', '見通しの断定化チェック'] if generated else ['原文抜粋'],
             'aiGenerated':generated,
             'tag':'Gemini要約（一次資料から・未検証）' if generated else '公的原文を短く抜粋（Gemini未使用）',
             'retrievedAt':now_iso(),

@@ -47,6 +47,8 @@ jobs:
         env:
           SOURCES_ONLY: 'true'
         run: python -u scripts/update_topics.py --live
+      - name: Backfill official five-year history without AI
+        run: python -u scripts/backfill_history.py --live --limit 600
       - run: python scripts/build_standalone.py
       - name: Retain verified observations on development branch
         run: |

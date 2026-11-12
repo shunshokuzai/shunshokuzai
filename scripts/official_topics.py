@@ -58,7 +58,12 @@ def commentary_items(text, foods, category, stamp, url):
                        for other in candidates if other['id']!=food['id']):
                     break
                 selected.append(following)
-        excerpt = ''.join(dict.fromkeys(selected))[:1200]
+        # Retain complete sentences; never end a quoted claim mid-sentence.
+        excerpt = ''
+        for sentence in dict.fromkeys(selected):
+            if len(excerpt) + len(sentence) > 1200:
+                break
+            excerpt += sentence
         if len(excerpt) < 24:
             continue
         period = f'{stamp[0]}年{stamp[1]}月第{stamp[2]}週'
@@ -66,6 +71,11 @@ def commentary_items(text, foods, category, stamp, url):
                        'reportKey': 'tokyo-' + category + '-' + '-'.join(map(str, stamp)),
                        'sourceName': '東京都中央卸売市場・週間市況（' + ('水産' if category == 'fish' else '果実') + '）',
                        'sourceTitle': period + 'の週間市況', 'observedPeriod': period,
+                       'scope': '東京都豊洲市場' if category == 'fish' else '東京都大田市場',
+                       'reportType': '市場への入荷・取引の実績',
+                       'limitations': ('市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。'
+                                       if category == 'fish' else '市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。'),
+                       'evidenceSections': [{'label': '入荷・市場動向（原文）', 'text': excerpt}],
                        'title': food['name'] + '：' + period + 'の入荷・市場動向',
                        'excerpt': excerpt})
     return result
