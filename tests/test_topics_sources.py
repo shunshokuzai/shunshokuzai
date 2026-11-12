@@ -31,6 +31,13 @@ class SourceTopicTests(unittest.TestCase):
         self.assertEqual(obj['topics'][0]['sourceExcerpt'], item['excerpt'])
         self.assertEqual(obj['topics'][0]['observedPeriod'], '2026年11月第1週')
 
+    def test_observed_growth_and_price_forecast_in_one_sentence_remain_distinct(self):
+        source = '主産地の生育は概ね順調であり、11月の出荷数量・価格は平年並みで推移する見込み。'
+        summary = '主産地の生育は概ね順調。11月の出荷数量・価格は平年並みで推移する可能性がある。'
+        self.assertEqual(validate_summary(summary, source), summary)
+        with_comma = '生育は順調。11月の出荷数量および価格は、いずれも平年並みで推移する見通し。'
+        self.assertEqual(validate_summary(with_comma, source), with_comma)
+
     def test_daily_ai_budget_uses_japan_date_even_across_utc_midnight(self):
         metadata={'lastTopicAttemptAt':'2026-11-11T16:00:00+00:00',
                   'topicGeminiSucceededLastRun':6,'topicGeminiFailedLastRun':0}

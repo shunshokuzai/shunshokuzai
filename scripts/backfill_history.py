@@ -14,6 +14,24 @@ from update_data import DATA, decode_csv, fetch, normalize, official_csv_url, pa
 from update_fish import INDEX, read_weekly, url_index
 
 
+def fish_observation(stamp, url):
+    try:
+        return url, read_weekly(fetch(url, timeout=30), url)
+    except ValueError:
+        # Several early-2024 index links are image-only PDFs. The same official
+        # report also survives as a declared-charset HTML price table.
+        if stamp[0] > 2024:
+            raise
+        year, month, week = stamp
+        alternate = f'https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/{year}{month:02}{week}.html'
+        raw = fetch(alternate, timeout=25)
+        from bs4 import BeautifulSoup
+        text = unicodedata.normalize('NFKC', BeautifulSoup(raw, 'html.parser').get_text())
+        if f'{year}年{month}月{week}週' not in re.sub(r'\s+', '', text):
+            raise ValueError('Alternate fish report period mismatch')
+        return alternate, read_weekly(raw, alternate)
+
+
 def parse_produce_pdf(blob, names, stamp):
     """Read only named aggregate rows, never the following prefecture rows.
 
@@ -123,7 +141,8 @@ def backfill(obj, archive, limit=24, seconds=420):
                 continue
             key = kind + ':' + '-'.join(map(str, stamp))
             prior = failures.get(key, {})
-            if prior.get('retryAfter', '') > today.isoformat():
+            retry_new_parser = kind == 'fish' and prior.get('error') == 'ValueError' and prior.get('parserVersion', 1) < 2
+            if prior.get('retryAfter', '') > today.isoformat() and not retry_new_parser:
                 continue
             pending.append((kind, stamp, url, key))
         # Balance years: each run adds coverage in every year, rather than
@@ -146,7 +165,7 @@ def backfill(obj, archive, limit=24, seconds=420):
             if kind == 'produce':
                 url, values = produce_observation(stamp, names)
             else:
-                values = read_weekly(fetch(url, timeout=30), url)
+                url, values = fish_observation(stamp, url)
             return task, url, values, None
         except Exception as exc:
             error = f'HTTP {exc.code}' if isinstance(exc, urllib.error.HTTPError) else type(exc).__name__
@@ -161,6 +180,7 @@ def backfill(obj, archive, limit=24, seconds=420):
             if error:
                 result['failed'] += 1
                 failures[key] = {'checkedAt': today.isoformat(), 'error': error,
+                                 'parserVersion': 2,
                                  'sourceUrl': url,
                                  'retryAfter': (today+dt.timedelta(days=7)).isoformat()}
             else:

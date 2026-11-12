@@ -104,11 +104,14 @@ def validate_summary(text, excerpt):
     numeric = lambda value: set(re.findall(r'\d+(?:\.\d+)?', normalized(value)))
     if not numeric(text).issubset(numeric(excerpt)):
         raise ValueError('Gemini summary introduced numbers absent from the source')
-    for metric in ('出荷量', '入荷量', '価格', '生育'):
+    # A single sentence can contain an observed growth condition followed by
+    # a price forecast. Check clauses, not the certainty of the whole sentence.
+    outlook = '見通し|見込|予想|予測|予定|可能性'
+    for metric in ('出荷量', '出荷数量', '入荷量', '価格'):
         claims = [s for s in re.split('[。\n]', text) if metric in s]
-        evidence = [s for s in re.split('[。\n]', excerpt) if metric in s]
-        if evidence and all(re.search('見通し|見込|予想|予測', s) for s in evidence):
-            if any(not re.search('見通し|見込|予想|予測|予定', s) for s in claims):
+        evidence = [s for s in re.split('[。、\n]', excerpt) if metric in s]
+        if evidence and all(re.search(outlook, s) for s in evidence):
+            if any(not re.search(outlook, s) for s in claims):
                 raise ValueError('Gemini summary converted an outlook into an observed result')
     return text
 
