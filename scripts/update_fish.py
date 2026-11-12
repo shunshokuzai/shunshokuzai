@@ -16,6 +16,7 @@ from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
 from update_data import BASE, DATA, fetch, now_iso, save
+from market_history import MarketHistory, apply_chart, valid_price
 
 INDEX='https://www.shijou.metro.tokyo.lg.jp/torihiki/week/suisan'
 # Refers only to a particular product specification within the official PDF.
@@ -110,7 +111,8 @@ def parse_rows(tables):
                 if food in found:continue
                 if label==norm(item):
                     # Do not confuse frozen/thawed/foreign secondary rows with the first (fresh) row.
-                    found[food]={'price':mid,'yearAgoRatio':number(row[12]),
+                    found[food]={'price':mid,'yearAgoRatio':number(row[12]),'previousRatio':number(row[11]),
+                                 'brandLabel':norm(row[7]),
                                  'brandDetail':re.sub(r'\s+',' ',str(row[6] or '')+' '+str(row[7] or '')+'・'+str(row[13] or '')).strip(),
                                  'pieceWeightKg':parse_piece_size(row[13],food),
                                  'pieceWeightSpec':str(row[13] or '').strip()}
@@ -136,7 +138,9 @@ def read_weekly(blob,url):
     """Official source may be a PDF or an archived HTML table (older years)."""
     if blob.startswith(b'%PDF'):return read_pdf(blob)
     from bs4 import BeautifulSoup
-    soup=BeautifulSoup(blob.decode('utf-8','replace'),'html.parser')
+    # Archived pages declare Shift_JIS. Decoding them as UTF-8 first destroys
+    # fish names and makes an otherwise valid 14-column table unrecognizable.
+    soup=BeautifulSoup(blob,'html.parser')
     # Some archive HTML pages link to an original weekly PDF.
     for a in soup.find_all('a',href=True):
         href=urljoin(url,a['href']);u=urlparse(href)
@@ -152,12 +156,14 @@ def read_weekly(blob,url):
             if len(cells)>=14:
                 rows.append([cell.get_text(' ',strip=True) for cell in cells])
         if rows:tables.append(rows)
+    if '卸売価格' not in soup.get_text():
+        raise ValueError('Archived page has no market price table heading')
     fish=parse_rows(tables)
     if len(fish)<4:raise ValueError('archived HTML is not a recognizable 14-column market table')
     return fish
 
 def compute_ratio(price,historical):
-    vals=[x for x in historical if isinstance(x,(int,float)) and 0<x<150000]
+    vals=[x for x in historical if valid_price(x)]
     if len(vals)<3:return None,None
     mean=round(sum(vals)/len(vals),1)
     return mean,round(price/mean*100,1)
@@ -170,15 +176,18 @@ def apply_fish(obj,latest,annual,stamp,link,hist_links,weekly):
         f=food_by_name.get(name)
         if not f:continue
         past=annual.get(name,{})
-        years=sorted(y for y in past if 0<past[y]<150000)
+        years=sorted(y for y in past if stamp[0]-5<=y<stamp[0] and valid_price(past[y]))
         base,ratio=compute_ratio(datum['price'],[past[y] for y in years]);old_row=old.get(f['id'],{})
         if not (base and ratio):
             # never retain last month's baseline in a newly observed week
             years=[]
-        vals=[weekly[week][name]['price'] for week in sorted(weekly) if name in weekly[week]]
-        labels=[f'{stamp[1]}月第{week}週' for week in sorted(weekly) if name in weekly[week]]
+        periods={(stamp[0],stamp[1],k) if isinstance(k,int) else k:v for k,v in weekly.items()}
+        ordered=sorted(k for k in periods if k<=stamp and name in periods[k])
+        vals=[periods[week][name]['price'] for week in ordered]
+        labels=[f'{s[0]}年{s[1]}月第{s[2]}週' for s in ordered]
         old[f['id']]={**old_row,'foodId':f['id'],'price':datum['price'],'unit':'円/kg',
             'normalPrice':base,'normalRatio':ratio,'yearAgoRatio':datum.get('yearAgoRatio'),
+            'previousRatio':datum.get('previousRatio'), 'historicalSampleCount':len(years),
             'history':vals,'historyLabels':labels,'historicalYears':years,
             'historicalPrices':[past[y] for y in years],
             'historicalSources':[hist_links[y] for y in years],
@@ -204,33 +213,56 @@ def apply_fish(obj,latest,annual,stamp,link,hist_links,weekly):
     return updated
 
 
-def update_live(obj):
+def same_brand(current, previous):
+    # Compare the same fresh/product grade, never substitute frozen or thawed
+    # secondary rows for a missing primary quote. Origin/size differences are
+    # retained in each source-linked observation and disclosed in the app.
+    return current.get('brandLabel') == previous.get('brandLabel')
+
+
+def update_live(obj, archive=None):
     import bs4  # noqa - dependency checked by requirements.txt
+    archive=archive if archive is not None else MarketHistory()
     listing=url_index(fetch(INDEX,timeout=25).decode('utf-8','replace'))
     today=dt.datetime.now(dt.timezone(dt.timedelta(hours=9)))
-    this_year=[s for s in listing if s[0]==today.year and (s[1]<today.month or s[1]==today.month)]
+    this_year=[s for s in listing if today.year-1<=s[0]<=today.year and (s[0],s[1])<=(today.year,today.month)]
     if not this_year:raise ValueError('no this-year official weekly price links')
     stamp=max(this_year);link=listing[stamp];print('latest PDF',stamp,link)
     latest=read_weekly(fetch(link,timeout=35),link)
+    archive.put('fish',stamp,link,latest)
     print('recognized fish',len(latest))
-    weekly={stamp[2]:latest}
-    for week in range(1,stamp[2]):
-        earlier=listing.get((stamp[0],stamp[1],week))
-        if not earlier:continue
-        try:weekly[week]=read_weekly(fetch(earlier,timeout=35),earlier)
-        except Exception as e:print('WARN recent graph',week,e,file=sys.stderr)
+    weekly={stamp:latest}
+    for period in sorted(s for s in listing if s<stamp)[-7:]:
+        earlier=listing[period]
+        try:
+            cached=archive.get('fish',period)
+            weekly[period]=cached['values'] if cached else read_weekly(fetch(earlier,timeout=35),earlier)
+            archive.put('fish',period,earlier,weekly[period])
+        except Exception as e:print('WARN recent graph',period,e,file=sys.stderr)
         time.sleep(.2)
     annual={name:{} for name in latest};hist_links={}
     for year in range(stamp[0]-5,stamp[0]):
         url=listing.get((year,stamp[1],stamp[2]))
         if not url:continue
         try:
-            old=read_weekly(fetch(url,timeout=35),url);hist_links[year]=url
+            past_stamp=(year,stamp[1],stamp[2]);cached=archive.get('fish',past_stamp)
+            old=cached['values'] if cached else read_weekly(fetch(url,timeout=35),url)
+            archive.put('fish',past_stamp,url,old);hist_links[year]=url
             for name in latest:
-                if name in old:annual[name][year]=old[name]['price']
+                if name in old and same_brand(latest[name],old[name]):annual[name][year]=old[name]['price']
         except Exception as e:print('WARN historical fish',year,e,file=sys.stderr)
         time.sleep(.2)
-    return apply_fish(obj,latest,annual,stamp,link,hist_links,weekly)
+    updated=apply_fish(obj,latest,annual,stamp,link,hist_links,weekly)
+    by_id={p['foodId']:p for p in obj['prices']}
+    for food in obj['foods']:
+        if food['category']!='fish' or food['name'] not in latest:continue
+        row=by_id[food['id']]
+        apply_chart(row,archive.chart('fish',food['name'],stamp,8),'fish')
+        row['historicalSpecs']=[archive.get('fish',(y,stamp[1],stamp[2]))['values'][food['name']].get('brandDetail') for y in row['historicalYears']]
+    archive.save()
+    obj['metadata']['fishReferenceRatioCount']=sum(p.get('normalRatio') is not None and not p.get('stale') for p in obj['prices'] if p['foodId'] in {f['id'] for f in obj['foods'] if f['category']=='fish'})
+    obj['metadata']['fishRatioDisclaimer']='過去3～5年の同月・同週・同じ銘柄区分の豊洲市場中値の単純平均を基準とする参考平年比。年による主産地・サイズの差に注意。'
+    return updated
 
 
 def main():
