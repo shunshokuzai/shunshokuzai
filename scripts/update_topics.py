@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Gemini Search Grounding connector. Disabled without --live and API key.
+"""Source-first, free-tier Gemini summarization of government food reports.
 
-Only publishes search-grounded excerpts with at least one URL. Does not
-claim independent fact-checking. Respect quota: max requests configured by
-MAX_AI_REQUESTS and only runs when explicitly requested with --live.
+No Google Search grounding is used: it is not part of the free tier for Gemini
+3.1 Flash-Lite. The source is fetched independently from an official page,
+then its exact text is supplied to the model; source URLs are NEVER invented by
+Gemini. When the model is unavailable, source extracts remain available and AI
+failure is reported accurately instead of claiming success.
 """
 import argparse
 import datetime as dt
@@ -11,88 +13,168 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
-from pathlib import Path
-from update_data import BASE, DATA, now_iso, save
 
-BASE_API='https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent'
+from bs4 import BeautifulSoup
+from update_data import BASE, DATA, fetch, now_iso, normalize, save
 
-def grounded_result(name,key,model,year,timeout=45):
-    prompt=(f'今日時点の{year}年の日本国内の「{name}」について、直近45日以内に発表された'
-        '生育・出荷・収穫・漁獲・品質の動向を、一次資料（自治体、農水省、漁協、産地団体）優先で調べてください。'
-        '確認できる個別の動向がなければ必ず「新しい公表資料を確認できません」と明記してください。'
-        '100〜150文字程度の日本語で、中立的にまとめてください。数量や増減の数字、年号を推測で補わないでください。'
-        '推測と確認された事実は明確に分けてください。')
-    req=urllib.request.Request(BASE_API.format(model=model),data=json.dumps({'contents':[{'parts':[{'text':prompt}]}],
-        'tools':[{'google_search':{}}],'generationConfig':{'temperature':0.1,'maxOutputTokens':450}}).encode('utf-8'),
-        headers={'Content-Type':'application/json','x-goog-api-key':key},method='POST')
-    with urllib.request.urlopen(req,timeout=timeout) as res:raw=json.load(res)
-    candidates=raw.get('candidates') or []
-    if not candidates:return None
-    candidate=candidates[0]
-    text=''.join(part.get('text','') for part in candidate.get('content',{}).get('parts',[]) if isinstance(part,dict))
-    text=re.sub(r'\s+',' ',text).strip()
-    grounding=candidate.get('groundingMetadata') or {}
-    sources=[]
-    for entry in grounding.get('groundingChunks',[]):
-        obj=entry.get('web') or {}
-        uri=obj.get('uri','')
-        if uri.startswith('https://') and uri not in [x['url'] for x in sources]:
-            sources.append({'url':uri,'name':obj.get('title') or uri.split('/')[2],'publishedAt':None})
-    # Without grounding URLs, do not publish any alleged new fact.
-    if len(text)<24 or not sources or '新しい公表資料を確認できません' in text:return None
-    if len(text)>200:text=text[:197]+'…' # body length guard, never use to assert source verification
-    return {'summary':text,'sources':sources[:6]}
+API = 'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent'
+MODEL = 'gemini-3.1-flash-lite'
+MAFF_DOMAIN = 'www.maff.go.jp'
+
+
+def recent_forecast_url(today, getter=fetch):
+    """Look for MAFF's late-previous-month press release, without a search API.
+
+    The issuance date is not guaranteed to be the last calendar day.
+    Only the canonical MAFF path is accepted; responses must include the
+    expected report heading. Old/future months never masquerade as 'latest'.
+    """
+    start = today.replace(day=1) - dt.timedelta(days=1)
+    for back in range(7):
+        date = start - dt.timedelta(days=back)
+        path = f'https://{MAFF_DOMAIN}/j/press/nousan/engei/{date:%y%m%d}.html'
+        try:
+            body = getter(path, timeout=15)
+        except Exception:
+            continue
+        soup = BeautifulSoup(body.decode('utf-8', 'replace'), 'html.parser')
+        title = soup.title.get_text(' ', strip=True) if soup.title else ''
+        if '野菜の生育状況及び価格見通し' in title and ('令和' in soup.get_text(' ', strip=True) or '年' in title):
+            return path, body, date.isoformat()
+    raise ValueError('MAFF vegetable forecast publication not found for the current month')
+
+
+def forecast_items(html, foods, url, published):
+    """Extract only explicitly named rows in MAFF's monthly vegetable table."""
+    soup = BeautifulSoup(html.decode('utf-8', 'replace'), 'html.parser')
+    allowed = {f['name']: f for f in foods if f['category'] == 'vegetable'}
+    rows = []
+    for tr in soup.find_all('tr'):
+        cells = tr.find_all(['th', 'td'], recursive=False)
+        if len(cells) < 3:
+            continue
+        texts = [re.sub(r'\s+', ' ', c.get_text(' ', strip=True)).strip() for c in cells]
+        # MAFF table sometimes has an initial rowspan cell or a fourth price
+        # outlook column. The food name must be an entire first cell.
+        name = normalize(texts[0].split('（')[0].split('(')[0])
+        if name not in allowed:
+            continue
+        details = texts[-2] if len(texts) >= 4 else texts[1]
+        outlook = texts[-1]
+        if len(details) < 28 or not any(k in details for k in ('出荷','生育','収穫','入荷','産地','小玉','作業','肥大')):
+            continue
+        excerpt = f'出荷・生育について：{details[:1000]}\n価格の見通し：{outlook[:240]}'
+        rows.append({'food': allowed[name], 'url': url, 'publishedAt': published,
+                     'excerpt': excerpt, 'outlook': outlook})
+    return list({x['food']['id']: x for x in rows}.values())
+
+
+def extract_summary(excerpt):
+    """Fallback excerpt, explicitly attributed to the official publication."""
+    text = excerpt.replace('出荷・生育について：', '').replace('\n価格の見通し：', '。価格見通し：')
+    text = re.sub(r'\s+', ' ', text)
+    # Avoid chopping the middle of a claim when possible.
+    if len(text) > 165:
+        p = text.rfind('。', 80, 165)
+        text = text[:p+1] if p >= 80 else text[:162]+'…'
+    return text
+
+
+def ai_summarize(excerpt, key, model=MODEL, timeout=40):
+    """Summarize an observed public source. No tools, paid-only search or URLs."""
+    prompt = ('以下は農林水産省が実際に公表した文章です。記載されている事実だけを使い、'
+        '野菜の生育・入荷・価格の見通しについて100～150字程度で要約してください。'
+        '見通しを確定した結果のように書かない。資料にない数値や地域を加えない。'
+        '余計な挨拶・注釈・Markdownは付けない。\n\n' + excerpt)
+    payload = {'contents':[{'parts':[{'text':prompt}]}],
+               'generationConfig':{'temperature':0.1,'maxOutputTokens':450}}
+    req = urllib.request.Request(API.format(model=model),
+        data=json.dumps(payload).encode('utf-8'),
+        headers={'Content-Type':'application/json','x-goog-api-key':key}, method='POST')
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        result = json.load(r)
+    parts = (result.get('candidates') or [{}])[0].get('content',{}).get('parts',[])
+    text = re.sub(r'\s+',' ',''.join(p.get('text','') for p in parts if isinstance(p,dict))).strip()
+    if not 28 <= len(text) <= 240:
+        raise ValueError('Gemini returned no usable text')
+    return text
+
+
+def merge_report(obj, items, key, model, request_limit):
+    """Publish each source item, try AI for up to the explicit free-tier budget."""
+    topics = list(obj['topics'])
+    attempts = 0; success = 0; changed = 0; failures = 0
+    for item in items:
+        f = item['food']; ident = f"forecast-{item['publishedAt']}-{f['id']}"
+        old = next((t for t in topics if t['id'] == ident), None)
+        # An official excerpt can be upgraded into an AI summary on a later
+        # run, without producing duplicate articles for the same report.
+        if old and (old.get('aiGenerated') or not key or attempts >= request_limit):
+            continue
+        summary = extract_summary(item['excerpt']); generated = False
+        if key and attempts < request_limit:
+            attempts += 1
+            try:
+                summary = ai_summarize(item['excerpt'], key, model)
+                success += 1; generated = True
+            except Exception as exc:
+                failures += 1
+                # Never include API keys, raw response bodies or request URLs.
+                print('WARN Gemini summarize', f['name'], type(exc).__name__,
+                      str(exc)[:110] if not isinstance(exc,urllib.error.HTTPError) else f'HTTP {exc.code}',
+                      file=sys.stderr)
+        new = {
+            'id':ident, 'foodId':f['id'],
+            'title':f"{f['name']}：{int(item['publishedAt'][5:7])+1 if int(item['publishedAt'][5:7])<12 else 1}月の生育・出荷見通し",
+            'summary':summary, 'kind':'ai_source_summary' if generated else 'official_excerpt',
+            'verified':not generated, 'yearSpecific':True,
+            'sources':[{'name':'農林水産省・野菜の生育状況及び価格見通し',
+                        'url':item['url'],'publishedAt':item['publishedAt']}],
+            'publishedAt':item['publishedAt'], 'observedPeriod':f'{(dt.date.fromisoformat(item["publishedAt"]).replace(day=1)+dt.timedelta(days=32)).month}月の見通し',
+            'aiGenerated':generated,
+            'tag':'Gemini要約（一次資料から・未検証）' if generated else '公的原文を短く抜粋（Gemini未使用）',
+            'retrievedAt':now_iso(),
+        }
+        topics = [t for t in topics if t['id'] != ident]
+        topics.insert(0, new);changed += 1
+    if changed:
+        obj['topics'] = topics
+        obj['metadata']['topicsStatus'] = 'source_first'
+        obj['metadata']['lastTopicRetrievedAt'] = now_iso()
+        obj['metadata']['updatedAt'] = now_iso()
+    obj['metadata']['topicSourceCountLastRun'] = len(items)
+    obj['metadata']['topicAddedLastRun'] = changed
+    obj['metadata']['topicGeminiSucceededLastRun'] = success
+    obj['metadata']['topicGeminiFailedLastRun'] = failures
+    return {'sourceItems':len(items),'added':changed,'aiSuccess':success,'aiFailed':failures,'aiAttempted':attempts}
+
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--live',action='store_true');ap.add_argument('--model',default=os.getenv('GEMINI_MODEL','gemini-2.5-flash-lite'))
+    ap=argparse.ArgumentParser()
+    ap.add_argument('--live',action='store_true')
+    ap.add_argument('--model', default=os.getenv('GEMINI_MODEL',MODEL))
     args=ap.parse_args()
     if not args.live:
-        print('AI connector is disabled. Add --live and an API key for a real test.');return
-    key=os.environ.get('GEMINI_API_KEY','')
-    if not key:
-        print('GEMINI_API_KEY missing. No AI request was sent.');return
-    maxreq=min(max(int(os.getenv('MAX_AI_REQUESTS','6')),0),10)
-    if maxreq<=0:print('MAX_AI_REQUESTS=0. Skipped.');return
+        print('No network activity without --live.');return
+    today=dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date()
+    key=os.getenv('GEMINI_API_KEY','')
+    limit=min(max(int(os.getenv('MAX_AI_REQUESTS','6')),0),10)
     obj=json.loads(DATA.read_text(encoding='utf-8'))
-    today=dt.datetime.now(dt.timezone(dt.timedelta(hours=9)))
-    chosen=[f for f in obj['foods'] if today.month in f['seasonMonths']]
-    priority=['サンマ','くり','みかん','かき','キャベツ','りんご','サバ','さつまいも','れんこん']
-    chosen.sort(key=lambda f:(priority.index(f['name']) if f['name'] in priority else 999,f['name']))
-    # Rotate through seasonal foods across weekly runs instead of always querying
-    # the same first six foods.
-    cursor_key=f'{today.year}-{today.month:02d}'
-    if obj['metadata'].get('topicCursorMonth')!=cursor_key:
-        obj['metadata']['topicCursor']=0
-        obj['metadata']['topicCursorMonth']=cursor_key
-    start=int(obj['metadata'].get('topicCursor',0))%max(len(chosen),1)
-    batch=[chosen[(start+i)%len(chosen)] for i in range(min(maxreq,len(chosen)))]
-    topics=obj['topics'];changed=0;attempted=0
-    for f in batch:
-        attempted+=1
-        try:res=grounded_result(f['name'],key,args.model,today.year)
-        except Exception as exc:
-            print('WARN search',f['name'],str(exc),file=sys.stderr);continue
-        if res is None:
-            print('No supported recent information',f['name']);continue
-        old=next((t for t in topics if t['id']=='latest-'+f['id']),None)
-        if old and old['summary']==res['summary']:
-            print('unchanged',f['name']);continue
-        new={'id':'latest-'+f['id'],'foodId':f['id'],'title':f['name']+'の今年の動向',
-             'summary':res['summary'],'kind':'ai_grounded','verified':False,'yearSpecific':True,
-             'sources':res['sources'],'publishedAt':None,'observedPeriod':None,
-             'aiGenerated':True,'tag':'AI要約（出典あり・未検証）','retrievedAt':now_iso()}
-        topics=[t for t in topics if t['id']!=new['id']];topics.insert(0,new);changed+=1
-        print('Grounded sources',f['name'],len(res['sources']))
-    if attempted:
-        obj['metadata']['topicCursor']=(start+attempted)%max(len(chosen),1)
-    if changed:
-        obj['topics']=topics;obj['metadata']['topicsStatus']='partial_live';obj['metadata']['lastTopicRetrievedAt']=now_iso();obj['metadata']['updatedAt']=now_iso();save(obj)
-        print('Published',changed,'new source-linked AI summaries (not independently verified)')
-    elif attempted:
-        obj['metadata']['lastTopicAttemptAt']=now_iso()
-        save(obj)
-        print('No new summaries; moved cursor for next search run.')
-    else: print('No candidates. Dataset preserved.')
+    url,html,published=recent_forecast_url(today)
+    items=forecast_items(html,obj['foods'],url,published)
+    if len(items)<5:
+        raise ValueError(f'Official monthly report has only {len(items)} validated food rows; no new items published')
+    result=merge_report(obj,items,key,args.model,limit)
+    obj['metadata']['lastTopicAttemptAt']=now_iso()
+    save(obj)
+    print('SOURCE-FIRST TOPICS',json.dumps(result,ensure_ascii=False))
+    # 'ok' must not be used when all attempted Gemini requests failed.
+    if result['aiAttempted'] and not result['aiSuccess']:
+        raise RuntimeError('Gemini text summarization unavailable; official source excerpts retained. Check model and free-tier quota.')
+    if not key:
+        raise RuntimeError('GEMINI_API_KEY missing; official source excerpts retained.')
 
-if __name__=='__main__':main()
+if __name__ == '__main__':
+    main()
