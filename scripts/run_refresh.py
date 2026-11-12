@@ -42,6 +42,7 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
         status['topics']='not_scheduled';status['gemini']='not_scheduled'
     obj=json.loads(DATA.read_text(encoding='utf-8'))
     meta=obj['metadata']
+    meta['version']='0.8.0'
     meta['lastAutomaticCheckAt']=now_iso()
     meta['autoRefreshStatus']=status
     meta['autoRefreshConfigured']=True

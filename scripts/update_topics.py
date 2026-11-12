@@ -16,6 +16,7 @@ import re
 import sys
 import urllib.error
 import urllib.request
+import unicodedata
 
 from bs4 import BeautifulSoup
 from update_data import BASE, DATA, fetch, now_iso, normalize, save
@@ -104,10 +105,25 @@ def ai_summarize(excerpt, key, model=MODEL, timeout=40):
     text = re.sub(r'\s+',' ',''.join(p.get('text','') for p in parts if isinstance(p,dict))).strip()
     if not 28 <= len(text) <= 240:
         raise ValueError('Gemini returned no usable text')
+    numeric=lambda s:set(re.findall(r'\d+(?:\.\d+)?',unicodedata.normalize('NFKC',s).replace(',','')))
+    if not numeric(text).issubset(numeric(excerpt)):
+        raise ValueError('Gemini summary introduced numbers absent from the source')
     return text
 
 
-def merge_report(obj, items, key, model, request_limit):
+def requests_used_today(metadata,today):
+    budget=metadata.get('aiRequestBudget',{})
+    if budget:
+        return max(0,int(budget.get('attempted',0))) if budget.get('date')==today.isoformat() else 0
+    try:
+        previous=dt.datetime.fromisoformat(metadata.get('lastTopicAttemptAt','')).astimezone(dt.timezone(dt.timedelta(hours=9))).date()
+    except (ValueError,TypeError):
+        return 0
+    return (metadata.get('topicGeminiSucceededLastRun',0)+metadata.get('topicGeminiFailedLastRun',0)
+            if previous==today else 0)
+
+
+def merge_report(obj, items, key, model, request_limit, on_attempt=None):
     """Publish each source item, try AI for up to the explicit free-tier budget."""
     topics = list(obj['topics'])
     attempts = 0; success = 0; changed = 0; failures = 0
@@ -127,6 +143,7 @@ def merge_report(obj, items, key, model, request_limit):
             continue
         summary = extract_summary(item['excerpt']); generated = False
         if key and not blocked and attempts < request_limit:
+            if on_attempt:on_attempt()
             attempts += 1
             try:
                 summary = ai_summarize(item['excerpt'], key, model)
@@ -173,14 +190,12 @@ def main():
     args=ap.parse_args()
     if not args.live:
         print('No network activity without --live.');return
+    if args.model!=MODEL:raise ValueError('Only the configured free-tier model is enabled')
     today=dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date()
     key=os.getenv('GEMINI_API_KEY','')
     limit=min(max(int(os.getenv('MAX_AI_REQUESTS','6')),0),6)
     obj=json.loads(DATA.read_text(encoding='utf-8'))
-    budget=obj['metadata'].get('aiRequestBudget',{})
-    used=budget.get('attempted',0) if budget.get('date')==today.isoformat() else 0
-    if not budget and str(obj['metadata'].get('lastTopicAttemptAt','')).startswith(today.isoformat()):
-        used=obj['metadata'].get('topicGeminiSucceededLastRun',0)+obj['metadata'].get('topicGeminiFailedLastRun',0)
+    used=requests_used_today(obj['metadata'],today)
     limit=min(limit,max(0,6-used))
     if os.getenv('SOURCES_ONLY','').lower()=='true':key=''
     items=[];source_errors=[]
@@ -194,7 +209,15 @@ def main():
         try:items.extend(weekly_items(obj['foods'],category,today))
         except Exception as error:source_errors.append(category+': '+type(error).__name__)
     if not items:raise ValueError('No validated current public source rows; previous topics retained')
-    result=merge_report(obj,items,key,args.model,limit)
+    reserved=0
+    def reserve_attempt():
+        nonlocal reserved
+        reserved+=1
+        obj['metadata']['aiRequestBudget']={'date':today.isoformat(),'attempted':used+reserved,'dailyLimit':6}
+        # Reserve before the request so cancellation cannot silently restore
+        # already used quota on the next run.
+        save(obj)
+    result=merge_report(obj,items,key,args.model,limit,on_attempt=reserve_attempt)
     obj['metadata']['aiRequestBudget']={'date':today.isoformat(),'attempted':used+result['aiAttempted'],'dailyLimit':6}
     obj['metadata']['topicSourceErrorsLastRun']=source_errors
     print('SOURCE WARNINGS',json.dumps(source_errors,ensure_ascii=False))

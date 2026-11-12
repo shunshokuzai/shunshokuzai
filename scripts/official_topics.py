@@ -15,7 +15,7 @@ INDEXES = {
 ALIASES = {'りんご': ['りんご', 'リンゴ'], 'みかん': ['みかん', 'ミカン'],
            'かき': ['柿', 'かき'], 'ぶどう': ['ぶどう', 'ブドウ'],
            'なし': ['日本なし', '日本ナシ'], 'カキ': ['ムキカキ', 'むきかき'],
-           'スルメイカ': ['スルメイカ', 'スルメ'], 'キウイフルーツ': ['キウイ']}
+           'スルメイカ': ['スルメイカ', 'スルメ'], 'キウイフルーツ': ['キウイ'], '洋なし':['西洋なし']}
 
 
 def report_text(blob):
@@ -32,18 +32,20 @@ def commentary_items(text, foods, category, stamp, url):
     text = unicodedata.normalize('NFKC', text)
     # Quotes must come from prose commentary, never by converting price-table
     # numbers into a fabricated explanation of supply or production.
-    markers = list(re.finditer(r'(?:市場概況|市場概\s*況|主要鮮魚別に見ると)', text))
+    markers = list(re.finditer(r'(?:市場概況|市場概\s*況|主要鮮魚別に見ると|品目別にみると)', text))
     if not markers:
         return []
     section = re.sub(r'\s+', '', text[markers[-1].end():])
     if len(section) < 24:
         return []
-    sentences = [s + '。' for s in section.split('。') if s.strip()]
+    sentences = [s.lstrip('、,') + '。' for s in section.split('。') if s.strip()]
     candidates = [f for f in foods if f['category'] == category]
+    def aliases_for(food):
+        return (['日本なし', '日本ナシ', '和梨', 'なしは', 'なしの', 'なしが'] if food['name']=='なし'
+                else [food['name'], *ALIASES.get(food['name'], [])])
     result = []
     for food in candidates:
-        aliases = (['日本なし', '日本ナシ', '和梨', 'なしは', 'なしの', 'なしが'] if food['name']=='なし'
-                   else [food['name'], *ALIASES.get(food['name'], [])])
+        aliases = aliases_for(food)
         selected = []
         for i, sentence in enumerate(sentences):
             if not any(alias in sentence for alias in aliases):
@@ -51,8 +53,11 @@ def commentary_items(text, foods, category, stamp, url):
             selected.append(sentence)
             # A following sentence such as "数量は前週比..." belongs to this
             # food only until another named food begins. Keep source context.
-            if i + 1 < len(sentences) and sentences[i + 1].startswith(('数量は', '価格は', '入荷量は')):
-                selected.append(sentences[i + 1])
+            for following in sentences[i+1:i+4]:
+                if any(any(alias in following for alias in aliases_for(other))
+                       for other in candidates if other['id']!=food['id']):
+                    break
+                selected.append(following)
         excerpt = ''.join(dict.fromkeys(selected))[:1200]
         if len(excerpt) < 24:
             continue
@@ -81,6 +86,5 @@ def weekly_items(foods, category, today=None):
     text=report_text(fetch(url, timeout=35))
     items=commentary_items(text, foods, category, stamp, url)
     print('OFFICIAL TOPIC SOURCE',category,url,'recognized',len(items))
-    if len(items)<5:
-        print('PUBLIC COMMENTARY DIAGNOSTIC',category,repr(text[-6500:]))
+    if not items:raise ValueError('No recognizable food-specific commentary')
     return items
