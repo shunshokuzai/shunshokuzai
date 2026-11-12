@@ -14,6 +14,10 @@ def main():
     raw = fetch(latest['sourceUrl'])
     rows = list(csv.reader(io.StringIO(decode_csv(raw))))
     print('OFFICIAL CSV HEADERS', json.dumps(rows[:6],ensure_ascii=False))
+    matches={}
+    for row in rows:
+        if row and normalize(row[0]) in known:matches.setdefault(normalize(row[0]),[]).append(row[:5])
+    print('DUPLICATE OFFICIAL LABELS',json.dumps({k:v for k,v in matches.items() if len(v)>1},ensure_ascii=False))
     unmapped = []
     for row in rows:
         labels = {normalize(c) for c in row[:5] if c.strip()}
@@ -22,7 +26,8 @@ def main():
             unmapped.append({'officialItem': result[0], 'price': result[1], 'leadingCells': row[:9]})
     print('UNMAPPED OFFICIAL ITEMS', json.dumps(unmapped, ensure_ascii=False))
     print('LOW VOLUME ROWS', json.dumps([r for r in rows if any(normalize(c) in ('ふき','洋なし','西洋なし','アボカド','キウイフルーツ') for c in r[:5])], ensure_ascii=False))
-    print('CURRENT VERIFIED COUNT', len(parse_csv(raw, known)))
+    try:print('CURRENT VERIFIED COUNT', len(parse_csv(raw, known)))
+    except ValueError as exc:print('CURRENT PRICE SCHEMA CONFLICT',str(exc))
 
 
 if __name__ == '__main__':

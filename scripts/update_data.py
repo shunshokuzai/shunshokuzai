@@ -98,6 +98,8 @@ def coded_price(row, known):
         return None
     if name in IMPORTED_FRUIT and not 50000<=code<60000:
         return None
+    if name not in IMPORTED_FRUIT and 50000<=code<60000:
+        return None
     if name=='メロン' and code!=47000:
         return None
     try:
@@ -176,7 +178,7 @@ def parse_csv(blob, food_names):
         result = coded_price(row,known) if coded else _ratio_verified_position(row, known)
         if result:
             if result[0] in out and out[result[0]]!=round(result[1],1):
-                raise ValueError('Conflicting commodity rows; refusing to mix market series')
+                raise ValueError('Conflicting commodity rows: '+result[0]+' code '+row[1].strip())
             out[result[0]] = round(result[1], 1)
     # Fallback for explicitly labelled normalized CSV distributions (test and
     # optional alternative CSV formats): only if first strategy found none.
