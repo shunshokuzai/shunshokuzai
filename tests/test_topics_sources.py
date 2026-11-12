@@ -6,10 +6,38 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from official_topics import commentary_items
-from update_topics import merge_report, requests_used_today
+from update_topics import merge_report, requests_used_today, validate_summary, extract_summary
 
 
 class SourceTopicTests(unittest.TestCase):
+    def test_summary_rejects_new_numbers_and_forecast_as_result(self):
+        source = '出荷量は27%増加した。価格は平年を下回る見通し。'
+        with self.assertRaises(ValueError):
+            validate_summary('出荷量は72%増加した。', source)
+        with self.assertRaises(ValueError):
+            validate_summary('価格は平年を下回った。', source)
+        self.assertEqual(validate_summary('出荷量は27%増加した。価格は平年を下回る見通し。', source), source)
+
+    def test_excerpts_have_clean_punctuation_and_preserve_source_context(self):
+        self.assertNotIn('。。', extract_summary('出荷・生育について：生育は順調。\n価格の見通し：平年並み。'))
+        obj = {'topics': [], 'metadata': {}}
+        item = {'food': {'id': 'f', 'name': 'サバ'}, 'url': 'https://www.shijou.metro.tokyo.lg.jp/report',
+                'publishedAt': None, 'reportKey': 'tokyo-fish-2026-11-1',
+                'observedPeriod': '2026年11月第1週',
+                'scope': '東京都豊洲市場', 'reportType': '市場への入荷・取引の実績',
+                'excerpt': 'サバは千葉主体に入荷。前週に比べ数量は27%増加し、価格は0.5割安。'}
+        merge_report(obj, [item], '', 'test', 0)
+        self.assertEqual(obj['topics'][0]['scope'], '東京都豊洲市場')
+        self.assertEqual(obj['topics'][0]['sourceExcerpt'], item['excerpt'])
+        self.assertEqual(obj['topics'][0]['observedPeriod'], '2026年11月第1週')
+
+    def test_observed_growth_and_price_forecast_in_one_sentence_remain_distinct(self):
+        source = '主産地の生育は概ね順調であり、11月の出荷数量・価格は平年並みで推移する見込み。'
+        summary = '主産地の生育は概ね順調。11月の出荷数量・価格は平年並みで推移する可能性がある。'
+        self.assertEqual(validate_summary(summary, source), summary)
+        with_comma = '生育は順調。11月の出荷数量および価格は、いずれも平年並みで推移する見通し。'
+        self.assertEqual(validate_summary(with_comma, source), with_comma)
+
     def test_daily_ai_budget_uses_japan_date_even_across_utc_midnight(self):
         metadata={'lastTopicAttemptAt':'2026-11-11T16:00:00+00:00',
                   'topicGeminiSucceededLastRun':6,'topicGeminiFailedLastRun':0}
