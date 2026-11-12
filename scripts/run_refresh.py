@@ -43,7 +43,7 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
         status['topics']='not_scheduled';status['gemini']='not_scheduled'
     obj=json.loads(DATA.read_text(encoding='utf-8'))
     meta=obj['metadata']
-    meta['version']='0.9.0'
+    meta['version']='0.10.0'
     meta['lastAutomaticCheckAt']=now_iso()
     meta['autoRefreshStatus']=status
     meta['autoRefreshConfigured']=True
@@ -61,6 +61,7 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
     details['topics']={'status':status.get('topics'),'checkedAt':now_iso(),
                       'sourceItemCount':meta.get('topicSourceCountLastRun',0),
                       'addedOrUpdatedCount':meta.get('topicAddedLastRun',0),
+                      'sourceFailureCount':len(meta.get('topicSourceErrorsLastRun',[])),
                       'aiState':status['gemini'],'aiRequestsToday':meta.get('aiRequestBudget',{}).get('attempted',0)}
     details['history']={'status':status['history'],'checkedAt':now_iso(),
                         **meta.get('historyBackfillLastRun',{})}

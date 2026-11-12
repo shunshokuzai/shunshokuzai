@@ -53,6 +53,8 @@ jobs:
         run: python -u scripts/backfill_history.py --live --limit 600
       - name: Check historical coverage and alternate official sources
         run: python -u scripts/verify_history.py
+      - name: Check every published price point against its official archive
+        run: python -u scripts/verify_consistency.py
       - run: python scripts/build_standalone.py
       - name: Retain verified observations on development branch
         run: |

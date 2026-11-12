@@ -25,7 +25,7 @@ from update_data import BASE, DATA, fetch, now_iso, normalize, save
 API = 'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent'
 MODEL = 'gemini-3.1-flash-lite'
 MAFF_DOMAIN = 'www.maff.go.jp'
-SUMMARY_VERSION = 3
+SUMMARY_VERSION = 4
 
 
 def recent_forecast_url(today, getter=fetch):
@@ -177,7 +177,7 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
         skip_ai = unchanged and (old.get('aiGenerated') or not key or blocked or attempts >= request_limit)
         if skip_ai and old.get('summaryVersion') == SUMMARY_VERSION:
             continue
-        summary = old['summary'] if unchanged and old.get('aiGenerated') else extract_summary(item.get('summaryExcerpt') or item['excerpt'])
+        summary = old['summary'] if unchanged and old.get('aiGenerated') else (item.get('summaryExcerpt') or extract_summary(item['excerpt']))
         generated = bool(unchanged and old.get('aiGenerated'))
         if generated:
             try:

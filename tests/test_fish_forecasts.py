@@ -4,11 +4,30 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from fish_forecasts import forecast_links, target_period, forecast_sections, report_items
+from fish_forecasts import forecast_links, target_period, forecast_sections, report_items, overview_sections
 from official_topics import weekly_period
 
 
 class FishForecastTests(unittest.TestCase):
+    def test_overview_keeps_opposite_sea_area_trends_and_both_mackerel_species(self):
+        text='''漁況（来遊量予測）
+マイワシ
+西では前年を上回るが、東では前年を下回る。全体として前年を下回る。
+カタクチイワシ
+西は低水準、北では前年を上回る。
+ウルメイワシ
+海域によって異なるが、全体として前年並。
+マアジ
+前年を下回る海域が多い。
+マサバ・ゴマサバ
+マサバ、ゴマサバともに低水準。
+問い合わせ先'''
+        result=overview_sections(text,'pacific')
+        self.assertIn('上回る',result['マイワシ'])
+        self.assertIn('下回る',result['マイワシ'])
+        self.assertIn('ともに低水準',result['マサバ・ゴマサバ'])
+        with self.assertRaises(ValueError):overview_sections(text.replace('マサバ・ゴマサバ\n',''),'pacific')
+
     def test_only_published_official_latest_family_links_are_selected(self):
         html='''<a href="/home/kenkyushokai/press/pr2026/fri_20260803_ukiuo-pac-1st.html">太平洋いわし類</a>
         <a href="/home/kenkyushokai/press/pr2026/fri_20261220_ukiuo-pac-2nd.html">太平洋いわし類</a>
