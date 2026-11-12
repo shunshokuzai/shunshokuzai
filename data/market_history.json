@@ -37544,6 +37544,797 @@
           "pieceWeightSpec": "-"
         }
       }
+    },
+    "2024-2-4": {
+      "stamp": [
+        2024,
+        2,
+        4
+      ],
+      "sourceUrl": "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2024024.html",
+      "values": {
+        "マグロ": {
+          "price": 6159,
+          "yearAgoRatio": 119,
+          "previousRatio": 107,
+          "brandLabel": "生",
+          "brandDetail": "各地 生・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "アジ": {
+          "price": 1663,
+          "yearAgoRatio": 241,
+          "previousRatio": 203,
+          "brandLabel": "中",
+          "brandDetail": "高知 中・180-200g/尾",
+          "pieceWeightKg": 0.19,
+          "pieceWeightSpec": "180-200g/尾"
+        },
+        "サバ": {
+          "price": 454,
+          "yearAgoRatio": 100,
+          "previousRatio": 100,
+          "brandLabel": "－",
+          "brandDetail": "千葉 －・7-10入/5kg",
+          "pieceWeightKg": 0.58823529,
+          "pieceWeightSpec": "7-10入/5kg"
+        },
+        "イワシ": {
+          "price": 410,
+          "yearAgoRatio": 118,
+          "previousRatio": 103,
+          "brandLabel": "－",
+          "brandDetail": "岩手ほか －・100-110g/尾",
+          "pieceWeightKg": 0.105,
+          "pieceWeightSpec": "100-110g/尾"
+        },
+        "スルメイカ": {
+          "price": 1242,
+          "yearAgoRatio": 108,
+          "previousRatio": 81,
+          "brandLabel": "－",
+          "brandDetail": "富山 －・15-20入/5kg",
+          "pieceWeightKg": 0.28571429,
+          "pieceWeightSpec": "15-20入/5kg"
+        },
+        "カレイ": {
+          "price": 716,
+          "yearAgoRatio": 133,
+          "previousRatio": 110,
+          "brandLabel": "マ",
+          "brandDetail": "北海道 マ・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "ハマチ": {
+          "price": 1026,
+          "yearAgoRatio": 66,
+          "previousRatio": 100,
+          "brandLabel": "野〆",
+          "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
+          "pieceWeightKg": 5.5,
+          "pieceWeightSpec": "5-6kg/尾"
+        },
+        "カツオ": {
+          "price": 864,
+          "yearAgoRatio": 129,
+          "previousRatio": 108,
+          "brandLabel": "－",
+          "brandDetail": "鹿児島ほか －・2-5kg/尾",
+          "pieceWeightKg": 3.5,
+          "pieceWeightSpec": "2-5kg/尾"
+        },
+        "キンメダイ": {
+          "price": 2376,
+          "yearAgoRatio": 112,
+          "previousRatio": 131,
+          "brandLabel": "－",
+          "brandDetail": "千葉ほか －・0.5-1.5kg/尾",
+          "pieceWeightKg": 1.0,
+          "pieceWeightSpec": "0.5-1.5kg/尾"
+        },
+        "カキ": {
+          "price": 2452,
+          "yearAgoRatio": 89,
+          "previousRatio": 83,
+          "brandLabel": "－",
+          "brandDetail": "三陸 －・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        }
+      }
+    },
+    "2024-2-3": {
+      "stamp": [
+        2024,
+        2,
+        3
+      ],
+      "sourceUrl": "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2024023.html",
+      "values": {
+        "マグロ": {
+          "price": 5746,
+          "yearAgoRatio": 102,
+          "previousRatio": 111,
+          "brandLabel": "生",
+          "brandDetail": "各地 生・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "アジ": {
+          "price": 821,
+          "yearAgoRatio": 99,
+          "previousRatio": 112,
+          "brandLabel": "中",
+          "brandDetail": "長崎 中・180-200g/尾",
+          "pieceWeightKg": 0.19,
+          "pieceWeightSpec": "180-200g/尾"
+        },
+        "サバ": {
+          "price": 454,
+          "yearAgoRatio": 100,
+          "previousRatio": 108,
+          "brandLabel": "－",
+          "brandDetail": "宮城ほか －・7-10入/5kg",
+          "pieceWeightKg": 0.58823529,
+          "pieceWeightSpec": "7-10入/5kg"
+        },
+        "イワシ": {
+          "price": 400,
+          "yearAgoRatio": 100,
+          "previousRatio": 117,
+          "brandLabel": "－",
+          "brandDetail": "富山ほか －・100-110g/尾",
+          "pieceWeightKg": 0.105,
+          "pieceWeightSpec": "100-110g/尾"
+        },
+        "スルメイカ": {
+          "price": 1525,
+          "yearAgoRatio": 115,
+          "previousRatio": 112,
+          "brandLabel": "－",
+          "brandDetail": "長崎ほか －・20入/5kg",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "20入/5kg"
+        },
+        "カレイ": {
+          "price": 648,
+          "yearAgoRatio": 118,
+          "previousRatio": 96,
+          "brandLabel": "マ",
+          "brandDetail": "北海道 マ・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "ハマチ": {
+          "price": 1026,
+          "yearAgoRatio": 66,
+          "previousRatio": 100,
+          "brandLabel": "野〆",
+          "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
+          "pieceWeightKg": 5.5,
+          "pieceWeightSpec": "5-6kg/尾"
+        },
+        "カツオ": {
+          "price": 799,
+          "yearAgoRatio": 68,
+          "previousRatio": 61,
+          "brandLabel": "－",
+          "brandDetail": "鹿児島ほか －・2-6kg/尾",
+          "pieceWeightKg": 4.0,
+          "pieceWeightSpec": "2-6kg/尾"
+        },
+        "キンメダイ": {
+          "price": 1814,
+          "yearAgoRatio": 84,
+          "previousRatio": 101,
+          "brandLabel": "－",
+          "brandDetail": "千葉ほか －・0.5-1.5kg/尾",
+          "pieceWeightKg": 1.0,
+          "pieceWeightSpec": "0.5-1.5kg/尾"
+        },
+        "カキ": {
+          "price": 2938,
+          "yearAgoRatio": 109,
+          "previousRatio": 104,
+          "brandLabel": "－",
+          "brandDetail": "三陸 －・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        }
+      }
+    },
+    "2024-2-2": {
+      "stamp": [
+        2024,
+        2,
+        2
+      ],
+      "sourceUrl": "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2024022.html",
+      "values": {
+        "マグロ": {
+          "price": 5193,
+          "yearAgoRatio": 105,
+          "previousRatio": 80,
+          "brandLabel": "生",
+          "brandDetail": "各地 生・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "アジ": {
+          "price": 734,
+          "yearAgoRatio": 103,
+          "previousRatio": 115,
+          "brandLabel": "中",
+          "brandDetail": "長崎 中・180-200g/尾",
+          "pieceWeightKg": 0.19,
+          "pieceWeightSpec": "180-200g/尾"
+        },
+        "サバ": {
+          "price": 421,
+          "yearAgoRatio": 104,
+          "previousRatio": 111,
+          "brandLabel": "－",
+          "brandDetail": "長崎ほか －・7-10入/5kg",
+          "pieceWeightKg": 0.58823529,
+          "pieceWeightSpec": "7-10入/5kg"
+        },
+        "イワシ": {
+          "price": 341,
+          "yearAgoRatio": 105,
+          "previousRatio": 102,
+          "brandLabel": "－",
+          "brandDetail": "千葉ほか －・100-110g/尾",
+          "pieceWeightKg": 0.105,
+          "pieceWeightSpec": "100-110g/尾"
+        },
+        "スルメイカ": {
+          "price": 1361,
+          "yearAgoRatio": 104,
+          "previousRatio": 119,
+          "brandLabel": "－",
+          "brandDetail": "富山ほか －・15-20入/5kg",
+          "pieceWeightKg": 0.28571429,
+          "pieceWeightSpec": "15-20入/5kg"
+        },
+        "カレイ": {
+          "price": 675,
+          "yearAgoRatio": 136,
+          "previousRatio": 95,
+          "brandLabel": "マ",
+          "brandDetail": "北海道 マ・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "ハマチ": {
+          "price": 1026,
+          "yearAgoRatio": 66,
+          "previousRatio": 100,
+          "brandLabel": "野〆",
+          "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
+          "pieceWeightKg": 5.5,
+          "pieceWeightSpec": "5-6kg/尾"
+        },
+        "カツオ": {
+          "price": 1318,
+          "yearAgoRatio": 84,
+          "previousRatio": 67,
+          "brandLabel": "－",
+          "brandDetail": "宮崎ほか －・2-5kg/尾",
+          "pieceWeightKg": 3.5,
+          "pieceWeightSpec": "2-5kg/尾"
+        },
+        "キンメダイ": {
+          "price": 1793,
+          "yearAgoRatio": 83,
+          "previousRatio": 88,
+          "brandLabel": "－",
+          "brandDetail": "東京ほか －・0.5-1.5kg/尾",
+          "pieceWeightKg": 1.0,
+          "pieceWeightSpec": "0.5-1.5kg/尾"
+        },
+        "カキ": {
+          "price": 2821,
+          "yearAgoRatio": 117,
+          "previousRatio": 106,
+          "brandLabel": "－",
+          "brandDetail": "三陸 －・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        }
+      }
+    },
+    "2024-2-1": {
+      "stamp": [
+        2024,
+        2,
+        1
+      ],
+      "sourceUrl": "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2024021.html",
+      "values": {
+        "マグロ": {
+          "price": 6486,
+          "yearAgoRatio": 140,
+          "previousRatio": 106,
+          "brandLabel": "生",
+          "brandDetail": "各地 生・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "アジ": {
+          "price": 637,
+          "yearAgoRatio": 97,
+          "previousRatio": 49,
+          "brandLabel": "中",
+          "brandDetail": "長崎 中・180-200g/尾",
+          "pieceWeightKg": 0.19,
+          "pieceWeightSpec": "180-200g/尾"
+        },
+        "サバ": {
+          "price": 378,
+          "yearAgoRatio": 82,
+          "previousRatio": 76,
+          "brandLabel": "－",
+          "brandDetail": "長崎ほか －・7-10入/5kg",
+          "pieceWeightKg": 0.58823529,
+          "pieceWeightSpec": "7-10入/5kg"
+        },
+        "イワシ": {
+          "price": 335,
+          "yearAgoRatio": 94,
+          "previousRatio": 84,
+          "brandLabel": "－",
+          "brandDetail": "岩手 －・100-110g/尾",
+          "pieceWeightKg": 0.105,
+          "pieceWeightSpec": "100-110g/尾"
+        },
+        "スルメイカ": {
+          "price": 1145,
+          "yearAgoRatio": 86,
+          "previousRatio": 86,
+          "brandLabel": "－",
+          "brandDetail": "富山 －・15-20入/5kg",
+          "pieceWeightKg": 0.28571429,
+          "pieceWeightSpec": "15-20入/5kg"
+        },
+        "カレイ": {
+          "price": 713,
+          "yearAgoRatio": 132,
+          "previousRatio": 87,
+          "brandLabel": "マ",
+          "brandDetail": "北海道 マ・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "ハマチ": {
+          "price": 1026,
+          "yearAgoRatio": 66,
+          "previousRatio": 100,
+          "brandLabel": "野〆",
+          "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
+          "pieceWeightKg": 5.5,
+          "pieceWeightSpec": "5-6kg/尾"
+        },
+        "カツオ": {
+          "price": 1971,
+          "yearAgoRatio": 98,
+          "previousRatio": 112,
+          "brandLabel": "－",
+          "brandDetail": "愛媛ほか －・3-5kg/尾",
+          "pieceWeightKg": 4.0,
+          "pieceWeightSpec": "3-5kg/尾"
+        },
+        "キンメダイ": {
+          "price": 2030,
+          "yearAgoRatio": 94,
+          "previousRatio": 84,
+          "brandLabel": "－",
+          "brandDetail": "千葉ほか －・0.5-1.5kg/尾",
+          "pieceWeightKg": 1.0,
+          "pieceWeightSpec": "0.5-1.5kg/尾"
+        },
+        "カキ": {
+          "price": 2666,
+          "yearAgoRatio": 132,
+          "previousRatio": 101,
+          "brandLabel": "－",
+          "brandDetail": "三陸 －・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        }
+      }
+    },
+    "2024-1-4": {
+      "stamp": [
+        2024,
+        1,
+        4
+      ],
+      "sourceUrl": "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2024014.html",
+      "values": {
+        "マグロ": {
+          "price": 6143,
+          "yearAgoRatio": 113,
+          "previousRatio": 91,
+          "brandLabel": "生",
+          "brandDetail": "各地 生・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "アジ": {
+          "price": 1296,
+          "yearAgoRatio": 207,
+          "previousRatio": 124,
+          "brandLabel": "中",
+          "brandDetail": "長崎ほか 中・160-200g/尾",
+          "pieceWeightKg": 0.18,
+          "pieceWeightSpec": "160-200g/尾"
+        },
+        "サバ": {
+          "price": 497,
+          "yearAgoRatio": 94,
+          "previousRatio": 115,
+          "brandLabel": "－",
+          "brandDetail": "長崎ほか －・7-10入/5kg",
+          "pieceWeightKg": 0.58823529,
+          "pieceWeightSpec": "7-10入/5kg"
+        },
+        "イワシ": {
+          "price": 400,
+          "yearAgoRatio": 103,
+          "previousRatio": 88,
+          "brandLabel": "－",
+          "brandDetail": "岩手 －・100-110g/尾",
+          "pieceWeightKg": 0.105,
+          "pieceWeightSpec": "100-110g/尾"
+        },
+        "スルメイカ": {
+          "price": 1339,
+          "yearAgoRatio": 99,
+          "previousRatio": 100,
+          "brandLabel": "－",
+          "brandDetail": "富山 －・15-20入/5kg",
+          "pieceWeightKg": 0.28571429,
+          "pieceWeightSpec": "15-20入/5kg"
+        },
+        "カレイ": {
+          "price": 821,
+          "yearAgoRatio": 121,
+          "previousRatio": 98,
+          "brandLabel": "マ",
+          "brandDetail": "北海道 マ・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "ハマチ": {
+          "price": 1026,
+          "yearAgoRatio": 66,
+          "previousRatio": 100,
+          "brandLabel": "野〆",
+          "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
+          "pieceWeightKg": 5.5,
+          "pieceWeightSpec": "5-6kg/尾"
+        },
+        "カツオ": {
+          "price": 1760,
+          "yearAgoRatio": 85,
+          "previousRatio": 133,
+          "brandLabel": "－",
+          "brandDetail": "和歌山ほか －・3-5kg/尾",
+          "pieceWeightKg": 4.0,
+          "pieceWeightSpec": "3-5kg/尾"
+        },
+        "キンメダイ": {
+          "price": 2419,
+          "yearAgoRatio": 112,
+          "previousRatio": 104,
+          "brandLabel": "－",
+          "brandDetail": "東京ほか －・0.5-1.5kg/尾",
+          "pieceWeightKg": 1.0,
+          "pieceWeightSpec": "0.5-1.5kg/尾"
+        },
+        "カキ": {
+          "price": 2632,
+          "yearAgoRatio": 90,
+          "previousRatio": 95,
+          "brandLabel": "－",
+          "brandDetail": "三陸 －・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        }
+      }
+    },
+    "2024-1-3": {
+      "stamp": [
+        2024,
+        1,
+        3
+      ],
+      "sourceUrl": "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2024013.html",
+      "values": {
+        "マグロ": {
+          "price": 6726,
+          "yearAgoRatio": 129,
+          "previousRatio": 116,
+          "brandLabel": "生",
+          "brandDetail": "各地 生・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "アジ": {
+          "price": 1048,
+          "yearAgoRatio": 143,
+          "previousRatio": 128,
+          "brandLabel": "中",
+          "brandDetail": "長崎 中・160-200g/尾",
+          "pieceWeightKg": 0.18,
+          "pieceWeightSpec": "160-200g/尾"
+        },
+        "サバ": {
+          "price": 432,
+          "yearAgoRatio": 100,
+          "previousRatio": 95,
+          "brandLabel": "－",
+          "brandDetail": "長崎ほか －・7-10入/5kg",
+          "pieceWeightKg": 0.58823529,
+          "pieceWeightSpec": "7-10入/5kg"
+        },
+        "イワシ": {
+          "price": 454,
+          "yearAgoRatio": 120,
+          "previousRatio": 128,
+          "brandLabel": "－",
+          "brandDetail": "岩手ほか －・100-110g/尾",
+          "pieceWeightKg": 0.105,
+          "pieceWeightSpec": "100-110g/尾"
+        },
+        "スルメイカ": {
+          "price": 1335,
+          "yearAgoRatio": 107,
+          "previousRatio": 108,
+          "brandLabel": "－",
+          "brandDetail": "富山ほか －・15-20入/5kg",
+          "pieceWeightKg": 0.28571429,
+          "pieceWeightSpec": "15-20入/5kg"
+        },
+        "カレイ": {
+          "price": 842,
+          "yearAgoRatio": 152,
+          "previousRatio": 103,
+          "brandLabel": "マ",
+          "brandDetail": "北海道 マ・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "ハマチ": {
+          "price": 1026,
+          "yearAgoRatio": 66,
+          "previousRatio": 96,
+          "brandLabel": "野〆",
+          "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
+          "pieceWeightKg": 5.5,
+          "pieceWeightSpec": "5-6kg/尾"
+        },
+        "カツオ": {
+          "price": 1328,
+          "yearAgoRatio": 75,
+          "previousRatio": 84,
+          "brandLabel": "－",
+          "brandDetail": "愛媛 －・3-5kg/尾",
+          "pieceWeightKg": 4.0,
+          "pieceWeightSpec": "3-5kg/尾"
+        },
+        "キンメダイ": {
+          "price": 2333,
+          "yearAgoRatio": 108,
+          "previousRatio": 102,
+          "brandLabel": "－",
+          "brandDetail": "千葉ほか －・0.5-1.5kg/尾",
+          "pieceWeightKg": 1.0,
+          "pieceWeightSpec": "0.5-1.5kg/尾"
+        },
+        "カキ": {
+          "price": 2766,
+          "yearAgoRatio": 100,
+          "previousRatio": 123,
+          "brandLabel": "－",
+          "brandDetail": "三陸 －・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        }
+      }
+    },
+    "2024-1-2": {
+      "stamp": [
+        2024,
+        1,
+        2
+      ],
+      "sourceUrl": "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2024012.html",
+      "values": {
+        "マグロ": {
+          "price": 5799,
+          "yearAgoRatio": 127,
+          "previousRatio": 58,
+          "brandLabel": "生",
+          "brandDetail": "各地 生・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "アジ": {
+          "price": 821,
+          "yearAgoRatio": 115,
+          "previousRatio": 79,
+          "brandLabel": "中",
+          "brandDetail": "長崎 中・160-200g/尾",
+          "pieceWeightKg": 0.18,
+          "pieceWeightSpec": "160-200g/尾"
+        },
+        "サバ": {
+          "price": 454,
+          "yearAgoRatio": 89,
+          "previousRatio": 100,
+          "brandLabel": "－",
+          "brandDetail": "長崎ほか －・7-10入/5kg",
+          "pieceWeightKg": 0.58823529,
+          "pieceWeightSpec": "7-10入/5kg"
+        },
+        "イワシ": {
+          "price": 356,
+          "yearAgoRatio": 103,
+          "previousRatio": 92,
+          "brandLabel": "－",
+          "brandDetail": "岩手 －・100-110g/尾",
+          "pieceWeightKg": 0.105,
+          "pieceWeightSpec": "100-110g/尾"
+        },
+        "スルメイカ": {
+          "price": 1231,
+          "yearAgoRatio": 104,
+          "previousRatio": 84,
+          "brandLabel": "－",
+          "brandDetail": "富山 －・12-15入/5kg",
+          "pieceWeightKg": 0.37037037,
+          "pieceWeightSpec": "12-15入/5kg"
+        },
+        "カレイ": {
+          "price": 821,
+          "yearAgoRatio": 173,
+          "previousRatio": 100,
+          "brandLabel": "マ",
+          "brandDetail": "北海道 マ・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "ハマチ": {
+          "price": 1069,
+          "yearAgoRatio": 68,
+          "previousRatio": 94,
+          "brandLabel": "野〆",
+          "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
+          "pieceWeightKg": 5.5,
+          "pieceWeightSpec": "5-6kg/尾"
+        },
+        "カツオ": {
+          "price": 1577,
+          "yearAgoRatio": 81,
+          "previousRatio": 112,
+          "brandLabel": "－",
+          "brandDetail": "和歌山ほか －・3-4kg/尾",
+          "pieceWeightKg": 3.5,
+          "pieceWeightSpec": "3-4kg/尾"
+        },
+        "キンメダイ": {
+          "price": 2290,
+          "yearAgoRatio": 104,
+          "previousRatio": 109,
+          "brandLabel": "－",
+          "brandDetail": "千葉ほか －・0.5-1.5kg/尾",
+          "pieceWeightKg": 1.0,
+          "pieceWeightSpec": "0.5-1.5kg/尾"
+        },
+        "カキ": {
+          "price": 2251,
+          "yearAgoRatio": 115,
+          "previousRatio": 67,
+          "brandLabel": "－",
+          "brandDetail": "三陸 －・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        }
+      }
+    },
+    "2024-1-1": {
+      "stamp": [
+        2024,
+        1,
+        1
+      ],
+      "sourceUrl": "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2024011.html",
+      "values": {
+        "アジ": {
+          "price": 1037,
+          "yearAgoRatio": 145,
+          "previousRatio": 118,
+          "brandLabel": "中",
+          "brandDetail": "長崎 中・160-200g/尾",
+          "pieceWeightKg": 0.18,
+          "pieceWeightSpec": "160-200g/尾"
+        },
+        "サバ": {
+          "price": 454,
+          "yearAgoRatio": 86,
+          "previousRatio": 81,
+          "brandLabel": "－",
+          "brandDetail": "長崎ほか －・7-10入/5kg",
+          "pieceWeightKg": 0.58823529,
+          "pieceWeightSpec": "7-10入/5kg"
+        },
+        "イワシ": {
+          "price": 389,
+          "yearAgoRatio": 92,
+          "previousRatio": 66,
+          "brandLabel": "－",
+          "brandDetail": "岩手 －・100-110g/尾",
+          "pieceWeightKg": 0.105,
+          "pieceWeightSpec": "100-110g/尾"
+        },
+        "スルメイカ": {
+          "price": 1460,
+          "yearAgoRatio": 138,
+          "previousRatio": 91,
+          "brandLabel": "－",
+          "brandDetail": "富山 －・12-15入/5kg",
+          "pieceWeightKg": 0.37037037,
+          "pieceWeightSpec": "12-15入/5kg"
+        },
+        "カレイ": {
+          "price": 824,
+          "yearAgoRatio": 134,
+          "previousRatio": 148,
+          "brandLabel": "マ",
+          "brandDetail": "北海道 マ・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "ハマチ": {
+          "price": 1134,
+          "yearAgoRatio": 72,
+          "previousRatio": 100,
+          "brandLabel": "野〆",
+          "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
+          "pieceWeightKg": 5.5,
+          "pieceWeightSpec": "5-6kg/尾"
+        },
+        "カツオ": {
+          "price": 1404,
+          "yearAgoRatio": 77,
+          "previousRatio": 85,
+          "brandLabel": "－",
+          "brandDetail": "三重ほか －・3-4kg/尾",
+          "pieceWeightKg": 3.5,
+          "pieceWeightSpec": "3-4kg/尾"
+        },
+        "キンメダイ": {
+          "price": 2095,
+          "yearAgoRatio": 87,
+          "previousRatio": 105,
+          "brandLabel": "－",
+          "brandDetail": "千葉ほか －・0.5-1.5kg/尾",
+          "pieceWeightKg": 1.0,
+          "pieceWeightSpec": "0.5-1.5kg/尾"
+        },
+        "カキ": {
+          "price": 3342,
+          "yearAgoRatio": 102,
+          "previousRatio": 92,
+          "brandLabel": "－",
+          "brandDetail": "三陸 －・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        }
+      }
     }
   },
   "backfillFailures": {
@@ -37905,46 +38696,6 @@
     "produce:2021-1-1": {
       "checkedAt": "2026-11-12",
       "error": "HTTPError",
-      "retryAfter": "2026-11-19"
-    },
-    "fish:2024-2-4": {
-      "checkedAt": "2026-11-12",
-      "error": "ValueError",
-      "retryAfter": "2026-11-19"
-    },
-    "fish:2024-2-3": {
-      "checkedAt": "2026-11-12",
-      "error": "ValueError",
-      "retryAfter": "2026-11-19"
-    },
-    "fish:2024-2-2": {
-      "checkedAt": "2026-11-12",
-      "error": "ValueError",
-      "retryAfter": "2026-11-19"
-    },
-    "fish:2024-2-1": {
-      "checkedAt": "2026-11-12",
-      "error": "ValueError",
-      "retryAfter": "2026-11-19"
-    },
-    "fish:2024-1-4": {
-      "checkedAt": "2026-11-12",
-      "error": "ValueError",
-      "retryAfter": "2026-11-19"
-    },
-    "fish:2024-1-3": {
-      "checkedAt": "2026-11-12",
-      "error": "ValueError",
-      "retryAfter": "2026-11-19"
-    },
-    "fish:2024-1-2": {
-      "checkedAt": "2026-11-12",
-      "error": "ValueError",
-      "retryAfter": "2026-11-19"
-    },
-    "fish:2024-1-1": {
-      "checkedAt": "2026-11-12",
-      "error": "ValueError",
       "retryAfter": "2026-11-19"
     }
   }
