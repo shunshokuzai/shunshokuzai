@@ -5,10 +5,10 @@
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
     "version": "0.9.0",
-    "lastCheckedAt": "2026-11-12T13:54:55+00:00",
+    "lastCheckedAt": "2026-11-12T14:12:51+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-12T13:55:00+00:00",
+    "updatedAt": "2026-11-12T14:12:55+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -73,10 +73,10 @@
       "topics": "ok",
       "gemini": "daily_limit"
     },
-    "lastFishCheckedAt": "2026-11-12T13:55:00+00:00",
+    "lastFishCheckedAt": "2026-11-12T14:12:55+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
-    "lastTopicAttemptAt": "2026-11-12T13:55:08+00:00",
+    "lastTopicAttemptAt": "2026-11-12T14:13:01+00:00",
     "lastAutomaticCheckAt": "2026-11-12T13:55:08+00:00",
     "lastFishSuccessAt": "2026-11-12T13:55:08+00:00",
     "lastGeminiSuccessAt": "2026-11-12T04:31:34+00:00",
@@ -93,7 +93,7 @@
       "dailyLimit": 6
     },
     "topicSourceErrorsLastRun": [],
-    "topicGeminiStateLastRun": "daily_limit",
+    "topicGeminiStateLastRun": "sources_only",
     "lastTopicsSuccessAt": "2026-11-12T13:55:08+00:00",
     "lastStepResults": {
       "vegetableFruit": {
@@ -262,7 +262,7 @@
         }
       }
     ],
-    "longHistoryUpdatedAt": "2026-11-12T13:55:02+00:00",
+    "longHistoryUpdatedAt": "2026-11-12T14:13:03+00:00",
     "historyBackfillLastRun": {
       "attempted": 0,
       "succeeded": 0,
