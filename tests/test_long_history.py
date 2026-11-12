@@ -5,11 +5,23 @@ from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from backfill_history import attach_long_history, parse_produce_pdf, backfill
+from backfill_history import attach_long_history, parse_produce_pdf, backfill, fish_observation
 from market_history import MarketHistory
 
 
 class LongHistoryTests(unittest.TestCase):
+    def test_image_pdf_falls_back_to_same_period_official_html(self):
+        raw = '<meta charset="utf-8"><h1>2024年2月4週</h1>'.encode('utf-8')
+        with patch('backfill_history.fetch', side_effect=[b'%PDF-image', raw]), patch(
+                'backfill_history.read_weekly', side_effect=[ValueError('no table'), {'サバ': {'price': 454}}]):
+            source, values = fish_observation((2024, 2, 4), 'https://www.shijou.metro.tokyo.lg.jp/report')
+        self.assertTrue(source.endswith('/2024024.html'))
+        self.assertEqual(values['サバ']['price'], 454)
+        with patch('backfill_history.fetch', side_effect=[b'%PDF-image', raw.replace(b'2024', b'2023')]), patch(
+                'backfill_history.read_weekly', side_effect=ValueError('no table')):
+            with self.assertRaisesRegex(ValueError, 'period mismatch'):
+                fish_observation((2024, 2, 4), 'https://www.shijou.metro.tokyo.lg.jp/report')
+
     def test_five_completed_years_plus_current_and_matching_fish_brand_only(self):
         with tempfile.TemporaryDirectory() as directory:
             archive = MarketHistory(Path(directory)/'history.json')

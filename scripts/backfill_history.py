@@ -96,6 +96,11 @@ def attach_long_history(obj, archive):
         current = next((r['values'][food['name']] for r in reversed(records)
                         if food['name'] in r['values']), None)
         brand = current.get('brandLabel') if isinstance(current, dict) else None
+        expected = {tuple(r['stamp']) for r in records}
+        expected.update(tuple(map(int, key.split(':')[1].split('-')))
+                        for key in archive.data.get('backfillFailures', {})
+                        if key.startswith(kind+':'))
+        sequence = {stamp: i for i, stamp in enumerate(sorted(expected))}
         points = []
         for record in records:
             stamp = record['stamp']
@@ -107,7 +112,8 @@ def attach_long_history(obj, archive):
                 continue
             if kind == 'fish' and (brand is None or value.get('brandLabel') != brand):
                 continue
-            points.append({'period': stamp, 'price': price, 'sourceUrl': record['sourceUrl'],
+            ordinal = sequence[tuple(stamp)] if kind == 'fish' else stamp[0]*36+(stamp[1]-1)*3+stamp[2]-1
+            points.append({'period': stamp, 'sequence': ordinal, 'price': price, 'sourceUrl': record['sourceUrl'],
                            **({'spec': value.get('brandDetail'),
                                'weightKg': value.get('pieceWeightKg')} if kind == 'fish' else {})})
         row['longHistory'] = points

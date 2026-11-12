@@ -22,6 +22,7 @@ test('long-term graphs split missing periods and retain month/year boundaries',(
   assert.equal(ctx.historySegments([{period:[2021,12,3]},{period:[2022,1,1]}],'produce').length,1);
   assert.equal(ctx.historySegments([{period:[2021,1,4]},{period:[2021,2,1]}],'fish').length,1);
   assert.equal(ctx.historySegments([{period:[2021,1,1]},{period:[2021,2,1]}],'fish').length,2);
+  assert.equal(ctx.historySegments([{period:[2021,1,4],sequence:3},{period:[2021,2,1],sequence:5}],'fish').length,2);
 });
 test('year overlay exposes missing years, units, original values and source links',()=>{
   const ctx=historyContext();

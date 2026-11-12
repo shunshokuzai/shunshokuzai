@@ -107,6 +107,7 @@ return `<div class="chart-wrap"><div class="chart-head"><b>${p.historyLabels?`${
 
 
 function adjacentHistory(a,b,kind){
+if(Number.isInteger(a.sequence)&&Number.isInteger(b.sequence))return b.sequence===a.sequence+1;
 const [ay,am,ap]=a.period,[by,bm,bp]=b.period;
 if(ay===by&&am===bm)return bp===ap+1;
 const nextMonth=by*12+bm===ay*12+am+1;
