@@ -61,10 +61,11 @@ def forecast_sections(text):
     stock-assessment discussion after the outlook is deliberately excluded.
     """
     text=compact(text)
-    pattern=r'('+'|'.join(sorted(SPECIES,key=len,reverse=True))+r')(?:太平洋系群等|太平洋系群|対馬暖流系群|長期)?の?漁況予報'
+    taxa=[r'マサバ(?:太平洋系群)?・ゴマサバ',*[re.escape(s) for s in sorted(SPECIES,key=len,reverse=True) if s!='マサバ・ゴマサバ']]
+    pattern=r'('+'|'.join(taxa)+r')(?:太平洋系群等|太平洋系群|対馬暖流系群|長期)?の?漁況予報'
     headings=list(re.finditer(pattern,text));sections={}
     for index,heading in enumerate(headings):
-        species=heading.group(1)
+        species=heading.group(1).replace('太平洋系群','')
         block=text[heading.end():headings[index+1].start() if index+1<len(headings) else len(text)]
         start=block.find('今後の見通し')
         if not 0<=start<180:continue
@@ -149,6 +150,9 @@ def forecast_items(foods,today=None):
             if not pdf:raise ValueError('No official forecast document link')
             import pdfplumber
             with pdfplumber.open(io.BytesIO(fetch_pdf(pdf))) as document:
+                first=document.pages[0]
+                print('FRA FIRST PAGE',family,repr(first.extract_text())[:2500],flush=True)
+                print('FRA SPECIES POSITIONS',family,[(w['text'],round(w['x0'],1),round(w['top'],1),round(w['size'],1)) for w in first.extract_words(extra_attrs=['size']) if w['text'] in SPECIES],flush=True)
                 text='\n'.join(page.extract_text() or '' for page in document.pages[:24])
             items=report_items(foods,family,published,url,html,text,pdf,today)
             if not items:raise ValueError('No current recognizable fish forecast sections')

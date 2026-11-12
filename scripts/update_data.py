@@ -81,7 +81,10 @@ def cache_produce(archive, stamp, source, values):
 def commodity_label(name):
     if name in IMPORTED_FRUIT:
         return name+'（輸入果実）'
-    return {'メロン':'メロン計（国産果実）','洋なし':'西洋なし'}.get(name,name)
+    domestic={'メロン':'メロン計','洋なし':'西洋なし','ぶどう':'ぶどう計','りんご':'りんご計','みかん':'みかん計','なし':'日本なし計','かき':'かき計'}
+    if name in domestic:return domestic[name]+'（国産果実）'
+    if name in {'もも','すもも','巨峰','シャインマスカット','くり','いちご','すいか'}:return name+'（国産果実）'
+    return name
 
 
 def coded_price(row, known):
@@ -173,7 +176,7 @@ def parse_csv(blob, food_names):
     rows = list(csv.reader(io.StringIO(decode_csv(blob))))
     known = set(food_names)
     out = {}
-    coded = any(len(row)>1 and re.fullmatch(r'\d{5}', row[1].strip()) for row in rows)
+    coded = any('品目コード' in re.sub(r'\s+','',cell) for row in rows[:15] for cell in row)
     for row in rows:
         result = coded_price(row,known) if coded else _ratio_verified_position(row, known)
         if result:

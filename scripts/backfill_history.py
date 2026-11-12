@@ -103,7 +103,7 @@ def attach_long_history(obj, archive):
         sequence = {stamp: i for i, stamp in enumerate(sorted(expected))}
         points = []
         for record in records:
-            if kind == 'produce' and food['name'] in IMPORTED_FRUIT | {'メロン'} and not same_produce_schema(record):
+            if kind == 'produce' and food['category']=='fruit' and not same_produce_schema(record):
                 continue
             stamp = record['stamp']
             if tuple(stamp) < start:

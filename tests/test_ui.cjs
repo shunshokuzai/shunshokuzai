@@ -16,6 +16,27 @@ function historyContext(){
   vm.runInContext(source.slice(source.indexOf('function adjacentHistory('),source.indexOf('function topicEvidence(')),ctx);
   return ctx;
 }
+function topicContext(){
+  const ctx=vm.createContext({});
+  vm.runInContext(source.slice(source.indexOf('function topicDate('),source.indexOf('const foodMap=')),ctx);
+  return ctx;
+}
+test('newer market observations and regional forecasts remain together after recaching',()=>{
+  const ctx=topicContext();
+  const topics=[
+    {id:'old',foodId:'f',yearSpecific:true,sourceFamily:'tokyo-fish',periodEnd:'2026-10-29',sources:[{}],retrievedAt:'2026-11-12'},
+    {id:'week',foodId:'f',yearSpecific:true,sourceFamily:'tokyo-fish',periodEnd:'2026-11-05',sources:[{}]},
+    {id:'forecast',foodId:'f',yearSpecific:true,sourceFamily:'fra-pacific',publishedAt:'2026-08-03',periodEnd:'2026-12-31',isForecast:true,sources:[{}]}
+  ];
+  assert.deepEqual(Array.from(ctx.activeFoodTopics(topics,'f','2026-11-12'),t=>t.id),['week','forecast']);
+});
+test('expired forecasts disappear while a valid cross-year forecast remains',()=>{
+  const ctx=topicContext();
+  const topic={id:'forecast',foodId:'f',yearSpecific:true,publishedAt:'2026-10-28',periodEnd:'2027-03-31',isForecast:true,sources:[{}]};
+  assert.equal(ctx.activeFoodTopics([topic],'f','2027-01-12').length,1);
+  assert.equal(ctx.activeFoodTopics([topic],'f','2027-04-01').length,0);
+  assert.equal(ctx.activeFoodTopics([{...topic,publishedAt:'2027-02-01'}],'f','2027-01-12').length,0);
+});
 test('long-term graphs split missing periods and retain month/year boundaries',()=>{
   const ctx=historyContext();
   assert.equal(ctx.historySegments([{period:[2021,1,1]},{period:[2021,1,3]},{period:[2021,2,1]}],'produce').length,2);

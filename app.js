@@ -7,9 +7,44 @@ const urlSafe=(str)=>{try{let u=new URL(str);return ['https:','http:'].includes(
 const now=new Date(), currentMonth=now.getMonth()+1;
 let saved=[];try{saved=JSON.parse(localStorage.getItem('shun-favs')||'[]');if(!Array.isArray(saved))saved=[]}catch{}
 const state={page:'topics',category:'all',query:'',sort:'default',priceOnly:'all',month:currentMonth,calendarCategory:'all',fav:saved,region:'national',lastFocus:null,customFishWeights:{}};
-const foodMap=new Map(D.foods.map(f=>[f.id,f]));const priceMap=new Map(D.prices.map(p=>[p.foodId,p]));const topicMap=new Map([...D.topics].reverse().map(t=>[t.foodId,t]));
+
+function topicDate(t){
+if(/^\d{4}-\d{2}-\d{2}/.test(t.publishedAt||''))return t.publishedAt.slice(0,10);
+if(t.periodEnd&&!t.isForecast)return t.periodEnd;
+const m=String(t.observedPeriod||'').match(/(20\d{2})年(\d{1,2})月(?:(\d{1,2})日)?/);
+return m?m[1]+'-'+m[2].padStart(2,'0')+'-'+(m[3]||'01').padStart(2,'0'):'';
+}
+function topicFamily(t){
+if(t.sourceFamily)return t.sourceFamily;
+const s=t.sources?.[0]||{};
+if((s.url||'').includes('/press/nousan/engei/'))return 'maff-vegetable';
+if((s.name||'').includes('週間市況'))return (s.name||'').includes('水産')?'tokyo-fish':'tokyo-fruit';
+return s.url||t.id;
+}
+function activeFoodTopics(topics,foodId,today){
+const forecastEnd=t=>{
+if(t.periodEnd)return t.periodEnd;
+const text=String(t.observedPeriod||'');
+const range=text.match(/(20\d{2})年(\d{1,2})月?[～〜~－-](?:(20\d{2})年)?(\d{1,2})月/);
+const month=text.match(/(20\d{2})年(\d{1,2})月/);
+if(!range&&!month)return '';
+const year=range?Number(range[3]||range[1])+(range[3]?0:Number(range[4])<Number(range[2])?1:0):Number(month[1]);
+const mon=Number(range?range[4]:month[2]);if(mon<1||mon>12)return '';
+return year+'-'+String(mon).padStart(2,'0')+'-'+new Date(Date.UTC(year,mon,0)).getUTCDate();
+};
+const candidates=topics.filter(t=>{
+if(t.foodId!==foodId||!t.yearSpecific||!t.sources?.length)return false;
+const date=topicDate(t);if(!date||date>today)return false;
+const forecast=t.isForecast||/予報|見通し/.test(t.observedPeriod||'');
+if(forecast){const end=forecastEnd(t);return end?end>=today:date.slice(0,4)===today.slice(0,4)}
+return Date.parse(today)-Date.parse(date)<=65*86400000;
+}).sort((a,b)=>topicDate(b).localeCompare(topicDate(a))||String(a.id).localeCompare(String(b.id)));
+const seen=new Set();return candidates.filter(t=>{const key=topicFamily(t);if(seen.has(key))return false;seen.add(key);return true});
+}
+
+const foodMap=new Map(D.foods.map(f=>[f.id,f]));const priceMap=new Map(D.prices.map(p=>[p.foodId,p]));const topicToday=now.toLocaleDateString('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'});const activeTopics=D.foods.flatMap(f=>activeFoodTopics(D.topics,f.id,topicToday));const topicMap=new Map(D.foods.map(f=>[f.id,activeTopics.filter(t=>t.foodId===f.id)[0]]).filter(([,t])=>t));
 const isMonth=(food,m)=>food.seasonMonths.includes(m);
-const officialTopics=()=>D.topics.filter(t=>t.yearSpecific && t.verified).length;
+const officialTopics=()=>activeTopics.length;
 const priceStatus=(p)=>{if(!p||p.stale||p.normalRatio==null)return ['判定待ち','demo'];return p.normalRatio<85?['安い','low']:p.normalRatio>115?['高い','high']:['普通','mid']};
 const priceIndicator=(id)=>{const [label,kind]=priceStatus(priceMap.get(id));const text=kind==='demo'?'未判定':label;return `<span class="price-indicator ${kind}" role="img" aria-label="価格判定：${text}" title="${kind==='demo'?'平年比未算出または価格未収録':`参考平年比による判定：${label}`}"><i aria-hidden="true"></i></span>`};
 const tone=f=>['vegetable','fruit','fish'].indexOf(f.category)===0?((f.id.charCodeAt(f.id.length-1)%2)?'tone-2':'tone-3'):f.category==='fruit'?'tone-0':'tone-3';
@@ -55,7 +90,7 @@ const inSeason=D.foods.filter(f=>isMonth(f,currentMonth)).length;const recent=[.
 return `${seedNotice()}
 <div class="stat-grid"><div class="stat-card"><span class="stat-symbol">✦</span><span><small>${currentMonth}月の旬の食材</small><strong>${inSeason}</strong><em>品目</em></span></div><div class="stat-card"><span class="stat-symbol">↗</span><span><small>公的市場価格</small><strong>${D.prices.filter(p=>!p.sample).length}</strong><em>品目</em></span></div><div class="stat-card"><span class="stat-symbol">▤</span><span><small>公的資料に基づく話題</small><strong>${officialTopics()}</strong><em>件</em></span></div></div>
 <section class="section"><div class="section-head"><div><h2>🍁 ${currentMonth}月の注目食材</h2><p>旬の食材をピックアップ</p></div><button class="text-link" data-page="calendar">旬カレンダーを見る ↗</button></div><div class="feature-grid">${focus.map(featureCard).join('')}</div></section>
-<section class="section"><div class="section-head"><div><h2>今年の生育・出荷・漁況</h2><p>一次資料をもとに現時点で確認できた情報です。予報と実績は区別しています。</p></div><span class="highlight-tag">出典付き ${recent.length} 件</span></div><div class="topic-list">${recent.length?recent.map(topicRow).join(''):empty('今年の話題はまだありません','Geminiで新情報を取得すると追加されます。')}</div></section>
+<section class="section"><div class="section-head"><div><h2>今年の生育・出荷・漁況</h2><p>一次資料をもとに現時点で確認できた情報です。予報と実績は区別しています。</p></div><span class="highlight-tag">出典付き ${recent.length} 品目</span></div><div class="topic-list">${recent.length?recent.map(topicRow).join(''):empty('今年の話題はまだありません','Geminiで新情報を取得すると追加されます。')}</div></section>
 <section class="section"><div class="section-head"><div><h2>旬の豆知識</h2><p>毎年の旬についての一般的な説明です。今年の作柄情報ではありません。</p></div><span class="highlight-tag">季節の説明 ${general.length} 件</span></div><div class="topic-list">${general.map(topicRow).join('')}</div></section>
 <div class="mini-insight"><strong>ℹ &nbsp;更新の状況</strong><br>掲載価格の対象：青果 ${escaped(D.metadata.priceObservationPeriod||'未取得')}／魚 ${escaped(D.metadata.fishPriceObservationPeriod||'未取得')}。データ更新：${escaped(D.metadata.updatedAt||'未取得')}。AI要約は取得した公的原文から作成し、独立検証前であることを明記します。</div>`}
 function filteredPrices(){let arr=D.prices.filter(p=>{let f=foodMap.get(p.foodId);return f&&(state.category==='all'||f.category===state.category)&&matchesFood(f,state.query.trim())&&(state.priceOnly==='all'||priceStatus(p)[1]===state.priceOnly)});
@@ -141,6 +176,13 @@ function topicEvidence(t){
 return '<div class="topic-context"><span>'+escaped(t.scope||'対象地域は原文参照')+'</span><span>'+escaped(t.reportType||'公的資料の記述')+'</span></div>'+(t.evidenceSections?.length?'<details class="topic-evidence"><summary>根拠の原文・見通しを確認</summary>'+t.evidenceSections.map(s=>'<div><strong>'+escaped(s.label)+'</strong><p>'+escaped(s.text)+'</p></div>').join('')+(t.limitations?'<p class="small-note">'+escaped(t.limitations)+'</p>':'')+'<p class="small-note">'+(t.aiGenerated?'AI要約には数値・見通しの自動チェックを行っていますが、内容全体の独立検証は完了していません。原文もご確認ください。':'原文の該当箇所を掲載しています。')+'</p></details>':'');
 }
 
+
+function extraTopicCards(f,main){
+const others=activeTopics.filter(t=>t.foodId===f.id&&t.id!==main?.id);
+if(!others.length)return '';
+return '<div class="related-reports"><h4>この食材のほかの公的資料（'+others.length+'件）</h4>'+others.map(t=>'<details class="related-report"><summary>'+escaped(t.title)+'</summary><p class="small-note">対象：'+escaped(t.observedPeriod||'原文参照')+'／公表：'+escaped(t.publishedAt||'未確認')+'</p><p>'+escaped(t.summary)+'</p>'+topicEvidence(t)+'<div class="source-links">'+(t.sources||[]).map(s=>'<a href="'+urlSafe(s.url)+'" target="_blank" rel="noopener noreferrer">↗ '+escaped(s.title||s.name||'原文')+'</a>').join('')+'</div></details>').join('')+'</div>';
+}
+
 function fishHistoryTable(p,f){if(p.stale||!p.historicalPrices?.length || !p.normalPrice)return '';const statistic=f.category==='fish'?'中値':'卸売平均価格';return `<div class="info-card" style="margin-top:12px"><h3 style="margin:0 0 8px">参考平年比の計算に使った価格</h3><p class="small-note">${escaped(p.normalRatioBasis||'')}。年度をクリックすると元資料が開きます。</p><div class="comparison-grid">${p.historicalYears.map((year,i)=>`<a href="${urlSafe(p.historicalSources[i])}" target="_blank" rel="noopener noreferrer"><small>${year}年 ↗</small><strong>${formatCurrency(p.historicalPrices[i])}円/kg</strong>${p.historicalSpecs?.[i]?`<small>${escaped(p.historicalSpecs[i])}</small>`:''}</a>`).join('')}</div><p class="small-note">過去${p.historicalYears.length}年の比較年平均（単純平均）：${formatCurrency(p.normalPrice)}円/kg<br>今年の${statistic}：${formatCurrency(p.price)}円/kg<br>参考平年比：${p.normalRatio}%（今年の${statistic} ÷ 同時期の比較年平均 × 100）</p></div>`}
 function fishWeightPanel(p,f){if(f.category!=='fish')return '';if(f.name==='カキ')return `<div class="legend-note"><strong>1個単価は換算できません。</strong> 公表値は殻付きでなく、むき身1kgの卸売価格です。むき身の数量と個数が対応しないため、1個価格を推定しません。</div>`;
 const kg=weightOf(p,f);const hasOfficial=Number.isFinite(p.pieceWeightKg)&&p.pieceWeightKg>0;
@@ -148,7 +190,7 @@ return `<div class="fish-weight-panel"><strong>🐟 1${fishUnit(f)}あたりの�
 
 function openDetail(id,topicId){let f=foodMap.get(id);if(!f)return;const p=priceMap.get(id),t=(topicId?D.topics.find(t=>t.id===topicId):null)||relatedTopic(f);const status=p?priceStatus(p):null;const box=get('overlay');if(box.hidden)state.lastFocus=document.activeElement;const text=t?.yearSpecific?t.summary:`${f.name}の旬は地域・品種・漁期等で異なります。`;const src=t?.sources||[];
 get('detailContent').innerHTML=`<div class="detail-top ${tone(f)}"><button type="button" class="detail-close" id="closeDetail" aria-label="閉じる">×</button><span class="big-emoji">${art(f)}</span></div><div class="detail-inner"><span class="eyebrow">${names[f.category]} · 食材の詳細</span><div class="detail-title-line"><div class="food-name-line"><h2 id="detailTitle">${escaped(f.name)}</h2>${priceIndicator(f.id)}</div><button class="fav-detail" data-fav="${f.id}">${state.fav.includes(id)?'♥ お気に入り済み':'♡ お気に入りに登録'}</button></div><p class="detail-sub">旬の目安：${f.seasonStart}月 ～ ${f.seasonEnd}月</p><h3>📰 今年の生育・出荷・漁況</h3>${t?.yearSpecific?`${pill(t.aiGenerated?'Gemini要約・独立検証前':'公的資料を確認して要約',t.aiGenerated?'demo':'')}<p class="detail-summary">${escaped(text)}</p>${topicEvidence(t)}<div class="source-links"><span class="small-note">対象期間：${escaped(t.observedPeriod||'要出典確認')}</span><span class="small-note">公表日：${escaped(t.publishedAt||'不明')}</span><span class="small-note">アプリ反映：${escaped(String(t.retrievedAt||'未記録').slice(0,10))}</span>${src.map(x=>`<a href="${urlSafe(x.url)}" target="_blank" rel="noopener noreferrer">↗ ${escaped(x.name||'出典原文を確認')}</a>`).join('')}</div>`:`<p class="detail-summary">この食材の今年の状況について、出典付きの情報はまだ収録されていません。</p>`}
-<h3>📈 ${f.category==='fish'?'1尾あたりの参考価格':'卸売価格'} ${p?pill(f.category==='fish'?'東京都豊洲市場の公的統計':'農林水産省の公的統計'):pill('データ未収録','demo')}</h3>${p?`<div class="detail-stats"><div class="detail-stat"><small>${f.category==='fish'?'市場1'+fishUnit(f)+'参考換算（卸売）':escaped(p.priceStatistic||p.market||'卸売価格・円/kg')}</small><strong>${f.category==='fish'?(oneFish(p,f)==null?'換算不可':`約 ${formatCurrency(oneFish(p,f))} <em>円/${fishUnit(f)}</em>`):`${formatCurrency(p.price)} <em>円/kg</em>`}</strong></div><div class="detail-stat"><small>${f.category==='fish'?'参考平年比と判定':'平年比と判定'}</small><strong>${p.normalRatio!=null?p.normalRatio+'%':'—'}</strong> ${pill(status[0],status[1])}</div></div><p class="small-note">${f.category==='fish'?'前年同期比':'前年同旬比'}：${p.yearAgoRatio!=null?p.yearAgoRatio+'%':'未公表'}（前年を100%）。統計上の品目：${escaped(p.statisticalItem||f.name)}${p.brandDetail?`／主な規格：${escaped(p.brandDetail)}`:''}</p>${f.category==='fish'?fishWeightPanel(p,f):''}${sparkSvg(p,f)}${longHistoryPanel(p,f)}${p.historicalPrices?fishHistoryTable(p,f):''}${p.note?`<div class="legend-note">${escaped(p.note)}</div>`:''}<div class="source-links"><span class="small-note">対象期間：${escaped(p.period)}</span><span class="small-note">出典の公表日：${escaped(p.publishedAt||'未確認')}</span><span class="small-note">アプリ反映：${escaped(p.retrievedAt||'未記録')}</span><a href="${urlSafe(p.sourceUrl)}" target="_blank" rel="noopener noreferrer">↗ ${f.category==='fish'?'東京都の週間市況（原表）':'農林水産省の統計原表'}</a></div>`:`<div class="empty"><strong>卸売価格は未収録です</strong><span>${f.category==='fish'?'豊洲の週間市況に掲載されない魚種・銘柄、または中値がないため未収録です。':'対象旬に取引がない等の可能性があります。'}</span></div>`}</div>`;box.hidden=false;document.body.style.overflow='hidden';get('closeDetail').focus()}
+${extraTopicCards(f,t)}<h3>📈 ${f.category==='fish'?'1尾あたりの参考価格':'卸売価格'} ${p?pill(f.category==='fish'?'東京都豊洲市場の公的統計':'農林水産省の公的統計'):pill('データ未収録','demo')}</h3>${p?`<div class="detail-stats"><div class="detail-stat"><small>${f.category==='fish'?'市場1'+fishUnit(f)+'参考換算（卸売）':escaped(p.priceStatistic||p.market||'卸売価格・円/kg')}</small><strong>${f.category==='fish'?(oneFish(p,f)==null?'換算不可':`約 ${formatCurrency(oneFish(p,f))} <em>円/${fishUnit(f)}</em>`):`${formatCurrency(p.price)} <em>円/kg</em>`}</strong></div><div class="detail-stat"><small>${f.category==='fish'?'参考平年比と判定':'平年比と判定'}</small><strong>${p.normalRatio!=null?p.normalRatio+'%':'—'}</strong> ${pill(status[0],status[1])}</div></div><p class="small-note">${f.category==='fish'?'前年同期比':'前年同旬比'}：${p.yearAgoRatio!=null?p.yearAgoRatio+'%':'未公表'}（前年を100%）。統計上の品目：${escaped(p.statisticalItem||f.name)}${p.brandDetail?`／主な規格：${escaped(p.brandDetail)}`:''}</p>${f.category==='fish'?fishWeightPanel(p,f):''}${sparkSvg(p,f)}${longHistoryPanel(p,f)}${p.historicalPrices?fishHistoryTable(p,f):''}${p.note?`<div class="legend-note">${escaped(p.note)}</div>`:''}<div class="source-links"><span class="small-note">対象期間：${escaped(p.period)}</span><span class="small-note">出典の公表日：${escaped(p.publishedAt||'未確認')}</span><span class="small-note">アプリ反映：${escaped(p.retrievedAt||'未記録')}</span><a href="${urlSafe(p.sourceUrl)}" target="_blank" rel="noopener noreferrer">↗ ${f.category==='fish'?'東京都の週間市況（原表）':'農林水産省の統計原表'}</a></div>`:`<div class="empty"><strong>卸売価格は未収録です</strong><span>${f.category==='fish'?'豊洲の週間市況に掲載されない魚種・銘柄、または中値がないため未収録です。':'対象旬に取引がない等の可能性があります。'}</span></div>`}</div>`;box.hidden=false;document.body.style.overflow='hidden';get('closeDetail').focus()}
 function closeDetail(){get('overlay').hidden=true;document.body.style.overflow='';state.lastFocus?.focus?.()}
 function toast(msg){let el=get('toast');el.textContent=msg;el.classList.add('show');clearTimeout(window.__toastTimeout);window.__toastTimeout=setTimeout(()=>el.classList.remove('show'),2700)}
 function updateChrome(){const labels={topics:'旬の話題',prices:'食材の価格',calendar:'旬カレンダー',favorites:'お気に入り',about:'情報の見方・出典'};get('breadcrumbPage').textContent=labels[state.page];document.querySelectorAll('.nav-item').forEach(b=>b.classList.toggle('active',b.dataset.page===state.page));get('asideMonth').textContent=`${currentMonth}月の旬`;

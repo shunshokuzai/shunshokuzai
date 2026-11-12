@@ -35,5 +35,8 @@ class ProduceSchemaTests(unittest.TestCase):
             parse_csv(blob(['キャベツ,31700,100,10000,100','キャベツ,31700,100,20000,200']),['キャベツ'])
         self.assertEqual(parse_csv(blob(['キャベツ,31700,100,10000,nan']),['キャベツ']),{})
 
+    def test_legacy_five_digit_quantity_is_not_misread_as_a_commodity_code(self):
+        self.assertEqual(parse_csv('品目,卸売数量,卸売価額,卸売価格\nキャベツ,35000,3500000,100'.encode(),['キャベツ']),{'キャベツ':100})
+
 
 if __name__=='__main__':unittest.main()
