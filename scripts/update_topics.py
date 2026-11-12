@@ -10,6 +10,7 @@ failure is reported accurately instead of claiming success.
 import argparse
 import datetime as dt
 import json
+import hashlib
 import os
 import re
 import sys
@@ -84,8 +85,8 @@ def extract_summary(excerpt):
 
 def ai_summarize(excerpt, key, model=MODEL, timeout=40):
     """Summarize an observed public source. No tools, paid-only search or URLs."""
-    prompt = ('以下は農林水産省が実際に公表した文章です。記載されている事実だけを使い、'
-        '野菜の生育・入荷・価格の見通しについて100～150字程度で要約してください。'
+    prompt = ('以下は公的機関が実際に公表した文章です。記載されている事実だけを使い、'
+        '食材の生育・入荷・市場動向について100～150字程度で要約してください。'
         '見通しを確定した結果のように書かない。資料にない数値や地域を加えない。'
         '余計な挨拶・注釈・Markdownは付けない。\n\n' + excerpt)
     payload = {'contents':[{'parts':[{'text':prompt}]}],
@@ -97,10 +98,7 @@ def ai_summarize(excerpt, key, model=MODEL, timeout=40):
         with urllib.request.urlopen(req, timeout=timeout) as r:
             result = json.load(r)
     except urllib.error.HTTPError as e:
-        detail = e.read().decode("utf-8", errors="replace")
-        raise RuntimeError(
-            f"Gemini API HTTP {e.code}: {detail[:800]}"
-        ) from e
+        raise RuntimeError(f'Gemini API HTTP {e.code}') from e
 
     parts = (result.get('candidates') or [{}])[0].get('content',{}).get('parts',[])
     text = re.sub(r'\s+',' ',''.join(p.get('text','') for p in parts if isinstance(p,dict))).strip()
@@ -113,33 +111,43 @@ def merge_report(obj, items, key, model, request_limit):
     """Publish each source item, try AI for up to the explicit free-tier budget."""
     topics = list(obj['topics'])
     attempts = 0; success = 0; changed = 0; failures = 0
+    blocked = False
     for item in items:
-        f = item['food']; ident = f"forecast-{item['publishedAt']}-{f['id']}"
+        f = item['food']; ident = f"{item.get('reportKey') or 'forecast-'+item['publishedAt']}-{f['id']}"
+        fingerprint = hashlib.sha256(item['excerpt'].encode('utf-8')).hexdigest()
         old = next((t for t in topics if t['id'] == ident), None)
+        if old and 'sourceFingerprint' not in old:
+            # Migrate already published summaries without spending the daily
+            # budget to regenerate the same report or downgrading them.
+            old['sourceFingerprint'] = fingerprint
         # An official excerpt can be upgraded into an AI summary on a later
         # run, without producing duplicate articles for the same report.
-        if old and (old.get('aiGenerated') or not key or attempts >= request_limit):
+        unchanged = old and old.get('sourceFingerprint') == fingerprint
+        if unchanged and (old.get('aiGenerated') or not key or blocked or attempts >= request_limit):
             continue
         summary = extract_summary(item['excerpt']); generated = False
-        if key and attempts < request_limit:
+        if key and not blocked and attempts < request_limit:
             attempts += 1
             try:
                 summary = ai_summarize(item['excerpt'], key, model)
                 success += 1; generated = True
             except Exception as exc:
                 failures += 1
+                blocked = 'HTTP 429' in str(exc) or 'HTTP 403' in str(exc)
                 # Never include API keys, raw response bodies or request URLs.
                 print('WARN Gemini summarize', f['name'], type(exc).__name__,
                       str(exc)[:110] if not isinstance(exc,urllib.error.HTTPError) else f'HTTP {exc.code}',
                       file=sys.stderr)
         new = {
             'id':ident, 'foodId':f['id'],
-            'title':f"{f['name']}：{int(item['publishedAt'][5:7])+1 if int(item['publishedAt'][5:7])<12 else 1}月の生育・出荷見通し",
+            'title':item.get('title') or f"{f['name']}：{int(item['publishedAt'][5:7])+1 if int(item['publishedAt'][5:7])<12 else 1}月の生育・出荷見通し",
             'summary':summary, 'kind':'ai_source_summary' if generated else 'official_excerpt',
             'verified':not generated, 'yearSpecific':True,
-            'sources':[{'name':'農林水産省・野菜の生育状況及び価格見通し',
+            'sources':[{'name':item.get('sourceName','農林水産省・野菜の生育状況及び価格見通し'),
+                        'title':item.get('sourceTitle','野菜の生育状況及び価格見通し'),
                         'url':item['url'],'publishedAt':item['publishedAt']}],
-            'publishedAt':item['publishedAt'], 'observedPeriod':f'{(dt.date.fromisoformat(item["publishedAt"]).replace(day=1)+dt.timedelta(days=32)).month}月の見通し',
+            'publishedAt':item['publishedAt'], 'observedPeriod':item.get('observedPeriod') or f'{(dt.date.fromisoformat(item["publishedAt"]).replace(day=1)+dt.timedelta(days=32)).month}月の見通し',
+            'sourceFingerprint':fingerprint,
             'aiGenerated':generated,
             'tag':'Gemini要約（一次資料から・未検証）' if generated else '公的原文を短く抜粋（Gemini未使用）',
             'retrievedAt':now_iso(),
@@ -167,20 +175,38 @@ def main():
         print('No network activity without --live.');return
     today=dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date()
     key=os.getenv('GEMINI_API_KEY','')
-    limit=min(max(int(os.getenv('MAX_AI_REQUESTS','6')),0),10)
+    limit=min(max(int(os.getenv('MAX_AI_REQUESTS','6')),0),6)
     obj=json.loads(DATA.read_text(encoding='utf-8'))
-    url,html,published=recent_forecast_url(today)
-    items=forecast_items(html,obj['foods'],url,published)
-    if len(items)<5:
-        raise ValueError(f'Official monthly report has only {len(items)} validated food rows; no new items published')
+    budget=obj['metadata'].get('aiRequestBudget',{})
+    used=budget.get('attempted',0) if budget.get('date')==today.isoformat() else 0
+    if not budget and str(obj['metadata'].get('lastTopicAttemptAt','')).startswith(today.isoformat()):
+        used=obj['metadata'].get('topicGeminiSucceededLastRun',0)+obj['metadata'].get('topicGeminiFailedLastRun',0)
+    limit=min(limit,max(0,6-used))
+    if os.getenv('SOURCES_ONLY','').lower()=='true':key=''
+    items=[];source_errors=[]
+    try:
+        url,html,published=recent_forecast_url(today)
+        items.extend(forecast_items(html,obj['foods'],url,published))
+    except Exception as error:
+        source_errors.append('MAFF forecast: '+type(error).__name__)
+    from official_topics import weekly_items
+    for category in ('fish','fruit'):
+        try:items.extend(weekly_items(obj['foods'],category,today))
+        except Exception as error:source_errors.append(category+': '+type(error).__name__)
+    if not items:raise ValueError('No validated current public source rows; previous topics retained')
     result=merge_report(obj,items,key,args.model,limit)
+    obj['metadata']['aiRequestBudget']={'date':today.isoformat(),'attempted':used+result['aiAttempted'],'dailyLimit':6}
+    obj['metadata']['topicSourceErrorsLastRun']=source_errors
+    print('SOURCE WARNINGS',json.dumps(source_errors,ensure_ascii=False))
+    obj['metadata']['topicGeminiStateLastRun']=('ok' if result['aiSuccess'] else 'error' if result['aiFailed']
+        else 'sources_only' if not key else 'daily_limit' if used>=6 else 'no_new_sources')
     obj['metadata']['lastTopicAttemptAt']=now_iso()
     save(obj)
     print('SOURCE-FIRST TOPICS',json.dumps(result,ensure_ascii=False))
     # 'ok' must not be used when all attempted Gemini requests failed.
     if result['aiAttempted'] and not result['aiSuccess']:
         raise RuntimeError('Gemini text summarization unavailable; official source excerpts retained. Check model and free-tier quota.')
-    if not key:
+    if not key and os.getenv('SOURCES_ONLY','').lower()!='true':
         raise RuntimeError('GEMINI_API_KEY missing; official source excerpts retained.')
 
 if __name__ == '__main__':

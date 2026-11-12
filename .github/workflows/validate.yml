@@ -42,6 +42,10 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Verify official data without Gemini requests
         run: python -u scripts/verify_prices.py
+      - name: Verify expanded public topic sources without Gemini requests
+        env:
+          SOURCES_ONLY: 'true'
+        run: python -u scripts/update_topics.py --live
       - run: python scripts/build_standalone.py
       - name: Retain verified observations on development branch
         run: |
