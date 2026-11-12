@@ -1,0 +1,59 @@
+name: Validate code and official price sources
+on:
+  push:
+    branches: ['codex/**']
+    paths: ['scripts/**', 'tests/**', 'app.js', 'requirements.txt', '.github/workflows/validate.yml']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - run: python scripts/preflight.py
+      - run: node --check app.js && node --check search.js
+      - run: node --test tests/test_ui.cjs
+  official-prices:
+    if: github.event_name == 'push'
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Verify official data without Gemini requests
+        run: python -u scripts/verify_prices.py
+      - name: Verify expanded public topic sources without Gemini requests
+        env:
+          SOURCES_ONLY: 'true'
+        run: python -u scripts/update_topics.py --live
+      - run: python scripts/build_standalone.py
+      - name: Retain verified observations on development branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/market_history.json data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: retain validated official market history'
+            git push
+          fi

@@ -17,6 +17,7 @@ import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
+from market_history import MarketHistory, apply_chart, atomic_text, valid_price
 
 BASE=Path(__file__).resolve().parents[1]
 DATA=BASE/'data'/'seed.json'
@@ -148,9 +149,9 @@ def parse_csv(blob, food_names):
     return out
 
 def save(obj):
-    text=json.dumps(obj,ensure_ascii=False,indent=2)
-    DATA.write_text(text+'\n',encoding='utf-8')
-    (BASE/'data.js').write_text('window.SHUN_DATA = '+json.dumps(obj,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf-8')
+    text=json.dumps(obj,ensure_ascii=False,indent=2,allow_nan=False)
+    atomic_text(DATA,text+'\n')
+    atomic_text(BASE/'data.js','window.SHUN_DATA = '+json.dumps(obj,ensure_ascii=False,separators=(',',':'),allow_nan=False)+';\n')
 
 def apply_prices(obj,prices,history_by_name,stamp,source_url):
     """Publish observed prices even if the five-year baseline is unavailable.
@@ -167,12 +168,14 @@ def apply_prices(obj,prices,history_by_name,stamp,source_url):
     for name,price in prices.items():
         if name not in foods: continue
         food=foods[name]
-        hist=[float(x) for x in history_by_name.get(name,[]) if isinstance(x,(float,int)) and x>0]
+        hist=[float(x) for x in history_by_name.get(name,[]) if valid_price(x)]
         baseline=round(sum(hist)/len(hist),1) if len(hist)>=3 else None
         ratio=round(100*price/baseline,1) if baseline else None
-        old[food['id']]={'foodId':food['id'],'price':round(price,1),'unit':'円/kg',
+        previous=old.get(food['id'],{})
+        old[food['id']]={**previous,'foodId':food['id'],'price':round(price,1),'unit':'円/kg',
           'normalPrice':baseline,'normalRatio':ratio,'normalRatioBasis':f'過去{len(hist)}年の同月・同旬の単純平均' if ratio else '比較年数不足','previousRatio':None,
-          'yearAgoRatio':None,'history':[], 'sourceType':'農林水産省 青果物卸売市場調査（旬別）',
+          'yearAgoRatio':None,'historicalYears':[],'historicalPrices':[],'historicalSources':[],
+          'history':previous.get('history',[]), 'sourceType':'農林水産省 青果物卸売市場調査（旬別）',
           'sourceUrl':source_url,'period':f'{stamp[0]}年{stamp[1]}月 {("上旬","中旬","下旬")[stamp[2]-1]}',
           'publishedAt':None,'retrievedAt':dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date().isoformat(),
           'sample':False,'market':'主要卸売市場計','priceStatistic':'主要卸売市場計・卸売平均価格（円/kg）','historicalSampleCount':len(hist),'stale':False,
@@ -190,28 +193,47 @@ def apply_prices(obj,prices,history_by_name,stamp,source_url):
     meta['priceSourceUrl']=source_url
     return changed
 
-def update_live(obj):
+def official_csv_url(stamp):
+    year,month,ten=stamp
+    return f'https://www.maff.go.jp/j/tokei/syohi/shunbetu/{year}/csv/{year%100:02d}{month:02d}{ten}h_syuyo.csv'
+
+
+def update_live(obj, archive=None):
     now=dt.datetime.now(dt.timezone(dt.timedelta(hours=9)))
+    archive=archive if archive is not None else MarketHistory()
     current_year=now.year; all_urls={}
-    for year in range(current_year-YEARS_BACK,current_year+1):
+    # The public index currently lists three calendar years. Older index pages
+    # can disappear while their official CSV documents remain available.
+    for year in range(current_year-2,current_year+1):
         try:
             url_map=page_csv_urls(year);all_urls.update(url_map)
             print('index',year,'files',len(url_map))
         except Exception as exc:print('WARN index',year,str(exc),file=sys.stderr)
         time.sleep(.3)
-    candidates=sorted([k for k in all_urls if k[0]==current_year and k[1]<=now.month],reverse=True)
+    candidates=sorted([k for k in all_urls if k[0]>=current_year-1 and k[1]<=12
+                       and dt.date(k[0],k[1],(1,11,21)[k[2]-1])<=now.date()],reverse=True)
     if not candidates:raise ValueError('No recent official CSV links (check source page)')
     stamp=candidates[0];source=all_urls[stamp];print('Latest candidate',stamp,source)
     known=[f['name'] for f in obj['foods'] if f['category']!='fish']
     latest=parse_csv(fetch(source),known)
     if len(latest)<8:raise ValueError(f'CSV schema requires validation: parsed {len(latest)} known food prices; nothing published')
+    archive.put('produce',stamp,source,latest)
     # Historical comparator: exact matching month and ten-day period for the previous 5 years.
     history_by_name={name:[] for name in latest}; comparison_detail={name:[] for name in latest}
-    for year in range(current_year-YEARS_BACK,current_year):
-        link=all_urls.get((year,stamp[1],stamp[2]));
-        if not link:continue
+    for year in range(stamp[0]-YEARS_BACK,stamp[0]):
+        past_stamp=(year,stamp[1],stamp[2])
+        link=all_urls.get(past_stamp) or official_csv_url(past_stamp)
         try:
-            past=parse_csv(fetch(link),known)
+            cached=archive.get('produce',past_stamp)
+            if cached:
+                past=cached['values'];link=cached['sourceUrl']
+            else:
+                raw=fetch(link)
+                if '主要卸売市場計' not in re.sub(r'\s+','',decode_csv(raw)):
+                    raise ValueError('Historical CSV does not identify the same market aggregate')
+                past=parse_csv(raw,known)
+                if len(past)<8:raise ValueError('Historical CSV schema unverified')
+                archive.put('produce',past_stamp,link,past)
             for name in latest:
                 if name in past:
                     history_by_name[name].append(past[name]);comparison_detail[name].append((year,past[name],link))
@@ -222,27 +244,32 @@ def update_live(obj):
     for name,pairs in comparison_detail.items():
         if name not in by_name:continue
         row=by_id[by_name[name]]
-        if row.get('normalPrice'):
-            row['historicalYears']=[x[0] for x in pairs]
-            row['historicalPrices']=[x[1] for x in pairs]
-            row['historicalSources']=[x[2] for x in pairs]
+        row['historicalYears']=[x[0] for x in pairs]
+        row['historicalPrices']=[x[1] for x in pairs]
+        row['historicalSources']=[x[2] for x in pairs]
+        if stamp[0]-1 in row['historicalYears']:
+            prior=pairs[row['historicalYears'].index(stamp[0]-1)][1]
+            row['yearAgoRatio']=round(100*row['price']/prior,1)
     # Chart up to twelve released ten-day periods (never synthetic).
-    recent=sorted(k for k in all_urls if k[0]==stamp[0] and k<=stamp)[-12:]
+    recent=sorted(k for k in all_urls if k<=stamp)[-12:]
     recent_data=[]
     for s in recent:
         if s==stamp: data=latest
         else:
-            try:data=parse_csv(fetch(all_urls[s]),known)
+            try:
+                cached=archive.get('produce',s)
+                data=cached['values'] if cached else parse_csv(fetch(all_urls[s]),known)
+                if len(data)<8:raise ValueError('Recent CSV schema unverified')
+                archive.put('produce',s,all_urls[s],data)
             except Exception as exc:
                 print('WARN recent price graph',s,exc,file=sys.stderr);continue
         recent_data.append((s,data))
     for name,ident in by_name.items():
         if ident not in by_id or by_id[ident].get('stale'):continue
-        points=[(ss,v[name]) for ss,v in recent_data if name in v]
-        if len(points)>=2:
-            row=by_id[ident]
-            row['history']=[val for _,val in points]
-            row['historyLabels']=[f'{ss[1]}月{("上旬","中旬","下旬")[ss[2]-1]}' for ss,_ in points]
+        points=archive.chart('produce',name,stamp,12)
+        apply_chart(by_id[ident],points,'produce')
+    archive.save()
+    obj['metadata']['produceReferenceRatioCount']=sum(p.get('normalRatio') is not None and not p.get('stale') for p in obj['prices'] if p['foodId'] in {f['id'] for f in obj['foods'] if f['category']!='fish'})
     return changed
 
 def ingest_csv(obj,path):

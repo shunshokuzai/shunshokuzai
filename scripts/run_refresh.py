@@ -14,7 +14,11 @@ from update_data import BASE,DATA,now_iso,save
 
 
 def run_step(script,env=None):
-    r=subprocess.run([sys.executable,str(BASE/'scripts'/script),'--live'],cwd=BASE,env=env,check=False)
+    try:
+        r=subprocess.run([sys.executable,str(BASE/'scripts'/script),'--live'],cwd=BASE,env=env,check=False,timeout=600)
+    except subprocess.TimeoutExpired:
+        print('ERROR update step timed out:',script,file=sys.stderr)
+        return 'error'
     return 'ok' if r.returncode==0 else 'error'
 
 
@@ -26,21 +30,39 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
     status['fish']=run_step('update_fish.py')
     scheduled=force_gemini or local.weekday() in (1,3,5)  # Tue/Thu/Sat, manual verification override
     key=ai_key if ai_key is not None else os.getenv('GEMINI_API_KEY','')
-    if scheduled and key:
-        env=os.environ.copy();env['GEMINI_API_KEY']=key
-        status['gemini']=run_step('update_topics.py',env)
-    elif scheduled:
-        status['gemini']='api_key_missing'
+    if scheduled:
+        env=os.environ.copy()
+        if key:env['GEMINI_API_KEY']=key
+        if not key:env['SOURCES_ONLY']='true'
+        status['topics']=run_step('update_topics.py',env)
+        saved=json.loads(DATA.read_text(encoding='utf-8'))['metadata']
+        status['gemini']=('api_key_missing' if not key else
+                          saved.get('topicGeminiStateLastRun','error') if status['topics']=='ok' else 'error')
     else:
-        status['gemini']='not_scheduled'
+        status['topics']='not_scheduled';status['gemini']='not_scheduled'
     obj=json.loads(DATA.read_text(encoding='utf-8'))
     meta=obj['metadata']
+    meta['version']='0.8.0'
     meta['lastAutomaticCheckAt']=now_iso()
     meta['autoRefreshStatus']=status
     meta['autoRefreshConfigured']=True
     if status['vegetableFruit']=='ok':meta['lastVegetableFruitSuccessAt']=now_iso()
     if status['fish']=='ok':meta['lastFishSuccessAt']=now_iso()
     if status['gemini']=='ok':meta['lastGeminiSuccessAt']=now_iso()
+    if status.get('topics')=='ok':meta['lastTopicsSuccessAt']=now_iso()
+    foods={f['id']:f for f in obj['foods']}
+    details={}
+    for name,is_fish in (('vegetableFruit',False),('fish',True)):
+        prices=[p for p in obj['prices'] if (foods[p['foodId']]['category']=='fish')==is_fish and not p.get('stale')]
+        details[name]={'status':status[name],'checkedAt':now_iso(),'activePriceCount':len(prices),
+                       'referenceRatioCount':sum(p.get('normalRatio') is not None for p in prices),
+                       'chartPointCount':sum(len(p.get('history',[])) for p in prices)}
+    details['topics']={'status':status.get('topics'),'checkedAt':now_iso(),
+                      'sourceItemCount':meta.get('topicSourceCountLastRun',0),
+                      'addedOrUpdatedCount':meta.get('topicAddedLastRun',0),
+                      'aiState':status['gemini'],'aiRequestsToday':meta.get('aiRequestBudget',{}).get('attempted',0)}
+    meta['lastStepResults']=details
+    meta['updateHistory']=(meta.get('updateHistory',[])+[{'checkedAt':now_iso(),'steps':details}])[-20:]
     save(obj)
     print('UPDATE STATUS',json.dumps(status,ensure_ascii=False))
     return status
