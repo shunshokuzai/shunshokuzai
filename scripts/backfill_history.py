@@ -6,6 +6,7 @@ import json
 import re
 import time
 import unicodedata
+import urllib.error
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from market_history import MarketHistory, valid_price
@@ -148,7 +149,8 @@ def backfill(obj, archive, limit=24, seconds=420):
                 values = read_weekly(fetch(url, timeout=30), url)
             return task, url, values, None
         except Exception as exc:
-            return task, url, None, type(exc).__name__
+            error = f'HTTP {exc.code}' if isinstance(exc, urllib.error.HTTPError) else type(exc).__name__
+            return task, url, None, error
 
     with ThreadPoolExecutor(max_workers=2) as executor:
         for future in as_completed([executor.submit(retrieve, task) for task in tasks]):
@@ -159,6 +161,7 @@ def backfill(obj, archive, limit=24, seconds=420):
             if error:
                 result['failed'] += 1
                 failures[key] = {'checkedAt': today.isoformat(), 'error': error,
+                                 'sourceUrl': url,
                                  'retryAfter': (today+dt.timedelta(days=7)).isoformat()}
             else:
                 archive.put(kind, stamp, url, values)

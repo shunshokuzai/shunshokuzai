@@ -62,6 +62,8 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
                       'sourceItemCount':meta.get('topicSourceCountLastRun',0),
                       'addedOrUpdatedCount':meta.get('topicAddedLastRun',0),
                       'aiState':status['gemini'],'aiRequestsToday':meta.get('aiRequestBudget',{}).get('attempted',0)}
+    details['history']={'status':status['history'],'checkedAt':now_iso(),
+                        **meta.get('historyBackfillLastRun',{})}
     meta['lastStepResults']=details
     meta['updateHistory']=(meta.get('updateHistory',[])+[{'checkedAt':now_iso(),'steps':details}])[-20:]
     save(obj)
