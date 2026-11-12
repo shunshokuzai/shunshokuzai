@@ -78,4 +78,9 @@ def weekly_items(foods, category, today=None):
     if today - dt.date(stamp[0], stamp[1], 1) > dt.timedelta(days=65):
         raise ValueError('Weekly commentary source is too old')
     url = listing[stamp]
-    return commentary_items(report_text(fetch(url, timeout=35)), foods, category, stamp, url)
+    text=report_text(fetch(url, timeout=35))
+    items=commentary_items(text, foods, category, stamp, url)
+    print('OFFICIAL TOPIC SOURCE',category,url,'recognized',len(items))
+    if len(items)<5:
+        print('PUBLIC COMMENTARY DIAGNOSTIC',category,repr(text[-6500:]))
+    return items
