@@ -43,6 +43,8 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Verify official data without Gemini requests
         run: python -u scripts/verify_prices.py
+      - name: Audit unmapped official commodities
+        run: python -u scripts/audit_sources.py
       - name: Verify expanded public topic sources without Gemini requests
         env:
           SOURCES_ONLY: 'true'
