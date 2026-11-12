@@ -288,7 +288,7 @@ def main():
     args=ap.parse_args();obj=json.loads(DATA.read_text(encoding='utf-8'))
     if args.inspect_csv:ingest_csv(obj,args.inspect_csv)
     elif args.live:
-        result=update_live(obj);save(obj);print('Updated',result,'official prices; reference ratios:',sum(p.get('normalRatio') is not None and not p.get('stale') for p in obj['prices'] if p['foodId'].startswith(('v-','fr-'))))
+        result=update_live(obj);save(obj);print('Updated',result,'official prices; reference ratios:',obj['metadata'].get('produceReferenceRatioCount',0))
     else:print('Use --inspect-csv or --live. No data changed.')
 
 if __name__=='__main__':main()
