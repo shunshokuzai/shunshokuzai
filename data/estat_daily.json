@@ -132320,7 +132320,7 @@
     }
   },
   "validation": {
-    "method": "estat_daily_weighted_v1",
+    "method": "estat_daily_weighted_v2",
     "periods": [
       {
         "stamp": [
