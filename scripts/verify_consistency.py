@@ -22,7 +22,10 @@ def verify(obj,archive):
             assert source and point['sourceUrl']==source['sourceUrl'], 'History source mismatch'
             value=source['values'][food['name']]
             assert point['price']==(value['price'] if kind=='fish' else value), 'History price mismatch'
-            if kind=='produce':assert same_produce_schema(source), 'Old commodity-series parser in published history'
+            if kind=='produce':
+                assert same_produce_schema(source), 'Old commodity-series parser in published history'
+                if source.get('estimate'):
+                    assert point.get('estimate') and point.get('method')==source.get('method'), 'Unlabelled estimated history price'
             elif datum is not None:assert value.get('brandLabel')==datum.get('brandLabel'), 'Different fish brands mixed'
             checked+=1
         if row.get('normalRatio') is not None:

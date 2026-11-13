@@ -204,7 +204,7 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
         new = {
             'id':ident, 'foodId':f['id'],
             'title':item.get('title') or f"{f['name']}：{item.get('observedPeriod') or '生育・出荷の公的情報'}",
-            'summary':summary, 'kind':'ai_source_summary' if generated else 'official_excerpt',
+            'summary':summary, 'kind':'ai_source_summary' if generated else item.get('kind','official_excerpt'),
             'verified':not generated, 'yearSpecific':True,
             'sources':[{'name':item.get('sourceName','農林水産省・野菜の生育状況及び価格見通し'),
                         'title':item.get('sourceTitle','野菜の生育状況及び価格見通し'),
@@ -221,9 +221,9 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
             'reportType': item.get('reportType', '公的資料の記述'),
             'evidenceSections': item.get('evidenceSections', [{'label': '原文の該当箇所', 'text': item['excerpt']}]),
             'limitations': item.get('limitations', '品目全体の全国的な状況を保証する資料ではありません。'),
-            'automaticChecks': ['数値の原文照合', '見通しの断定化チェック'] if generated else ['原文抜粋'],
+            'automaticChecks': ['数値の原文照合', '見通しの断定化チェック'] if generated else item.get('nonAiChecks',['原文抜粋']),
             'aiGenerated':generated, 'summaryProvider':provider if generated else None,
-            'tag':provider+'要約（一次資料から・独立検証前）' if generated else '公的原文を短く抜粋（Gemini未使用）',
+            'tag':provider+'要約（一次資料から・独立検証前）' if generated else item.get('nonAiTag','公的原文を短く抜粋（Gemini未使用）'),
             'retrievedAt':now_iso(),
         }
         topics = [t for t in topics if t['id'] != ident]
@@ -270,6 +270,9 @@ def main():
         forecasts,errors=fish_forecast_items(obj['foods'],today)
         items.extend(forecasts);source_errors.extend(errors)
     except Exception as error:source_errors.append('FRA forecasts: '+type(error).__name__)
+    from additional_fish_topics import additional_items
+    extra,errors=additional_items(obj['foods'],today)
+    items.extend(extra);source_errors.extend(errors)
     from regional_topics import regional_items
     regional,errors=regional_items(obj['foods'],today)
     items.extend(regional);source_errors.extend(errors)

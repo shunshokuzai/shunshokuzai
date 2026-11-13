@@ -35,7 +35,7 @@ class RegionalTopicsTests(unittest.TestCase):
   self.assertEqual(row['sourceExcerpt'],item['publicExcerpt'])
   self.assertFalse(row['verified'])
  def test_apple_maturity_not_production_forecast(self):
-  html='<h1>2026年りんご ふじ</h1><p>無袋：11月6日現在、糖度は高い。</p><p>有袋：11月6日現在、硬度は低い。</p>'
+  html='<time>2026.11.06</time><h1>2026年りんご ふじ</h1><p>無袋：11月6日現在、糖度は高い。</p><p>有袋：11月6日現在、硬度は低い。</p>'
   row=apple_items(html,[{'id':'apple','name':'りんご'}],self.today)[0]
   self.assertFalse(row['isForecast'])
   self.assertEqual(row['publishedAt'],'2026-11-06')

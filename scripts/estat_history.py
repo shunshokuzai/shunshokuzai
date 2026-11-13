@@ -23,7 +23,7 @@ from update_data import DATA, fetch, decode_csv, normalize, IMPORTED_FRUIT
 CACHE=DATA.parent/'estat_daily.json'
 YEAR_CLASS={2021:'000001150226',2022:'000001163286',2023:'000001201860'}
 BASE='https://www.e-stat.go.jp/stat-search/files'
-METHOD='estat_daily_weighted_v1'
+METHOD='estat_daily_weighted_v2'
 
 def listing_url(year,page=1):
  return BASE+'?'+urlencode({'layout':'dataset','page':page,'limit':100,'toukei':'00500226',
@@ -84,6 +84,20 @@ def aggregate_period(entries,days):
    if datum is None:invalid.add(name);continue
    q,p=datum;totals[name][0]+=q;totals[name][1]+=q*p
  return {name:round(amount/q,1) for name,(q,amount) in totals.items() if q>0 and name not in invalid}
+
+def rounding_bounds(entries,days,values):
+ """Daily unit-price rounding and possible half-kg quantity rounding."""
+ bounds={}
+ for name,value in values.items():
+  parts=[days[k]['values'].get(name) for k in entries]
+  parts=[p for p in parts if p is not None]
+  quantity=sum(p[0] for p in parts)
+  minimum=quantity-.5*len(parts)
+  if minimum<=0:continue
+  error=.55+sum(.5*abs(p[1]-value) for p in parts)/minimum
+  bounds[name]=math.ceil(error*1000)/1000
+ return bounds
+
 
 def cache_load(path=CACHE):
  if not path.exists():return {'version':1,'manifests':{},'days':{}}
@@ -184,14 +198,17 @@ def backfill_daily(obj,archive,limit=80,seconds=360):
   for k in result:result[k]+=part[k]
   for stamp,pieces in grouped(entries).items():
    if any(k not in cache['days'] for k in pieces):continue
-   if archive.get('produce',stamp):continue
+   previous=archive.get('produce',stamp)
+   if previous and (not previous.get('estimate') or previous.get('method')==METHOD):continue
    values=aggregate_period(pieces,cache['days'])
    if len(values)<8:continue
    from update_data import cache_produce
    cache_produce(archive,stamp,listing_url(year),values)
    record=archive.get('produce',stamp)
    record.update({'method':METHOD,'estimate':True,'roundingUncertaintyYenKg':0.55,
+    'roundingUncertaintyByFood':rounding_bounds(pieces,cache['days'],values),
     'dailySources':[v['url'] for v in pieces.values()],
+    'dailyDocuments':list(pieces.values()),
     'dailyObservationDates':sorted({v['date'] for v in pieces.values()}),
     'methodNote':'公表日別単価（円/kg）を数量（kg）で加重平均した旬別参考推計。丸め前の取引価額は未取得であり、農林水産省の旬別公表値ではありません。'})
    archive.data.get('backfillFailures',{}).pop('produce:'+ '-'.join(map(str,stamp)),None);added+=1
@@ -224,13 +241,13 @@ def refresh_cached_baselines(obj,archive):
   row['normalPrice']=mean;row['normalRatio']=round(100*row['price']/mean,1) if mean else None
   row['normalRatioBasis']=f'過去{len(pairs)}年の同月・同旬の単純平均' if mean else '比較年数不足'
   if mean and any(row['historicalEstimates']):
-   error=sum(r.get('roundingUncertaintyYenKg',0) for y,r in pairs)/len(pairs)+0.05
+   error=sum(r.get('roundingUncertaintyByFood',{}).get(name,r.get('roundingUncertaintyYenKg',0)) for y,r in pairs)/len(pairs)+0.05
    lo=100*row['price']/(mean+error);hi=100*row['price']/(mean-error)
    row['normalRatioRange']=[math.floor(lo*10)/10,math.ceil(hi*10)/10]
    row['classificationUncertain']=(lo<85<=hi or lo<=115<hi)
    row['normalRatioBasis']+='（日別数量加重平均の参考推計を含む）'
    base=row.get('note','').split('【日別再集計】')[0]
-   row['note']=base+'【日別再集計】2021〜2022年はe-Statの主要卸売市場計の日別数量・整数単価を加重平均した参考推計を含みます。旬別公表値とは異なり、丸め誤差があります。推計誤差で判定境界をまたぐ場合は色を付けません。'
+   row['note']=base+'【日別再集計】2021〜2022年はe-Statの主要卸売市場計の日別数量・整数単価を加重平均した参考推計を含みます。旬別公表値とは異なり、丸め誤差があります（日別数量を公表値±0.5kg、単価を±0.5円として参考範囲を算出）。推計誤差で判定境界をまたぐ場合は色を付けません。'
   elif row.get('note'):row['note']=row['note'].split('【日別再集計】')[0]
  obj['metadata']['produceReferenceRatioCount']=sum(p.get('normalRatio') is not None and not p.get('stale') for p in obj['prices'] if p['foodId'] in names)
 
@@ -239,7 +256,8 @@ if __name__=='__main__':
  from update_data import save
  from backfill_history import attach_long_history
  import argparse
- p=argparse.ArgumentParser();p.add_argument('--limit',type=int,default=80);args=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--live',action='store_true');p.add_argument('--limit',type=int,default=80);p.add_argument('--seconds',type=int,default=360);args=p.parse_args()
+ if not args.live:p.exit(message='No network activity without --live.\n')
  obj=json.loads(DATA.read_text(encoding='utf-8'));archive=MarketHistory()
- backfill_daily(obj,archive,limit=min(1200,max(0,args.limit)),seconds=650)
+ backfill_daily(obj,archive,limit=min(1200,max(0,args.limit)),seconds=min(650,max(30,args.seconds)))
  refresh_cached_baselines(obj,archive);attach_long_history(obj,archive);save(obj)

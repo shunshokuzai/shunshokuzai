@@ -52,7 +52,7 @@ jobs:
       - name: Backfill official five-year history without AI
         run: python -u scripts/backfill_history.py --live --limit 600
       - name: Recover restricted historical periods from public daily originals
-        run: python -u scripts/estat_history.py --limit 1200
+        run: python -u scripts/estat_history.py --live --limit 1200 --seconds 650
       - name: Check historical coverage and alternate official sources
         run: python -u scripts/verify_history.py
       - name: Check every published price point against its official archive

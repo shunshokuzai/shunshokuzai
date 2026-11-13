@@ -8,6 +8,7 @@ import datetime as dt
 import re
 import unicodedata
 from bs4 import BeautifulSoup
+from urllib.parse import urljoin,urlparse
 from update_data import fetch
 
 ALIC_URL='https://vegetable.alic.go.jp/yasaijoho/jyukyu/2611_jyukyu1_2.html'
@@ -65,35 +66,55 @@ def alic_items(html,foods,today):
  return out
 
 AOMORI_URL='https://www.nounavi-aomori.jp/farmer/archives/18185'
-def apple_items(html,foods,today):
+def apple_items(html,foods,today,url=AOMORI_URL):
  soup=BeautifulSoup(html,'html.parser')
  text=unicodedata.normalize('NFKC',soup.get_text(' ',strip=True))
- if '2026年りんご' not in text or '11月6日現在' not in text:return []
- date=dt.date(2026,11,6)
+ title=unicodedata.normalize('NFKC',soup.h1.get_text(' ',strip=True) if soup.h1 else '')
+ year=re.search(r'(20\d{2})年りんご',title)
+ observed=re.search(r'(\d{1,2})月\s*(\d{1,2})日現在',text)
+ if not year or not observed:return []
+ date=dt.date(int(year[1]),int(observed[1]),int(observed[2]))
+ if date.year!=today.year:return []
  if today<date or (today-date).days>65:return []
  food=next((f for f in foods if f['name']=='りんご'),None)
  if not food:return []
  claims=[]
  for label in ('無袋','有袋'):
-  m=re.search(label+r'[:：]\s*11月6日現在[^。]*。',text)
+  m=re.search(label+r'[:：]\s*'+str(date.month)+r'月\s*'+str(date.day)+r'日現在[^。]*。',text)
   if not m:raise ValueError('Aomori maturity overview missing')
   claims.append(m.group(0))
  excerpt='\n'.join(claims)
- return [{'food':food,'url':AOMORI_URL,'publishedAt':'2026-11-06',
-  'reportKey':'aomori-fuji-2026-11-06','sourceFamily':'aomori-apple-maturity',
+ return [{'food':food,'url':url,'publishedAt':next((m.group(0).replace('.','-') for m in re.finditer(r'20\d{2}\.\d{2}\.\d{2}',text)),None),
+  'reportKey':'aomori-fuji-'+date.isoformat(),'sourceFamily':'aomori-apple-maturity',
   'sourceName':'青森県・農なび青森（りんご研究所）',
-  'sourceTitle':'2026年りんご「ふじ」熟度調査結果（11月6日現在）',
-  'observedPeriod':'2026年11月6日の熟度調査',
-  'periodStart':'2026-11-06','periodEnd':'2026-11-06','isForecast':False,
+  'sourceTitle':title,
+  'observedPeriod':f'{date.year}年{date.month}月{date.day}日の熟度調査',
+  'periodStart':date.isoformat(),'periodEnd':date.isoformat(),'isForecast':False,
   'excerpt':excerpt,'scope':'青森県りんご研究所の調査樹・ふじ（無袋と有袋）',
   'reportType':'糖度・着色などの品質調査',
   'evidenceSections':[{'label':'熟度調査の概要','text':excerpt}],
   'limitations':'研究所の調査樹の結果であり、青森県全域の品質や出荷量を示すものではありません。資料の平年値は主に20か年平均で、価格の参考平年比とは異なります。'}]
 
+def latest_apple_items(foods,today):
+ index='https://www.nounavi-aomori.jp/farmer/tag/%E3%82%8A%E3%82%93%E3%81%94'
+ soup=BeautifulSoup(fetch(index,timeout=25),'html.parser')
+ links=[]
+ for a in soup.find_all('a',href=True):
+  title=unicodedata.normalize('NFKC',a.get_text(' ',strip=True))
+  url=urljoin(index,a['href'])
+  if str(today.year)+'年' in title and 'ふじ' in title and '熟度調査結果' in title and urlparse(url).hostname=='www.nounavi-aomori.jp' and '/farmer/archives/' in url:
+   if url not in links:links.append(url)
+ for url in links[:2]:
+  items=apple_items(fetch(url,timeout=25),foods,today,url)
+  if items:return items
+ return []
+
 def regional_items(foods,today):
  items=[];errors=[]
- for name,url,parser in [('ALIC',ALIC_URL,alic_items),('Aomori',AOMORI_URL,apple_items)]:
+ for name,url,parser in [('ALIC',ALIC_URL,alic_items)]:
   try:items.extend(parser(fetch(url,timeout=25),foods,today))
   except Exception as error:errors.append(name+': '+type(error).__name__+': '+str(error)[:100])
+ try:items.extend(latest_apple_items(foods,today))
+ except Exception as error:errors.append('Aomori: '+type(error).__name__)
  print('REGIONAL CROP REPORTS',len(items),errors,flush=True)
  return items,errors

@@ -122,6 +122,7 @@ def attach_long_history(obj, archive):
         row['longHistory'] = points
         row['longHistoryRange'] = [start[0], end[0]]
         row['longHistoryFrequency'] = 'weekly' if kind == 'fish' else 'ten_day'
+    obj['metadata']['produceDailySourceSets']={'-'.join(map(str,r['stamp'])):r.get('dailyDocuments',[]) for r in archive.records('produce') if r.get('estimate')}
     obj['metadata']['longHistoryUpdatedAt'] = dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')
 
 

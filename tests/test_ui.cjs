@@ -47,12 +47,13 @@ test('long-term graphs split missing periods and retain month/year boundaries',(
 });
 test('year overlay exposes missing years, units, original values and source links',()=>{
   const ctx=historyContext();
-  const html=ctx.longHistoryPanel({longHistoryRange:[2021,2026],longHistory:[{period:[2021,1,1],price:100,sourceUrl:'https://www.maff.go.jp/one'},{period:[2026,1,1],price:200,sourceUrl:'https://www.maff.go.jp/two'}]},{id:'v',name:'キャベツ',category:'vegetable'},'seasonal');
+  const html=ctx.longHistoryPanel({longHistoryRange:[2021,2026],longHistory:[{period:[2021,1,1],price:100,estimate:true,sourceUrl:'https://www.maff.go.jp/one'},{period:[2026,1,1],price:200,sourceUrl:'https://www.maff.go.jp/two'}]},{id:'v',name:'キャベツ',category:'vegetable'},'seasonal');
   assert.ok(html.includes('2022年（未取得）'));
   assert.ok(html.includes('卸売・円/kg'));
   assert.ok(html.includes('https://www.maff.go.jp/one'));
   assert.ok(html.includes('2021年1月上旬'));
   assert.ok(html.includes('2時点'));
+  assert.ok(html.includes('100（日別再集計）')); 
   assert.ok(!html.includes('NaN'));
 });
 test('fish trend uses the weight published for each week',()=>{
@@ -82,4 +83,5 @@ test('classification includes both boundaries in normal and ignores stale values
   assert.equal(ctx.status({normalRatio:115.1})[1],'high');
   assert.equal(ctx.status({normalRatio:120,stale:true})[1],'demo');
   assert.equal(ctx.status({normalRatio:null})[1],'demo');
+  assert.equal(ctx.status({normalRatio:85,classificationUncertain:true})[1],'demo');
 });
