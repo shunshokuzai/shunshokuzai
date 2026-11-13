@@ -8,7 +8,7 @@ from update_topics import validate_summary
 
 class AdditionalFishTests(unittest.TestCase):
  def test_salmon_total_keeps_coastal_catch_and_river_capture_distinct(self):
-  html='<h1>さけます来遊速報(令和8年度)</h1><h3>サケ道県別来遊数（9月30日現在）10月16日更新</h3><table><tr>'+''.join('<td>'+str(x)+'</td>' for x in ['合計',20,40,'50%',0,0,'0%',80,160,'50%',100,200,'50%'])+'</tr></table>'
+  html='<h1 class="logo"></h1><h1>さけます来遊速報(令和8年度)</h1><h3>サケ道県別来遊数（9月30日現在）10月16日更新</h3><table><tr>'+''.join('<td>'+str(x)+'</td>' for x in ['合計',20,40,'50%',0,0,'0%',80,160,'50%',100,200,'50%'])+'</tr></table>'
   row=salmon_items(html,[{'id':'salmon','name':'サケ'}],dt.date(2026,11,13))[0]
   self.assertFalse(row['isForecast'])
   self.assertIn('沿岸の漁獲80尾',row['summaryExcerpt'])
@@ -24,7 +24,7 @@ class AdditionalFishTests(unittest.TestCase):
   self.assertEqual(katsuo_items(html,foods,dt.date(2026,12,1)),[])
  def test_sanma_publication_and_regional_claims_are_required(self):
   html='<h1>2026年度第7回サンマ中短期漁況予報</h1>'
-  text='2026年11月9日。11月中旬から12月下旬。さんま棒受網漁業。来遊量・道東海域では、11月中旬は断続的な来遊となる。・三陸海域では、11月中旬は低位水準。・常磐海域では、11月中旬は低位水準。問い合わせ先'
+  text='2026年11月9日。11月中旬から12月下旬。さんま棒受網漁業。南下回遊群。来遊量・道東海域では、11月中旬は断続的な来遊となる。・三陸海域では、11月中旬は低位水準。・常磐海域では、11月中旬は低位水準。問い合わせ先'
   foods=[{'id':'s','name':'サンマ'}]
   row=sanma_items(html,text,foods,dt.date(2026,11,13))[0]
   validate_summary(row['preparedSummary'],row['excerpt'])

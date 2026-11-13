@@ -37,14 +37,14 @@ def sanma_items(html,pdftext,foods,today):
  if not dt.date(2026,11,9)<=today<=dt.date(2026,12,31):return []
  soup=BeautifulSoup(html,'html.parser');title=soup.h1.get_text(' ',strip=True) if soup.h1 else ''
  text=normalized(pdftext)
- required=['2026年11月9日','11月中旬から12月下旬','道東海域','三陸海域','常磐海域','断続的な来遊','低位水準','さんま棒受網漁業']
+ required=['2026年11月9日','11月中旬から12月下旬','道東海域','三陸海域','常磐海域','断続的な来遊','低位水準','さんま棒受網漁業','南下回遊群']
  if '第7回サンマ' not in normalized(title) or not all(s in text for s in required):raise ValueError('Sanma forecast scope or dates changed')
  food=next((f for f in foods if f['name']=='サンマ'),None)
  if not food:return []
  # First-page overview has three separate sea-area claims.
  overview=re.search(r'来遊量(.+?)問い合わせ先',text)
  if not overview:raise ValueError('Sanma overview missing')
- excerpt='公表日:2026年11月9日。予測期間:2026年11月中旬から12月下旬。'+overview.group(1)
+ excerpt='公表日:2026年11月9日。予測期間:2026年11月中旬から12月下旬。対象漁業:さんま棒受網漁業。対象魚群:南下回遊群。'+overview.group(1)
  summary='11月9日公表のサンマ予報では、道東は11月半ばに断続的な来遊となる見込み。三陸・常磐では11月半ばの来遊水準を低いと予測しています。対象は南下回遊群の棒受網漁で、全国の確定漁獲量ではありません。'
  return [{'food':food,'url':SANMA,'publishedAt':'2026-11-09','reportKey':'jafic-sanma-2026-11-09',
   'sourceFamily':'jafic-sanma','sourceName':'漁業情報サービスセンター（関係水産研究機関と検討）',
@@ -60,7 +60,7 @@ def sanma_items(html,pdftext,foods,today):
 
 def salmon_items(html,foods,today):
  soup=BeautifulSoup(html,'html.parser')
- title=normalized(soup.h1.get_text() if soup.h1 else '')
+ title=next((normalized(h.get_text()) for h in soup.find_all('h1') if 'さけます来遊速報' in normalized(h.get_text())), '')
  year=re.search(r'さけます来遊速報\(令和(\d+)年度\)',title)
  if not year:raise ValueError('Salmon bulletin year missing')
  year=int(year[1])+2018

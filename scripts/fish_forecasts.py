@@ -144,7 +144,7 @@ def report_items(foods,family,published,url,html,pdf_text,pdf_url,today,overview
     if not re.search(f'{start.year}年{start.month}月[~〜～-]'+endyear+f'{end.month}月',compact(pdf_text)):
         raise ValueError('Forecast PDF observation period mismatch')
     if start>today+dt.timedelta(days=45) or end<today:return []
-    heading=soup.find('h1')
+    heading=next((h for h in soup.find_all('h1') if FAMILIES[family][0] in compact(h.get_text())),None)
     title=heading.get_text(' ',strip=True) if heading else FAMILIES[family][0]+'漁況予報'
     grouped={}
     overviews=overview_sections(overview_text if overview_text is not None else pdf_text,family)
