@@ -25,7 +25,7 @@ from update_data import BASE, DATA, fetch, now_iso, normalize, save
 API = 'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent'
 MODEL = 'gemini-3.1-flash-lite'
 MAFF_DOMAIN = 'www.maff.go.jp'
-SUMMARY_VERSION = 4
+SUMMARY_VERSION = 5
 
 
 def recent_forecast_url(today, getter=fetch):
@@ -184,12 +184,16 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
                 validate_summary(summary, item['excerpt'])
             except ValueError:
                 summary = extract_summary(item['excerpt']); generated = False
-        if not skip_ai and key and not blocked and attempts < request_limit:
+        provider = old.get('summaryProvider','Gemini') if generated and old else 'Gemini'
+        if item.get('preparedSummary'):
+            summary = validate_summary(item['preparedSummary'], item['excerpt'])
+            generated = True; provider = item['summaryProvider']
+        if not item.get('preparedSummary') and not skip_ai and key and not blocked and attempts < request_limit:
             if on_attempt:on_attempt()
             attempts += 1
             try:
                 summary = ai_summarize(item['excerpt'], key, model)
-                success += 1; generated = True
+                success += 1; generated = True; provider = 'Gemini'
             except Exception as exc:
                 failures += 1
                 blocked = 'HTTP 429' in str(exc) or 'HTTP 403' in str(exc)
@@ -212,14 +216,14 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
             'sourceFamily': item.get('sourceFamily'), 'isForecast': item.get('isForecast',False),
             'periodStart': item.get('periodStart'), 'periodEnd': item.get('periodEnd'),
             'summaryVersion': SUMMARY_VERSION,
-            'sourceExcerpt': item['excerpt'],
+            'sourceExcerpt': item.get('publicExcerpt',item['excerpt']),
             'scope': item.get('scope', '資料に記載の対象地域'),
             'reportType': item.get('reportType', '公的資料の記述'),
             'evidenceSections': item.get('evidenceSections', [{'label': '原文の該当箇所', 'text': item['excerpt']}]),
             'limitations': item.get('limitations', '品目全体の全国的な状況を保証する資料ではありません。'),
             'automaticChecks': ['数値の原文照合', '見通しの断定化チェック'] if generated else ['原文抜粋'],
-            'aiGenerated':generated,
-            'tag':'Gemini要約（一次資料から・未検証）' if generated else '公的原文を短く抜粋（Gemini未使用）',
+            'aiGenerated':generated, 'summaryProvider':provider if generated else None,
+            'tag':provider+'要約（一次資料から・独立検証前）' if generated else '公的原文を短く抜粋（Gemini未使用）',
             'retrievedAt':now_iso(),
         }
         topics = [t for t in topics if t['id'] != ident]
@@ -266,6 +270,9 @@ def main():
         forecasts,errors=fish_forecast_items(obj['foods'],today)
         items.extend(forecasts);source_errors.extend(errors)
     except Exception as error:source_errors.append('FRA forecasts: '+type(error).__name__)
+    from regional_topics import regional_items
+    regional,errors=regional_items(obj['foods'],today)
+    items.extend(regional);source_errors.extend(errors)
     if not items:raise ValueError('No validated current public source rows; previous topics retained')
     reserved=0
     def reserve_attempt():
