@@ -29,7 +29,7 @@ jobs:
     if: github.event_name == 'push'
     needs: tests
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 22
     permissions:
       contents: write
     steps:
@@ -51,18 +51,18 @@ jobs:
         run: python -u scripts/update_topics.py --live
       - name: Backfill official five-year history without AI
         run: python -u scripts/backfill_history.py --live --limit 600
+      - name: Recover restricted historical periods from public daily originals
+        run: python -u scripts/estat_history.py --limit 1200
       - name: Check historical coverage and alternate official sources
         run: python -u scripts/verify_history.py
       - name: Check every published price point against its official archive
         run: python -u scripts/verify_consistency.py
-      - name: Inspect alternate official historical data
-        run: python -u scripts/inspect_estat.py
       - run: python scripts/build_standalone.py
       - name: Retain verified observations on development branch
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/market_history.json data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
+          git add data/estat_daily.json data/market_history.json data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
           if ! git diff --cached --quiet; then
             git commit -m 'data: retain validated official market history'
             git push

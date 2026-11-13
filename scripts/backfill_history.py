@@ -116,6 +116,7 @@ def attach_long_history(obj, archive):
                 continue
             ordinal = sequence[tuple(stamp)] if kind == 'fish' else stamp[0]*36+(stamp[1]-1)*3+stamp[2]-1
             points.append({'period': stamp, 'sequence': ordinal, 'price': price, 'sourceUrl': record['sourceUrl'],
+                           **({'estimate':True,'method':record.get('method')} if record.get('estimate') else {}),
                            **({'spec': value.get('brandDetail'),
                                'weightKg': value.get('pieceWeightKg')} if kind == 'fish' else {})})
         row['longHistory'] = points
