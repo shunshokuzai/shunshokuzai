@@ -5,10 +5,10 @@
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
     "version": "0.9.0",
-    "lastCheckedAt": "2026-11-13T02:08:49+00:00",
+    "lastCheckedAt": "2026-11-13T02:12:29+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-13T02:08:54+00:00",
+    "updatedAt": "2026-11-13T02:12:53+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -56,7 +56,7 @@
         "purpose": "ふじの熟度調査と収穫情報"
       }
     ],
-    "lastTopicRetrievedAt": "2026-11-13T02:05:20+00:00",
+    "lastTopicRetrievedAt": "2026-11-13T02:12:53+00:00",
     "dataCutoffAt": "2026-10-30",
     "priceObservationPeriod": "2026年10月下旬",
     "priceSourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
@@ -73,15 +73,15 @@
       "topics": "ok",
       "gemini": "daily_limit"
     },
-    "lastFishCheckedAt": "2026-11-13T02:08:54+00:00",
+    "lastFishCheckedAt": "2026-11-13T02:12:33+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
-    "lastTopicAttemptAt": "2026-11-13T02:09:18+00:00",
+    "lastTopicAttemptAt": "2026-11-13T02:12:53+00:00",
     "lastAutomaticCheckAt": "2026-11-12T13:55:08+00:00",
     "lastFishSuccessAt": "2026-11-12T13:55:08+00:00",
     "lastGeminiSuccessAt": "2026-11-12T04:31:34+00:00",
-    "topicSourceCountLastRun": 37,
-    "topicAddedLastRun": 0,
+    "topicSourceCountLastRun": 44,
+    "topicAddedLastRun": 7,
     "topicGeminiSucceededLastRun": 0,
     "topicGeminiFailedLastRun": 0,
     "lastVegetableFruitSuccessAt": "2026-11-12T13:55:08+00:00",
@@ -92,9 +92,7 @@
       "attempted": 0,
       "dailyLimit": 6
     },
-    "topicSourceErrorsLastRun": [
-      "ALIC: ValueError: ALIC source claims changed: セロリ"
-    ],
+    "topicSourceErrorsLastRun": [],
     "topicGeminiStateLastRun": "sources_only",
     "lastTopicsSuccessAt": "2026-11-12T13:55:08+00:00",
     "lastStepResults": {
@@ -264,7 +262,7 @@
         }
       }
     ],
-    "longHistoryUpdatedAt": "2026-11-13T02:09:20+00:00",
+    "longHistoryUpdatedAt": "2026-11-13T02:12:54+00:00",
     "historyBackfillLastRun": {
       "attempted": 0,
       "succeeded": 0,
@@ -123122,6 +123120,307 @@
     }
   ],
   "topics": [
+    {
+      "id": "alic-2026-11-v-011",
+      "foodId": "v-011",
+      "title": "ミニトマト：2026年11月の見通し（刊行時点の産地情報）",
+      "summary": "熊本の冬春ミニトマトは育ちが良く、11月後半の出荷最盛期を見込んでいます。一方、和歌山では初期の果実が暑さで付きにくく、出荷が増える時期は12月以降とされます。産地で進み方が異なります。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農畜産業振興機構（執筆：加藤宏一）",
+          "title": "野菜情報2026年11月号「首都圏の需要を中心とした11月の見通し」",
+          "url": "https://vegetable.alic.go.jp/yasaijoho/jyukyu/2611_jyukyu1_2.html",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月の見通し（刊行時点の産地情報）",
+      "sourceFingerprint": "3f6a57cbca72279e63e4b2b07d37ee09bd5039a3f0a8244feb147a05bd78f2fc",
+      "sourceFamily": "alic-monthly-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "ミニトマトは、熊本産の冬春物は、9月22日から選…",
+      "scope": "熊本県・和歌山県の冬春作・首都圏向け需要",
+      "reportType": "産地の作柄・出荷の見通し",
+      "evidenceSections": [
+        {
+          "label": "原文の冒頭（全文は出典リンク）",
+          "text": "ミニトマトは、熊本産の冬春物は、9月22日から選…"
+        }
+      ],
+      "limitations": "11月号に掲載された刊行時点の見通しです。11月現在の実績を確認したものではありません。記載の産地・品種に限った情報で、全国の生産量ではありません。正確な公表日は未確認です。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "ChatGPT",
+      "tag": "ChatGPT要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:12:53+00:00"
+    },
+    {
+      "id": "alic-2026-11-v-024",
+      "foodId": "v-024",
+      "title": "れんこん：2026年11月の見通し（刊行時点の産地情報）",
+      "summary": "茨城のれんこんは生育が良好で、台風による葉の損傷も報告されていません。11月の出荷は10月に続いて平年程度となる見込みです。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農畜産業振興機構（執筆：加藤宏一）",
+          "title": "野菜情報2026年11月号「首都圏の需要を中心とした11月の見通し」",
+          "url": "https://vegetable.alic.go.jp/yasaijoho/jyukyu/2611_jyukyu1_2.html",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月の見通し（刊行時点の産地情報）",
+      "sourceFingerprint": "6de3afbeb71b71c88c756c47a140774cd1ee6a7455e0cde1ddd9ef9b0c77dce6",
+      "sourceFamily": "alic-monthly-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "れんこんは、茨城産は10月に続き11月も平年並み…",
+      "scope": "茨城県の産地・首都圏向け需要",
+      "reportType": "産地の作柄・出荷の見通し",
+      "evidenceSections": [
+        {
+          "label": "原文の冒頭（全文は出典リンク）",
+          "text": "れんこんは、茨城産は10月に続き11月も平年並み…"
+        }
+      ],
+      "limitations": "11月号に掲載された刊行時点の見通しです。11月現在の実績を確認したものではありません。記載の産地・品種に限った情報で、全国の生産量ではありません。正確な公表日は未確認です。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "ChatGPT",
+      "tag": "ChatGPT要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:12:53+00:00"
+    },
+    {
+      "id": "alic-2026-11-v-025",
+      "foodId": "v-025",
+      "title": "ごぼう：2026年11月の見通し（刊行時点の産地情報）",
+      "summary": "茨城の「芹沢のごぼう」は平年程度の作柄とされます。出荷は11月から増え、12月に最も多くなる見通し。Mサイズを中心とした供給が予定されています。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農畜産業振興機構（執筆：加藤宏一）",
+          "title": "野菜情報2026年11月号「首都圏の需要を中心とした11月の見通し」",
+          "url": "https://vegetable.alic.go.jp/yasaijoho/jyukyu/2611_jyukyu1_2.html",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月の見通し（刊行時点の産地情報）",
+      "sourceFingerprint": "b1abd981d3c8a7c648971cc57b06686c366d9ef2ba42c696bee17bb393568c5a",
+      "sourceFamily": "alic-monthly-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "ごぼうは、茨城産の「芹沢のごぼう」が11月に徐々…",
+      "scope": "茨城県の芹沢のごぼう・首都圏向け需要",
+      "reportType": "産地の作柄・出荷の見通し",
+      "evidenceSections": [
+        {
+          "label": "原文の冒頭（全文は出典リンク）",
+          "text": "ごぼうは、茨城産の「芹沢のごぼう」が11月に徐々…"
+        }
+      ],
+      "limitations": "11月号に掲載された刊行時点の見通しです。11月現在の実績を確認したものではありません。記載の産地・品種に限った情報で、全国の生産量ではありません。正確な公表日は未確認です。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "ChatGPT",
+      "tag": "ChatGPT要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:12:53+00:00"
+    },
+    {
+      "id": "alic-2026-11-v-020",
+      "foodId": "v-020",
+      "title": "さつまいも：2026年11月の見通し（刊行時点の産地情報）",
+      "summary": "石川の「五郎島金時」は2026年産の数量を十分に確保しているとの報告です。8月後半から出荷し、翌年5月下旬まで計画的に供給する方針。中心となるサイズはMです。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農畜産業振興機構（執筆：加藤宏一）",
+          "title": "野菜情報2026年11月号「首都圏の需要を中心とした11月の見通し」",
+          "url": "https://vegetable.alic.go.jp/yasaijoho/jyukyu/2611_jyukyu1_2.html",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月の見通し（刊行時点の産地情報）",
+      "sourceFingerprint": "9d85efc06ecc005b0342d3c46bfc1fc2aad1be3747dee77e8b8a57951ea4d0f8",
+      "sourceFamily": "alic-monthly-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "かんしょは、石川産の「五郎島金時®」の令和8年産…",
+      "scope": "石川県の五郎島金時・首都圏向け需要",
+      "reportType": "産地の作柄・出荷の見通し",
+      "evidenceSections": [
+        {
+          "label": "原文の冒頭（全文は出典リンク）",
+          "text": "かんしょは、石川産の「五郎島金時®」の令和8年産…"
+        }
+      ],
+      "limitations": "11月号に掲載された刊行時点の見通しです。11月現在の実績を確認したものではありません。記載の産地・品種に限った情報で、全国の生産量ではありません。正確な公表日は未確認です。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "ChatGPT",
+      "tag": "ChatGPT要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:12:53+00:00"
+    },
+    {
+      "id": "alic-2026-11-v-019",
+      "foodId": "v-019",
+      "title": "かぼちゃ：2026年11月の見通し（刊行時点の産地情報）",
+      "summary": "北海道北部では10月初めに収穫を終え、12月半ばまで出荷する見通しです。夏の少雨の影響に農家間の差があり、傷みを除く選別で数量が変わるため、出荷予測には不確かさがあります。前年超・平年未満の見込みです。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農畜産業振興機構（執筆：加藤宏一）",
+          "title": "野菜情報2026年11月号「首都圏の需要を中心とした11月の見通し」",
+          "url": "https://vegetable.alic.go.jp/yasaijoho/jyukyu/2611_jyukyu1_2.html",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月の見通し（刊行時点の産地情報）",
+      "sourceFingerprint": "4f018f0c1dbc38c35c2629daa76bdfa5e250fd7fc03d2f7e908c49aca6cc69d8",
+      "sourceFamily": "alic-monthly-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "かぼちゃは、北海道産(道北)は、現時点(10月初…",
+      "scope": "北海道道北の産地・首都圏向け需要",
+      "reportType": "産地の作柄・出荷の見通し",
+      "evidenceSections": [
+        {
+          "label": "原文の冒頭（全文は出典リンク）",
+          "text": "かぼちゃは、北海道産(道北)は、現時点(10月初…"
+        }
+      ],
+      "limitations": "11月号に掲載された刊行時点の見通しです。11月現在の実績を確認したものではありません。記載の産地・品種に限った情報で、全国の生産量ではありません。正確な公表日は未確認です。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "ChatGPT",
+      "tag": "ChatGPT要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:12:53+00:00"
+    },
+    {
+      "id": "alic-2026-11-v-008",
+      "foodId": "v-008",
+      "title": "カリフラワー：2026年11月の見通し（刊行時点の産地情報）",
+      "summary": "福岡では夏の少雨で植え付けが遅れましたが、その後の生育は良好。11月10日ごろの出荷開始と翌春までの継続が見込まれます。出荷量は、大雨の影響で少なかった前年より増える予想です。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農畜産業振興機構（執筆：加藤宏一）",
+          "title": "野菜情報2026年11月号「首都圏の需要を中心とした11月の見通し」",
+          "url": "https://vegetable.alic.go.jp/yasaijoho/jyukyu/2611_jyukyu1_2.html",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月の見通し（刊行時点の産地情報）",
+      "sourceFingerprint": "a15de43d398019465bccae11555814dfe19582521df90d9ee79602f7b58ad4b9",
+      "sourceFamily": "alic-monthly-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "カリフラワーは、福岡産は、8月までの干ばつの影響…",
+      "scope": "福岡県の産地・首都圏向け需要",
+      "reportType": "産地の作柄・出荷の見通し",
+      "evidenceSections": [
+        {
+          "label": "原文の冒頭（全文は出典リンク）",
+          "text": "カリフラワーは、福岡産は、8月までの干ばつの影響…"
+        }
+      ],
+      "limitations": "11月号に掲載された刊行時点の見通しです。11月現在の実績を確認したものではありません。記載の産地・品種に限った情報で、全国の生産量ではありません。正確な公表日は未確認です。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "ChatGPT",
+      "tag": "ChatGPT要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:12:53+00:00"
+    },
+    {
+      "id": "alic-2026-11-v-046",
+      "foodId": "v-046",
+      "title": "セロリ：2026年11月の見通し（刊行時点の産地情報）",
+      "summary": "静岡の露地セロリは11月半ば、施設栽培は12月初めから出荷開始の見込み。定植後の育ちは良かった一方、その後の高温と長雨による根腐れが懸念されています。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農畜産業振興機構（執筆：加藤宏一）",
+          "title": "野菜情報2026年11月号「首都圏の需要を中心とした11月の見通し」",
+          "url": "https://vegetable.alic.go.jp/yasaijoho/jyukyu/2611_jyukyu1_2.html",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月の見通し（刊行時点の産地情報）",
+      "sourceFingerprint": "cfa06fcc9691acbaf189a584c68ffe7c2bb5437c94c1e750770306d449289a0d",
+      "sourceFamily": "alic-monthly-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "セロリ(セルリー)は、静岡産の露地物は例年並みの…",
+      "scope": "静岡県の産地・首都圏向け需要",
+      "reportType": "産地の作柄・出荷の見通し",
+      "evidenceSections": [
+        {
+          "label": "原文の冒頭（全文は出典リンク）",
+          "text": "セロリ(セルリー)は、静岡産の露地物は例年並みの…"
+        }
+      ],
+      "limitations": "11月号に掲載された刊行時点の見通しです。11月現在の実績を確認したものではありません。記載の産地・品種に限った情報で、全国の生産量ではありません。正確な公表日は未確認です。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "ChatGPT",
+      "tag": "ChatGPT要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:12:53+00:00"
+    },
     {
       "id": "aomori-fuji-2026-11-06-f-054",
       "foodId": "f-054",
