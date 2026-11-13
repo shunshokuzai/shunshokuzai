@@ -51,7 +51,7 @@ def alic_items(html,foods,today):
    'sourceTitle':'野菜情報2026年11月号「首都圏の需要を中心とした11月の見通し」',
    'observedPeriod':'2026年11月の見通し（刊行時点の産地情報）',
    'periodStart':'2026-11-01','periodEnd':'2026-11-30','isForecast':True,
-   'excerpt':paragraph,'publicExcerpt':quote,'preparedSummary':summary,
+   'excerpt':'野菜情報2026年11月号\n'+paragraph,'publicExcerpt':quote,'preparedSummary':summary,
    'summaryProvider':'ChatGPT','scope':scope,'reportType':'産地の作柄・出荷の見通し',
    'evidenceSections':[{'label':'原文の冒頭（全文は出典リンク）','text':quote}],
    'limitations':'11月号に掲載された刊行時点の見通しです。11月現在の実績を確認したものではありません。記載の産地・品種に限った情報で、全国の生産量ではありません。正確な公表日は未確認です。'})
