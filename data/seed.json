@@ -5,10 +5,10 @@
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
     "version": "0.9.0",
-    "lastCheckedAt": "2026-11-13T02:27:37+00:00",
+    "lastCheckedAt": "2026-11-13T02:30:28+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-13T02:28:12+00:00",
+    "updatedAt": "2026-11-13T02:31:02+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -56,7 +56,7 @@
         "purpose": "ふじの熟度調査と収穫情報"
       }
     ],
-    "lastTopicRetrievedAt": "2026-11-13T02:28:12+00:00",
+    "lastTopicRetrievedAt": "2026-11-13T02:31:02+00:00",
     "dataCutoffAt": "2026-10-30",
     "priceObservationPeriod": "2026年10月下旬",
     "priceSourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
@@ -73,15 +73,15 @@
       "topics": "ok",
       "gemini": "daily_limit"
     },
-    "lastFishCheckedAt": "2026-11-13T02:27:42+00:00",
+    "lastFishCheckedAt": "2026-11-13T02:30:34+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
-    "lastTopicAttemptAt": "2026-11-13T02:28:12+00:00",
+    "lastTopicAttemptAt": "2026-11-13T02:31:02+00:00",
     "lastAutomaticCheckAt": "2026-11-12T13:55:08+00:00",
     "lastFishSuccessAt": "2026-11-12T13:55:08+00:00",
     "lastGeminiSuccessAt": "2026-11-12T04:31:34+00:00",
-    "topicSourceCountLastRun": 46,
-    "topicAddedLastRun": 3,
+    "topicSourceCountLastRun": 47,
+    "topicAddedLastRun": 2,
     "topicGeminiSucceededLastRun": 0,
     "topicGeminiFailedLastRun": 0,
     "lastVegetableFruitSuccessAt": "2026-11-12T13:55:08+00:00",
@@ -92,9 +92,7 @@
       "attempted": 0,
       "dailyLimit": 6
     },
-    "topicSourceErrorsLastRun": [
-      "Salmon: ValueError: Salmon bulletin year missing"
-    ],
+    "topicSourceErrorsLastRun": [],
     "topicGeminiStateLastRun": "sources_only",
     "lastTopicsSuccessAt": "2026-11-12T13:55:08+00:00",
     "lastStepResults": {
@@ -264,7 +262,7 @@
         }
       }
     ],
-    "longHistoryUpdatedAt": "2026-11-13T02:28:15+00:00",
+    "longHistoryUpdatedAt": "2026-11-13T02:31:05+00:00",
     "historyBackfillLastRun": {
       "attempted": 0,
       "succeeded": 0,
@@ -279,7 +277,7 @@
       "succeeded": 0,
       "failed": 0,
       "state": "validated",
-      "addedPeriods": 72,
+      "addedPeriods": 0,
       "validation": [
         {
           "stamp": [
@@ -174267,6 +174265,96 @@
   ],
   "topics": [
     {
+      "id": "jafic-sanma-2026-11-09-f-094",
+      "foodId": "f-094",
+      "title": "サンマ：道東・三陸・常磐の中短期漁況予報",
+      "summary": "11月9日公表のサンマ予報では、道東は11月半ばに断続的な来遊となる見込み。三陸・常磐では11月半ばの来遊水準を低いと予測しています。対象は南下回遊群の棒受網漁で、全国の確定漁獲量ではありません。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "漁業情報サービスセンター（関係水産研究機関と検討）",
+          "title": "2026年度第7回サンマ中短期漁況予報（2026年11月9日公表）",
+          "url": "https://www.jafic.or.jp/information/2026/11/09/post-5/",
+          "publishedAt": "2026-11-09"
+        },
+        {
+          "name": "中短期予報のPDF原文",
+          "url": "https://www.jafic.or.jp/notice/gyokyo/sanma20261109.pdf",
+          "publishedAt": "2026-11-09"
+        }
+      ],
+      "publishedAt": "2026-11-09",
+      "observedPeriod": "2026年11月中旬～12月下旬の予測",
+      "sourceFingerprint": "a7e0e41d6bdd8e02a3ea38607735eef59ba68d04555d1b7e5d7af5c3d8c4325f",
+      "sourceFamily": "jafic-sanma",
+      "isForecast": true,
+      "periodStart": "2026-11-11",
+      "periodEnd": "2026-12-31",
+      "summaryVersion": 5,
+      "sourceExcerpt": "道東海域では、11月中旬は断続的な来遊となる。",
+      "scope": "道東・三陸・常磐海域の南下回遊群・さんま棒受網漁業",
+      "reportType": "海域別の来遊量予報",
+      "evidenceSections": [
+        {
+          "label": "原文の一部（全文はPDF）",
+          "text": "道東海域では、11月中旬は断続的な来遊となる。"
+        }
+      ],
+      "limitations": "11月9日公表時点の予測です。12月までを対象とする資料ですが、この要約は原資料冒頭の11月中旬の海域別見通しを整理しています。詳しい旬別の見通しはPDF原文をご確認ください。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "ChatGPT",
+      "tag": "ChatGPT要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:31:02+00:00"
+    },
+    {
+      "id": "fra-salmon-2026-09-30-f-100",
+      "foodId": "f-100",
+      "title": "サケ：11道県の来遊速報（9月30日現在）",
+      "summary": "9月30日までの11道県のサケ総来遊数は2,391,004尾、前年同期の68%です。内訳は沿岸の漁獲2,098,789尾と河川等の捕獲292,215尾。期間途中の速報で、年間の確定値ではありません。",
+      "kind": "official_data_digest",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "水産研究・教育機構（関係11道県の速報を集計）",
+          "title": "さけます来遊速報 令和8年度・サケ道県別来遊数",
+          "url": "https://www.fra.go.jp/shigen/salmon/sokuhou.html",
+          "publishedAt": "2026-10-16"
+        }
+      ],
+      "publishedAt": "2026-10-16",
+      "observedPeriod": "2026年7月以降～9月30日の累計（漁獲は8月以降）",
+      "sourceFingerprint": "d686a40cd1dfd11c29a353d0a953e621451f809e33ba152c7584c104d700f67b",
+      "sourceFamily": "fra-salmon",
+      "isForecast": false,
+      "periodStart": "2026-07-01",
+      "periodEnd": "2026-09-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "9月30日までの11道県のサケ総来遊数は2,391,004尾、前年同期の68%です。内訳は沿岸の漁獲2,098,789尾と河川等の捕獲292,215尾。期間途中の速報で、年間の確定値ではありません。",
+      "scope": "北海道・青森・岩手・宮城・福島・茨城・秋田・山形・新潟・富山・石川の11道県",
+      "reportType": "内水面捕獲数＋沿岸漁獲数の累計速報",
+      "evidenceSections": [
+        {
+          "label": "合計行から整理した数値",
+          "text": "捕獲数 292,215尾／漁獲数 2,098,789尾／総来遊数 2,391,004尾／総来遊数前年比 68%"
+        }
+      ],
+      "limitations": "総来遊数は河川などの捕獲数と沿岸漁獲数の合計で、海面漁獲量だけを示す数値ではありません。11道県の期間途中の速報で、追録・修正されることがあります。",
+      "automaticChecks": [
+        "合計内訳・前年比の算術照合"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的統計の数値を整理（AI未使用）",
+      "retrievedAt": "2026-11-13T02:31:02+00:00"
+    },
+    {
       "id": "aomori-fuji-2026-11-12-f-054",
       "foodId": "f-054",
       "title": "りんご：2026年11月12日の熟度調査",
@@ -174306,54 +174394,6 @@
       "aiGenerated": false,
       "summaryProvider": null,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T02:28:12+00:00"
-    },
-    {
-      "id": "jafic-sanma-2026-11-09-f-094",
-      "foodId": "f-094",
-      "title": "サンマ：道東・三陸・常磐の中短期漁況予報",
-      "summary": "11月9日公表のサンマ予報では、道東は11月半ばに断続的な来遊となる見込み。三陸・常磐では11月半ばの来遊水準を低いと予測しています。対象は南下回遊群の棒受網漁で、全国の確定漁獲量ではありません。",
-      "kind": "ai_source_summary",
-      "verified": false,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "漁業情報サービスセンター（関係水産研究機関と検討）",
-          "title": "2026年度第7回サンマ中短期漁況予報（2026年11月9日公表）",
-          "url": "https://www.jafic.or.jp/information/2026/11/09/post-5/",
-          "publishedAt": "2026-11-09"
-        },
-        {
-          "name": "中短期予報のPDF原文",
-          "url": "https://www.jafic.or.jp/notice/gyokyo/sanma20261109.pdf",
-          "publishedAt": "2026-11-09"
-        }
-      ],
-      "publishedAt": "2026-11-09",
-      "observedPeriod": "2026年11月中旬～12月下旬の予測",
-      "sourceFingerprint": "09f066ad5ef79600b68c9ffb2ba0549dfed86cb58b794a3c9059028767af2b7c",
-      "sourceFamily": "jafic-sanma",
-      "isForecast": true,
-      "periodStart": "2026-11-11",
-      "periodEnd": "2026-12-31",
-      "summaryVersion": 5,
-      "sourceExcerpt": "道東海域では、11月中旬は断続的な来遊となる。",
-      "scope": "道東・三陸・常磐海域の南下回遊群・さんま棒受網漁業",
-      "reportType": "海域別の来遊量予報",
-      "evidenceSections": [
-        {
-          "label": "原文の一部（全文はPDF）",
-          "text": "道東海域では、11月中旬は断続的な来遊となる。"
-        }
-      ],
-      "limitations": "11月9日公表時点の予測です。12月までを対象とする資料ですが、この要約は原資料冒頭の11月中旬の海域別見通しを整理しています。詳しい旬別の見通しはPDF原文をご確認ください。",
-      "automaticChecks": [
-        "数値の原文照合",
-        "見通しの断定化チェック"
-      ],
-      "aiGenerated": true,
-      "summaryProvider": "ChatGPT",
-      "tag": "ChatGPT要約（一次資料から・独立検証前）",
       "retrievedAt": "2026-11-13T02:28:12+00:00"
     },
     {
