@@ -1,26 +1,14 @@
-"""Inspect public e-Stat download metadata and one CSV without API credentials."""
+"""Read-only discovery of e-Stat original daily files."""
 import json,re
+from urllib.parse import urljoin
 from bs4 import BeautifulSoup
-from update_data import fetch,decode_csv
-
-URL='https://www.e-stat.go.jp/stat-search/files?layout=datalist&stat_infid=000032228975&toukei=00500226'
-LIST='https://www.e-stat.go.jp/stat-search/files?layout=dataset&page=1&limit=100&toukei=00500226&tclass1=000001032194&tclass2=000001046984&year=20220&query=%E4%B8%BB%E8%A6%81%E5%8D%B8%E5%A3%B2%E5%B8%82%E5%A0%B4%E8%A8%88'
+from update_data import fetch
+BASE='https://www.e-stat.go.jp/stat-search/files?layout=datalist&limit=100&toukei=00500226&tclass1=000001032194&tclass2=000001046984&query=%E4%B8%BB%E8%A6%81%E5%8D%B8%E5%A3%B2%E5%B8%82%E5%A0%B4%E8%A8%88'
 def main():
- for name,url in [('dataset',URL),('listing',LIST)]:
-  try:
-   raw=fetch(url,timeout=35);soup=BeautifulSoup(raw,'html.parser')
-   print('ESTAT',name,'bytes',len(raw),'title',soup.title.get_text() if soup.title else None,flush=True)
-   tags=[{'tag':t.name,'attrs':t.attrs,'text':t.get_text(' ',strip=True)[:160]} for t in soup.find_all(['a','button','div','input']) if re.search('download|fileKind|stat_infid|statInfId',json.dumps(t.attrs),re.I)]
-   print('ESTAT DOWNLOAD TAGS',name,json.dumps(tags[:12],ensure_ascii=False),flush=True)
-   print('ESTAT PAGINATION',name,json.dumps([{'text':a.get_text(' ',strip=True),'href':a.get('href')} for a in soup.find_all('a',href=True) if 'page=' in a['href']][-8:],ensure_ascii=False),flush=True)
-   if name=='dataset':
-    for a in soup.find_all('a',href=True):
-     if 'file-download' in a['href']:
-      from urllib.parse import urljoin
-      link=urljoin(url,a['href'])
-      print('ESTAT CSV LINK',link,flush=True)
-      data=fetch(link,timeout=35)
-      print('ESTAT CSV SAMPLE',repr(decode_csv(data)[:3200]),flush=True)
-      break
-  except Exception as e:print('ESTAT ERROR',name,type(e).__name__,str(e)[:150],flush=True)
+ for year,cls in [(2021,'000001150226'),(2022,'000001163286'),(2023,'000001201860')]:
+  url=BASE+'&tclass3='+cls+'&cycle=0'
+  s=BeautifulSoup(fetch(url,timeout=40),'html.parser')
+  links=[{'text':a.get_text(' ',strip=True),'href':a.get('href')} for a in s.find_all('a',href=True) if any(k in a['href'] for k in ('page=','tclass4=','file-download'))]
+  print('ESTAT DISCOVER',year,json.dumps(links[:8]+links[-14:],ensure_ascii=False),flush=True)
+  print('ESTAT TEXT',year,s.get_text(' ',strip=True)[-8000:-3000],flush=True)
 if __name__=='__main__':main()
