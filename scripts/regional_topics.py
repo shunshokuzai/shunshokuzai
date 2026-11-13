@@ -87,6 +87,6 @@ def regional_items(foods,today):
  items=[];errors=[]
  for name,url,parser in [('ALIC',ALIC_URL,alic_items),('Aomori',AOMORI_URL,apple_items)]:
   try:items.extend(parser(fetch(url,timeout=25),foods,today))
-  except Exception as error:errors.append(name+': '+type(error).__name__)
+  except Exception as error:errors.append(name+': '+type(error).__name__+': '+str(error)[:100])
  print('REGIONAL CROP REPORTS',len(items),errors,flush=True)
  return items,errors
