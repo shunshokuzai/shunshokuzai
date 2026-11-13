@@ -1,0 +1,38 @@
+name: Check published app on desktop and mobile
+on:
+  push:
+    branches: ['codex/public-ui-*']
+    paths: ['scripts/verify_public_ui.py', '.github/workflows/public-ui.yml']
+  workflow_run:
+    workflows: ['Update food prices, Gemini topics, and publish site']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: public-ui-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  browser-check:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install isolated browser verification tools
+        run: |
+          pip install 'playwright==1.65.1'
+          python -m playwright install --with-deps chromium
+      - name: Test the live published app
+        run: python -u scripts/verify_public_ui.py
+      - name: Retain screen captures and verification results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: published-app-ui
+          path: ui-results
+          retention-days: 7

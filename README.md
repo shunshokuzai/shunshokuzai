@@ -68,6 +68,8 @@ python scripts/verify_history.py
 python scripts/verify_consistency.py
 ```
 
+`public-ui.yml` は公開更新の成功後、実際の公開URLをChromiumで開き、PC幅1280px・スマートフォン幅390pxで要約・5年グラフ・日別原表リンク・表記ゆれ検索・横はみ出し・JavaScriptエラーを確認します。画面キャプチャと結果JSONはActionsの成果物として7日間保存します。11月13日の公開画面で両表示幅の操作確認に成功しました（実機Safariでの確認ではありません）。期限切れの予報を残すことを要求するテストにはしていません。
+
 `validate.yml` は開発ブランチでテストと実際の公的資料の取得を実行します。検証時はGeminiを呼び出しません。本番への反映前に結果を確認します。
 
 ## 主なファイル
