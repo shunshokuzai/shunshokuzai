@@ -42,6 +42,13 @@ def alic_items(html,foods,today):
   # Paragraphs may include spans/ruby; normalize whitespace only, not meaning.
   paragraphs=[unicodedata.normalize('NFKC',p.get_text('',strip=True)).strip() for p in soup.find_all('p')]
   paragraph=next((p for p in paragraphs if p.startswith(prefix)),None)
+  if not paragraph:
+   body=unicodedata.normalize('NFKC',soup.get_text('',strip=True))
+   start=body.find(prefix)
+   if start>=0:
+    markers=['だいこんは','にんじんは','キャベツは','はくさいは','ほうれんそうは','ねぎは','ブロッコリーは','レタスは','きゅうりは','なすは','トマトは','ミニトマトは','ピーマンは','ばれいしょは','たまねぎは','さといもは','セロリ(セルリー)は','カリフラワーは','かぼちゃは','かんしょは','ごぼうは','れんこんは','(執筆者']
+    ends=[body.find(mark,start+len(prefix)) for mark in markers]
+    paragraph=body[start:min([end for end in ends if end>=0] or [len(body)])]
   if not paragraph or not all(word in paragraph for word in required):
    raise ValueError('ALIC source claims changed: '+name)
   quote=paragraph[:24]+'…'
