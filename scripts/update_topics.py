@@ -8,6 +8,7 @@ Gemini. When the model is unavailable, source extracts remain available and AI
 failure is reported accurately instead of claiming success.
 """
 import argparse
+import calendar
 import datetime as dt
 import json
 import hashlib
@@ -24,7 +25,7 @@ from update_data import BASE, DATA, fetch, now_iso, normalize, save
 API = 'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent'
 MODEL = 'gemini-3.1-flash-lite'
 MAFF_DOMAIN = 'www.maff.go.jp'
-SUMMARY_VERSION = 2
+SUMMARY_VERSION = 5
 
 
 def recent_forecast_url(today, getter=fetch):
@@ -74,6 +75,9 @@ def forecast_items(html, foods, url, published):
         rows.append({'food': allowed[name], 'url': url, 'publishedAt': published,
                      'excerpt': excerpt, 'outlook': outlook,
                      'sourceTitle': title, 'observedPeriod': f'{target.year}年{target.month}月の見通し',
+                     'sourceFamily': 'maff-vegetable', 'isForecast': True,
+                     'periodStart': f'{target.year}-{target.month:02}-01',
+                     'periodEnd': f'{target.year}-{target.month:02}-{calendar.monthrange(target.year,target.month)[1]}',
                      'scope': '資料に記載の主産地（産地・卸売会社等への聞き取り）',
                      'reportType': '生育・出荷状況と今後の見通し',
                      'limitations': '聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。',
@@ -121,7 +125,7 @@ def ai_summarize(excerpt, key, model=MODEL, timeout=40):
     prompt = ('以下は公的機関が実際に公表した文章です。記載されている事実だけを使い、'
         '食材の生育・入荷・市場動向について100～150字程度で要約してください。'
         '主産地、生育または入荷の現状、変動理由、今後の見通しのうち原文にある項目を優先する。'
-        '市場への入荷量を全国の収穫量・漁獲量と言い換えない。前週比と前年比を混同しない。'
+        '市場への入荷量を全国の収穫量・漁獲量と言い換えない。来遊量の予報を確定した漁獲量と言い換えない。前週比と前年比を混同しない。'
         '見通しを確定した結果のように書かない。資料にない数値や地域、原因を加えない。'
         '余計な挨拶・注釈・Markdownは付けない。\n\n' + excerpt)
     payload = {'contents':[{'parts':[{'text':prompt}]}],
@@ -173,19 +177,23 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
         skip_ai = unchanged and (old.get('aiGenerated') or not key or blocked or attempts >= request_limit)
         if skip_ai and old.get('summaryVersion') == SUMMARY_VERSION:
             continue
-        summary = old['summary'] if unchanged and old.get('aiGenerated') else extract_summary(item['excerpt'])
+        summary = old['summary'] if unchanged and old.get('aiGenerated') else (item.get('summaryExcerpt') or extract_summary(item['excerpt']))
         generated = bool(unchanged and old.get('aiGenerated'))
         if generated:
             try:
                 validate_summary(summary, item['excerpt'])
             except ValueError:
                 summary = extract_summary(item['excerpt']); generated = False
-        if not skip_ai and key and not blocked and attempts < request_limit:
+        provider = old.get('summaryProvider','Gemini') if generated and old else 'Gemini'
+        if item.get('preparedSummary'):
+            summary = validate_summary(item['preparedSummary'], item['excerpt'])
+            generated = True; provider = item['summaryProvider']
+        if not item.get('preparedSummary') and not skip_ai and key and not blocked and attempts < request_limit:
             if on_attempt:on_attempt()
             attempts += 1
             try:
                 summary = ai_summarize(item['excerpt'], key, model)
-                success += 1; generated = True
+                success += 1; generated = True; provider = 'Gemini'
             except Exception as exc:
                 failures += 1
                 blocked = 'HTTP 429' in str(exc) or 'HTTP 403' in str(exc)
@@ -196,24 +204,26 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
         new = {
             'id':ident, 'foodId':f['id'],
             'title':item.get('title') or f"{f['name']}：{item.get('observedPeriod') or '生育・出荷の公的情報'}",
-            'summary':summary, 'kind':'ai_source_summary' if generated else 'official_excerpt',
+            'summary':summary, 'kind':'ai_source_summary' if generated else item.get('kind','official_excerpt'),
             'verified':not generated, 'yearSpecific':True,
             'sources':[{'name':item.get('sourceName','農林水産省・野菜の生育状況及び価格見通し'),
                         'title':item.get('sourceTitle','野菜の生育状況及び価格見通し'),
-                        'url':item['url'],'publishedAt':item['publishedAt']}],
+                        'url':item['url'],'publishedAt':item['publishedAt']}, *item.get('extraSources',[])],
             'publishedAt':item['publishedAt'], 'observedPeriod':item.get('observedPeriod') or (
                 f'{(dt.date.fromisoformat(item["publishedAt"]).replace(day=1)+dt.timedelta(days=32)).month}月の見通し'
                 if item.get('publishedAt') else '資料参照（対象期間未確認）'),
             'sourceFingerprint':fingerprint,
+            'sourceFamily': item.get('sourceFamily'), 'isForecast': item.get('isForecast',False),
+            'periodStart': item.get('periodStart'), 'periodEnd': item.get('periodEnd'),
             'summaryVersion': SUMMARY_VERSION,
-            'sourceExcerpt': item['excerpt'],
+            'sourceExcerpt': item.get('publicExcerpt',item['excerpt']),
             'scope': item.get('scope', '資料に記載の対象地域'),
             'reportType': item.get('reportType', '公的資料の記述'),
             'evidenceSections': item.get('evidenceSections', [{'label': '原文の該当箇所', 'text': item['excerpt']}]),
             'limitations': item.get('limitations', '品目全体の全国的な状況を保証する資料ではありません。'),
-            'automaticChecks': ['数値の原文照合', '見通しの断定化チェック'] if generated else ['原文抜粋'],
-            'aiGenerated':generated,
-            'tag':'Gemini要約（一次資料から・未検証）' if generated else '公的原文を短く抜粋（Gemini未使用）',
+            'automaticChecks': ['数値の原文照合', '見通しの断定化チェック'] if generated else item.get('nonAiChecks',['原文抜粋']),
+            'aiGenerated':generated, 'summaryProvider':provider if generated else None,
+            'tag':provider+'要約（一次資料から・独立検証前）' if generated else item.get('nonAiTag','公的原文を短く抜粋（Gemini未使用）'),
             'retrievedAt':now_iso(),
         }
         topics = [t for t in topics if t['id'] != ident]
@@ -255,6 +265,17 @@ def main():
     for category in ('fish','fruit'):
         try:items.extend(weekly_items(obj['foods'],category,today))
         except Exception as error:source_errors.append(category+': '+type(error).__name__)
+    from fish_forecasts import forecast_items as fish_forecast_items
+    try:
+        forecasts,errors=fish_forecast_items(obj['foods'],today)
+        items.extend(forecasts);source_errors.extend(errors)
+    except Exception as error:source_errors.append('FRA forecasts: '+type(error).__name__)
+    from additional_fish_topics import additional_items
+    extra,errors=additional_items(obj['foods'],today)
+    items.extend(extra);source_errors.extend(errors)
+    from regional_topics import regional_items
+    regional,errors=regional_items(obj['foods'],today)
+    items.extend(regional);source_errors.extend(errors)
     if not items:raise ValueError('No validated current public source rows; previous topics retained')
     reserved=0
     def reserve_attempt():

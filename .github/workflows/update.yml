@@ -42,6 +42,8 @@ jobs:
           MAX_AI_REQUESTS: '6'
           FORCE_GEMINI: ${{ github.event_name == 'workflow_dispatch' }}
         run: python scripts/run_refresh.py --live
+      - name: Validate published price consistency
+        run: python scripts/verify_consistency.py
       - name: Make standalone and published page
         run: |
           python scripts/build_standalone.py
@@ -50,7 +52,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/seed.json data/market_history.json data.js '旬食材まるわかり_プロトタイプ.html'
+          git add data/estat_daily.json data/seed.json data/market_history.json data.js '旬食材まるわかり_プロトタイプ.html'
           if ! git diff --cached --quiet; then
             git commit -m 'data: refresh market statistics and source-linked topics'
             git push

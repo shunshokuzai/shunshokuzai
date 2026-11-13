@@ -29,6 +29,8 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
     status['vegetableFruit']=run_step('update_data.py')
     status['fish']=run_step('update_fish.py')
     status['history']=run_step('backfill_history.py')
+    daily_history=run_step('estat_history.py')
+    if daily_history=='error':status['history']='error'
     scheduled=force_gemini or local.weekday() in (1,3,5)  # Tue/Thu/Sat, manual verification override
     key=ai_key if ai_key is not None else os.getenv('GEMINI_API_KEY','')
     if scheduled:
@@ -43,7 +45,7 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
         status['topics']='not_scheduled';status['gemini']='not_scheduled'
     obj=json.loads(DATA.read_text(encoding='utf-8'))
     meta=obj['metadata']
-    meta['version']='0.9.0'
+    meta['version']='0.10.0'
     meta['lastAutomaticCheckAt']=now_iso()
     meta['autoRefreshStatus']=status
     meta['autoRefreshConfigured']=True
@@ -61,9 +63,11 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
     details['topics']={'status':status.get('topics'),'checkedAt':now_iso(),
                       'sourceItemCount':meta.get('topicSourceCountLastRun',0),
                       'addedOrUpdatedCount':meta.get('topicAddedLastRun',0),
+                      'sourceFailureCount':len(meta.get('topicSourceErrorsLastRun',[])),
                       'aiState':status['gemini'],'aiRequestsToday':meta.get('aiRequestBudget',{}).get('attempted',0)}
     details['history']={'status':status['history'],'checkedAt':now_iso(),
-                        **meta.get('historyBackfillLastRun',{})}
+                        **meta.get('historyBackfillLastRun',{}),
+                        'dailyFallback':meta.get('estatHistoryLastRun',{})}
     meta['lastStepResults']=details
     meta['updateHistory']=(meta.get('updateHistory',[])+[{'checkedAt':now_iso(),'steps':details}])[-20:]
     save(obj)

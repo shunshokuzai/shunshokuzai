@@ -16,6 +16,27 @@ function historyContext(){
   vm.runInContext(source.slice(source.indexOf('function adjacentHistory('),source.indexOf('function topicEvidence(')),ctx);
   return ctx;
 }
+function topicContext(){
+  const ctx=vm.createContext({});
+  vm.runInContext(source.slice(source.indexOf('function topicDate('),source.indexOf('const foodMap=')),ctx);
+  return ctx;
+}
+test('newer market observations and regional forecasts remain together after recaching',()=>{
+  const ctx=topicContext();
+  const topics=[
+    {id:'old',foodId:'f',yearSpecific:true,sourceFamily:'tokyo-fish',periodEnd:'2026-10-29',sources:[{}],retrievedAt:'2026-11-12'},
+    {id:'week',foodId:'f',yearSpecific:true,sourceFamily:'tokyo-fish',periodEnd:'2026-11-05',sources:[{}]},
+    {id:'forecast',foodId:'f',yearSpecific:true,sourceFamily:'fra-pacific',publishedAt:'2026-08-03',periodEnd:'2026-12-31',isForecast:true,sources:[{}]}
+  ];
+  assert.deepEqual(Array.from(ctx.activeFoodTopics(topics,'f','2026-11-12'),t=>t.id),['week','forecast']);
+});
+test('expired forecasts disappear while a valid cross-year forecast remains',()=>{
+  const ctx=topicContext();
+  const topic={id:'forecast',foodId:'f',yearSpecific:true,publishedAt:'2026-10-28',periodEnd:'2027-03-31',isForecast:true,sources:[{}]};
+  assert.equal(ctx.activeFoodTopics([topic],'f','2027-01-12').length,1);
+  assert.equal(ctx.activeFoodTopics([topic],'f','2027-04-01').length,0);
+  assert.equal(ctx.activeFoodTopics([{...topic,publishedAt:'2027-02-01'}],'f','2027-01-12').length,0);
+});
 test('long-term graphs split missing periods and retain month/year boundaries',()=>{
   const ctx=historyContext();
   assert.equal(ctx.historySegments([{period:[2021,1,1]},{period:[2021,1,3]},{period:[2021,2,1]}],'produce').length,2);
@@ -26,12 +47,13 @@ test('long-term graphs split missing periods and retain month/year boundaries',(
 });
 test('year overlay exposes missing years, units, original values and source links',()=>{
   const ctx=historyContext();
-  const html=ctx.longHistoryPanel({longHistoryRange:[2021,2026],longHistory:[{period:[2021,1,1],price:100,sourceUrl:'https://www.maff.go.jp/one'},{period:[2026,1,1],price:200,sourceUrl:'https://www.maff.go.jp/two'}]},{id:'v',name:'キャベツ',category:'vegetable'},'seasonal');
+  const html=ctx.longHistoryPanel({longHistoryRange:[2021,2026],longHistory:[{period:[2021,1,1],price:100,estimate:true,sourceUrl:'https://www.maff.go.jp/one'},{period:[2026,1,1],price:200,sourceUrl:'https://www.maff.go.jp/two'}]},{id:'v',name:'キャベツ',category:'vegetable'},'seasonal');
   assert.ok(html.includes('2022年（未取得）'));
   assert.ok(html.includes('卸売・円/kg'));
   assert.ok(html.includes('https://www.maff.go.jp/one'));
   assert.ok(html.includes('2021年1月上旬'));
   assert.ok(html.includes('2時点'));
+  assert.ok(html.includes('100（日別再集計）')); 
   assert.ok(!html.includes('NaN'));
 });
 test('fish trend uses the weight published for each week',()=>{
@@ -61,4 +83,5 @@ test('classification includes both boundaries in normal and ignores stale values
   assert.equal(ctx.status({normalRatio:115.1})[1],'high');
   assert.equal(ctx.status({normalRatio:120,stale:true})[1],'demo');
   assert.equal(ctx.status({normalRatio:null})[1],'demo');
+  assert.equal(ctx.status({normalRatio:85,classificationUncertain:true})[1],'demo');
 });

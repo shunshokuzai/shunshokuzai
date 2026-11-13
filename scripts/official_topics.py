@@ -18,6 +18,17 @@ ALIASES = {'りんご': ['りんご', 'リンゴ'], 'みかん': ['みかん', '
            'スルメイカ': ['スルメイカ', 'スルメ'], 'キウイフルーツ': ['キウイ'], '洋なし':['西洋なし']}
 
 
+def weekly_period(text,stamp):
+    text=re.sub(r'\s+','',unicodedata.normalize('NFKC',text))
+    match=re.search(r'(\d{1,2})月(\d{1,2})日?[~～〜－-](\d{1,2})月(\d{1,2})日?',text)
+    if not match:return None,None
+    sm,sd,em,ed=map(int,match.groups())
+    sy=stamp[0]-(sm>stamp[1]);ey=sy+(em<sm)
+    start=dt.date(sy,sm,sd);end=dt.date(ey,em,ed)
+    if not 0<=(end-start).days<=7:raise ValueError('Unrecognized weekly observation dates')
+    return start.isoformat(),end.isoformat()
+
+
 def report_text(blob):
     if blob.startswith(b'%PDF'):
         import pdfplumber
@@ -30,6 +41,7 @@ def report_text(blob):
 
 def commentary_items(text, foods, category, stamp, url):
     text = unicodedata.normalize('NFKC', text)
+    period_start,period_end=weekly_period(text,stamp)
     # Quotes must come from prose commentary, never by converting price-table
     # numbers into a fabricated explanation of supply or production.
     markers = list(re.finditer(r'(?:市場概況|市場概\s*況|主要鮮魚別に見ると|品目別にみると)', text))
@@ -71,6 +83,8 @@ def commentary_items(text, foods, category, stamp, url):
                        'reportKey': 'tokyo-' + category + '-' + '-'.join(map(str, stamp)),
                        'sourceName': '東京都中央卸売市場・週間市況（' + ('水産' if category == 'fish' else '果実') + '）',
                        'sourceTitle': period + 'の週間市況', 'observedPeriod': period,
+                       'sourceFamily': 'tokyo-'+category, 'isForecast':False,
+                       'periodStart':period_start,'periodEnd':period_end,
                        'scope': '東京都豊洲市場' if category == 'fish' else '東京都大田市場',
                        'reportType': '市場への入荷・取引の実績',
                        'limitations': ('市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。'
