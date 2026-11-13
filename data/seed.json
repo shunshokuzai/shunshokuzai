@@ -4,11 +4,11 @@
     "priceStatus": "real_snapshot",
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
-    "version": "0.9.0",
-    "lastCheckedAt": "2026-11-13T02:30:28+00:00",
+    "version": "0.10.0",
+    "lastCheckedAt": "2026-11-13T02:33:56+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-13T02:31:02+00:00",
+    "updatedAt": "2026-11-13T02:34:02+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -70,21 +70,21 @@
       "vegetableFruit": "ok",
       "fish": "ok",
       "history": "ok",
-      "topics": "ok",
-      "gemini": "daily_limit"
+      "topics": "not_scheduled",
+      "gemini": "not_scheduled"
     },
-    "lastFishCheckedAt": "2026-11-13T02:30:34+00:00",
+    "lastFishCheckedAt": "2026-11-13T02:34:02+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
     "lastTopicAttemptAt": "2026-11-13T02:31:02+00:00",
-    "lastAutomaticCheckAt": "2026-11-12T13:55:08+00:00",
-    "lastFishSuccessAt": "2026-11-12T13:55:08+00:00",
+    "lastAutomaticCheckAt": "2026-11-13T02:34:04+00:00",
+    "lastFishSuccessAt": "2026-11-13T02:34:04+00:00",
     "lastGeminiSuccessAt": "2026-11-12T04:31:34+00:00",
     "topicSourceCountLastRun": 47,
     "topicAddedLastRun": 2,
     "topicGeminiSucceededLastRun": 0,
     "topicGeminiFailedLastRun": 0,
-    "lastVegetableFruitSuccessAt": "2026-11-12T13:55:08+00:00",
+    "lastVegetableFruitSuccessAt": "2026-11-13T02:34:04+00:00",
     "produceReferenceRatioCount": 56,
     "fishReferenceRatioCount": 11,
     "aiRequestBudget": {
@@ -98,35 +98,75 @@
     "lastStepResults": {
       "vegetableFruit": {
         "status": "ok",
-        "checkedAt": "2026-11-12T13:55:08+00:00",
-        "activePriceCount": 54,
-        "referenceRatioCount": 51,
-        "chartPointCount": 648
+        "checkedAt": "2026-11-13T02:34:04+00:00",
+        "activePriceCount": 58,
+        "referenceRatioCount": 56,
+        "chartPointCount": 696
       },
       "fish": {
         "status": "ok",
-        "checkedAt": "2026-11-12T13:55:08+00:00",
+        "checkedAt": "2026-11-13T02:34:04+00:00",
         "activePriceCount": 11,
         "referenceRatioCount": 11,
         "chartPointCount": 88
       },
       "topics": {
-        "status": "ok",
-        "checkedAt": "2026-11-12T13:55:08+00:00",
-        "sourceItemCount": 27,
-        "addedOrUpdatedCount": 0,
-        "aiState": "daily_limit",
-        "aiRequestsToday": 6
+        "status": "not_scheduled",
+        "checkedAt": "2026-11-13T02:34:04+00:00",
+        "sourceItemCount": 47,
+        "addedOrUpdatedCount": 2,
+        "sourceFailureCount": 0,
+        "aiState": "not_scheduled",
+        "aiRequestsToday": 0
       },
       "history": {
         "status": "ok",
-        "checkedAt": "2026-11-12T13:55:08+00:00",
+        "checkedAt": "2026-11-13T02:34:04+00:00",
         "attempted": 0,
         "succeeded": 0,
         "failed": 0,
         "cachedReports": {
-          "produce": 138,
+          "produce": 210,
           "fish": 304
+        },
+        "dailyFallback": {
+          "attempted": 0,
+          "succeeded": 0,
+          "failed": 0,
+          "state": "validated",
+          "addedPeriods": 0,
+          "validation": [
+            {
+              "stamp": [
+                2023,
+                10,
+                1
+              ],
+              "foods": 53,
+              "maxDifferenceYenKg": 0.6,
+              "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23101h_syuyo.csv"
+            },
+            {
+              "stamp": [
+                2023,
+                10,
+                2
+              ],
+              "foods": 54,
+              "maxDifferenceYenKg": 0.6,
+              "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23102h_syuyo.csv"
+            },
+            {
+              "stamp": [
+                2023,
+                10,
+                3
+              ],
+              "foods": 54,
+              "maxDifferenceYenKg": 0.6,
+              "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23103h_syuyo.csv"
+            }
+          ]
         }
       }
     },
@@ -260,9 +300,87 @@
             }
           }
         }
+      },
+      {
+        "checkedAt": "2026-11-13T02:34:04+00:00",
+        "steps": {
+          "vegetableFruit": {
+            "status": "ok",
+            "checkedAt": "2026-11-13T02:34:04+00:00",
+            "activePriceCount": 58,
+            "referenceRatioCount": 56,
+            "chartPointCount": 696
+          },
+          "fish": {
+            "status": "ok",
+            "checkedAt": "2026-11-13T02:34:04+00:00",
+            "activePriceCount": 11,
+            "referenceRatioCount": 11,
+            "chartPointCount": 88
+          },
+          "topics": {
+            "status": "not_scheduled",
+            "checkedAt": "2026-11-13T02:34:04+00:00",
+            "sourceItemCount": 47,
+            "addedOrUpdatedCount": 2,
+            "sourceFailureCount": 0,
+            "aiState": "not_scheduled",
+            "aiRequestsToday": 0
+          },
+          "history": {
+            "status": "ok",
+            "checkedAt": "2026-11-13T02:34:04+00:00",
+            "attempted": 0,
+            "succeeded": 0,
+            "failed": 0,
+            "cachedReports": {
+              "produce": 210,
+              "fish": 304
+            },
+            "dailyFallback": {
+              "attempted": 0,
+              "succeeded": 0,
+              "failed": 0,
+              "state": "validated",
+              "addedPeriods": 0,
+              "validation": [
+                {
+                  "stamp": [
+                    2023,
+                    10,
+                    1
+                  ],
+                  "foods": 53,
+                  "maxDifferenceYenKg": 0.6,
+                  "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23101h_syuyo.csv"
+                },
+                {
+                  "stamp": [
+                    2023,
+                    10,
+                    2
+                  ],
+                  "foods": 54,
+                  "maxDifferenceYenKg": 0.6,
+                  "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23102h_syuyo.csv"
+                },
+                {
+                  "stamp": [
+                    2023,
+                    10,
+                    3
+                  ],
+                  "foods": 54,
+                  "maxDifferenceYenKg": 0.6,
+                  "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23103h_syuyo.csv"
+                }
+              ]
+            }
+          }
+        }
       }
     ],
-    "longHistoryUpdatedAt": "2026-11-13T02:31:05+00:00",
+    "longHistoryUpdatedAt": "2026-11-13T02:34:04+00:00",
     "historyBackfillLastRun": {
       "attempted": 0,
       "succeeded": 0,
