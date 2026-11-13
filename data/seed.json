@@ -5,10 +5,10 @@
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
     "version": "0.9.0",
-    "lastCheckedAt": "2026-11-13T02:02:52+00:00",
+    "lastCheckedAt": "2026-11-13T02:04:53+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-13T02:02:57+00:00",
+    "updatedAt": "2026-11-13T02:05:20+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -56,7 +56,7 @@
         "purpose": "ふじの熟度調査と収穫情報"
       }
     ],
-    "lastTopicRetrievedAt": "2026-11-13T01:52:03+00:00",
+    "lastTopicRetrievedAt": "2026-11-13T02:05:20+00:00",
     "dataCutoffAt": "2026-10-30",
     "priceObservationPeriod": "2026年10月下旬",
     "priceSourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
@@ -73,15 +73,15 @@
       "topics": "ok",
       "gemini": "daily_limit"
     },
-    "lastFishCheckedAt": "2026-11-13T02:02:57+00:00",
+    "lastFishCheckedAt": "2026-11-13T02:04:58+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
-    "lastTopicAttemptAt": "2026-11-13T02:03:15+00:00",
+    "lastTopicAttemptAt": "2026-11-13T02:05:20+00:00",
     "lastAutomaticCheckAt": "2026-11-12T13:55:08+00:00",
     "lastFishSuccessAt": "2026-11-12T13:55:08+00:00",
     "lastGeminiSuccessAt": "2026-11-12T04:31:34+00:00",
-    "topicSourceCountLastRun": 36,
-    "topicAddedLastRun": 0,
+    "topicSourceCountLastRun": 37,
+    "topicAddedLastRun": 37,
     "topicGeminiSucceededLastRun": 0,
     "topicGeminiFailedLastRun": 0,
     "lastVegetableFruitSuccessAt": "2026-11-12T13:55:08+00:00",
@@ -92,7 +92,9 @@
       "attempted": 0,
       "dailyLimit": 6
     },
-    "topicSourceErrorsLastRun": [],
+    "topicSourceErrorsLastRun": [
+      "ALIC: ValueError"
+    ],
     "topicGeminiStateLastRun": "sources_only",
     "lastTopicsSuccessAt": "2026-11-12T13:55:08+00:00",
     "lastStepResults": {
@@ -262,7 +264,7 @@
         }
       }
     ],
-    "longHistoryUpdatedAt": "2026-11-13T02:03:17+00:00",
+    "longHistoryUpdatedAt": "2026-11-13T02:05:22+00:00",
     "historyBackfillLastRun": {
       "attempted": 0,
       "succeeded": 0,
@@ -123121,250 +123123,46 @@
   ],
   "topics": [
     {
-      "id": "tokyo-fruit-2026-11-2-f-080",
-      "foodId": "f-080",
-      "title": "メロン：2026年11月第2週の入荷・市場動向",
-      "summary": "「アールスメロン」の1日平均入荷量は、前週比24%の増加となった。静岡県産の価格は強含みとなった。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（果実）",
-          "title": "2026年11月第2週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第2週",
-      "sourceFingerprint": "3ec5a4f5e58d20825de397a210f3bbe50a875cde57a7cf6c278b182f9b94d83e",
-      "sourceFamily": "tokyo-fruit",
-      "isForecast": false,
-      "periodStart": "2026-11-06",
-      "periodEnd": "2026-11-12",
-      "summaryVersion": 4,
-      "sourceExcerpt": "「アールスメロン」の1日平均入荷量は、前週比24%の増加となった。静岡県産の価格は強含みとなった。",
-      "scope": "東京都大田市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "「アールスメロン」の1日平均入荷量は、前週比24%の増加となった。静岡県産の価格は強含みとなった。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T01:52:03+00:00"
-    },
-    {
-      "id": "tokyo-fruit-2026-11-2-f-072",
-      "foodId": "f-072",
-      "title": "いちご：2026年11月第2週の入荷・市場動向",
-      "summary": "「いちご」の1日平均入荷量は、前週比8%の減少となった。栃木県産「とちおとめ」の価格は保合となった。栃木県産「とちあいか」の価格は弱含みとなった。静岡県産「紅ほっぺ」の価格は弱保合となった。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（果実）",
-          "title": "2026年11月第2週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第2週",
-      "sourceFingerprint": "c41781ceca9d5b2e8c4b2c07dfd36128b8e8fa80ebf850854b8ba67c8c170c0c",
-      "sourceFamily": "tokyo-fruit",
-      "isForecast": false,
-      "periodStart": "2026-11-06",
-      "periodEnd": "2026-11-12",
-      "summaryVersion": 4,
-      "sourceExcerpt": "「いちご」の1日平均入荷量は、前週比8%の減少となった。栃木県産「とちおとめ」の価格は保合となった。栃木県産「とちあいか」の価格は弱含みとなった。静岡県産「紅ほっぺ」の価格は弱保合となった。",
-      "scope": "東京都大田市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "「いちご」の1日平均入荷量は、前週比8%の減少となった。栃木県産「とちおとめ」の価格は保合となった。栃木県産「とちあいか」の価格は弱含みとなった。静岡県産「紅ほっぺ」の価格は弱保合となった。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T01:52:03+00:00"
-    },
-    {
-      "id": "tokyo-fruit-2026-11-2-f-068",
-      "foodId": "f-068",
-      "title": "洋なし：2026年11月第2週の入荷・市場動向",
-      "summary": "「西洋なし」の1日平均入荷量は、前週比13%の減少となった。山形県産「ラ・フランス」の価格は保合となった。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（果実）",
-          "title": "2026年11月第2週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第2週",
-      "sourceFingerprint": "1415bf00fde32e782569fdb88460e6b58fccf7b1cf2dd05735ac587a4cd32373",
-      "sourceFamily": "tokyo-fruit",
-      "isForecast": false,
-      "periodStart": "2026-11-06",
-      "periodEnd": "2026-11-12",
-      "summaryVersion": 4,
-      "sourceExcerpt": "「西洋なし」の1日平均入荷量は、前週比13%の減少となった。山形県産「ラ・フランス」の価格は保合となった。",
-      "scope": "東京都大田市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "「西洋なし」の1日平均入荷量は、前週比13%の減少となった。山形県産「ラ・フランス」の価格は保合となった。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T01:52:03+00:00"
-    },
-    {
-      "id": "tokyo-fruit-2026-11-2-f-063",
-      "foodId": "f-063",
-      "title": "かき：2026年11月第2週の入荷・市場動向",
-      "summary": "「かき」の1日平均入荷量は、前週比16%の減少となった。福岡県産「富有」の価格は保合となった。愛知県産「次郎」の価格は保合となった。和歌山県産「平核無」の価格は強含みとなった。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（果実）",
-          "title": "2026年11月第2週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第2週",
-      "sourceFingerprint": "c3c9211d85b7754d1d73492588a955b6f9dda50ebda78a545e079e9fb625a35a",
-      "sourceFamily": "tokyo-fruit",
-      "isForecast": false,
-      "periodStart": "2026-11-06",
-      "periodEnd": "2026-11-12",
-      "summaryVersion": 4,
-      "sourceExcerpt": "「かき」の1日平均入荷量は、前週比16%の減少となった。福岡県産「富有」の価格は保合となった。愛知県産「次郎」の価格は保合となった。和歌山県産「平核無」の価格は強含みとなった。",
-      "scope": "東京都大田市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "「かき」の1日平均入荷量は、前週比16%の減少となった。福岡県産「富有」の価格は保合となった。愛知県産「次郎」の価格は保合となった。和歌山県産「平核無」の価格は強含みとなった。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T01:52:03+00:00"
-    },
-    {
-      "id": "tokyo-fruit-2026-11-2-f-055",
-      "foodId": "f-055",
-      "title": "みかん：2026年11月第2週の入荷・市場動向",
-      "summary": "「みかん」の1日平均入荷量は、前週比44%の増加となった。愛媛県産「早生みかん」の価格は強保合となった。和歌山県産「極早生みかん」の価格は強含みとなった。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（果実）",
-          "title": "2026年11月第2週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第2週",
-      "sourceFingerprint": "2a558b1b5568453773116a4a39e50cf5dd02b8a20215c19e1a94db1afc0fffcc",
-      "sourceFamily": "tokyo-fruit",
-      "isForecast": false,
-      "periodStart": "2026-11-06",
-      "periodEnd": "2026-11-12",
-      "summaryVersion": 4,
-      "sourceExcerpt": "「みかん」の1日平均入荷量は、前週比44%の増加となった。愛媛県産「早生みかん」の価格は強保合となった。和歌山県産「極早生みかん」の価格は強含みとなった。",
-      "scope": "東京都大田市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "「みかん」の1日平均入荷量は、前週比44%の増加となった。愛媛県産「早生みかん」の価格は強保合となった。和歌山県産「極早生みかん」の価格は強含みとなった。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T01:52:03+00:00"
-    },
-    {
-      "id": "tokyo-fruit-2026-11-2-f-054",
+      "id": "aomori-fuji-2026-11-06-f-054",
       "foodId": "f-054",
-      "title": "りんご：2026年11月第2週の入荷・市場動向",
-      "summary": "「りんご」の1日平均入荷量は、前週比9%の減少となった。青森県産「ふじ」の価格は弱保合となった。",
+      "title": "りんご：2026年11月6日の熟度調査",
+      "summary": "無袋:11月6日現在、平年値と比較して、糖度及び 着色指数は高く 、硬度、ヨード反応及び蜜果率は同程度、蜜程度はやや低く、酸度 は低い。 有袋:11月6日現在、平年値と比較して、糖度は高く、ヨード反応及び着色指数は同程度、硬度及び酸度は低い。",
       "kind": "official_excerpt",
       "verified": true,
       "yearSpecific": true,
       "sources": [
         {
-          "name": "東京都中央卸売市場・週間市況（果実）",
-          "title": "2026年11月第2週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
-          "publishedAt": null
+          "name": "青森県・農なび青森（りんご研究所）",
+          "title": "2026年りんご「ふじ」熟度調査結果（11月6日現在）",
+          "url": "https://www.nounavi-aomori.jp/farmer/archives/18185",
+          "publishedAt": "2026-11-06"
         }
       ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第2週",
-      "sourceFingerprint": "b76701e38dbaa249a390980fe6f19d08aec640cc22fd774843dd6b8914721271",
-      "sourceFamily": "tokyo-fruit",
+      "publishedAt": "2026-11-06",
+      "observedPeriod": "2026年11月6日の熟度調査",
+      "sourceFingerprint": "37231050d8eb4c67fbb1a608c55311d9282ffdfabab1c0722239a9ca9c4769e1",
+      "sourceFamily": "aomori-apple-maturity",
       "isForecast": false,
       "periodStart": "2026-11-06",
-      "periodEnd": "2026-11-12",
-      "summaryVersion": 4,
-      "sourceExcerpt": "「りんご」の1日平均入荷量は、前週比9%の減少となった。青森県産「ふじ」の価格は弱保合となった。",
-      "scope": "東京都大田市場",
-      "reportType": "市場への入荷・取引の実績",
+      "periodEnd": "2026-11-06",
+      "summaryVersion": 5,
+      "sourceExcerpt": "無袋:11月6日現在、平年値と比較して、糖度及び 着色指数は高く 、硬度、ヨード反応及び蜜果率は同程度、蜜程度はやや低く、酸度 は低い。\n有袋:11月6日現在、平年値と比較して、糖度は高く、ヨード反応及び着色指数は同程度、硬度及び酸度は低い。",
+      "scope": "青森県りんご研究所の調査樹・ふじ（無袋と有袋）",
+      "reportType": "糖度・着色などの品質調査",
       "evidenceSections": [
         {
-          "label": "入荷・市場動向（原文）",
-          "text": "「りんご」の1日平均入荷量は、前週比9%の減少となった。青森県産「ふじ」の価格は弱保合となった。"
+          "label": "熟度調査の概要",
+          "text": "無袋:11月6日現在、平年値と比較して、糖度及び 着色指数は高く 、硬度、ヨード反応及び蜜果率は同程度、蜜程度はやや低く、酸度 は低い。\n有袋:11月6日現在、平年値と比較して、糖度は高く、ヨード反応及び着色指数は同程度、硬度及び酸度は低い。"
         }
       ],
-      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
+      "limitations": "研究所の調査樹の結果であり、青森県全域の品質や出荷量を示すものではありません。資料の平年値は主に20か年平均で、価格の参考平年比とは異なります。",
       "automaticChecks": [
         "原文抜粋"
       ],
       "aiGenerated": false,
+      "summaryProvider": null,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T01:52:03+00:00"
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
     },
     {
       "id": "fra-buri-2026-11-11-f-101",
@@ -123395,7 +123193,7 @@
       "isForecast": true,
       "periodStart": "2026-11-01",
       "periodEnd": "2027-03-31",
-      "summaryVersion": 4,
+      "summaryVersion": 5,
       "sourceExcerpt": "予報対象期間：2026年11月～2027年3月。\nブリの漁況予報・概要（原文）：0歳魚は前年を下回る。2歳以上魚は前年並。\nブリの対象条件・海域別予報（原文）：今後の見通し(2026年11月~2027年3月)のポイント漁況(来遊量)0歳魚は前年を下回る2歳以上魚は前年並*「前年」は2025年11月~2026年3月対象海域*対象漁業は定置網",
       "scope": "日本海中部（新潟県～兵庫県）",
       "reportType": "来遊量・漁況の見通し（予報）",
@@ -123414,8 +123212,9 @@
         "原文抜粋"
       ],
       "aiGenerated": false,
+      "summaryProvider": null,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
     },
     {
       "id": "fra-tsushima-2026-10-28-f-099",
@@ -123446,7 +123245,7 @@
       "isForecast": true,
       "periodStart": "2026-11-01",
       "periodEnd": "2027-03-31",
-      "summaryVersion": 4,
+      "summaryVersion": 5,
       "sourceExcerpt": "予報対象期間：2026年11月～2027年3月。\nマイワシの漁況予報・概要（原文）：東シナ海は前年並みで、平年を上回る。日本海は前年並みで、平年を上回る。\nウルメイワシの漁況予報・概要（原文）：東シナ海は前年・平年を下回る。\nカタクチイワシの漁況予報・概要（原文）：東シナ海は前年・平年を下回る。\nマイワシの対象条件・海域別予報（原文）：今後の見通し(2026年11月~2027年3月)対象海域:東シナ海・日本海対象漁業:まき網、棒受網、定置網、その他対象魚群:0歳魚(2026年級群(2026年生まれ))、1歳魚(2025年級群)、2歳魚(2024年級群)、3歳魚(2023年級群)。魚の大きさは被鱗体長で表示。1.東シナ海(1)来遊量:前年並みで、平年を上回る。(2)漁期・漁場:期間を通して、長崎県以南の沿岸域が漁場となる。(3)魚体:12~17cmの0歳魚(小羽・中羽銘柄)主体に、18~23cmの1歳魚以上(中羽・大羽銘柄)も漁獲される。2.日本海(1)来遊量:前年並みで、平年を上回る。(2)漁期・漁場:漁期前半に日本海西部、後半に日本海西部~中部の沿岸域が漁場となる。(3)魚体:12~17cmの0歳魚(小羽・中羽銘柄)に加えて、18~23cmの1歳魚以上(中羽・大羽銘柄)も漁獲される。注:「前年」は2025年11月~2026年3月。「平年」は過去5年の平均値。「並み」はCPUE等指標値の±20%の範囲。\nウルメイワシの対象条件・海域別予報（原文）：今後の見通し(2026年11月~2027年3月)対象海域:東シナ海対象漁業:まき網、棒受網、その他対象魚群:0歳魚(2026年級群(2026年生まれ))、1歳魚(2025年級群)、2歳魚(2024年級群)。魚の大きさは被鱗体長で表示。(1)来遊量:前年・平年を下回る。(2)漁期・漁場:期間を通して、長崎県以南の沿岸域が漁場となる。(3)魚体:15~25cmの0・1歳魚(中羽・大羽銘柄)が主に漁獲される。注:「前年」は2025年11月~2026年3月。「平年」は過去5年の平均値。「並み」はCPUE等指標値の±20%の範囲。\nカタクチイワシの対象条件・海域別予報（原文）：今後の見通し(2026年11月~2027年3月)対象海域:東シナ海対象漁業:まき網、棒受網、その他対象魚群:0歳魚(2026年級群(2026年生まれ))・1歳魚(2025年級群)。魚の大きさは被鱗体長で表示。(1)来遊量:前年・平年を下回る。(2)漁期・漁場:期間を通して、長崎県以南の沿岸域が漁場となる。(3)魚体:5~10cmの0歳魚(カエリ・小羽・中羽銘柄)が主体で、10cm以上の1歳魚(大羽銘柄)が混じる。注:「前年」は2025年11月~2026年3月。「平年」は過去5年の平均値。「並み」はCPUE等指標値の±20%の範囲。",
       "scope": "東シナ海・日本海（対馬暖流系）",
       "reportType": "来遊量・漁況の見通し（予報）",
@@ -123481,8 +123280,9 @@
         "原文抜粋"
       ],
       "aiGenerated": false,
+      "summaryProvider": null,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
     },
     {
       "id": "fra-tsushima-2026-10-28-f-097",
@@ -123513,7 +123313,7 @@
       "isForecast": true,
       "periodStart": "2026-11-01",
       "periodEnd": "2027-03-31",
-      "summaryVersion": 4,
+      "summaryVersion": 5,
       "sourceExcerpt": "予報対象期間：2026年11月～2027年3月。\nマサバの漁況予報・概要（原文）：東シナ海は沖合域は前年並みで、平年を上回り、沿岸域は前年・平年並み。日本海は前年並みで、平年を上回る。\nゴマサバの漁況予報・概要（原文）：東シナ海は沖合域は前年並みで、平年を下回り、沿岸域は前年・平年を下回る。\nマサバの対象条件・海域別予報（原文）：今後の見通し(2026年11月~2027年3月)対象海域:東シナ海・日本海対象漁業:まき網、定置網、その他対象魚群:0歳魚(2026年級群(2026年生まれ))、1歳魚(2025年級群)、2歳魚(2024年級群)。魚の大きさは尾叉長で表示。1.東シナ海(1)来遊量:沖合域は前年並みで平年を上回り、沿岸域は前年・平年並み。(2)漁期・漁場:期間を通して、対馬沖、沿岸域が漁場となる。(3)魚体:25~28cmの0歳魚(豆銘柄)および28~32cmの1歳魚(小銘柄)が主に漁獲される。2.日本海(1)来遊量:前年並みで、平年を上回る。(2)漁期・漁場:期間を通して、日本海西部~中部の沿岸域が漁場となる。(3)魚体:25~28cmの0歳魚(豆銘柄)および28~32cmの1歳魚(小銘柄)に加えて、32cm以上の2歳魚以上(中銘柄以上)が漁獲される。注:「前年」は2025年11月~2026年3月。「平年」は過去5年の平均値。「並み」はCPUE等指標値の±20%の範囲。沖合域とは大中型まき網が操業する対馬周辺から東シナ海。\nゴマサバの対象条件・海域別予報（原文）：今後の見通し(2026年11月~2027年3月)対象海域:東シナ海対象漁業:まき網、定置網、その他対象魚群:0歳魚(2026年級群(2026年生まれ))、1歳魚(2025年級群)、2歳魚(2024年級群)、3歳魚(2023年級群)。魚の大きさは尾叉長で表示。(1)来遊量:沖合域は前年並みで平年を下回り、沿岸域は前年・平年を下回る。(2)漁期・漁場:期間を通して、東シナ海中部、五島灘・薩南、対馬沖が漁場となる。(3)魚体:沖合域では25~30cmの0歳魚(豆銘柄)および30~33cmの1歳魚(小銘柄)が主に漁獲される。沿岸域では25~40cmの0歳魚以上(豆銘柄以上)が主に漁獲される。注:「前年」は2025年11月~2026年3月。「平年」は過去5年の平均値。「並み」はCPUE等指標値の±20%の範囲。沖合域とは大中型まき網が操業する対馬周辺から東シナ海。",
       "scope": "東シナ海・日本海（対馬暖流系）",
       "reportType": "来遊量・漁況の見通し（予報）",
@@ -123540,8 +123340,9 @@
         "原文抜粋"
       ],
       "aiGenerated": false,
+      "summaryProvider": null,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
     },
     {
       "id": "fra-tsushima-2026-10-28-f-098",
@@ -123572,7 +123373,7 @@
       "isForecast": true,
       "periodStart": "2026-11-01",
       "periodEnd": "2027-03-31",
-      "summaryVersion": 4,
+      "summaryVersion": 5,
       "sourceExcerpt": "予報対象期間：2026年11月～2027年3月。\nマアジの漁況予報・概要（原文）：東シナ海は沖合域は前年並みで、平年を下回り、沿岸域は前年・平年を下回る。日本海は前年・平年並み。\nマアジの対象条件・海域別予報（原文）：今後の見通し(2026年11月~2027年3月)対象海域:東シナ海・日本海対象漁業:まき網、定置網、その他対象魚群:0歳魚(2026年級群(2026年生まれ))、1歳魚(2025年級群)、2歳魚(2024年級群)。魚の大きさは尾叉長で表示。1.東シナ海(1)来遊量:沖合域は前年並みで、平年を下回る。沿岸域は前年・平年を下回る。(2)漁期・漁場:期間を通して、対馬沖、東シナ海中・南部、沿岸域が漁場となる。(3)魚体:19~24cmの1歳魚(小銘柄)が主に、10~19cmの0歳魚(豆・ゼンゴ銘柄)、24cm以上の2歳魚以上(中・大銘柄)も漁獲される。2.日本海(1)来遊量:前年・平年並み。(2)漁期・漁場:期間を通して、日本海西部が漁場となる。(3)魚体:16~24cmの1歳魚(小銘柄)が主に、10~16cmの0歳魚(豆・ゼンゴ銘柄)と24cm以上の2歳魚以上(中・大銘柄)も漁獲される。注:「前年」は2025年11月~2026年3月。「平年」は過去5年の平均値。「並み」はCPUE等指標値の±20%の範囲。沖合域とは大中型まき網が操業する対馬周辺から東シナ海。",
       "scope": "東シナ海・日本海（対馬暖流系）",
       "reportType": "来遊量・漁況の見通し（予報）",
@@ -123591,8 +123392,9 @@
         "原文抜粋"
       ],
       "aiGenerated": false,
+      "summaryProvider": null,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
     },
     {
       "id": "fra-pacific-2026-08-03-f-097",
@@ -123623,7 +123425,7 @@
       "isForecast": true,
       "periodStart": "2026-08-01",
       "periodEnd": "2026-12-31",
-      "summaryVersion": 4,
+      "summaryVersion": 5,
       "sourceExcerpt": "予報対象期間：2026年8月～2026年12月。\nマサバ・ゴマサバの漁況予報・概要（原文）：マサバ、ゴマサバともに低水準。",
       "scope": "太平洋沿岸域（資料に記載の対象海域）",
       "reportType": "来遊量・漁況の見通し（予報）",
@@ -123638,8 +123440,9 @@
         "原文抜粋"
       ],
       "aiGenerated": false,
+      "summaryProvider": null,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
     },
     {
       "id": "fra-pacific-2026-08-03-f-098",
@@ -123670,7 +123473,7 @@
       "isForecast": true,
       "periodStart": "2026-08-01",
       "periodEnd": "2026-12-31",
-      "summaryVersion": 4,
+      "summaryVersion": 5,
       "sourceExcerpt": "予報対象期間：2026年8月～2026年12月。\nマアジの漁況予報・概要（原文）：前年を下回る海域が多い。\nマアジの対象条件・海域別予報（原文）：今後の見通し(2026年8月~12月)対象海域:北薩~熊野灘、相模湾対象漁業:まき網、定置網対象魚群:0歳魚(2026年級群)、1歳魚(2025年級群)、2歳魚(2024年級群)、3歳(2023年級群)以上。年初に加齢、魚体は尾叉長。1.北薩~土佐湾(まき網、定置網)(1)来遊量:北薩~薩南海域では前年を下回る。日向灘では前年並。豊後水道西側では前年並~下回る。豊後水道東側および宿毛湾・土佐湾では前年を下回る。(2)魚体:北薩~薩南海域および日向灘では0歳魚、1歳魚主体。豊後水道では0歳魚が主体。宿毛湾・土佐湾では0歳魚、1歳魚が主体。0歳魚は19cm以下、1歳魚は19cm~25cm、2歳以上は23cm以上。2.紀伊水道外域~熊野灘(まき網、定置網)(1)来遊量:紀伊水道外域西部では前年を下回る。紀伊水道外域東部では前年並。熊野灘では前年並~上回る。(2)魚体:紀伊水道外域では0歳魚、1歳魚主体。熊野灘では1歳魚主体に0歳魚および2歳以上が混じる。0歳魚は19cm以下、1歳魚は19cm~25cm、2歳魚は23cm~27cm、3歳以上は25cm以上。3.相模湾(定置網)(1)来遊量:伊豆東岸および西湘地区では前年を下回る。(2)魚体:主体となる0歳魚は19cm以下、1歳魚は19cm~22cm。",
       "scope": "太平洋沿岸域（資料に記載の対象海域）",
       "reportType": "来遊量・漁況の見通し（予報）",
@@ -123689,8 +123492,9 @@
         "原文抜粋"
       ],
       "aiGenerated": false,
+      "summaryProvider": null,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
     },
     {
       "id": "fra-pacific-2026-08-03-f-099",
@@ -123721,7 +123525,7 @@
       "isForecast": true,
       "periodStart": "2026-08-01",
       "periodEnd": "2026-12-31",
-      "summaryVersion": 4,
+      "summaryVersion": 5,
       "sourceExcerpt": "予報対象期間：2026年8月～2026年12月。\nマイワシの漁況予報・概要（原文）：紀伊水道外域以西では前年を上回るが、熊野灘以東では前年を大きく下回る。全体としては前年を大きく下回る。\nカタクチイワシの漁況予報・概要（原文）：相模湾以西では引き続き低水準、房総海域以北では前年を上回る。\nウルメイワシの漁況予報・概要（原文）：海域によって異なるが、全体としては前年並。\nマイワシの対象条件・海域別予報（原文）：今後の見通し(2026年8月~12月)対象海域:北薩~三陸海域、道東海域対象漁業:まき網、定置網、船曳網対象魚群:0歳魚(2026年級群)、1歳魚(2025年級群)、2歳魚(2024年級群)、3歳魚(2023年級群)、4歳以上(2022年級群以上)。年初に加齢。魚体は被鱗体長。1.北薩~熊野灘(まき網、定置網)(1)来遊量:北薩~薩南海域では前年並。日向灘では前年を上回る。豊後水道では前年並~上回る。宿毛湾、土佐湾では前年を上回る。紀伊水道外域西部では前年を上回る。紀伊水道外域東部では前年並。熊野灘では前年を下回る。(2)漁期:期を通じて漁獲される。(3)魚体:北薩及び薩南では、12cm~16cm(0歳魚)主体。日向灘~豊後水道南部西側では、12cm~18cm(0歳魚、1歳魚)主体。豊後水道中南部東側では、12cm~16cm(0歳魚)主体。宿毛湾~紀伊水道外域では0歳魚および1歳以上が漁獲される。熊野灘では11cm~17cm(0歳魚)主体。2.伊勢・三河湾~相模湾(まき網、定置網、船曳網)(1)来遊量:前年を下回る。(2)漁期:期を通じて漁獲される。(3)魚体:10cm~15cm(0歳魚)主体。3.房総~三陸海域、道東海域(まき網、定置網)(1)来遊量:前年を大きく下回る。(2)漁期・漁場:まき網は8月当初は三陸北部海域が主漁場となる。その後、10月まで房総~道東海域は小規模な漁場形成となる。11月、12月は三陸~常磐海域において漁場が形成される。定置網は、各地で期を通じて散発的に漁獲され、12月以降に本格化する。(3)魚体:14cm以下の0歳魚、13cm~16cmの1歳魚、15cm~18cmの2歳魚、16cm~20cmの3歳魚、17cm以上の4歳以上が漁獲される。\nカタクチイワシの対象条件・海域別予報（原文）：今後の見通し(2026年8月〜12月)対象海域:北薩〜三陸海域、道東海域対象漁業:まき網、定置網、船曳網対象魚群:0歳魚(2026年級群)、1歳魚(2025年級群)、2歳魚(2024年級群)。年初に加齢。魚体は被鱗体長。1.西薩〜常磐南部海域のシラス(船曳網)(1)来遊量:西薩〜土佐湾、紀伊水道外域東部、鹿島灘〜常磐南部海域では予測が困難。紀伊水道外域西部では低調であった前年を上回る。伊勢湾、渥美外海では前年を下回る。遠州灘〜駿河湾では8月は前年を上回る、9月以降は予測困難。相模湾では前年並。(2)漁期:期を通じて漁獲される。2.北薩〜熊野灘(まき網、定置網)(1)来遊量:北薩、薩南海域では前年並。日向灘では前年を下回る。豊後水道南部西側では前年並~下回る。豊後水道東側では前年を上回る。宿毛湾・土佐湾では低調であった前年並。紀伊水道外域西部では漁獲の無かった前年を上回る。紀伊水道外域東部、熊野灘では主たる漁獲対象ではない。(2)漁期:期を通じて漁獲される。(3)魚体:10cm以下の0歳魚主体に、10cm以上の1歳以上が漁獲される。3.伊勢・三河湾〜相模湾(まき網、定置網、船曳網)(1)来遊量:低調であった前年並。(2)漁期:期を通じて漁獲される。(3)魚体:10cm以下の0歳魚主体に、10cm~14cmの1歳以上が漁獲される。4.房総〜三陸海域、道東海域(まき網、定置網)(1)来遊量:房総海域~三陸南部海域および道東海域では前年を上回る。三陸北部海域では前年並。(2)漁期・漁場:房総海域(犬吠埼沖~外房海域)ではまき網(主に2そうまき)、仙台湾~三陸南部海域では定置網により期を通じて漁獲される。三陸北部海域(八戸沖)では2そうまきにより9月以降に漁獲される。房総~常磐海域および道東海域では1そうまきの漁獲対象となる可能性がある。(3)魚体:5cm~11cm前後の0歳魚、9cm〜13cmの1歳魚が主に漁獲され、11cm~14cmの2歳魚が混ざる。\nウルメイワシの対象条件・海域別予報（原文）：今後の見通し(2026年8月~12月)対象海域:北薩~熊野灘対象漁業:まき網、定置網、棒受網、多鈎釣対象魚群:0歳魚(2026年級群)、1歳魚(2025年級群)以上。年初に加齢。魚体は被鱗体長。(1)来遊量:北薩・薩南海域では前年を上回る。日向灘では前年並。豊後水道南部西側では前年を下回り、豊後水道東側では前年を上回る。宿毛湾・土佐湾では前年を下回る。紀伊水道外域では前年並。熊野灘では前年を上回る。(2)漁期:期を通じて漁獲される。(3)魚体:0歳魚(8cm~20cm)が主体となる。海域により1歳以上(20cm以上)も対象となる。",
       "scope": "太平洋沿岸域（資料に記載の対象海域）",
       "reportType": "来遊量・漁況の見通し（予報）",
@@ -123756,8 +123560,9 @@
         "原文抜粋"
       ],
       "aiGenerated": false,
+      "summaryProvider": null,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
     },
     {
       "id": "fra-squid-2026-09-30-f-132",
@@ -123788,7 +123593,7 @@
       "isForecast": true,
       "periodStart": "2026-10-01",
       "periodEnd": "2026-12-31",
-      "summaryVersion": 4,
+      "summaryVersion": 5,
       "sourceExcerpt": "予報対象期間：2026年10月～2026年12月。\nスルメイカの漁況予報・概要（原文）：スルメイカの来遊量は、根室海峡~オホーツク海、道東太平洋海域および津軽海峡~道南太平洋海域で前年を下回り、常磐~三陸海域で前年並と予測される。\nスルメイカの対象条件・海域別予報（原文）：今後の見通し(2026年10月~12月)のポイントスルメイカの来遊量は、根室海峡~オホーツク海、道東太平洋海域および津軽海峡~道南太平洋海域で前年を下回り、常磐~三陸海域で前年並と予測される。根室海峡~オホーツク海:来遊量は前年を下回る。道東太平洋海域:来遊量は前年を下回る。津軽海峡~道南太平洋海域:来遊量は前年を下回る。常磐~三陸海域:来遊量は前年並。",
       "scope": "太平洋・根室海峡～オホーツク海等（資料の対象海域）",
       "reportType": "来遊量・漁況の見通し（予報）",
@@ -123807,8 +123612,1251 @@
         "原文抜粋"
       ],
       "aiGenerated": false,
+      "summaryProvider": null,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fruit-2026-11-2-f-080",
+      "foodId": "f-080",
+      "title": "メロン：2026年11月第2週の入荷・市場動向",
+      "summary": "「アールスメロン」の1日平均入荷量は、前週比24%の増加となった。静岡県産の価格は強含みとなった。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（果実）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "3ec5a4f5e58d20825de397a210f3bbe50a875cde57a7cf6c278b182f9b94d83e",
+      "sourceFamily": "tokyo-fruit",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "「アールスメロン」の1日平均入荷量は、前週比24%の増加となった。静岡県産の価格は強含みとなった。",
+      "scope": "東京都大田市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "「アールスメロン」の1日平均入荷量は、前週比24%の増加となった。静岡県産の価格は強含みとなった。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fruit-2026-11-2-f-072",
+      "foodId": "f-072",
+      "title": "いちご：2026年11月第2週の入荷・市場動向",
+      "summary": "「いちご」の1日平均入荷量は、前週比8%の減少となった。栃木県産「とちおとめ」の価格は保合となった。栃木県産「とちあいか」の価格は弱含みとなった。静岡県産「紅ほっぺ」の価格は弱保合となった。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（果実）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "c41781ceca9d5b2e8c4b2c07dfd36128b8e8fa80ebf850854b8ba67c8c170c0c",
+      "sourceFamily": "tokyo-fruit",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "「いちご」の1日平均入荷量は、前週比8%の減少となった。栃木県産「とちおとめ」の価格は保合となった。栃木県産「とちあいか」の価格は弱含みとなった。静岡県産「紅ほっぺ」の価格は弱保合となった。",
+      "scope": "東京都大田市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "「いちご」の1日平均入荷量は、前週比8%の減少となった。栃木県産「とちおとめ」の価格は保合となった。栃木県産「とちあいか」の価格は弱含みとなった。静岡県産「紅ほっぺ」の価格は弱保合となった。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fruit-2026-11-2-f-068",
+      "foodId": "f-068",
+      "title": "洋なし：2026年11月第2週の入荷・市場動向",
+      "summary": "「西洋なし」の1日平均入荷量は、前週比13%の減少となった。山形県産「ラ・フランス」の価格は保合となった。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（果実）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "1415bf00fde32e782569fdb88460e6b58fccf7b1cf2dd05735ac587a4cd32373",
+      "sourceFamily": "tokyo-fruit",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "「西洋なし」の1日平均入荷量は、前週比13%の減少となった。山形県産「ラ・フランス」の価格は保合となった。",
+      "scope": "東京都大田市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "「西洋なし」の1日平均入荷量は、前週比13%の減少となった。山形県産「ラ・フランス」の価格は保合となった。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fruit-2026-11-2-f-063",
+      "foodId": "f-063",
+      "title": "かき：2026年11月第2週の入荷・市場動向",
+      "summary": "「かき」の1日平均入荷量は、前週比16%の減少となった。福岡県産「富有」の価格は保合となった。愛知県産「次郎」の価格は保合となった。和歌山県産「平核無」の価格は強含みとなった。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（果実）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "c3c9211d85b7754d1d73492588a955b6f9dda50ebda78a545e079e9fb625a35a",
+      "sourceFamily": "tokyo-fruit",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "「かき」の1日平均入荷量は、前週比16%の減少となった。福岡県産「富有」の価格は保合となった。愛知県産「次郎」の価格は保合となった。和歌山県産「平核無」の価格は強含みとなった。",
+      "scope": "東京都大田市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "「かき」の1日平均入荷量は、前週比16%の減少となった。福岡県産「富有」の価格は保合となった。愛知県産「次郎」の価格は保合となった。和歌山県産「平核無」の価格は強含みとなった。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fruit-2026-11-2-f-055",
+      "foodId": "f-055",
+      "title": "みかん：2026年11月第2週の入荷・市場動向",
+      "summary": "「みかん」の1日平均入荷量は、前週比44%の増加となった。愛媛県産「早生みかん」の価格は強保合となった。和歌山県産「極早生みかん」の価格は強含みとなった。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（果実）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "2a558b1b5568453773116a4a39e50cf5dd02b8a20215c19e1a94db1afc0fffcc",
+      "sourceFamily": "tokyo-fruit",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "「みかん」の1日平均入荷量は、前週比44%の増加となった。愛媛県産「早生みかん」の価格は強保合となった。和歌山県産「極早生みかん」の価格は強含みとなった。",
+      "scope": "東京都大田市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "「みかん」の1日平均入荷量は、前週比44%の増加となった。愛媛県産「早生みかん」の価格は強保合となった。和歌山県産「極早生みかん」の価格は強含みとなった。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fruit-2026-11-2-f-054",
+      "foodId": "f-054",
+      "title": "りんご：2026年11月第2週の入荷・市場動向",
+      "summary": "「りんご」の1日平均入荷量は、前週比9%の減少となった。青森県産「ふじ」の価格は弱保合となった。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（果実）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026-11-13-083723-696",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "b76701e38dbaa249a390980fe6f19d08aec640cc22fd774843dd6b8914721271",
+      "sourceFamily": "tokyo-fruit",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "「りんご」の1日平均入荷量は、前週比9%の減少となった。青森県産「ふじ」の価格は弱保合となった。",
+      "scope": "東京都大田市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "「りんご」の1日平均入荷量は、前週比9%の減少となった。青森県産「ふじ」の価格は弱保合となった。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の収穫量や生育を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-1-f-132",
+      "foodId": "f-132",
+      "title": "スルメイカ：2026年11月第1週の入荷・市場動向",
+      "summary": "スルメイカは青森と岩手主体に入荷。前週に比べ数量は5%増加、価格は1割弱安。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第1週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第1週",
+      "sourceFingerprint": "c51df705f013ec9ff722fb02b8f79c419ea4b584dfdaa0a0fd130711afb80287",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-10-30",
+      "periodEnd": "2026-11-05",
+      "summaryVersion": 5,
+      "sourceExcerpt": "スルメイカは青森と岩手主体に入荷。前週に比べ数量は5%増加、価格は1割弱安。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "スルメイカは青森と岩手主体に入荷。前週に比べ数量は5%増加、価格は1割弱安。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-1-f-121",
+      "foodId": "f-121",
+      "title": "カキ：2026年11月第1週の入荷・市場動向",
+      "summary": "ムキカキの数量は2倍に増加、三陸産の価格は0.5割強高。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第1週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第1週",
+      "sourceFingerprint": "3fa4e115b5d8028100b4f350ddd85b33a8a15bd32eb17180d90ff84ca9638e59",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-10-30",
+      "periodEnd": "2026-11-05",
+      "summaryVersion": 5,
+      "sourceExcerpt": "ムキカキの数量は2倍に増加、三陸産の価格は0.5割強高。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "ムキカキの数量は2倍に増加、三陸産の価格は0.5割強高。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-1-f-099",
+      "foodId": "f-099",
+      "title": "イワシ：2026年11月第1週の入荷・市場動向",
+      "summary": "イワシは鹿児島と愛知主体に入荷。前週に比べ数量は41%増加、価格は1割弱高。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第1週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第1週",
+      "sourceFingerprint": "86e8b51b731ceac994bfd4b2d43819005f934f3f33795ec3b6944b41f7003379",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-10-30",
+      "periodEnd": "2026-11-05",
+      "summaryVersion": 5,
+      "sourceExcerpt": "イワシは鹿児島と愛知主体に入荷。前週に比べ数量は41%増加、価格は1割弱高。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "イワシは鹿児島と愛知主体に入荷。前週に比べ数量は41%増加、価格は1割弱高。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-1-f-098",
+      "foodId": "f-098",
+      "title": "アジ：2026年11月第1週の入荷・市場動向",
+      "summary": "アジは中型が鳥取と長崎、中小型が千葉と鳥取主体に入荷。前週に比べ数量は11%減少、価格は中型が0.5割高、中小型が1割弱安。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第1週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第1週",
+      "sourceFingerprint": "e5ebb78b8f635d150a72e62b8e56f50b84d7b40255decce8eb3f1b7f7b0b3932",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-10-30",
+      "periodEnd": "2026-11-05",
+      "summaryVersion": 5,
+      "sourceExcerpt": "アジは中型が鳥取と長崎、中小型が千葉と鳥取主体に入荷。前週に比べ数量は11%減少、価格は中型が0.5割高、中小型が1割弱安。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "アジは中型が鳥取と長崎、中小型が千葉と鳥取主体に入荷。前週に比べ数量は11%減少、価格は中型が0.5割高、中小型が1割弱安。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-1-f-097",
+      "foodId": "f-097",
+      "title": "サバ：2026年11月第1週の入荷・市場動向",
+      "summary": "サバは千葉主体に入荷。前週に比べ数量は27%増加、価格は0.5割安。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第1週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第1週",
+      "sourceFingerprint": "e119cdd0d349a3cba8c59725b1f0625e2fccd43b5f65e881fc3939a6ae839b64",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-10-30",
+      "periodEnd": "2026-11-05",
+      "summaryVersion": 5,
+      "sourceExcerpt": "サバは千葉主体に入荷。前週に比べ数量は27%増加、価格は0.5割安。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "サバは千葉主体に入荷。前週に比べ数量は27%増加、価格は0.5割安。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-1-f-095",
+      "foodId": "f-095",
+      "title": "カツオ：2026年11月第1週の入荷・市場動向",
+      "summary": "カツオは宮城と鹿児島主体に入荷。前週に比べ数量は37%減少、価格はわずかに上昇。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第1週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第1週",
+      "sourceFingerprint": "d961501a7877e35c9375acbcd26fce15340d5b6700941aa3e8351246ba33e3ad",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-10-30",
+      "periodEnd": "2026-11-05",
+      "summaryVersion": 5,
+      "sourceExcerpt": "カツオは宮城と鹿児島主体に入荷。前週に比べ数量は37%減少、価格はわずかに上昇。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "カツオは宮城と鹿児島主体に入荷。前週に比べ数量は37%減少、価格はわずかに上昇。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-1-f-094",
+      "foodId": "f-094",
+      "title": "サンマ：2026年11月第1週の入荷・市場動向",
+      "summary": "サンマは宮城主体に入荷。前週に比べ数量は62%減少、生サンマの価格は2割弱安。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第1週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第1週",
+      "sourceFingerprint": "f989ed238da2deb4004e7f973da8a48204919f949b5960f7d9b85bd7013cb2c7",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-10-30",
+      "periodEnd": "2026-11-05",
+      "summaryVersion": 5,
+      "sourceExcerpt": "サンマは宮城主体に入荷。前週に比べ数量は62%減少、生サンマの価格は2割弱安。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "サンマは宮城主体に入荷。前週に比べ数量は62%減少、生サンマの価格は2割弱安。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-027",
+      "foodId": "v-027",
+      "title": "たまねぎ：2026年11月の見通し",
+      "summary": "北海道産中心の出荷。主産地の生育は概ね順調であり、大玉傾向。11月の出荷数量は平年を上回り、価格は平年を下回って推移する見込み。価格見通し：平年を下回って推移",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "983c1ae4f4c36d77d2ad98a5cf43c02e3a253798a9fbac565ae0813e6df6daf4",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：北海道産中心の出荷。主産地の生育は概ね順調であり、大玉傾向。11月の出荷数量は平年を上回り、価格は平年を下回って推移する見込み。\n価格の見通し：平年を下回って推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "北海道産中心の出荷。主産地の生育は概ね順調であり、大玉傾向。11月の出荷数量は平年を上回り、価格は平年を下回って推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年を下回って推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-022",
+      "foodId": "v-022",
+      "title": "さといも：2026年11月の見通し",
+      "summary": "埼玉県産・愛媛県産中心の出荷。主産地の生育は概ね順調であり、11月の出荷数量はやや平年を上回り、価格は平年を下回って推移する見込み。価格見通し：平年を下回って推移",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "9e1a089dde8fd08a6d027a2bfb97a051c40c07e8108b80833ead1a943524451a",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：埼玉県産・愛媛県産中心の出荷。主産地の生育は概ね順調であり、11月の出荷数量はやや平年を上回り、価格は平年を下回って推移する見込み。\n価格の見通し：平年を下回って推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "埼玉県産・愛媛県産中心の出荷。主産地の生育は概ね順調であり、11月の出荷数量はやや平年を上回り、価格は平年を下回って推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年を下回って推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-021",
+      "foodId": "v-021",
+      "title": "じゃがいも：2026年11月の見通し",
+      "summary": "北海道産中心の出荷。11月の出荷数量・価格は平年並みで推移する見込み。価格見通し：平年並みで推移",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "9d821e295ab8304dea7da35a58a5d560fccf3652a556cf37557716321260e444",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：北海道産中心の出荷。11月の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "北海道産中心の出荷。11月の出荷数量・価格は平年並みで推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年並みで推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-014",
+      "foodId": "v-014",
+      "title": "ピーマン：2026年11月の見通し",
+      "summary": "茨城県産中心の出荷。10月は概ね好天が続いたが茨城県産は9月の長雨の影響が続いている。宮崎県産・高知県産の生育は概ね順調で、11月後半に出荷量が増加する。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "5f2ce00e7b3ecaa3191e7170da6055a0dfdb4339308c4b54448559f38311c5a4",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：茨城県産中心の出荷。10月は概ね好天が続いたが茨城県産は9月の長雨の影響が続いている。宮崎県産・高知県産の生育は概ね順調で、11月後半に出荷量が増加する。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "茨城県産中心の出荷。10月は概ね好天が続いたが茨城県産は9月の長雨の影響が続いている。宮崎県産・高知県産の生育は概ね順調で、11月後半に出荷量が増加する。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-010",
+      "foodId": "v-010",
+      "title": "トマト：2026年11月の見通し",
+      "summary": "関東産・東海産は9月の長雨の影響により着果不良が発生し、着果数の減少が懸念される。熊本県産は9月の気温が適度であり、10月も好天が続いたことから生育は概ね順調である。 全体として、11月の出荷数量・価格は平年並みで推移する見込み。価格見通し：平年並みで推移",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "853d91b591c10d6e641a63fc874529db3343f17089dbd3ebd4fac9793417582b",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：関東産・東海産は9月の長雨の影響により着果不良が発生し、着果数の減少が懸念される。熊本県産は9月の気温が適度であり、10月も好天が続いたことから生育は概ね順調である。 全体として、11月の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "関東産・東海産は9月の長雨の影響により着果不良が発生し、着果数の減少が懸念される。熊本県産は9月の気温が適度であり、10月も好天が続いたことから生育は概ね順調である。 全体として、11月の出荷数量・価格は平年並みで推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年並みで推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-013",
+      "foodId": "v-013",
+      "title": "なす：2026年11月の見通し",
+      "summary": "主産地の生育は概ね順調であり、11月の出荷数量、価格は平年並みで推移する見込み。価格見通し：平年並みで推移",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "a8bce9e6b13eb3e7ceb3ad0102dd4bfde0079f89b217a76a4c18daccf53533c9",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：主産地の生育は概ね順調であり、11月の出荷数量、価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "主産地の生育は概ね順調であり、11月の出荷数量、価格は平年並みで推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年並みで推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-012",
+      "foodId": "v-012",
+      "title": "きゅうり：2026年11月の見通し",
+      "summary": "関東産中心の出荷から宮崎県産中心の出荷に切り替わる。関東産は9月の長雨の影響により樹勢の低下がみられ、出荷数量の減少につながっている。 宮崎県産の生育は概ね順調である。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "4b3f88c85a0b59ed9f8ecfef101355245350e44f571a184d3447e85f283add78",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：関東産中心の出荷から宮崎県産中心の出荷に切り替わる。関東産は9月の長雨の影響により樹勢の低下がみられ、出荷数量の減少につながっている。 宮崎県産の生育は概ね順調である。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "関東産中心の出荷から宮崎県産中心の出荷に切り替わる。関東産は9月の長雨の影響により樹勢の低下がみられ、出荷数量の減少につながっている。 宮崎県産の生育は概ね順調である。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-009",
+      "foodId": "v-009",
+      "title": "レタス：2026年11月の見通し",
+      "summary": "長野県産の出荷が減少し、茨城県産中心の出荷に切り替わる。主産地では9月の長雨と日照不足の影響で小玉傾向がみられるが、10月は概ね好天であったため、11月中旬頃から長雨以降に定植を行ったものが出荷を迎える。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "61d479678dbabd585b62f15087e32e3976aef8a987a05d6b59d19d2aa0841d67",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：長野県産の出荷が減少し、茨城県産中心の出荷に切り替わる。主産地では9月の長雨と日照不足の影響で小玉傾向がみられるが、10月は概ね好天であったため、11月中旬頃から長雨以降に定植を行ったものが出荷を迎える。全体として、11月前半の出荷数量は平年を下回り、価格は平年を上回って推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。\n価格の見通し：<11月前半> 平年を上回って推移 <11月後半> やや平年を上回って推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "長野県産の出荷が減少し、茨城県産中心の出荷に切り替わる。主産地では9月の長雨と日照不足の影響で小玉傾向がみられるが、10月は概ね好天であったため、11月中旬頃から長雨以降に定植を行ったものが出荷を迎える。全体として、11月前半の出荷数量は平年を下回り、価格は平年を上回って推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "<11月前半> 平年を上回って推移 <11月後半> やや平年を上回って推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-007",
+      "foodId": "v-007",
+      "title": "ブロッコリー：2026年11月の見通し",
+      "summary": "埼玉県産・香川県産・熊本県産・長崎県産が中心の出荷。主産地では長雨の影響等で生育が遅れており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。価格見通し：平年を上回って推移",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "9f0495f3bd9b12a5ca009325f315c33872c0caa1276afa36d4dc967b6f5c7d98",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：埼玉県産・香川県産・熊本県産・長崎県産が中心の出荷。主産地では長雨の影響等で生育が遅れており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：平年を上回って推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "埼玉県産・香川県産・熊本県産・長崎県産が中心の出荷。主産地では長雨の影響等で生育が遅れており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年を上回って推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-028",
+      "foodId": "v-028",
+      "title": "長ねぎ：2026年11月の見通し",
+      "summary": "北海道・東北産の生育は順調だが、茨城県産は長雨や日照不足で生育不良がみられる。出荷は北海道・東北産が減少する一方、茨城県産は増加する見込み。これらを踏まえ、11月前半の出荷数量と価格は平年並みで推移すると予測される。11月後半については、出荷数量がやや平年を下回り、価格はやや平年を上回って推移する可能性がある。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "bdb5db9aa4481ceff77358993e50221ae89c5050c7dead979898c2e0fe188111",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：北海道産・秋田県産・青森県産の出荷が減少し、茨城県産の出荷が増加する。北海道産・東北産の生育は順調。茨城県産は9月の長雨や日照不足の影響で生育不良がみられる。全体として、11月前半の出荷数量・価格は平年並みで推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。\n価格の見通し：<11月前半> 平年並みで推移 <11月後半> やや平年を上回って推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "北海道産・秋田県産・青森県産の出荷が減少し、茨城県産の出荷が増加する。北海道産・東北産の生育は順調。茨城県産は9月の長雨や日照不足の影響で生育不良がみられる。全体として、11月前半の出荷数量・価格は平年並みで推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "<11月前半> 平年並みで推移 <11月後半> やや平年を上回って推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-005",
+      "foodId": "v-005",
+      "title": "ほうれんそう：2026年11月の見通し",
+      "summary": "主産地における野菜の生育は概ね順調に推移している。この状況を踏まえると、11月の出荷数量および価格は、いずれも平年並みで推移する見通しとなっている。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "cb46ba559a4428e44b2c294c42cf529bb3f6dc1ecea3a0f5df07f0132f3a460b",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：主産地の生育は概ね順調であり、11月の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "主産地の生育は概ね順調であり、11月の出荷数量・価格は平年並みで推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年並みで推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-001",
+      "foodId": "v-001",
+      "title": "キャベツ：2026年11月の見通し",
+      "summary": "群馬県産の出荷終了に伴い、今後は千葉・茨城・愛知県産が中心となる見込みです。しかし、これらの産地では長雨や日照不足の影響で定植や生育の遅れ、小玉傾向がみられます。このため、11月の出荷数量は平年を下回り、価格は平年を上回って推移する可能性があると考えられます。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "0f4f550df63306adf5bc5c9e8a31e3fc40e01d8d1f2756c8e1f5a6ffe40d3584",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：群馬県産の出荷が減少し、千葉県産・茨城県産・愛知県産中心の出荷へと切り替わる。群馬県産は11月上旬に出荷が終了する見込み。千葉県産・茨城県産・愛知県産は9月の長雨や日照不足の影響で定植作業の遅れや生育遅れが発生しているほか、小玉傾向がみられている。 全体として、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：平年を上回って推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "群馬県産の出荷が減少し、千葉県産・茨城県産・愛知県産中心の出荷へと切り替わる。群馬県産は11月上旬に出荷が終了する見込み。千葉県産・茨城県産・愛知県産は9月の長雨や日照不足の影響で定植作業の遅れや生育遅れが発生しているほか、小玉傾向がみられている。 全体として、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年を上回って推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-002",
+      "foodId": "v-002",
+      "title": "はくさい：2026年11月の見通し",
+      "summary": "長野県産の出荷は11月中旬に終了し、茨城県産中心の出荷へ切り替わる見通しである。茨城県産は9月の長雨や日照不足の影響で生育遅れや肥大の鈍化がみられる。このため、11月の出荷数量は平年を下回り、価格は平年を上回って推移する可能性がある。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "fb02b7fbbbba4ed8e0f73de3ff4d13b3fed6ba6afb271bc6f346f4d79e3f6ac7",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：長野県産の出荷が減少し、茨城県産中心の出荷へと切り替わる。長野県産は11月中旬に出荷が終了する見込み。茨城県産は9月の長雨や日照不足の影響で生育遅れや肥大の鈍化がみられる。11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：平年を上回って推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "長野県産の出荷が減少し、茨城県産中心の出荷へと切り替わる。長野県産は11月中旬に出荷が終了する見込み。茨城県産は9月の長雨や日照不足の影響で生育遅れや肥大の鈍化がみられる。11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年を上回って推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-004",
+      "foodId": "v-004",
+      "title": "にんじん：2026年11月の見通し",
+      "summary": "北海道産等の出荷終了に伴い、今後は千葉県産中心の出荷へ切り替わる。千葉県産は天候不順による生育遅れ等の影響で、出荷数量は平年を下回る見込みである。これらを踏まえ、11月前半の出荷数量と価格は平年並みで推移すると予想される。一方、11月後半については、出荷数量が平年を下回り、価格は平年を上回って推移する可能性がある。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "1614b6248c0a5bc53ab950d7debacf08c50d5e85bfdc15e2f076bff6bd336d85",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：北海道産中心の出荷から、千葉県産中心の出荷へと切り替わる。北海道産・青森県産は11月中旬に出荷が終了する見込み。千葉県産は8月の豪雨や9月の台風による再播種、また9月の長雨や日照不足の影響により生育遅れや肥大の鈍化がみられており、出荷数量は平年を下回る見込み。 全体として、11月前半の出荷数量・価格は平年並みで推移し、11月後半の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：<11月前半> 平年並みで推移 <11月後半> 平年を上回って推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "北海道産中心の出荷から、千葉県産中心の出荷へと切り替わる。北海道産・青森県産は11月中旬に出荷が終了する見込み。千葉県産は8月の豪雨や9月の台風による再播種、また9月の長雨や日照不足の影響により生育遅れや肥大の鈍化がみられており、出荷数量は平年を下回る見込み。 全体として、11月前半の出荷数量・価格は平年並みで推移し、11月後半の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "<11月前半> 平年並みで推移 <11月後半> 平年を上回って推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-003",
+      "foodId": "v-003",
+      "title": "だいこん：2026年11月の見通し",
+      "summary": "北海道産・青森県産の出荷が減少し、千葉県産・神奈川県産中心の出荷へ切り替わる見通しである。千葉県産・神奈川県産では、9月の長雨や台風の影響で播種ができなかった圃場があるほか、生育遅れや生理障害が発生している。このため、11月の出荷数量は平年を下回り、価格は平年を上回って推移する可能性がある。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "e0a2b1f348317c7d6d9ac1d9199b67f8de27d3bc64b91076e9c83b6eeeb4addd",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：北海道産・青森県産の出荷が減少し、千葉県産・神奈川県産中心の出荷に切り替わる。千葉県産・神奈川県産は9月の長雨や台風の影響で播種ができなかった圃場がみられるほか、生育遅れや生理障害が発生しており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：平年を上回って推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "北海道産・青森県産の出荷が減少し、千葉県産・神奈川県産中心の出荷に切り替わる。千葉県産・神奈川県産は9月の長雨や台風の影響で播種ができなかった圃場がみられるほか、生育遅れや生理障害が発生しており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年を上回って推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-13T02:05:20+00:00"
     },
     {
       "id": "tokyo-fruit-2026-11-1-f-080",
@@ -124013,974 +125061,6 @@
       ],
       "aiGenerated": false,
       "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "tokyo-fish-2026-11-1-f-132",
-      "foodId": "f-132",
-      "title": "スルメイカ：2026年11月第1週の入荷・市場動向",
-      "summary": "スルメイカは青森と岩手主体に入荷。前週に比べ数量は5%増加、価格は1割弱安。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（水産）",
-          "title": "2026年11月第1週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第1週",
-      "sourceFingerprint": "c51df705f013ec9ff722fb02b8f79c419ea4b584dfdaa0a0fd130711afb80287",
-      "sourceFamily": "tokyo-fish",
-      "isForecast": false,
-      "periodStart": "2026-10-30",
-      "periodEnd": "2026-11-05",
-      "summaryVersion": 4,
-      "sourceExcerpt": "スルメイカは青森と岩手主体に入荷。前週に比べ数量は5%増加、価格は1割弱安。",
-      "scope": "東京都豊洲市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "スルメイカは青森と岩手主体に入荷。前週に比べ数量は5%増加、価格は1割弱安。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "tokyo-fish-2026-11-1-f-121",
-      "foodId": "f-121",
-      "title": "カキ：2026年11月第1週の入荷・市場動向",
-      "summary": "ムキカキの数量は2倍に増加、三陸産の価格は0.5割強高。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（水産）",
-          "title": "2026年11月第1週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第1週",
-      "sourceFingerprint": "3fa4e115b5d8028100b4f350ddd85b33a8a15bd32eb17180d90ff84ca9638e59",
-      "sourceFamily": "tokyo-fish",
-      "isForecast": false,
-      "periodStart": "2026-10-30",
-      "periodEnd": "2026-11-05",
-      "summaryVersion": 4,
-      "sourceExcerpt": "ムキカキの数量は2倍に増加、三陸産の価格は0.5割強高。",
-      "scope": "東京都豊洲市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "ムキカキの数量は2倍に増加、三陸産の価格は0.5割強高。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "tokyo-fish-2026-11-1-f-099",
-      "foodId": "f-099",
-      "title": "イワシ：2026年11月第1週の入荷・市場動向",
-      "summary": "イワシは鹿児島と愛知主体に入荷。前週に比べ数量は41%増加、価格は1割弱高。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（水産）",
-          "title": "2026年11月第1週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第1週",
-      "sourceFingerprint": "86e8b51b731ceac994bfd4b2d43819005f934f3f33795ec3b6944b41f7003379",
-      "sourceFamily": "tokyo-fish",
-      "isForecast": false,
-      "periodStart": "2026-10-30",
-      "periodEnd": "2026-11-05",
-      "summaryVersion": 4,
-      "sourceExcerpt": "イワシは鹿児島と愛知主体に入荷。前週に比べ数量は41%増加、価格は1割弱高。",
-      "scope": "東京都豊洲市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "イワシは鹿児島と愛知主体に入荷。前週に比べ数量は41%増加、価格は1割弱高。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "tokyo-fish-2026-11-1-f-098",
-      "foodId": "f-098",
-      "title": "アジ：2026年11月第1週の入荷・市場動向",
-      "summary": "アジは中型が鳥取と長崎、中小型が千葉と鳥取主体に入荷。前週に比べ数量は11%減少、価格は中型が0.5割高、中小型が1割弱安。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（水産）",
-          "title": "2026年11月第1週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第1週",
-      "sourceFingerprint": "e5ebb78b8f635d150a72e62b8e56f50b84d7b40255decce8eb3f1b7f7b0b3932",
-      "sourceFamily": "tokyo-fish",
-      "isForecast": false,
-      "periodStart": "2026-10-30",
-      "periodEnd": "2026-11-05",
-      "summaryVersion": 4,
-      "sourceExcerpt": "アジは中型が鳥取と長崎、中小型が千葉と鳥取主体に入荷。前週に比べ数量は11%減少、価格は中型が0.5割高、中小型が1割弱安。",
-      "scope": "東京都豊洲市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "アジは中型が鳥取と長崎、中小型が千葉と鳥取主体に入荷。前週に比べ数量は11%減少、価格は中型が0.5割高、中小型が1割弱安。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "tokyo-fish-2026-11-1-f-097",
-      "foodId": "f-097",
-      "title": "サバ：2026年11月第1週の入荷・市場動向",
-      "summary": "サバは千葉主体に入荷。前週に比べ数量は27%増加、価格は0.5割安。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（水産）",
-          "title": "2026年11月第1週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第1週",
-      "sourceFingerprint": "e119cdd0d349a3cba8c59725b1f0625e2fccd43b5f65e881fc3939a6ae839b64",
-      "sourceFamily": "tokyo-fish",
-      "isForecast": false,
-      "periodStart": "2026-10-30",
-      "periodEnd": "2026-11-05",
-      "summaryVersion": 4,
-      "sourceExcerpt": "サバは千葉主体に入荷。前週に比べ数量は27%増加、価格は0.5割安。",
-      "scope": "東京都豊洲市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "サバは千葉主体に入荷。前週に比べ数量は27%増加、価格は0.5割安。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "tokyo-fish-2026-11-1-f-095",
-      "foodId": "f-095",
-      "title": "カツオ：2026年11月第1週の入荷・市場動向",
-      "summary": "カツオは宮城と鹿児島主体に入荷。前週に比べ数量は37%減少、価格はわずかに上昇。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（水産）",
-          "title": "2026年11月第1週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第1週",
-      "sourceFingerprint": "d961501a7877e35c9375acbcd26fce15340d5b6700941aa3e8351246ba33e3ad",
-      "sourceFamily": "tokyo-fish",
-      "isForecast": false,
-      "periodStart": "2026-10-30",
-      "periodEnd": "2026-11-05",
-      "summaryVersion": 4,
-      "sourceExcerpt": "カツオは宮城と鹿児島主体に入荷。前週に比べ数量は37%減少、価格はわずかに上昇。",
-      "scope": "東京都豊洲市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "カツオは宮城と鹿児島主体に入荷。前週に比べ数量は37%減少、価格はわずかに上昇。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "tokyo-fish-2026-11-1-f-094",
-      "foodId": "f-094",
-      "title": "サンマ：2026年11月第1週の入荷・市場動向",
-      "summary": "サンマは宮城主体に入荷。前週に比べ数量は62%減少、生サンマの価格は2割弱安。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（水産）",
-          "title": "2026年11月第1週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-          "publishedAt": null
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第1週",
-      "sourceFingerprint": "f989ed238da2deb4004e7f973da8a48204919f949b5960f7d9b85bd7013cb2c7",
-      "sourceFamily": "tokyo-fish",
-      "isForecast": false,
-      "periodStart": "2026-10-30",
-      "periodEnd": "2026-11-05",
-      "summaryVersion": 4,
-      "sourceExcerpt": "サンマは宮城主体に入荷。前週に比べ数量は62%減少、生サンマの価格は2割弱安。",
-      "scope": "東京都豊洲市場",
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "サンマは宮城主体に入荷。前週に比べ数量は62%減少、生サンマの価格は2割弱安。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-027",
-      "foodId": "v-027",
-      "title": "たまねぎ：2026年11月の見通し",
-      "summary": "北海道産中心の出荷。主産地の生育は概ね順調であり、大玉傾向。11月の出荷数量は平年を上回り、価格は平年を下回って推移する見込み。価格見通し：平年を下回って推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "983c1ae4f4c36d77d2ad98a5cf43c02e3a253798a9fbac565ae0813e6df6daf4",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：北海道産中心の出荷。主産地の生育は概ね順調であり、大玉傾向。11月の出荷数量は平年を上回り、価格は平年を下回って推移する見込み。\n価格の見通し：平年を下回って推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "北海道産中心の出荷。主産地の生育は概ね順調であり、大玉傾向。11月の出荷数量は平年を上回り、価格は平年を下回って推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年を下回って推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-022",
-      "foodId": "v-022",
-      "title": "さといも：2026年11月の見通し",
-      "summary": "埼玉県産・愛媛県産中心の出荷。主産地の生育は概ね順調であり、11月の出荷数量はやや平年を上回り、価格は平年を下回って推移する見込み。価格見通し：平年を下回って推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "9e1a089dde8fd08a6d027a2bfb97a051c40c07e8108b80833ead1a943524451a",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：埼玉県産・愛媛県産中心の出荷。主産地の生育は概ね順調であり、11月の出荷数量はやや平年を上回り、価格は平年を下回って推移する見込み。\n価格の見通し：平年を下回って推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "埼玉県産・愛媛県産中心の出荷。主産地の生育は概ね順調であり、11月の出荷数量はやや平年を上回り、価格は平年を下回って推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年を下回って推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-021",
-      "foodId": "v-021",
-      "title": "じゃがいも：2026年11月の見通し",
-      "summary": "北海道産中心の出荷。11月の出荷数量・価格は平年並みで推移する見込み。価格見通し：平年並みで推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "9d821e295ab8304dea7da35a58a5d560fccf3652a556cf37557716321260e444",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：北海道産中心の出荷。11月の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "北海道産中心の出荷。11月の出荷数量・価格は平年並みで推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年並みで推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-014",
-      "foodId": "v-014",
-      "title": "ピーマン：2026年11月の見通し",
-      "summary": "茨城県産中心の出荷。10月は概ね好天が続いたが茨城県産は9月の長雨の影響が続いている。宮崎県産・高知県産の生育は概ね順調で、11月後半に出荷量が増加する。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "5f2ce00e7b3ecaa3191e7170da6055a0dfdb4339308c4b54448559f38311c5a4",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：茨城県産中心の出荷。10月は概ね好天が続いたが茨城県産は9月の長雨の影響が続いている。宮崎県産・高知県産の生育は概ね順調で、11月後半に出荷量が増加する。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "茨城県産中心の出荷。10月は概ね好天が続いたが茨城県産は9月の長雨の影響が続いている。宮崎県産・高知県産の生育は概ね順調で、11月後半に出荷量が増加する。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-010",
-      "foodId": "v-010",
-      "title": "トマト：2026年11月の見通し",
-      "summary": "関東産・東海産は9月の長雨の影響により着果不良が発生し、着果数の減少が懸念される。熊本県産は9月の気温が適度であり、10月も好天が続いたことから生育は概ね順調である。 全体として、11月の出荷数量・価格は平年並みで推移する見込み。価格見通し：平年並みで推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "853d91b591c10d6e641a63fc874529db3343f17089dbd3ebd4fac9793417582b",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：関東産・東海産は9月の長雨の影響により着果不良が発生し、着果数の減少が懸念される。熊本県産は9月の気温が適度であり、10月も好天が続いたことから生育は概ね順調である。 全体として、11月の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "関東産・東海産は9月の長雨の影響により着果不良が発生し、着果数の減少が懸念される。熊本県産は9月の気温が適度であり、10月も好天が続いたことから生育は概ね順調である。 全体として、11月の出荷数量・価格は平年並みで推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年並みで推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-013",
-      "foodId": "v-013",
-      "title": "なす：2026年11月の見通し",
-      "summary": "主産地の生育は概ね順調であり、11月の出荷数量、価格は平年並みで推移する見込み。価格見通し：平年並みで推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "a8bce9e6b13eb3e7ceb3ad0102dd4bfde0079f89b217a76a4c18daccf53533c9",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：主産地の生育は概ね順調であり、11月の出荷数量、価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "主産地の生育は概ね順調であり、11月の出荷数量、価格は平年並みで推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年並みで推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-012",
-      "foodId": "v-012",
-      "title": "きゅうり：2026年11月の見通し",
-      "summary": "関東産中心の出荷から宮崎県産中心の出荷に切り替わる。関東産は9月の長雨の影響により樹勢の低下がみられ、出荷数量の減少につながっている。 宮崎県産の生育は概ね順調である。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "4b3f88c85a0b59ed9f8ecfef101355245350e44f571a184d3447e85f283add78",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：関東産中心の出荷から宮崎県産中心の出荷に切り替わる。関東産は9月の長雨の影響により樹勢の低下がみられ、出荷数量の減少につながっている。 宮崎県産の生育は概ね順調である。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "関東産中心の出荷から宮崎県産中心の出荷に切り替わる。関東産は9月の長雨の影響により樹勢の低下がみられ、出荷数量の減少につながっている。 宮崎県産の生育は概ね順調である。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-009",
-      "foodId": "v-009",
-      "title": "レタス：2026年11月の見通し",
-      "summary": "長野県産の出荷が減少し、茨城県産中心の出荷に切り替わる。主産地では9月の長雨と日照不足の影響で小玉傾向がみられるが、10月は概ね好天であったため、11月中旬頃から長雨以降に定植を行ったものが出荷を迎える。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "61d479678dbabd585b62f15087e32e3976aef8a987a05d6b59d19d2aa0841d67",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：長野県産の出荷が減少し、茨城県産中心の出荷に切り替わる。主産地では9月の長雨と日照不足の影響で小玉傾向がみられるが、10月は概ね好天であったため、11月中旬頃から長雨以降に定植を行ったものが出荷を迎える。全体として、11月前半の出荷数量は平年を下回り、価格は平年を上回って推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。\n価格の見通し：<11月前半> 平年を上回って推移 <11月後半> やや平年を上回って推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "長野県産の出荷が減少し、茨城県産中心の出荷に切り替わる。主産地では9月の長雨と日照不足の影響で小玉傾向がみられるが、10月は概ね好天であったため、11月中旬頃から長雨以降に定植を行ったものが出荷を迎える。全体として、11月前半の出荷数量は平年を下回り、価格は平年を上回って推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "<11月前半> 平年を上回って推移 <11月後半> やや平年を上回って推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-007",
-      "foodId": "v-007",
-      "title": "ブロッコリー：2026年11月の見通し",
-      "summary": "埼玉県産・香川県産・熊本県産・長崎県産が中心の出荷。主産地では長雨の影響等で生育が遅れており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。価格見通し：平年を上回って推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "9f0495f3bd9b12a5ca009325f315c33872c0caa1276afa36d4dc967b6f5c7d98",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：埼玉県産・香川県産・熊本県産・長崎県産が中心の出荷。主産地では長雨の影響等で生育が遅れており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：平年を上回って推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "埼玉県産・香川県産・熊本県産・長崎県産が中心の出荷。主産地では長雨の影響等で生育が遅れており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年を上回って推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-028",
-      "foodId": "v-028",
-      "title": "長ねぎ：2026年11月の見通し",
-      "summary": "北海道・東北産の生育は順調だが、茨城県産は長雨や日照不足で生育不良がみられる。出荷は北海道・東北産が減少する一方、茨城県産は増加する見込み。これらを踏まえ、11月前半の出荷数量と価格は平年並みで推移すると予測される。11月後半については、出荷数量がやや平年を下回り、価格はやや平年を上回って推移する可能性がある。",
-      "kind": "ai_source_summary",
-      "verified": false,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "bdb5db9aa4481ceff77358993e50221ae89c5050c7dead979898c2e0fe188111",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：北海道産・秋田県産・青森県産の出荷が減少し、茨城県産の出荷が増加する。北海道産・東北産の生育は順調。茨城県産は9月の長雨や日照不足の影響で生育不良がみられる。全体として、11月前半の出荷数量・価格は平年並みで推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。\n価格の見通し：<11月前半> 平年並みで推移 <11月後半> やや平年を上回って推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "北海道産・秋田県産・青森県産の出荷が減少し、茨城県産の出荷が増加する。北海道産・東北産の生育は順調。茨城県産は9月の長雨や日照不足の影響で生育不良がみられる。全体として、11月前半の出荷数量・価格は平年並みで推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "<11月前半> 平年並みで推移 <11月後半> やや平年を上回って推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "数値の原文照合",
-        "見通しの断定化チェック"
-      ],
-      "aiGenerated": true,
-      "tag": "Gemini要約（一次資料から・未検証）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-005",
-      "foodId": "v-005",
-      "title": "ほうれんそう：2026年11月の見通し",
-      "summary": "主産地における野菜の生育は概ね順調に推移している。この状況を踏まえると、11月の出荷数量および価格は、いずれも平年並みで推移する見通しとなっている。",
-      "kind": "ai_source_summary",
-      "verified": false,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "cb46ba559a4428e44b2c294c42cf529bb3f6dc1ecea3a0f5df07f0132f3a460b",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：主産地の生育は概ね順調であり、11月の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "主産地の生育は概ね順調であり、11月の出荷数量・価格は平年並みで推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年並みで推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "数値の原文照合",
-        "見通しの断定化チェック"
-      ],
-      "aiGenerated": true,
-      "tag": "Gemini要約（一次資料から・未検証）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-001",
-      "foodId": "v-001",
-      "title": "キャベツ：2026年11月の見通し",
-      "summary": "群馬県産の出荷終了に伴い、今後は千葉・茨城・愛知県産が中心となる見込みです。しかし、これらの産地では長雨や日照不足の影響で定植や生育の遅れ、小玉傾向がみられます。このため、11月の出荷数量は平年を下回り、価格は平年を上回って推移する可能性があると考えられます。",
-      "kind": "ai_source_summary",
-      "verified": false,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "0f4f550df63306adf5bc5c9e8a31e3fc40e01d8d1f2756c8e1f5a6ffe40d3584",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：群馬県産の出荷が減少し、千葉県産・茨城県産・愛知県産中心の出荷へと切り替わる。群馬県産は11月上旬に出荷が終了する見込み。千葉県産・茨城県産・愛知県産は9月の長雨や日照不足の影響で定植作業の遅れや生育遅れが発生しているほか、小玉傾向がみられている。 全体として、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：平年を上回って推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "群馬県産の出荷が減少し、千葉県産・茨城県産・愛知県産中心の出荷へと切り替わる。群馬県産は11月上旬に出荷が終了する見込み。千葉県産・茨城県産・愛知県産は9月の長雨や日照不足の影響で定植作業の遅れや生育遅れが発生しているほか、小玉傾向がみられている。 全体として、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年を上回って推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "数値の原文照合",
-        "見通しの断定化チェック"
-      ],
-      "aiGenerated": true,
-      "tag": "Gemini要約（一次資料から・未検証）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-002",
-      "foodId": "v-002",
-      "title": "はくさい：2026年11月の見通し",
-      "summary": "長野県産の出荷は11月中旬に終了し、茨城県産中心の出荷へ切り替わる見通しである。茨城県産は9月の長雨や日照不足の影響で生育遅れや肥大の鈍化がみられる。このため、11月の出荷数量は平年を下回り、価格は平年を上回って推移する可能性がある。",
-      "kind": "ai_source_summary",
-      "verified": false,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "fb02b7fbbbba4ed8e0f73de3ff4d13b3fed6ba6afb271bc6f346f4d79e3f6ac7",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：長野県産の出荷が減少し、茨城県産中心の出荷へと切り替わる。長野県産は11月中旬に出荷が終了する見込み。茨城県産は9月の長雨や日照不足の影響で生育遅れや肥大の鈍化がみられる。11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：平年を上回って推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "長野県産の出荷が減少し、茨城県産中心の出荷へと切り替わる。長野県産は11月中旬に出荷が終了する見込み。茨城県産は9月の長雨や日照不足の影響で生育遅れや肥大の鈍化がみられる。11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年を上回って推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "数値の原文照合",
-        "見通しの断定化チェック"
-      ],
-      "aiGenerated": true,
-      "tag": "Gemini要約（一次資料から・未検証）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-004",
-      "foodId": "v-004",
-      "title": "にんじん：2026年11月の見通し",
-      "summary": "北海道産等の出荷終了に伴い、今後は千葉県産中心の出荷へ切り替わる。千葉県産は天候不順による生育遅れ等の影響で、出荷数量は平年を下回る見込みである。これらを踏まえ、11月前半の出荷数量と価格は平年並みで推移すると予想される。一方、11月後半については、出荷数量が平年を下回り、価格は平年を上回って推移する可能性がある。",
-      "kind": "ai_source_summary",
-      "verified": false,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "1614b6248c0a5bc53ab950d7debacf08c50d5e85bfdc15e2f076bff6bd336d85",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：北海道産中心の出荷から、千葉県産中心の出荷へと切り替わる。北海道産・青森県産は11月中旬に出荷が終了する見込み。千葉県産は8月の豪雨や9月の台風による再播種、また9月の長雨や日照不足の影響により生育遅れや肥大の鈍化がみられており、出荷数量は平年を下回る見込み。 全体として、11月前半の出荷数量・価格は平年並みで推移し、11月後半の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：<11月前半> 平年並みで推移 <11月後半> 平年を上回って推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "北海道産中心の出荷から、千葉県産中心の出荷へと切り替わる。北海道産・青森県産は11月中旬に出荷が終了する見込み。千葉県産は8月の豪雨や9月の台風による再播種、また9月の長雨や日照不足の影響により生育遅れや肥大の鈍化がみられており、出荷数量は平年を下回る見込み。 全体として、11月前半の出荷数量・価格は平年並みで推移し、11月後半の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "<11月前半> 平年並みで推移 <11月後半> 平年を上回って推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "数値の原文照合",
-        "見通しの断定化チェック"
-      ],
-      "aiGenerated": true,
-      "tag": "Gemini要約（一次資料から・未検証）",
-      "retrievedAt": "2026-11-12T14:36:56+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-003",
-      "foodId": "v-003",
-      "title": "だいこん：2026年11月の見通し",
-      "summary": "北海道産・青森県産の出荷が減少し、千葉県産・神奈川県産中心の出荷へ切り替わる見通しである。千葉県産・神奈川県産では、9月の長雨や台風の影響で播種ができなかった圃場があるほか、生育遅れや生理障害が発生している。このため、11月の出荷数量は平年を下回り、価格は平年を上回って推移する可能性がある。",
-      "kind": "ai_source_summary",
-      "verified": false,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "e0a2b1f348317c7d6d9ac1d9199b67f8de27d3bc64b91076e9c83b6eeeb4addd",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 4,
-      "sourceExcerpt": "出荷・生育について：北海道産・青森県産の出荷が減少し、千葉県産・神奈川県産中心の出荷に切り替わる。千葉県産・神奈川県産は9月の長雨や台風の影響で播種ができなかった圃場がみられるほか、生育遅れや生理障害が発生しており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：平年を上回って推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "北海道産・青森県産の出荷が減少し、千葉県産・神奈川県産中心の出荷に切り替わる。千葉県産・神奈川県産は9月の長雨や台風の影響で播種ができなかった圃場がみられるほか、生育遅れや生理障害が発生しており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年を上回って推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "数値の原文照合",
-        "見通しの断定化チェック"
-      ],
-      "aiGenerated": true,
-      "tag": "Gemini要約（一次資料から・未検証）",
       "retrievedAt": "2026-11-12T14:36:56+00:00"
     },
     {
