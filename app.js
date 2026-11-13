@@ -4,7 +4,7 @@ const art=(f)=>window.SHUN_ART?window.SHUN_ART(f):escaped(f.emoji);
 const matchesFood=(food,query)=>window.SHUN_SEARCH?window.SHUN_SEARCH.matches(food,query):food.name.includes(query);
 const get=(id)=>document.getElementById(id);const escaped=(s)=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const urlSafe=(str)=>{try{let u=new URL(str);return ['https:','http:'].includes(u.protocol)?u.href:'#'}catch{return '#'}};
-const now=new Date(), currentMonth=now.getMonth()+1;
+const now=new Date(), todayJst=now.toLocaleDateString('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}), currentMonth=Number(todayJst.slice(5,7));
 let saved=[];try{saved=JSON.parse(localStorage.getItem('shun-favs')||'[]');if(!Array.isArray(saved))saved=[]}catch{}
 const state={page:'topics',category:'all',query:'',sort:'default',priceOnly:'all',month:currentMonth,calendarCategory:'all',fav:saved,region:'national',lastFocus:null,customFishWeights:{}};
 
@@ -42,7 +42,7 @@ return Date.parse(today)-Date.parse(date)<=65*86400000;
 const seen=new Set();return candidates.filter(t=>{const key=topicFamily(t);if(seen.has(key))return false;seen.add(key);return true});
 }
 
-const foodMap=new Map(D.foods.map(f=>[f.id,f]));const priceMap=new Map(D.prices.map(p=>[p.foodId,p]));const topicToday=now.toLocaleDateString('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'});const activeTopics=D.foods.flatMap(f=>activeFoodTopics(D.topics,f.id,topicToday));const topicMap=new Map(D.foods.map(f=>[f.id,activeTopics.filter(t=>t.foodId===f.id)[0]]).filter(([,t])=>t));
+const foodMap=new Map(D.foods.map(f=>[f.id,f]));const priceMap=new Map(D.prices.map(p=>[p.foodId,p]));const topicToday=todayJst;const activeTopics=D.foods.flatMap(f=>activeFoodTopics(D.topics,f.id,topicToday));const topicMap=new Map(D.foods.map(f=>[f.id,activeTopics.filter(t=>t.foodId===f.id)[0]]).filter(([,t])=>t));
 const isMonth=(food,m)=>food.seasonMonths.includes(m);
 const officialTopics=()=>activeTopics.length;
 const priceStatus=(p)=>{if(!p||p.stale||p.normalRatio==null)return ['判定待ち','demo'];return p.normalRatio<85?['安い','low']:p.normalRatio>115?['高い','high']:['普通','mid']};
@@ -194,7 +194,7 @@ ${extraTopicCards(f,t)}<h3>📈 ${f.category==='fish'?'1尾あたりの参考価
 function closeDetail(){get('overlay').hidden=true;document.body.style.overflow='';state.lastFocus?.focus?.()}
 function toast(msg){let el=get('toast');el.textContent=msg;el.classList.add('show');clearTimeout(window.__toastTimeout);window.__toastTimeout=setTimeout(()=>el.classList.remove('show'),2700)}
 function updateChrome(){const labels={topics:'旬の話題',prices:'食材の価格',calendar:'旬カレンダー',favorites:'お気に入り',about:'情報の見方・出典'};get('breadcrumbPage').textContent=labels[state.page];document.querySelectorAll('.nav-item').forEach(b=>b.classList.toggle('active',b.dataset.page===state.page));get('asideMonth').textContent=`${currentMonth}月の旬`;
-get('todayLabel').textContent=`${now.getFullYear()}年${currentMonth}月${now.getDate()}日`;}
+get('todayLabel').textContent=`${Number(todayJst.slice(0,4))}年${currentMonth}月${Number(todayJst.slice(8,10))}日`;}
 function refresh(opts={}){const focus=opts.preserve&&document.activeElement?.id, pos=opts.preserve?window.scrollY:0;
 const html={topics:renderTopics,prices:renderPrices,calendar:renderCalendar,favorites:renderFavorites,about:renderAbout}[state.page]();get('content').innerHTML=html;updateChrome();if(opts.preserve){window.scrollTo(0,pos);if(focus)get(focus)?.focus()} }
 function pageTo(page){if(!['topics','prices','calendar','favorites','about'].includes(page))return;closeDetail();state.page=page;state.query='';get('sidebar').classList.remove('open');let shade=get('mobileShade');if(shade)shade.classList.remove('show');refresh();window.scrollTo({top:0,behavior:'instant'});history.replaceState({},'',`#${page}`)}

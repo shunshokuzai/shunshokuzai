@@ -55,6 +55,8 @@ jobs:
         run: python -u scripts/verify_history.py
       - name: Check every published price point against its official archive
         run: python -u scripts/verify_consistency.py
+      - name: Inspect alternate official historical data
+        run: python -u scripts/inspect_estat.py
       - run: python scripts/build_standalone.py
       - name: Retain verified observations on development branch
         run: |
