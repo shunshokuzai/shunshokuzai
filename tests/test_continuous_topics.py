@@ -81,3 +81,29 @@ class ContinuousTopicTests(unittest.TestCase):
   seed=json.loads((root/'data/seed.json').read_text(encoding='utf-8'))
   self.assertEqual({f['foodId'] for f in catalog['foods']},{f['id'] for f in seed['foods']})
   self.assertTrue(all(f['sourceIds'] for f in catalog['foods']))
+
+ def test_new_saury_pdf_must_match_publication_and_explicit_forecast_window(self):
+  from topic_discovery import jafic_items
+  from types import SimpleNamespace
+  source={**self.source,'id':'jafic-forecasts'}
+  entry={'url':'https://official.test/information/2026/11/19/report'}
+  html='<h1>2026年度第8回サンマ中短期漁況予報（2026年11月19日公表）</h1><a href="/forecast.pdf">サンマ予報PDF</a>'
+  text='2026年11月19日 来遊量 道東は断続的。三陸は低位。常磐は低位。問い合わせ先 予測期間:2026年11月下旬から12月下旬まで'
+  class Pdf:
+   def __enter__(self):return SimpleNamespace(pages=[SimpleNamespace(extract_text=lambda:text)])
+   def __exit__(self,*args):pass
+  food={'foodId':'s','name':'サンマ','aliases':['サンマ'],'category':'fish','sourceIds':['jafic-forecasts']}
+  with patch('pdfplumber.open',return_value=Pdf()):
+   items,status=jafic_items(html,entry,source,[food],dt.date(2026,11,20),getter=lambda *a:b'%PDF')
+  self.assertEqual(status,'source_text_found')
+  self.assertEqual(items[0]['periodStart'],'2026-11-21')
+  self.assertEqual(items[0]['periodEnd'],'2026-12-31')
+  self.assertTrue(items[0]['requireAi'])
+ def test_ja_h3_heading_and_article_date_are_supported(self):
+  source={**self.source,'id':'ja-kumamoto'}
+  html='<html><h3>栗の出荷が始まる</h3><p>2026.09.02</p><p>栗は夏の高温で早生が小ぶりですが、品質は例年並みと報告されています。</p></html>'
+  items,status=article_items(html,{'url':'https://official.test/article/1','title':'栗の出荷が始まる'},source,[self.food],self.today)
+  self.assertEqual(status,'source_text_found')
+  self.assertEqual(items[0]['publishedAt'],'2026-09-02')
+  self.assertTrue(items[0]['requireAi'])
+  self.assertLessEqual(len(items[0]['publicExcerpt']),25)

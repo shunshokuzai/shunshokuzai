@@ -22,6 +22,7 @@ from update_data import BASE,USER_AGENT,now_iso
 CATALOG=BASE/'data/topic_catalog.json'
 STATE=BASE/'data/topic_monitor.json'
 VERSION=1
+PARSER_VERSION=2
 
 def compact(value):
  return re.sub(r'\s+',' ',unicodedata.normalize('NFKC',str(value))).strip()
@@ -103,7 +104,7 @@ def publication_date(soup,title):
   except ValueError:pass
  # Body dates near the article header only. Do not mistake footer dates or
  # dates embedded in an archive URL for a publication date.
- node=next((h for h in soup.find_all(['h1','h2']) if compact(h.get_text())==title),None)
+ node=next((h for h in soup.find_all(['h1','h2','h3']) if compact(h.get_text())==title),None)
  if not node:return None
  text=compact(' '.join(str(x.get_text(' ',strip=True) if hasattr(x,'get_text') else x) for x in list(node.next_siblings)[:8]))[:1100]
  for pattern in (r'(20\d{2})[年/.-]\s*(\d{1,2})[月/.-]\s*(\d{1,2})日?',r'令和\s*(\d+)年\s*(\d+)月\s*(\d+)日'):
@@ -123,7 +124,7 @@ def article_items(raw,entry,source,foods,today):
   return [],'dedicated_pdf_parser_needed'
  soup=BeautifulSoup(raw,'html.parser')
  for tag in soup.find_all(['script','style','nav','footer','aside']):tag.decompose()
- headings=[h for h in soup.find_all('h1') if len(compact(h.get_text()))>4]
+ headings=[h for h in soup.find_all(['h1','h2','h3']) if len(compact(h.get_text()))>4]
  title_node=next((h for h in headings if matching_foods(h.get_text(),foods) or any(w in h.get_text() for w in source['terms'])),headings[-1] if headings else None)
  if not title_node:return [],'article_heading_missing'
  title=compact(title_node.get_text(' ',strip=True))
@@ -170,13 +171,57 @@ def article_items(raw,entry,source,foods,today):
    'sourceName':source['name'],'sourceTitle':title,
    'title':food['name']+'：'+title,
    'observedPeriod':f'{today.year}年の生育調査（資料の記載品種）' if kochi else f'{date.year}年{date.month}月{date.day}日公表の資料（詳細な対象期間は原文参照）',
-   'periodStart':None,'periodEnd':None,'seasonalRecord':bool(kochi),'reportYear':today.year,
+   'periodStart':None,'periodEnd':None,'seasonalRecord':bool(kochi or source['id'].startswith('ja-')),'reportYear':today.year,
    'isForecast':False,'scope':source['scope'],'reportType':'試験場の生育観測' if kochi else '産地・海域の生育、出荷または漁況に関する記述',
    'excerpt':excerpt,'summaryExcerpt':short,'requireAi':source['id'].startswith('ja-'),
    'publicExcerpt':excerpt[:24]+'…' if source['id'].startswith('ja-') else excerpt,
    'evidenceSections':[{'label':'原文の該当箇所' if kochi else '出典の記述（対象条件は原文参照）','text':excerpt if not source['id'].startswith('ja-') else excerpt[:24]+'…'}],
    'limitations':'記載の産地・品種・調査樹・海域に限った情報です。全国の収穫量・漁獲量を示すものではありません。'+('更新日は確認しましたが初回公表日は未確認です。' if kochi else '公表日と情報の対象期間は一致するとは限りません。')})
  return items,'source_text_found' if items else 'food_specific_evidence_missing'
+
+
+def jafic_items(raw,entry,source,foods,today,getter=read_public):
+ """Discover the newest dated saury forecast, retaining its explicit window."""
+ soup=BeautifulSoup(raw,'html.parser')
+ title=next((compact(h.get_text()) for h in soup.find_all(['h1','h2','h3']) if 'サンマ中短期漁況予報' in compact(h.get_text())), '')
+ pub=re.search(r'(20\d{2})年(\d{1,2})月(\d{1,2})日公表',title)
+ if not pub:return [],'dedicated_forecast_parser_needed'
+ date=dt.date(*map(int,pub.groups()))
+ if date>today or date.year!=today.year:return [],'current_forecast_date_unconfirmed'
+ link=next((urljoin(entry['url'],a['href']) for a in soup.find_all('a',href=True) if '.pdf' in a['href'].lower() and 'サンマ' in a.get_text()),None)
+ if not link or not trusted(link,source):return [],'forecast_pdf_link_missing'
+ data=getter(link,source)
+ if not data.startswith(b'%PDF'):return [],'forecast_pdf_invalid'
+ import pdfplumber
+ with pdfplumber.open(io.BytesIO(data)) as pdf:
+  text=re.sub(r'\s+','',unicodedata.normalize('NFKC','\n'.join(p.extract_text() or '' for p in pdf.pages[:2])))
+ if f'{date.year}年{date.month}月{date.day}日' not in text:return [],'forecast_pdf_date_mismatch'
+ period=re.search(r'予測期間:(20\d{2})年(\d{1,2})月([上中下])旬から(?:(20\d{2})年)?(\d{1,2})月([上中下])旬まで',text)
+ overview=re.search(r'来遊量(.+?)問い合わせ先',text)
+ if not period or not overview:return [],'forecast_period_or_overview_missing'
+ year,month,ten,eyear,emonth,eten=period.groups();year=int(year);month=int(month);emonth=int(emonth)
+ eyear=int(eyear) if eyear else year+(emonth<month)
+ import calendar
+ start=dt.date(year,month,{'上':1,'中':11,'下':21}[ten])
+ end=dt.date(eyear,emonth,{'上':10,'中':20,'下':calendar.monthrange(eyear,emonth)[1]}[eten])
+ if end<today or start>today+dt.timedelta(days=45) or (end-start).days>180:return [],'forecast_expired_or_invalid'
+ food=next((f for f in foods if f['name']=='サンマ'),None)
+ if not food:return [],'food_not_registered'
+ block=overview[1]
+ if not all(area in block for area in ('道東','三陸','常磐')) or len(block)>1000:return [],'regional_overview_missing'
+ item={'food':{'id':food['foodId'],'name':food['name']},'url':entry['url'],'publishedAt':date.isoformat(),
+  'reportKey':'jafic-sanma-'+date.isoformat(),'sourceFamily':'jafic-sanma',
+  'sourceName':source['name'],'sourceTitle':title,'title':'サンマ：道東・三陸・常磐の中短期漁況予報',
+  'observedPeriod':f'{year}年{month}月{ten}旬～{eyear}年{emonth}月{eten}旬の予報',
+  'periodStart':start.isoformat(),'periodEnd':end.isoformat(),'isForecast':True,
+  'scope':source['scope'],'reportType':'海域別の来遊量予報',
+  'excerpt':f'公表日:{date.year}年{date.month}月{date.day}日。予測期間:{start.isoformat()}～{end.isoformat()}。'+block,
+  'requireAi':True,'publicExcerpt':block[:24]+'…',
+  'evidenceSections':[{'label':'予報冒頭の一部（全文はPDFへ）','text':block[:24]+'…'}],
+  'extraSources':[{'name':'予報のPDF原文','url':link,'publishedAt':date.isoformat()}],
+  'limitations':'公表時点の海域別予報です。全国の確定漁獲量や市場価格を示すものではありません。'}
+ return [item],'source_text_found'
+
 
 def load_state(path=STATE):
  if not path.exists():return {'version':VERSION,'sources':{},'articles':{},'foods':{}}
@@ -226,9 +271,11 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
  def priority(entry):
   ids=entry['foodIds'];missing=sum(not any(t.get('foodId')==f and t.get('yearSpecific') for t in obj['topics']) for f in ids)
   prior=articles.get(entry['url'],{})
-  return (0 if any(f.get('name')=='くり' and f['foodId'] in ids for f in foods) else 1,
-          -missing,prior.get('lastCheckedAt',''),entry['url'])
- pending=[q for q in queue if articles.get(q['url'],{}).get('retryAfter','')<=date]
+  url_date=re.search(r'/(20\d{2})/(\d{2})/(\d{2})/',entry['url'])
+  forecast_rank=-int(''.join(url_date.groups())) if url_date and entry['sourceId']=='jafic-forecasts' else 0
+  return (0 if entry['sourceId']=='jafic-forecasts' else 1 if any(f.get('name')=='くり' and f['foodId'] in ids for f in foods) else 2,
+          -missing,prior.get('lastCheckedAt',''),forecast_rank,entry['url'])
+ pending=[q for q in queue if (articles.get(q['url'],{}).get('parserVersion')!=PARSER_VERSION or articles.get(q['url'],{}).get('retryAfter','')<=date)]
  pending.sort(key=priority);attempts=0
  for entry in pending:
   if attempts>=limit or time.monotonic()-started>=seconds:break
@@ -236,16 +283,16 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
   attempts+=1;prior=articles.setdefault(entry['url'],{})
   try:
    raw=getter(entry['url'],source)
-   found,result=article_items(raw,entry,source,choices,today)
+   found,result=(jafic_items(raw,entry,source,choices,today,getter) if source['id']=='jafic-forecasts' else article_items(raw,entry,source,choices,today))
    items.extend(found)
-   prior.update({'lastCheckedAt':now_iso(),'status':result,'fingerprint':hashlib.sha256(raw).hexdigest(),
+   prior.update({'parserVersion':PARSER_VERSION,'lastCheckedAt':now_iso(),'status':result,'fingerprint':hashlib.sha256(raw).hexdigest(),
     'foodIds':list(set(entry['foodIds']+[i['food']['id'] for i in found])),
     'retryAfter':(today+dt.timedelta(days=3 if found else 7)).isoformat()})
    for fid in prior['foodIds']:
     row=state['foods'][fid];row['lastArticleCheckedAt']=now_iso();row['lastArticleResult']=result
     if found and any(x['food']['id']==fid for x in found):row['lastEvidenceFoundAt']=now_iso();row['coverage']='evidence_found'
   except Exception as error:
-   prior.update({'lastCheckedAt':now_iso(),'status':'error','error':type(error).__name__,
+   prior.update({'parserVersion':PARSER_VERSION,'lastCheckedAt':now_iso(),'status':'error','error':type(error).__name__,
     'retryAfter':(today+dt.timedelta(days=3)).isoformat()});errors.append(source['id']+' article: '+type(error).__name__)
   save_state(state,path)
  obj['metadata']['topicDiscoverySources']=[{'id':s['id'],'name':s['name'],'url':source_url(s,today)} for s in sources.values()]
