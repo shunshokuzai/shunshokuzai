@@ -5,10 +5,10 @@
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
     "version": "0.10.0",
-    "lastCheckedAt": "2026-11-13T02:49:27+00:00",
+    "lastCheckedAt": "2026-11-14T02:16:54+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-13T02:49:32+00:00",
+    "updatedAt": "2026-11-14T02:17:58+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -56,13 +56,13 @@
         "purpose": "ふじの熟度調査と収穫情報"
       }
     ],
-    "lastTopicRetrievedAt": "2026-11-13T02:31:02+00:00",
+    "lastTopicRetrievedAt": "2026-11-14T02:17:58+00:00",
     "dataCutoffAt": "2026-10-30",
     "priceObservationPeriod": "2026年10月下旬",
     "priceSourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
     "aiState": "Gemini APIの自動検索はAPIキー未登録で未実行。",
-    "fishPriceObservationPeriod": "2026年11月第1週",
-    "fishPriceSourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+    "fishPriceObservationPeriod": "2026年11月第2週",
+    "fishPriceSourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
     "fishRatioDisclaimer": "過去3～5年の同月・同週・同じ銘柄区分の豊洲市場中値の単純平均を基準とする参考平年比。年による主産地・サイズの差に注意。",
     "fishPriceCount": 11,
     "autoRefreshConfigured": true,
@@ -70,64 +70,64 @@
       "vegetableFruit": "ok",
       "fish": "ok",
       "history": "ok",
-      "topics": "not_scheduled",
-      "gemini": "not_scheduled"
+      "topics": "ok",
+      "gemini": "ok"
     },
-    "lastFishCheckedAt": "2026-11-13T02:49:32+00:00",
+    "lastFishCheckedAt": "2026-11-14T02:16:59+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
-    "lastTopicAttemptAt": "2026-11-13T02:43:18+00:00",
-    "lastAutomaticCheckAt": "2026-11-13T02:49:36+00:00",
-    "lastFishSuccessAt": "2026-11-13T02:49:36+00:00",
-    "lastGeminiSuccessAt": "2026-11-12T04:31:34+00:00",
+    "lastTopicAttemptAt": "2026-11-14T02:17:58+00:00",
+    "lastAutomaticCheckAt": "2026-11-14T02:17:58+00:00",
+    "lastFishSuccessAt": "2026-11-14T02:17:58+00:00",
+    "lastGeminiSuccessAt": "2026-11-14T02:17:58+00:00",
     "topicSourceCountLastRun": 47,
-    "topicAddedLastRun": 0,
-    "topicGeminiSucceededLastRun": 0,
+    "topicAddedLastRun": 14,
+    "topicGeminiSucceededLastRun": 6,
     "topicGeminiFailedLastRun": 0,
-    "lastVegetableFruitSuccessAt": "2026-11-13T02:49:36+00:00",
+    "lastVegetableFruitSuccessAt": "2026-11-14T02:17:58+00:00",
     "produceReferenceRatioCount": 56,
     "fishReferenceRatioCount": 11,
     "aiRequestBudget": {
-      "date": "2026-11-13",
-      "attempted": 0,
+      "date": "2026-11-14",
+      "attempted": 6,
       "dailyLimit": 6
     },
     "topicSourceErrorsLastRun": [],
-    "topicGeminiStateLastRun": "sources_only",
-    "lastTopicsSuccessAt": "2026-11-12T13:55:08+00:00",
+    "topicGeminiStateLastRun": "ok",
+    "lastTopicsSuccessAt": "2026-11-14T02:17:58+00:00",
     "lastStepResults": {
       "vegetableFruit": {
         "status": "ok",
-        "checkedAt": "2026-11-13T02:49:36+00:00",
+        "checkedAt": "2026-11-14T02:17:58+00:00",
         "activePriceCount": 58,
         "referenceRatioCount": 56,
         "chartPointCount": 696
       },
       "fish": {
         "status": "ok",
-        "checkedAt": "2026-11-13T02:49:36+00:00",
+        "checkedAt": "2026-11-14T02:17:58+00:00",
         "activePriceCount": 11,
         "referenceRatioCount": 11,
         "chartPointCount": 88
       },
       "topics": {
-        "status": "not_scheduled",
-        "checkedAt": "2026-11-13T02:49:36+00:00",
+        "status": "ok",
+        "checkedAt": "2026-11-14T02:17:58+00:00",
         "sourceItemCount": 47,
-        "addedOrUpdatedCount": 0,
+        "addedOrUpdatedCount": 14,
         "sourceFailureCount": 0,
-        "aiState": "not_scheduled",
-        "aiRequestsToday": 0
+        "aiState": "ok",
+        "aiRequestsToday": 6
       },
       "history": {
         "status": "ok",
-        "checkedAt": "2026-11-13T02:49:36+00:00",
+        "checkedAt": "2026-11-14T02:17:58+00:00",
         "attempted": 0,
         "succeeded": 0,
         "failed": 0,
         "cachedReports": {
           "produce": 210,
-          "fish": 304
+          "fish": 305
         },
         "dailyFallback": {
           "attempted": 0,
@@ -456,16 +456,94 @@
             }
           }
         }
+      },
+      {
+        "checkedAt": "2026-11-14T02:17:58+00:00",
+        "steps": {
+          "vegetableFruit": {
+            "status": "ok",
+            "checkedAt": "2026-11-14T02:17:58+00:00",
+            "activePriceCount": 58,
+            "referenceRatioCount": 56,
+            "chartPointCount": 696
+          },
+          "fish": {
+            "status": "ok",
+            "checkedAt": "2026-11-14T02:17:58+00:00",
+            "activePriceCount": 11,
+            "referenceRatioCount": 11,
+            "chartPointCount": 88
+          },
+          "topics": {
+            "status": "ok",
+            "checkedAt": "2026-11-14T02:17:58+00:00",
+            "sourceItemCount": 47,
+            "addedOrUpdatedCount": 14,
+            "sourceFailureCount": 0,
+            "aiState": "ok",
+            "aiRequestsToday": 6
+          },
+          "history": {
+            "status": "ok",
+            "checkedAt": "2026-11-14T02:17:58+00:00",
+            "attempted": 0,
+            "succeeded": 0,
+            "failed": 0,
+            "cachedReports": {
+              "produce": 210,
+              "fish": 305
+            },
+            "dailyFallback": {
+              "attempted": 0,
+              "succeeded": 0,
+              "failed": 0,
+              "state": "validated",
+              "addedPeriods": 0,
+              "validation": [
+                {
+                  "stamp": [
+                    2023,
+                    10,
+                    1
+                  ],
+                  "foods": 53,
+                  "maxDifferenceYenKg": 0.6,
+                  "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23101h_syuyo.csv"
+                },
+                {
+                  "stamp": [
+                    2023,
+                    10,
+                    2
+                  ],
+                  "foods": 54,
+                  "maxDifferenceYenKg": 0.6,
+                  "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23102h_syuyo.csv"
+                },
+                {
+                  "stamp": [
+                    2023,
+                    10,
+                    3
+                  ],
+                  "foods": 54,
+                  "maxDifferenceYenKg": 0.6,
+                  "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23103h_syuyo.csv"
+                }
+              ]
+            }
+          }
+        }
       }
     ],
-    "longHistoryUpdatedAt": "2026-11-13T02:49:36+00:00",
+    "longHistoryUpdatedAt": "2026-11-14T02:17:01+00:00",
     "historyBackfillLastRun": {
       "attempted": 0,
       "succeeded": 0,
       "failed": 0,
       "cachedReports": {
         "produce": 210,
-        "fish": 304
+        "fish": 305
       }
     },
     "estatHistoryLastRun": {
@@ -8031,7 +8109,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -10441,7 +10519,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -12851,7 +12929,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -15261,7 +15339,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -17671,7 +17749,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -20081,7 +20159,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -22491,7 +22569,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -24901,7 +24979,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -27311,7 +27389,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -29721,7 +29799,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -32131,7 +32209,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -34541,7 +34619,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -36951,7 +37029,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -39362,7 +39440,7 @@
       "periodStart": "2026-10-11",
       "periodEnd": "2026-10-20",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "statisticalItem": "ふき",
@@ -41579,7 +41657,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -43989,7 +44067,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -46399,7 +46477,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -48809,7 +48887,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -51219,7 +51297,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -53629,7 +53707,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -56039,7 +56117,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -58449,7 +58527,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -60859,7 +60937,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -63269,7 +63347,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -65679,7 +65757,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -68089,7 +68167,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -70499,7 +70577,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -72909,7 +72987,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -74444,7 +74522,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -76854,7 +76932,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -79264,7 +79342,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -81674,7 +81752,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -84084,7 +84162,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -86494,7 +86572,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -88904,7 +88982,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -91314,7 +91392,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -93724,7 +93802,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -96134,7 +96212,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -98544,7 +98622,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -100954,7 +101032,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -103364,7 +103442,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -105774,7 +105852,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -108184,7 +108262,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -110191,7 +110269,7 @@
       "periodStart": "2026-10-11",
       "periodEnd": "2026-10-20",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "statisticalItem": "西洋なし（国産果実）",
@@ -111762,7 +111840,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -113723,7 +113801,7 @@
       "periodStart": "2026-10-11",
       "periodEnd": "2026-10-20",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "statisticalItem": "もも（国産果実）",
@@ -115495,7 +115573,7 @@
       "periodStart": "2026-10-11",
       "periodEnd": "2026-10-20",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "statisticalItem": "すもも（国産果実）",
@@ -116882,7 +116960,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -119262,7 +119340,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -120990,7 +121068,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -121419,7 +121497,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -122431,7 +122509,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -124841,7 +124919,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -127251,7 +127329,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -129661,7 +129739,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -130832,7 +130910,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -133242,7 +133320,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -135652,7 +135730,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26103h_syuyo.csv",
       "period": "2026年10月 下旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -137162,32 +137240,32 @@
     },
     {
       "foodId": "f-094",
-      "price": 1512,
+      "price": 1469,
       "unit": "円/kg",
-      "normalPrice": 915.8,
-      "normalRatio": 165.1,
+      "normalPrice": 852.0,
+      "normalRatio": 172.4,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
-      "previousRatio": 81,
-      "yearAgoRatio": 159,
+      "previousRatio": 97,
+      "yearAgoRatio": 194,
       "history": [
-        1404,
         1377,
         1879,
         1539,
         1269,
         1890,
         1863,
-        1512
+        1512,
+        1469
       ],
       "historyLabels": [
-        "2026年9月第2週",
         "2026年9月第3週",
         "2026年9月第4週",
         "2026年10月第1週",
         "2026年10月第2週",
         "2026年10月第3週",
         "2026年10月第4週",
-        "2026年11月第1週"
+        "2026年11月第1週",
+        "2026年11月第2週"
       ],
       "historyRecords": [
         {
@@ -137219,44 +137297,39 @@
         2025
       ],
       "historicalPrices": [
-        1145,
-        842,
-        1102,
-        540,
-        950
+        734,
+        972,
+        1161,
+        637,
+        756
       ],
       "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023111.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024111",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025111-pdf-1"
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023112.html",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024112",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025112-pdf"
       ],
       "sample": false,
       "market": "豊洲市場",
       "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-      "period": "2026年11月第1週",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+      "period": "2026年11月第2週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "statisticalItem": "サンマ",
-      "brandDetail": "宮 城 生・130-140g/尾",
+      "brandDetail": "岩 手 生・130-140g/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
       "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 0.135,
       "pieceWeightSpec": "130-140g/尾",
       "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
       "stale": false,
-      "normalRatioBasis": "11月第1週・過去5年中値単純平均",
+      "normalRatioBasis": "11月第2週・過去5年中値単純平均",
       "historicalSampleCount": 5,
       "historyPeriods": [
-        [
-          2026,
-          9,
-          2
-        ],
         [
           2026,
           9,
@@ -137291,17 +137364,22 @@
           2026,
           11,
           1
+        ],
+        [
+          2026,
+          11,
+          2
         ]
       ],
       "historySources": [
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026092-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026093-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026094-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026101-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026102-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026103-1-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf"
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf"
       ],
       "historyPieceWeights": [
         0.135,
@@ -137324,9 +137402,9 @@
         "130-140g/尾"
       ],
       "historicalSpecs": [
-        "岩手ほか 生・120-130g/尾",
-        "北海道 生・100-110g/尾",
-        "岩手 生・110-130g/尾",
+        "岩手ほか 生・120-130ｇ/尾",
+        "岩手 生・100-110g/尾",
+        "岩手ほか 生・110-130g/尾",
         "北海道 ほ か 生・100-110g/尾",
         "岩手ほか 生・130-140g/尾"
       ],
@@ -138446,6 +138524,18 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
           "spec": "宮 城 生・130-140g/尾",
           "weightKg": 0.135
+        },
+        {
+          "period": [
+            2026,
+            11,
+            2
+          ],
+          "sequence": 304,
+          "price": 1469,
+          "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "spec": "岩 手 生・130-140g/尾",
+          "weightKg": 0.135
         }
       ],
       "longHistoryRange": [
@@ -138456,32 +138546,32 @@
     },
     {
       "foodId": "f-097",
-      "price": 756,
+      "price": 702,
       "unit": "円/kg",
-      "normalPrice": 475.2,
-      "normalRatio": 159.1,
+      "normalPrice": 533.4,
+      "normalRatio": 131.6,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
-      "previousRatio": 95,
-      "yearAgoRatio": 117,
+      "previousRatio": 93,
+      "yearAgoRatio": 103,
       "history": [
-        637,
         689,
         626,
         702,
         724,
         659,
         799,
-        756
+        756,
+        702
       ],
       "historyLabels": [
-        "2026年9月第2週",
         "2026年9月第3週",
         "2026年9月第4週",
         "2026年10月第1週",
         "2026年10月第2週",
         "2026年10月第3週",
         "2026年10月第4週",
-        "2026年11月第1週"
+        "2026年11月第1週",
+        "2026年11月第2週"
       ],
       "historyRecords": [
         {
@@ -138513,44 +138603,39 @@
         2025
       ],
       "historicalPrices": [
-        378,
         475,
-        421,
         454,
-        648
+        540,
+        518,
+        680
       ],
       "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023111.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024111",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025111-pdf-1"
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023112.html",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024112",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025112-pdf"
       ],
       "sample": false,
       "market": "豊洲市場",
       "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-      "period": "2026年11月第1週",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+      "period": "2026年11月第2週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "statisticalItem": "サバ",
-      "brandDetail": "千 葉 －・7-10入/5kg",
+      "brandDetail": "三重ほか －・7-10入/5kg",
       "priceStatistic": "豊洲市場・中値（円/kg）",
       "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 0.58823529,
       "pieceWeightSpec": "7-10入/5kg",
       "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
       "stale": false,
-      "normalRatioBasis": "11月第1週・過去5年中値単純平均",
+      "normalRatioBasis": "11月第2週・過去5年中値単純平均",
       "historicalSampleCount": 5,
       "historyPeriods": [
-        [
-          2026,
-          9,
-          2
-        ],
         [
           2026,
           9,
@@ -138585,17 +138670,22 @@
           2026,
           11,
           1
+        ],
+        [
+          2026,
+          11,
+          2
         ]
       ],
       "historySources": [
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026092-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026093-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026094-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026101-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026102-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026103-1-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf"
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf"
       ],
       "historyPieceWeights": [
         0.58823529,
@@ -138618,10 +138708,10 @@
         "7-10入/5kg"
       ],
       "historicalSpecs": [
-        "青森 －・8-10入/5kg",
+        "北海道 －・8-10入/5kg",
         "宮城 －・7-10入/5kg",
-        "岩手ほか －・7-10入/5kg",
-        "三重ほか －・7-10入/5kg",
+        "宮城ほか －・7-10入/5kg",
+        "宮城ほか －・7-10入/5kg",
         "宮城ほか －・7-10入/5kg"
       ],
       "longHistory": [
@@ -142272,6 +142362,18 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
           "spec": "千 葉 －・7-10入/5kg",
           "weightKg": 0.58823529
+        },
+        {
+          "period": [
+            2026,
+            11,
+            2
+          ],
+          "sequence": 304,
+          "price": 702,
+          "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "spec": "三重ほか －・7-10入/5kg",
+          "weightKg": 0.58823529
         }
       ],
       "longHistoryRange": [
@@ -142282,32 +142384,32 @@
     },
     {
       "foodId": "f-098",
-      "price": 702,
+      "price": 788,
       "unit": "円/kg",
-      "normalPrice": 576.8,
-      "normalRatio": 121.7,
+      "normalPrice": 717.4,
+      "normalRatio": 109.8,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
-      "previousRatio": 105,
-      "yearAgoRatio": 103,
+      "previousRatio": 112,
+      "yearAgoRatio": 101,
       "history": [
-        972,
         999,
         756,
         626,
         583,
         594,
         670,
-        702
+        702,
+        788
       ],
       "historyLabels": [
-        "2026年9月第2週",
         "2026年9月第3週",
         "2026年9月第4週",
         "2026年10月第1週",
         "2026年10月第2週",
         "2026年10月第3週",
         "2026年10月第4週",
-        "2026年11月第1週"
+        "2026年11月第1週",
+        "2026年11月第2週"
       ],
       "historyRecords": [
         {
@@ -142339,44 +142441,39 @@
         2025
       ],
       "historicalPrices": [
-        454,
-        529,
-        659,
-        562,
-        680
+        756,
+        616,
+        713,
+        724,
+        778
       ],
       "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023111.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024111",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025111-pdf-1"
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023112.html",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024112",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025112-pdf"
       ],
       "sample": false,
       "market": "豊洲市場",
       "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-      "period": "2026年11月第1週",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+      "period": "2026年11月第2週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "statisticalItem": "アジ",
-      "brandDetail": "鳥取ほか 中・200-250g/尾",
+      "brandDetail": "長 崎 中・180-220g/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
       "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
-      "pieceWeightKg": 0.225,
-      "pieceWeightSpec": "200-250g/尾",
+      "pieceWeightKg": 0.2,
+      "pieceWeightSpec": "180-220g/尾",
       "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
       "stale": false,
-      "normalRatioBasis": "11月第1週・過去5年中値単純平均",
+      "normalRatioBasis": "11月第2週・過去5年中値単純平均",
       "historicalSampleCount": 5,
       "historyPeriods": [
-        [
-          2026,
-          9,
-          2
-        ],
         [
           2026,
           9,
@@ -142411,44 +142508,49 @@
           2026,
           11,
           1
+        ],
+        [
+          2026,
+          11,
+          2
         ]
       ],
       "historySources": [
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026092-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026093-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026094-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026101-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026102-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026103-1-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf"
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf"
       ],
       "historyPieceWeights": [
-        0.25,
         0.19,
         0.215,
         0.19,
         0.19,
         0.19,
         0.225,
-        0.225
+        0.225,
+        0.2
       ],
       "historyPieceSpecs": [
-        "200-300g/尾",
         "180-200g/尾",
         "180-250g/尾",
         "180-200g/尾",
         "180-200g/尾",
         "180-200g/尾",
         "200-250g/尾",
-        "200-250g/尾"
+        "200-250g/尾",
+        "180-220g/尾"
       ],
       "historicalSpecs": [
-        "鳥取ほか 中・160-200g/尾",
-        "長崎 中・160-180g/尾",
         "長崎 中・160-200g/尾",
-        "鳥取ほか 中・180-220g/尾",
-        "長崎ほか 中・190-200g/尾"
+        "鳥取 中・160-180g/尾",
+        "長崎ほか 中・160-200g/尾",
+        "長崎ほか 中・1８0-220g/尾",
+        "長崎ほか 中・180-200g/尾"
       ],
       "longHistory": [
         {
@@ -146098,6 +146200,18 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
           "spec": "鳥取ほか 中・200-250g/尾",
           "weightKg": 0.225
+        },
+        {
+          "period": [
+            2026,
+            11,
+            2
+          ],
+          "sequence": 304,
+          "price": 788,
+          "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "spec": "長 崎 中・180-220g/尾",
+          "weightKg": 0.2
         }
       ],
       "longHistoryRange": [
@@ -146108,32 +146222,32 @@
     },
     {
       "foodId": "f-099",
-      "price": 734,
+      "price": 756,
       "unit": "円/kg",
-      "normalPrice": 514.8,
-      "normalRatio": 142.6,
+      "normalPrice": 557.6,
+      "normalRatio": 135.6,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
-      "previousRatio": 108,
-      "yearAgoRatio": 174,
+      "previousRatio": 103,
+      "yearAgoRatio": 212,
       "history": [
-        594,
         810,
         670,
         626,
         557,
         514,
         680,
-        734
+        734,
+        756
       ],
       "historyLabels": [
-        "2026年9月第2週",
         "2026年9月第3週",
         "2026年9月第4週",
         "2026年10月第1週",
         "2026年10月第2週",
         "2026年10月第3週",
         "2026年10月第4週",
-        "2026年11月第1週"
+        "2026年11月第1週",
+        "2026年11月第2週"
       ],
       "historyRecords": [
         {
@@ -146165,44 +146279,39 @@
         2025
       ],
       "historicalPrices": [
-        367,
-        566,
-        691,
-        529,
-        421
+        473,
+        674,
+        734,
+        551,
+        356
       ],
       "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023111.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024111",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025111-pdf-1"
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023112.html",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024112",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025112-pdf"
       ],
       "sample": false,
       "market": "豊洲市場",
       "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-      "period": "2026年11月第1週",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+      "period": "2026年11月第2週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "statisticalItem": "イワシ",
-      "brandDetail": "鹿児島 ほ か －・60-100g/尾",
+      "brandDetail": "鹿児島 －・60-100g/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
       "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 0.08,
       "pieceWeightSpec": "60-100g/尾",
       "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
       "stale": false,
-      "normalRatioBasis": "11月第1週・過去5年中値単純平均",
+      "normalRatioBasis": "11月第2週・過去5年中値単純平均",
       "historicalSampleCount": 5,
       "historyPeriods": [
-        [
-          2026,
-          9,
-          2
-        ],
         [
           2026,
           9,
@@ -146237,25 +146346,30 @@
           2026,
           11,
           1
+        ],
+        [
+          2026,
+          11,
+          2
         ]
       ],
       "historySources": [
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026092-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026093-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026094-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026101-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026102-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026103-1-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf"
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf"
       ],
       "historyPieceWeights": [
         0.095,
         0.095,
         0.095,
-        0.095,
         0.09,
         0.09,
+        0.08,
         0.08,
         0.08
       ],
@@ -146263,18 +146377,18 @@
         "90-100g/尾",
         "90-100g/尾",
         "90-100g/尾",
-        "90-100g/尾",
         "80-100g/尾",
         "80-100g/尾",
+        "60-100g/尾",
         "60-100g/尾",
         "60-100g/尾"
       ],
       "historicalSpecs": [
-        "北海道ほか －・70-90g/尾",
-        "愛知ほか －・80-100g/尾",
-        "北海道ほか －・100-110g/尾",
+        "北海道 －・70-90g/尾",
+        "北海道 －・80-100g/尾",
+        "北海道 －・100-110g/尾",
         "北海道 －・70-100g/尾",
-        "愛 知 －・30-120g/尾"
+        "北海道 ほ か －・30-100g/尾"
       ],
       "longHistory": [
         {
@@ -149912,6 +150026,18 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
           "spec": "鹿児島 ほ か －・60-100g/尾",
           "weightKg": 0.08
+        },
+        {
+          "period": [
+            2026,
+            11,
+            2
+          ],
+          "sequence": 304,
+          "price": 756,
+          "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "spec": "鹿児島 －・60-100g/尾",
+          "weightKg": 0.08
         }
       ],
       "longHistoryRange": [
@@ -149922,32 +150048,32 @@
     },
     {
       "foodId": "f-095",
-      "price": 1426,
+      "price": 1685,
       "unit": "円/kg",
-      "normalPrice": 1019.6,
-      "normalRatio": 139.9,
+      "normalPrice": 1051.8,
+      "normalRatio": 160.2,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
-      "previousRatio": 103,
-      "yearAgoRatio": 120,
+      "previousRatio": 118,
+      "yearAgoRatio": 115,
       "history": [
-        1037,
         945,
         994,
         886,
         1318,
         1469,
         1382,
-        1426
+        1426,
+        1685
       ],
       "historyLabels": [
-        "2026年9月第2週",
         "2026年9月第3週",
         "2026年9月第4週",
         "2026年10月第1週",
         "2026年10月第2週",
         "2026年10月第3週",
         "2026年10月第4週",
-        "2026年11月第1週"
+        "2026年11月第1週",
+        "2026年11月第2週"
       ],
       "historyRecords": [
         {
@@ -149979,44 +150105,39 @@
         2025
       ],
       "historicalPrices": [
-        767,
-        929,
-        1393,
-        821,
-        1188
+        616,
+        842,
+        1382,
+        950,
+        1469
       ],
       "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023111.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024111",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025111-pdf-1"
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023112.html",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024112",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025112-pdf"
       ],
       "sample": false,
       "market": "豊洲市場",
       "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-      "period": "2026年11月第1週",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+      "period": "2026年11月第2週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "statisticalItem": "カツオ",
-      "brandDetail": "宮城ほか －・3-4kg/尾",
+      "brandDetail": "鹿児島 ほ か －・3-4kg/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
       "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 3.5,
       "pieceWeightSpec": "3-4kg/尾",
       "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
       "stale": false,
-      "normalRatioBasis": "11月第1週・過去5年中値単純平均",
+      "normalRatioBasis": "11月第2週・過去5年中値単純平均",
       "historicalSampleCount": 5,
       "historyPeriods": [
-        [
-          2026,
-          9,
-          2
-        ],
         [
           2026,
           9,
@@ -150051,17 +150172,22 @@
           2026,
           11,
           1
+        ],
+        [
+          2026,
+          11,
+          2
         ]
       ],
       "historySources": [
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026092-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026093-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026094-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026101-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026102-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026103-1-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf"
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf"
       ],
       "historyPieceWeights": [
         3.25,
@@ -150070,7 +150196,7 @@
         3.25,
         3.25,
         3.25,
-        3.25,
+        3.5,
         3.5
       ],
       "historyPieceSpecs": [
@@ -150080,15 +150206,15 @@
         "2.5-4kg/尾",
         "2.5-4kg/尾",
         "2.5-4kg/尾",
-        "2.5-4kg/尾",
+        "3-4kg/尾",
         "3-4kg/尾"
       ],
       "historicalSpecs": [
         "宮城 －・3-5kg/尾",
         "鹿児島 －・3-5kg/尾",
-        "宮城 －・3-5kg/尾",
+        "宮城ほか －・3-5kg/尾",
         "宮 城 －・2.5-5kg/尾",
-        "鹿児島 －・2-5kg/尾"
+        "千 葉 －・4-6kg/尾"
       ],
       "longHistory": [
         {
@@ -153702,6 +153828,18 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
           "spec": "宮城ほか －・3-4kg/尾",
           "weightKg": 3.5
+        },
+        {
+          "period": [
+            2026,
+            11,
+            2
+          ],
+          "sequence": 304,
+          "price": 1685,
+          "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "spec": "鹿児島 ほ か －・3-4kg/尾",
+          "weightKg": 3.5
         }
       ],
       "longHistoryRange": [
@@ -153712,32 +153850,32 @@
     },
     {
       "foodId": "f-102",
-      "price": 4549,
+      "price": 5049,
       "unit": "円/kg",
-      "normalPrice": 5197.6,
-      "normalRatio": 87.5,
+      "normalPrice": 5178.0,
+      "normalRatio": 97.5,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
-      "previousRatio": 103,
-      "yearAgoRatio": 76,
+      "previousRatio": 111,
+      "yearAgoRatio": 124,
       "history": [
-        6080,
         5889,
         4463,
         5361,
         4137,
         4974,
         4417,
-        4549
+        4549,
+        5049
       ],
       "historyLabels": [
-        "2026年9月第2週",
         "2026年9月第3週",
         "2026年9月第4週",
         "2026年10月第1週",
         "2026年10月第2週",
         "2026年10月第3週",
         "2026年10月第4週",
-        "2026年11月第1週"
+        "2026年11月第1週",
+        "2026年11月第2週"
       ],
       "historyRecords": [
         {
@@ -153769,28 +153907,28 @@
         2025
       ],
       "historicalPrices": [
-        3961,
-        5687,
-        5488,
-        4882,
-        5970
+        4181,
+        6574,
+        5431,
+        5637,
+        4067
       ],
       "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023111.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024111",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025111-pdf-1"
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023112.html",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024112",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025112-pdf"
       ],
       "sample": false,
       "market": "豊洲市場",
       "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-      "period": "2026年11月第1週",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+      "period": "2026年11月第2週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "statisticalItem": "マグロ",
       "brandDetail": "各 地 生・-",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -153799,14 +153937,9 @@
       "pieceWeightSpec": "-",
       "pieceWeightBasis": "市場のサイズ情報がないため換算できません",
       "stale": false,
-      "normalRatioBasis": "11月第1週・過去5年中値単純平均",
+      "normalRatioBasis": "11月第2週・過去5年中値単純平均",
       "historicalSampleCount": 5,
       "historyPeriods": [
-        [
-          2026,
-          9,
-          2
-        ],
         [
           2026,
           9,
@@ -153841,17 +153974,22 @@
           2026,
           11,
           1
+        ],
+        [
+          2026,
+          11,
+          2
         ]
       ],
       "historySources": [
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026092-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026093-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026094-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026101-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026102-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026103-1-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf"
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf"
       ],
       "historyPieceWeights": [
         null,
@@ -157468,6 +157606,18 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
           "spec": "各 地 生・-",
           "weightKg": null
+        },
+        {
+          "period": [
+            2026,
+            11,
+            2
+          ],
+          "sequence": 304,
+          "price": 5049,
+          "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "spec": "各 地 生・-",
+          "weightKg": null
         }
       ],
       "longHistoryRange": [
@@ -157480,30 +157630,30 @@
       "foodId": "f-105",
       "price": 756,
       "unit": "円/kg",
-      "normalPrice": 649.8,
-      "normalRatio": 116.3,
+      "normalPrice": 606.6,
+      "normalRatio": 124.6,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 100,
-      "yearAgoRatio": 119,
+      "yearAgoRatio": 147,
       "history": [
-        621,
         554,
         612,
         567,
         621,
         635,
         756,
+        756,
         756
       ],
       "historyLabels": [
-        "2026年9月第2週",
         "2026年9月第3週",
         "2026年9月第4週",
         "2026年10月第1週",
         "2026年10月第2週",
         "2026年10月第3週",
         "2026年10月第4週",
-        "2026年11月第1週"
+        "2026年11月第1週",
+        "2026年11月第2週"
       ],
       "historyRecords": [
         {
@@ -157535,28 +157685,28 @@
         2025
       ],
       "historicalPrices": [
-        513,
-        475,
-        738,
-        886,
-        637
+        473,
+        540,
+        783,
+        724,
+        513
       ],
       "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023111.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024111",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025111-pdf-1"
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023112.html",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024112",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025112-pdf"
       ],
       "sample": false,
       "market": "豊洲市場",
       "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-      "period": "2026年11月第1週",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+      "period": "2026年11月第2週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "statisticalItem": "カレイ",
       "brandDetail": "北海道 マ・-",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -157565,14 +157715,9 @@
       "pieceWeightSpec": "-",
       "pieceWeightBasis": "市場のサイズ情報がないため換算できません",
       "stale": false,
-      "normalRatioBasis": "11月第1週・過去5年中値単純平均",
+      "normalRatioBasis": "11月第2週・過去5年中値単純平均",
       "historicalSampleCount": 5,
       "historyPeriods": [
-        [
-          2026,
-          9,
-          2
-        ],
         [
           2026,
           9,
@@ -157607,17 +157752,22 @@
           2026,
           11,
           1
+        ],
+        [
+          2026,
+          11,
+          2
         ]
       ],
       "historySources": [
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026092-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026093-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026094-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026101-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026102-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026103-1-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf"
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf"
       ],
       "historyPieceWeights": [
         null,
@@ -160970,6 +161120,18 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
           "spec": "北海道 マ・-",
           "weightKg": null
+        },
+        {
+          "period": [
+            2026,
+            11,
+            2
+          ],
+          "sequence": 304,
+          "price": 756,
+          "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "spec": "北海道 マ・-",
+          "weightKg": null
         }
       ],
       "longHistoryRange": [
@@ -160980,32 +161142,32 @@
     },
     {
       "foodId": "f-110",
-      "price": 2311,
+      "price": 2376,
       "unit": "円/kg",
-      "normalPrice": 2138.4,
-      "normalRatio": 108.1,
+      "normalPrice": 2125.4,
+      "normalRatio": 111.8,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
       "previousRatio": 103,
-      "yearAgoRatio": 96,
+      "yearAgoRatio": 106,
       "history": [
-        2333,
         2403,
         2160,
         2203,
         2311,
         2246,
         2246,
-        2311
+        2311,
+        2376
       ],
       "historyLabels": [
-        "2026年9月第2週",
         "2026年9月第3週",
         "2026年9月第4週",
         "2026年10月第1週",
         "2026年10月第2週",
         "2026年10月第3週",
         "2026年10月第4週",
-        "2026年11月第1週"
+        "2026年11月第1週",
+        "2026年11月第2週"
       ],
       "historyRecords": [
         {
@@ -161037,44 +161199,39 @@
         2025
       ],
       "historicalPrices": [
-        1793,
+        1685,
         2117,
         1836,
-        2527,
-        2419
+        2743,
+        2246
       ],
       "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023111.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024111",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025111-pdf-1"
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023112.html",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024112",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025112-pdf"
       ],
       "sample": false,
       "market": "豊洲市場",
       "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-      "period": "2026年11月第1週",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+      "period": "2026年11月第2週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "statisticalItem": "キンメダイ",
-      "brandDetail": "東京ほか －・0.5-1.5kg/尾",
+      "brandDetail": "千葉ほか －・0.5-1.5kg/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
       "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
       "pieceWeightKg": 1.0,
       "pieceWeightSpec": "0.5-1.5kg/尾",
       "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
       "stale": false,
-      "normalRatioBasis": "11月第1週・過去5年中値単純平均",
+      "normalRatioBasis": "11月第2週・過去5年中値単純平均",
       "historicalSampleCount": 5,
       "historyPeriods": [
-        [
-          2026,
-          9,
-          2
-        ],
         [
           2026,
           9,
@@ -161109,17 +161266,22 @@
           2026,
           11,
           1
+        ],
+        [
+          2026,
+          11,
+          2
         ]
       ],
       "historySources": [
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026092-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026093-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026094-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026101-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026102-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026103-1-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf"
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf"
       ],
       "historyPieceWeights": [
         1.0,
@@ -164796,6 +164958,18 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
           "spec": "東京ほか －・0.5-1.5kg/尾",
           "weightKg": 1.0
+        },
+        {
+          "period": [
+            2026,
+            11,
+            2
+          ],
+          "sequence": 304,
+          "price": 2376,
+          "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "spec": "千葉ほか －・0.5-1.5kg/尾",
+          "weightKg": 1.0
         }
       ],
       "longHistoryRange": [
@@ -164806,32 +164980,32 @@
     },
     {
       "foodId": "f-132",
-      "price": 1102,
+      "price": 1266,
       "unit": "円/kg",
-      "normalPrice": 1308.2,
-      "normalRatio": 84.2,
+      "normalPrice": 1410.8,
+      "normalRatio": 89.7,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
-      "previousRatio": 91,
-      "yearAgoRatio": 80,
+      "previousRatio": 115,
+      "yearAgoRatio": 87,
       "history": [
-        1123,
         1269,
         1145,
         864,
         1296,
         942,
         1210,
-        1102
+        1102,
+        1266
       ],
       "historyLabels": [
-        "2026年9月第2週",
         "2026年9月第3週",
         "2026年9月第4週",
         "2026年10月第1週",
         "2026年10月第2週",
         "2026年10月第3週",
         "2026年10月第4週",
-        "2026年11月第1週"
+        "2026年11月第1週",
+        "2026年11月第2週"
       ],
       "historyRecords": [
         {
@@ -164863,44 +165037,39 @@
         2025
       ],
       "historicalPrices": [
-        1357,
-        1123,
-        1382,
-        1296,
-        1383
+        1140,
+        1391,
+        1577,
+        1490,
+        1456
       ],
       "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023111.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024111",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025111-pdf-1"
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023112.html",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024112",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025112-pdf"
       ],
       "sample": false,
       "market": "豊洲市場",
       "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-      "period": "2026年11月第1週",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+      "period": "2026年11月第2週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "statisticalItem": "スルメイカ",
-      "brandDetail": "青森ほか －・25-30入/5kg",
+      "brandDetail": "青 森 －・20-30入/5kg",
       "priceStatistic": "豊洲市場・中値（円/kg）",
       "note": "魚の参考平年比は東京都の公式指標ではありません。過去3年以上の同月・同週の中値を単純平均して比較（最大5年）。産地・魚体サイズ・銘柄等の年差があり厳密な同一品質比較ではありません。",
-      "pieceWeightKg": 0.18181818,
-      "pieceWeightSpec": "25-30入/5kg",
+      "pieceWeightKg": 0.2,
+      "pieceWeightSpec": "20-30入/5kg",
       "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
       "stale": false,
-      "normalRatioBasis": "11月第1週・過去5年中値単純平均",
+      "normalRatioBasis": "11月第2週・過去5年中値単純平均",
       "historicalSampleCount": 5,
       "historyPeriods": [
-        [
-          2026,
-          9,
-          2
-        ],
         [
           2026,
           9,
@@ -164935,44 +165104,49 @@
           2026,
           11,
           1
+        ],
+        [
+          2026,
+          11,
+          2
         ]
       ],
       "historySources": [
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026092-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026093-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026094-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026101-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026102-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026103-1-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf"
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf"
       ],
       "historyPieceWeights": [
-        0.18181818,
         0.2,
         0.2,
         0.2,
         0.2,
         0.18181818,
         0.18181818,
-        0.18181818
+        0.18181818,
+        0.2
       ],
       "historyPieceSpecs": [
-        "25-30入/5kg",
         "20-30入/5kg",
         "20-30入/5kg",
         "20-30入/5kg",
         "20-30入/5kg",
         "25-30入/5kg",
         "25-30入/5kg",
-        "25-30入/5kg"
+        "25-30入/5kg",
+        "20-30入/5kg"
       ],
       "historicalSpecs": [
-        "長崎 －・20-25入/5kg",
-        "青森 －・15-25入/5kg",
-        "青森 －・20-25入/5kg",
+        "北海道 －・20-25入/5kg",
+        "青森 －・15-20入/5kg",
+        "北海道 －・20-25入/5kg",
         "北海道 ほ か －・20-25入/5kg",
-        "青 森 －・20-60入/4-5kg"
+        "青 森 －・20-25入/5kg"
       ],
       "longHistory": [
         {
@@ -168622,6 +168796,18 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
           "spec": "青森ほか －・25-30入/5kg",
           "weightKg": 0.18181818
+        },
+        {
+          "period": [
+            2026,
+            11,
+            2
+          ],
+          "sequence": 304,
+          "price": 1266,
+          "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "spec": "青 森 －・20-30入/5kg",
+          "weightKg": 0.2
         }
       ],
       "longHistoryRange": [
@@ -168632,32 +168818,32 @@
     },
     {
       "foodId": "f-121",
-      "price": 4840,
+      "price": 4443,
       "unit": "円/kg",
-      "normalPrice": 2868.0,
-      "normalRatio": 168.8,
+      "normalPrice": 3016.6,
+      "normalRatio": 147.3,
       "normalRatioType": "独自参考平年比（東京都豊洲市場の週別中値、2021～2025年10月第4週の単純平均）",
-      "previousRatio": 107,
-      "yearAgoRatio": 136,
+      "previousRatio": 92,
+      "yearAgoRatio": 121,
       "history": [
-        2980,
         2438,
         5490,
         5090,
         6706,
         4392,
         4504,
-        4840
+        4840,
+        4443
       ],
       "historyLabels": [
-        "2026年3月第4週",
         "2026年3月第5週",
         "2026年9月第4週",
         "2026年10月第1週",
         "2026年10月第2週",
         "2026年10月第3週",
         "2026年10月第4週",
-        "2026年11月第1週"
+        "2026年11月第1週",
+        "2026年11月第2週"
       ],
       "historyRecords": [
         {
@@ -168689,28 +168875,28 @@
         2025
       ],
       "historicalPrices": [
-        2069,
-        2560,
-        2858,
-        3294,
-        3559
+        2486,
+        1976,
+        3151,
+        3786,
+        3684
       ],
       "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023111.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024111",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025111-pdf-1"
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023112.html",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024112",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025112-pdf"
       ],
       "sample": false,
       "market": "豊洲市場",
       "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-      "period": "2026年11月第1週",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+      "period": "2026年11月第2週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "statisticalItem": "カキ",
       "brandDetail": "三 陸 －・-",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -168719,14 +168905,9 @@
       "pieceWeightSpec": "-",
       "pieceWeightBasis": "市場のサイズ情報がないため換算できません",
       "stale": false,
-      "normalRatioBasis": "11月第1週・過去5年中値単純平均",
+      "normalRatioBasis": "11月第2週・過去5年中値単純平均",
       "historicalSampleCount": 5,
       "historyPeriods": [
-        [
-          2026,
-          3,
-          4
-        ],
         [
           2026,
           3,
@@ -168761,17 +168942,22 @@
           2026,
           11,
           1
+        ],
+        [
+          2026,
+          11,
+          2
         ]
       ],
       "historySources": [
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026034-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026035-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026094-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026101-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026102-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026103-1-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf"
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf"
       ],
       "historyPieceWeights": [
         null,
@@ -170636,6 +170822,18 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
           "spec": "三 陸 －・-",
           "weightKg": null
+        },
+        {
+          "period": [
+            2026,
+            11,
+            2
+          ],
+          "sequence": 304,
+          "price": 4443,
+          "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "spec": "三 陸 －・-",
+          "weightKg": null
         }
       ],
       "longHistoryRange": [
@@ -170664,14 +170862,14 @@
         1728
       ],
       "historyLabels": [
-        "2026年9月第2週",
         "2026年9月第3週",
         "2026年9月第4週",
         "2026年10月第1週",
         "2026年10月第2週",
         "2026年10月第3週",
         "2026年10月第4週",
-        "2026年11月第1週"
+        "2026年11月第1週",
+        "2026年11月第2週"
       ],
       "historyRecords": [
         {
@@ -170710,21 +170908,21 @@
         1998
       ],
       "historicalSources": [
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022111.html",
-        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023111.html",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024111",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025111-pdf-1"
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2021112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2022112.html",
+        "https://www.spt.metro.tokyo.lg.jp/shijou/torihiki/03/suisan/2023112.html",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/week_suisan_2024112",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2025112-pdf"
       ],
       "sample": false,
       "market": "豊洲市場",
       "sourceType": "東京都中央卸売市場 豊洲市場・水産物週間市況",
-      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
-      "period": "2026年11月第1週",
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+      "period": "2026年11月第2週",
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-13",
+      "retrievedAt": "2026-11-14",
       "statisticalItem": "ハマチ",
       "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -170733,14 +170931,9 @@
       "pieceWeightSpec": "5-6kg/尾",
       "pieceWeightBasis": "市場公表サイズ帯からの代表重量による換算（実際の1尾単価ではありません）",
       "stale": false,
-      "normalRatioBasis": "11月第1週・過去5年中値単純平均",
+      "normalRatioBasis": "11月第2週・過去5年中値単純平均",
       "historicalSampleCount": 5,
       "historyPeriods": [
-        [
-          2026,
-          9,
-          2
-        ],
         [
           2026,
           9,
@@ -170775,17 +170968,22 @@
           2026,
           11,
           1
+        ],
+        [
+          2026,
+          11,
+          2
         ]
       ],
       "historySources": [
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026092-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026093-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026094-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026101-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026102-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026103-1-pdf",
         "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026104-1-pdf",
-        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf"
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
+        "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf"
       ],
       "historyPieceWeights": [
         5.5,
@@ -174450,6 +174648,18 @@
           "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026111-pdf",
           "spec": "愛媛ほか 野〆・5-6kg/尾",
           "weightKg": 5.5
+        },
+        {
+          "period": [
+            2026,
+            11,
+            2
+          ],
+          "sequence": 304,
+          "price": 1728,
+          "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "spec": "愛媛ほか 野〆・5-6kg/尾",
+          "weightKg": 5.5
         }
       ],
       "longHistoryRange": [
@@ -174460,6 +174670,624 @@
     }
   ],
   "topics": [
+    {
+      "id": "fra-salmon-2026-10-31-f-100",
+      "foodId": "f-100",
+      "title": "サケ：11道県の来遊速報（10月31日現在）",
+      "summary": "10月31日までの11道県のサケ総来遊数は3,333,307尾、前年同期の54%です。内訳は沿岸の漁獲2,813,153尾と河川等の捕獲520,154尾。期間途中の速報で、年間の確定値ではありません。",
+      "kind": "official_data_digest",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "水産研究・教育機構（関係11道県の速報を集計）",
+          "title": "さけます来遊速報 令和8年度・サケ道県別来遊数",
+          "url": "https://www.fra.go.jp/shigen/salmon/sokuhou.html",
+          "publishedAt": "2026-11-13"
+        }
+      ],
+      "publishedAt": "2026-11-13",
+      "observedPeriod": "2026年7月以降～10月31日の累計（漁獲は8月以降）",
+      "sourceFingerprint": "b1ea93f9260bb3db0a8b00d72ac3e76b502a851596a810224b670c73bb2583d8",
+      "sourceFamily": "fra-salmon",
+      "isForecast": false,
+      "periodStart": "2026-07-01",
+      "periodEnd": "2026-10-31",
+      "summaryVersion": 5,
+      "sourceExcerpt": "10月31日までの11道県のサケ総来遊数は3,333,307尾、前年同期の54%です。内訳は沿岸の漁獲2,813,153尾と河川等の捕獲520,154尾。期間途中の速報で、年間の確定値ではありません。",
+      "scope": "北海道・青森・岩手・宮城・福島・茨城・秋田・山形・新潟・富山・石川の11道県",
+      "reportType": "内水面捕獲数＋沿岸漁獲数の累計速報",
+      "evidenceSections": [
+        {
+          "label": "合計行から整理した数値",
+          "text": "捕獲数 520,154尾／漁獲数 2,813,153尾／総来遊数 3,333,307尾／総来遊数前年比 54%"
+        }
+      ],
+      "limitations": "総来遊数は河川などの捕獲数と沿岸漁獲数の合計で、海面漁獲量だけを示す数値ではありません。11道県の期間途中の速報で、追録・修正されることがあります。",
+      "automaticChecks": [
+        "合計内訳・前年比の算術照合"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的統計の数値を整理（AI未使用）",
+      "retrievedAt": "2026-11-14T02:17:58+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-2-f-132",
+      "foodId": "f-132",
+      "title": "スルメイカ：2026年11月第2週の入荷・市場動向",
+      "summary": "スルメイカは青森主体に入荷。前週に比べ数量は11%減少、価格は1.5割高。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "47ad0de6e0e99c27f6f6b1a0f5c2ee3e1c5b5c4713d29b2ab267c72277bea603",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "スルメイカは青森主体に入荷。前週に比べ数量は11%減少、価格は1.5割高。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "スルメイカは青森主体に入荷。前週に比べ数量は11%減少、価格は1.5割高。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-14T02:17:58+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-2-f-121",
+      "foodId": "f-121",
+      "title": "カキ：2026年11月第2週の入荷・市場動向",
+      "summary": "ムキカキの数量は23%増加、三陸産の価格は1割弱安。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "b2e68d4ffdfe4e98e694905b41a42e27f3dae35143cafa6f80128aee70fa37ba",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "ムキカキの数量は23%増加、三陸産の価格は1割弱安。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "ムキカキの数量は23%増加、三陸産の価格は1割弱安。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-14T02:17:58+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-2-f-099",
+      "foodId": "f-099",
+      "title": "イワシ：2026年11月第2週の入荷・市場動向",
+      "summary": "イワシは鹿児島と愛知主体に入荷。前週に比べ数量は17%減少、価格はわずかに上昇。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "8a67a62d04e9de7106431bbb7febee673cb172e66e827f4b055331bd7eed8878",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "イワシは鹿児島と愛知主体に入荷。前週に比べ数量は17%減少、価格はわずかに上昇。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "イワシは鹿児島と愛知主体に入荷。前週に比べ数量は17%減少、価格はわずかに上昇。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-14T02:17:58+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-2-f-098",
+      "foodId": "f-098",
+      "title": "アジ：2026年11月第2週の入荷・市場動向",
+      "summary": "アジは中型が長崎、中小型が三重主体に入荷。前週に比べ数量は4%減少、価格は中型が1割強高、中小型が2.5割高。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "447683c6ba71964ffb8caf017471eed09e2c206c77ba81ed74b4015beee56665",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "アジは中型が長崎、中小型が三重主体に入荷。前週に比べ数量は4%減少、価格は中型が1割強高、中小型が2.5割高。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "アジは中型が長崎、中小型が三重主体に入荷。前週に比べ数量は4%減少、価格は中型が1割強高、中小型が2.5割高。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-14T02:17:58+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-2-f-097",
+      "foodId": "f-097",
+      "title": "サバ：2026年11月第2週の入荷・市場動向",
+      "summary": "サバは三重と千葉主体に入荷。前週に比べ数量は6%増加、価格は0.5割強安。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "f94554472f0cb9403262d285e5ae1f243dcdf8c230c6a3e6fb887aa75caeae6b",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "サバは三重と千葉主体に入荷。前週に比べ数量は6%増加、価格は0.5割強安。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "サバは三重と千葉主体に入荷。前週に比べ数量は6%増加、価格は0.5割強安。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-14T02:17:58+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-2-f-095",
+      "foodId": "f-095",
+      "title": "カツオ：2026年11月第2週の入荷・市場動向",
+      "summary": "カツオは鹿児島と宮城主体に入荷。前週に比べ数量は38%減少、価格は2割弱高。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "2f5b876f741d702f65615899e0d287dfc0cc05cdbcb917315a94056f9be6f2f5",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "カツオは鹿児島と宮城主体に入荷。前週に比べ数量は38%減少、価格は2割弱高。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "カツオは鹿児島と宮城主体に入荷。前週に比べ数量は38%減少、価格は2割弱高。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-14T02:17:58+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-2-f-094",
+      "foodId": "f-094",
+      "title": "サンマ：2026年11月第2週の入荷・市場動向",
+      "summary": "サンマは岩手主体に入荷。前週に比べ数量は約3倍に増加、生サンマの価格はわずかに下落。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "publishedAt": null
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "b6a2e179bf2a289a73b647af96e829bd1fdb102decab5a777e640eeb57aa38c8",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "summaryVersion": 5,
+      "sourceExcerpt": "サンマは岩手主体に入荷。前週に比べ数量は約3倍に増加、生サンマの価格はわずかに下落。",
+      "scope": "東京都豊洲市場",
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "サンマは岩手主体に入荷。前週に比べ数量は約3倍に増加、生サンマの価格はわずかに下落。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "原文抜粋"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "公的原文を短く抜粋（Gemini未使用）",
+      "retrievedAt": "2026-11-14T02:17:58+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-014",
+      "foodId": "v-014",
+      "title": "ピーマン：2026年11月の見通し",
+      "summary": "茨城県産を中心に、宮崎県産・高知県産が出荷されている。茨城県産は9月の長雨の影響が残る一方、宮崎・高知県産は生育が順調で11月後半に出荷量が増加する見込み。11月前半の入荷量は平年を下回り価格はやや平年を上回るが、11月後半には出荷量・価格ともに平年並みで推移する見通しである。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "5f2ce00e7b3ecaa3191e7170da6055a0dfdb4339308c4b54448559f38311c5a4",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：茨城県産中心の出荷。10月は概ね好天が続いたが茨城県産は9月の長雨の影響が続いている。宮崎県産・高知県産の生育は概ね順調で、11月後半に出荷量が増加する。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "茨城県産中心の出荷。10月は概ね好天が続いたが茨城県産は9月の長雨の影響が続いている。宮崎県産・高知県産の生育は概ね順調で、11月後半に出荷量が増加する。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-14T02:17:58+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-010",
+      "foodId": "v-010",
+      "title": "トマト：2026年11月の見通し",
+      "summary": "関東産・東海産は9月の長雨による着果不良で減少が懸念される一方、熊本県産は適度な気温と好天により生育は概ね順調である。これらを踏まえ、11月の出荷数量および価格は平年並みで推移する見込みである。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "853d91b591c10d6e641a63fc874529db3343f17089dbd3ebd4fac9793417582b",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：関東産・東海産は9月の長雨の影響により着果不良が発生し、着果数の減少が懸念される。熊本県産は9月の気温が適度であり、10月も好天が続いたことから生育は概ね順調である。 全体として、11月の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "関東産・東海産は9月の長雨の影響により着果不良が発生し、着果数の減少が懸念される。熊本県産は9月の気温が適度であり、10月も好天が続いたことから生育は概ね順調である。 全体として、11月の出荷数量・価格は平年並みで推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年並みで推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-14T02:17:51+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-013",
+      "foodId": "v-013",
+      "title": "なす：2026年11月の見通し",
+      "summary": "主産地の生育は概ね順調に推移している。11月の出荷数量については、平年並みとなる見込みである。また、価格についても、出荷数量と同様に平年並みで推移するとの見通しが示されている。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "a8bce9e6b13eb3e7ceb3ad0102dd4bfde0079f89b217a76a4c18daccf53533c9",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：主産地の生育は概ね順調であり、11月の出荷数量、価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "主産地の生育は概ね順調であり、11月の出荷数量、価格は平年並みで推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年並みで推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-14T02:17:50+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-012",
+      "foodId": "v-012",
+      "title": "きゅうり：2026年11月の見通し",
+      "summary": "出荷は関東産から宮崎県産へ切り替わる。関東産は9月の長雨による樹勢低下で入荷が減少しているが、宮崎県産は概ね順調に生育している。11月前半の入荷量は平年を下回り、価格はやや平年を上回る見込み。11月後半は入荷量、価格ともに平年並みで推移する見通しである。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "4b3f88c85a0b59ed9f8ecfef101355245350e44f571a184d3447e85f283add78",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：関東産中心の出荷から宮崎県産中心の出荷に切り替わる。関東産は9月の長雨の影響により樹勢の低下がみられ、出荷数量の減少につながっている。 宮崎県産の生育は概ね順調である。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "関東産中心の出荷から宮崎県産中心の出荷に切り替わる。関東産は9月の長雨の影響により樹勢の低下がみられ、出荷数量の減少につながっている。 宮崎県産の生育は概ね順調である。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-14T02:17:41+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-009",
+      "foodId": "v-009",
+      "title": "レタス：2026年11月の見通し",
+      "summary": "長野県産の出荷が減少し、茨城県産中心へ切り替わる。主産地では9月の長雨と日照不足により小玉傾向だが、10月の好天を受け、11月中旬頃から定植時期の遅いものが出荷される。11月前半の出荷量は平年を下回り価格は平年を上回る見込み。11月後半は出荷量、価格ともに平年をやや下回る、あるいは上回る水準で推移すると見込まれる。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "61d479678dbabd585b62f15087e32e3976aef8a987a05d6b59d19d2aa0841d67",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：長野県産の出荷が減少し、茨城県産中心の出荷に切り替わる。主産地では9月の長雨と日照不足の影響で小玉傾向がみられるが、10月は概ね好天であったため、11月中旬頃から長雨以降に定植を行ったものが出荷を迎える。全体として、11月前半の出荷数量は平年を下回り、価格は平年を上回って推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。\n価格の見通し：<11月前半> 平年を上回って推移 <11月後半> やや平年を上回って推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "長野県産の出荷が減少し、茨城県産中心の出荷に切り替わる。主産地では9月の長雨と日照不足の影響で小玉傾向がみられるが、10月は概ね好天であったため、11月中旬頃から長雨以降に定植を行ったものが出荷を迎える。全体として、11月前半の出荷数量は平年を下回り、価格は平年を上回って推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "<11月前半> 平年を上回って推移 <11月後半> やや平年を上回って推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-14T02:17:40+00:00"
+    },
+    {
+      "id": "forecast-2026-10-30-v-007",
+      "foodId": "v-007",
+      "title": "ブロッコリー：2026年11月の見通し",
+      "summary": "埼玉県、香川県、熊本県、長崎県が中心の出荷となっている。主産地では長雨の影響等により生育が遅れており、11月の入荷数量は平年を下回る見込みである。これに伴い、価格は平年を上回って推移する見通しとなっている。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農林水産省・野菜の生育状況及び価格見通し",
+          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
+          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
+          "publishedAt": "2026-10-30"
+        }
+      ],
+      "publishedAt": "2026-10-30",
+      "observedPeriod": "2026年11月の見通し",
+      "sourceFingerprint": "9f0495f3bd9b12a5ca009325f315c33872c0caa1276afa36d4dc967b6f5c7d98",
+      "sourceFamily": "maff-vegetable",
+      "isForecast": true,
+      "periodStart": "2026-11-01",
+      "periodEnd": "2026-11-30",
+      "summaryVersion": 5,
+      "sourceExcerpt": "出荷・生育について：埼玉県産・香川県産・熊本県産・長崎県産が中心の出荷。主産地では長雨の影響等で生育が遅れており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：平年を上回って推移",
+      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
+      "reportType": "生育・出荷状況と今後の見通し",
+      "evidenceSections": [
+        {
+          "label": "生育・出荷",
+          "text": "埼玉県産・香川県産・熊本県産・長崎県産が中心の出荷。主産地では長雨の影響等で生育が遅れており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
+        },
+        {
+          "label": "価格の見通し",
+          "text": "平年を上回って推移"
+        }
+      ],
+      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・独立検証前）",
+      "retrievedAt": "2026-11-14T02:17:39+00:00"
+    },
     {
       "id": "jafic-sanma-2026-11-09-f-094",
       "foodId": "f-094",
@@ -176102,282 +176930,6 @@
         {
           "label": "価格の見通し",
           "text": "平年並みで推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "summaryProvider": null,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T02:05:20+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-014",
-      "foodId": "v-014",
-      "title": "ピーマン：2026年11月の見通し",
-      "summary": "茨城県産中心の出荷。10月は概ね好天が続いたが茨城県産は9月の長雨の影響が続いている。宮崎県産・高知県産の生育は概ね順調で、11月後半に出荷量が増加する。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "5f2ce00e7b3ecaa3191e7170da6055a0dfdb4339308c4b54448559f38311c5a4",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 5,
-      "sourceExcerpt": "出荷・生育について：茨城県産中心の出荷。10月は概ね好天が続いたが茨城県産は9月の長雨の影響が続いている。宮崎県産・高知県産の生育は概ね順調で、11月後半に出荷量が増加する。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "茨城県産中心の出荷。10月は概ね好天が続いたが茨城県産は9月の長雨の影響が続いている。宮崎県産・高知県産の生育は概ね順調で、11月後半に出荷量が増加する。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "summaryProvider": null,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T02:05:20+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-010",
-      "foodId": "v-010",
-      "title": "トマト：2026年11月の見通し",
-      "summary": "関東産・東海産は9月の長雨の影響により着果不良が発生し、着果数の減少が懸念される。熊本県産は9月の気温が適度であり、10月も好天が続いたことから生育は概ね順調である。 全体として、11月の出荷数量・価格は平年並みで推移する見込み。価格見通し：平年並みで推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "853d91b591c10d6e641a63fc874529db3343f17089dbd3ebd4fac9793417582b",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 5,
-      "sourceExcerpt": "出荷・生育について：関東産・東海産は9月の長雨の影響により着果不良が発生し、着果数の減少が懸念される。熊本県産は9月の気温が適度であり、10月も好天が続いたことから生育は概ね順調である。 全体として、11月の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "関東産・東海産は9月の長雨の影響により着果不良が発生し、着果数の減少が懸念される。熊本県産は9月の気温が適度であり、10月も好天が続いたことから生育は概ね順調である。 全体として、11月の出荷数量・価格は平年並みで推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年並みで推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "summaryProvider": null,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T02:05:20+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-013",
-      "foodId": "v-013",
-      "title": "なす：2026年11月の見通し",
-      "summary": "主産地の生育は概ね順調であり、11月の出荷数量、価格は平年並みで推移する見込み。価格見通し：平年並みで推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "a8bce9e6b13eb3e7ceb3ad0102dd4bfde0079f89b217a76a4c18daccf53533c9",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 5,
-      "sourceExcerpt": "出荷・生育について：主産地の生育は概ね順調であり、11月の出荷数量、価格は平年並みで推移する見込み。\n価格の見通し：平年並みで推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "主産地の生育は概ね順調であり、11月の出荷数量、価格は平年並みで推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年並みで推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "summaryProvider": null,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T02:05:20+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-012",
-      "foodId": "v-012",
-      "title": "きゅうり：2026年11月の見通し",
-      "summary": "関東産中心の出荷から宮崎県産中心の出荷に切り替わる。関東産は9月の長雨の影響により樹勢の低下がみられ、出荷数量の減少につながっている。 宮崎県産の生育は概ね順調である。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "4b3f88c85a0b59ed9f8ecfef101355245350e44f571a184d3447e85f283add78",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 5,
-      "sourceExcerpt": "出荷・生育について：関東産中心の出荷から宮崎県産中心の出荷に切り替わる。関東産は9月の長雨の影響により樹勢の低下がみられ、出荷数量の減少につながっている。 宮崎県産の生育は概ね順調である。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。\n価格の見通し：<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "関東産中心の出荷から宮崎県産中心の出荷に切り替わる。関東産は9月の長雨の影響により樹勢の低下がみられ、出荷数量の減少につながっている。 宮崎県産の生育は概ね順調である。 全体として、11月前半の出荷数量は平年を下回り、価格はやや平年を上回って推移し、11月後半の出荷数量・価格は平年並みで推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "<11月前半> やや平年を上回って推移 <11月後半> 平年並みで推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "summaryProvider": null,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T02:05:20+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-009",
-      "foodId": "v-009",
-      "title": "レタス：2026年11月の見通し",
-      "summary": "長野県産の出荷が減少し、茨城県産中心の出荷に切り替わる。主産地では9月の長雨と日照不足の影響で小玉傾向がみられるが、10月は概ね好天であったため、11月中旬頃から長雨以降に定植を行ったものが出荷を迎える。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "61d479678dbabd585b62f15087e32e3976aef8a987a05d6b59d19d2aa0841d67",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 5,
-      "sourceExcerpt": "出荷・生育について：長野県産の出荷が減少し、茨城県産中心の出荷に切り替わる。主産地では9月の長雨と日照不足の影響で小玉傾向がみられるが、10月は概ね好天であったため、11月中旬頃から長雨以降に定植を行ったものが出荷を迎える。全体として、11月前半の出荷数量は平年を下回り、価格は平年を上回って推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。\n価格の見通し：<11月前半> 平年を上回って推移 <11月後半> やや平年を上回って推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "長野県産の出荷が減少し、茨城県産中心の出荷に切り替わる。主産地では9月の長雨と日照不足の影響で小玉傾向がみられるが、10月は概ね好天であったため、11月中旬頃から長雨以降に定植を行ったものが出荷を迎える。全体として、11月前半の出荷数量は平年を下回り、価格は平年を上回って推移し、11月後半の出荷数量はやや平年を下回り、価格はやや平年を上回って推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "<11月前半> 平年を上回って推移 <11月後半> やや平年を上回って推移"
-        }
-      ],
-      "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "summaryProvider": null,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-13T02:05:20+00:00"
-    },
-    {
-      "id": "forecast-2026-10-30-v-007",
-      "foodId": "v-007",
-      "title": "ブロッコリー：2026年11月の見通し",
-      "summary": "埼玉県産・香川県産・熊本県産・長崎県産が中心の出荷。主産地では長雨の影響等で生育が遅れており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。価格見通し：平年を上回って推移",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "農林水産省・野菜の生育状況及び価格見通し",
-          "title": "野菜の生育状況及び価格見通し（令和8年11月）について",
-          "url": "https://www.maff.go.jp/j/press/nousan/engei/261030.html",
-          "publishedAt": "2026-10-30"
-        }
-      ],
-      "publishedAt": "2026-10-30",
-      "observedPeriod": "2026年11月の見通し",
-      "sourceFingerprint": "9f0495f3bd9b12a5ca009325f315c33872c0caa1276afa36d4dc967b6f5c7d98",
-      "sourceFamily": "maff-vegetable",
-      "isForecast": true,
-      "periodStart": "2026-11-01",
-      "periodEnd": "2026-11-30",
-      "summaryVersion": 5,
-      "sourceExcerpt": "出荷・生育について：埼玉県産・香川県産・熊本県産・長崎県産が中心の出荷。主産地では長雨の影響等で生育が遅れており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。\n価格の見通し：平年を上回って推移",
-      "scope": "資料に記載の主産地（産地・卸売会社等への聞き取り）",
-      "reportType": "生育・出荷状況と今後の見通し",
-      "evidenceSections": [
-        {
-          "label": "生育・出荷",
-          "text": "埼玉県産・香川県産・熊本県産・長崎県産が中心の出荷。主産地では長雨の影響等で生育が遅れており、11月の出荷数量は平年を下回り、価格は平年を上回って推移する見込み。"
-        },
-        {
-          "label": "価格の見通し",
-          "text": "平年を上回って推移"
         }
       ],
       "limitations": "聞き取りに基づく見通しで、確定した収穫実績ではありません。資料中の「平年並み」は90～110%を目安とし、アプリの価格判定（85～115%）とは基準が異なります。",
