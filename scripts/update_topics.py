@@ -178,7 +178,7 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
         # run, without producing duplicate articles for the same report.
         unchanged = old and old.get('sourceFingerprint') == fingerprint
         skip_ai = unchanged and (old.get('aiGenerated') or not key or blocked or attempts >= request_limit)
-        metadata_same = old and all(old.get(k)==item.get(k) for k in ('sourceUpdatedAt','seasonalRecord','reportYear'))
+        metadata_same = old and all(old.get(k)==item.get(k) for k in ('sourceUpdatedAt','seasonalRecord','reportYear','sourceFamily','scope'))
         if skip_ai and old.get('summaryVersion') == SUMMARY_VERSION and metadata_same:
             continue
         summary = old['summary'] if unchanged and old.get('aiGenerated') else (item.get('summaryExcerpt') or extract_summary(item['excerpt']))

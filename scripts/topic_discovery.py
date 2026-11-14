@@ -200,13 +200,16 @@ def article_items(raw,entry,source,foods,today):
   if len(short)>330:short=short[:short.rfind('。',0,330)+1] or short[:160]+'…'
   items.append({'food':{'id':food['foodId'],'name':food['name']},'url':entry['url'],
    'publishedAt':published,'sourceUpdatedAt':updated,
-   'reportKey':'discovery-'+source['id']+'-'+digest,'sourceFamily':'discovery-'+source['id'],
+   'reportKey':'discovery-'+source['id']+'-'+digest,'sourceFamily':'discovery-'+source['id']+'-'+digest,
    'sourceName':source['name'],'sourceTitle':title,
    'title':food['name']+'：'+title,
    'observedPeriod':f'{today.year}年の生育調査（資料の記載品種）' if kochi else f'{date.year}年{date.month}月{date.day}日公表の資料（詳細な対象期間は原文参照）',
    'periodStart':None,'periodEnd':None,'seasonalRecord':bool(kochi or source['id'].startswith('ja-')),'reportYear':today.year,
    'isForecast':False,'scope':source['scope'],'reportType':'試験場の生育観測' if kochi else '産地・海域の生育、出荷または漁況に関する記述',
-   'excerpt':excerpt,'summaryExcerpt':short,'requireAi':source['id'].startswith('ja-'),
+   'excerpt':excerpt,'summaryExcerpt':short,
+   'kind':'official_data_digest' if kochi else 'official_excerpt',
+   'nonAiTag':'公的調査の記述・数値を整理（AI未使用）' if kochi else '公的原文の抜粋（AI未使用）',
+   'requireAi':source['id'].startswith('ja-'),
    'publicExcerpt':excerpt[:24]+'…' if source['id'].startswith('ja-') else excerpt,
    'evidenceSections':[{'label':'原文の該当箇所' if kochi else '出典の記述（対象条件は原文参照）','text':excerpt if not source['id'].startswith('ja-') else excerpt[:24]+'…'}],
    'limitations':'記載の産地・品種・調査樹・海域に限った情報です。全国の収穫量・漁獲量を示すものではありません。'+('更新日は確認しましたが初回公表日は未確認です。' if kochi else '公表日と情報の対象期間は一致するとは限りません。')})

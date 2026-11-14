@@ -24,6 +24,19 @@ def run():
    expect(page.get_by_role('heading',name='今年の生育・出荷・漁況',exact=True)).to_be_visible()
    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), 'Homepage overflows viewport'
    page.screenshot(path=str(OUT/(label+'-home.png')))
+   monitor=page.evaluate('window.SHUN_DATA.metadata.foodResearchStatus')
+   ids=page.evaluate('window.SHUN_DATA.foods.map(f=>f.id)')
+   assert monitor and set(monitor)==set(ids), 'Monitoring status does not cover every food'
+   if dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).strftime('%Y-%m-%d')=='2026-11-14':
+    chestnut=page.locator('.topic-row[data-detail="f-069"]')
+    expect(chestnut).to_have_count(1);chestnut.click()
+    expect(page.locator('#detailContent .detail-summary')).to_contain_text('収穫始期')
+    expect(page.locator('#detailContent .detail-summary')).to_contain_text('25.3g')
+    expect(page.locator('#detailContent .detail-summary')).to_contain_text('32.5g')
+    page.get_by_text('この食材の調査状況',exact=True).click()
+    expect(page.locator('.research-status')).to_contain_text('高知県')
+    page.screenshot(path=str(OUT/(label+'-chestnut.png')))
+    page.locator('#closeDetail').click()
    # A food which previously had little year-specific context now has a
    # scoped source summary and genuine observations in both recovered years.
    release_checks=dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).strftime('%Y-%m-%d')=='2026-11-13'
@@ -93,6 +106,11 @@ def run():
    expect(page.locator('#priceResults .price-indicator')).to_have_count(1)
    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), 'Price search overflows viewport'
    page.screenshot(path=str(OUT/(label+'-search.png')))
+   if mobile:page.locator('#mobileMenu').click()
+   page.locator('.nav-item[data-page="about"]').click()
+   overview=page.get_by_text('全'+str(len(ids))+'品目の調査状況を見る',exact=True)
+   overview.click()
+   expect(page.locator('table').filter(has=page.get_by_role('columnheader',name='新着一覧の最終確認')).locator('tbody tr')).to_have_count(len(ids))
    assert not errors,errors
    results.append({'viewport':label,'size':[width,height],'javascriptErrors':errors,
      'checked':['scoped crop summary','2021/2022 graph data','daily CSV provenance','saury forecast','salmon observations','hiragana search','viewport overflow']})
