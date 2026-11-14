@@ -23,12 +23,13 @@ def run():
    assert response and response.status==200
    expect(page.get_by_role('heading',name='今年の生育・出荷・漁況',exact=True)).to_be_visible()
    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), 'Homepage overflows viewport'
+   expect(page.locator('.mini-insight')).to_contain_text('別工程による内容検証は未実施')
    page.screenshot(path=str(OUT/(label+'-home.png')))
    monitor=page.evaluate('window.SHUN_DATA.metadata.foodResearchStatus')
    ids=page.evaluate('window.SHUN_DATA.foods.map(f=>f.id)')
    assert monitor and set(monitor)==set(ids), 'Monitoring status does not cover every food'
    if dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).strftime('%Y-%m-%d')=='2026-11-14':
-    chestnut=page.locator('.topic-row[data-detail="f-069"]')
+    chestnut=page.locator('section').filter(has=page.get_by_role('heading',name='今年の生育・出荷・漁況',exact=True)).locator('.topic-row[data-detail="f-069"]')
     expect(chestnut).to_have_count(1);chestnut.click()
     expect(page.locator('#detailContent .detail-summary')).to_contain_text('収穫始期')
     expect(page.locator('#detailContent .detail-summary')).to_contain_text('25.3g')
@@ -53,7 +54,7 @@ def run():
    if release_checks:
     expect(detail.locator('.detail-summary')).to_contain_text('静岡')
     expect(detail.locator('.detail-summary')).to_contain_text('根腐れ')
-    expect(detail).to_contain_text('独立検証前')
+    expect(detail).to_contain_text('別工程による検証は未実施')
    page.get_by_role('button',name='年ごとに比較',exact=True).click()
    graph=page.locator('#longHistoryPanel')
    legend=graph.locator('.history-legend').inner_text()
