@@ -1,0 +1,2179 @@
+{
+  "version": 1,
+  "description": "全登録品目を対象とする継続調査。収集先索引の確認と、本文確認・掲載を区別する。資料の存在を保証する一覧ではない。",
+  "sources": [
+    {
+      "id": "kochi-fruit",
+      "name": "高知県農業技術センター果樹試験場",
+      "categories": [
+        "fruit"
+      ],
+      "url": "https://www.nogyo.tosa.pref.kochi.lg.jp/info/list.php?mode=new&sid=2013",
+      "hosts": [
+        "www.nogyo.tosa.pref.kochi.lg.jp"
+      ],
+      "scope": "高知県果樹試験場の調査樹・記載品種",
+      "include": "/info/dtl.php",
+      "terms": [
+        "生育調査"
+      ]
+    },
+    {
+      "id": "kochi-agriculture",
+      "name": "こうち農業ネット（高知県）",
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "url": "https://www.nogyo.tosa.pref.kochi.lg.jp/",
+      "hosts": [
+        "www.nogyo.tosa.pref.kochi.lg.jp"
+      ],
+      "scope": "高知県の資料に記載された地域・作物",
+      "include": "/info/dtl.php",
+      "terms": [
+        "生育",
+        "出荷",
+        "収穫",
+        "肥大",
+        "普及活動情勢"
+      ]
+    },
+    {
+      "id": "ja-kumamoto",
+      "name": "JAグループ熊本・旬の農産物",
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "url": "https://www.ja-kumamoto.or.jp/agriculture/community/",
+      "hosts": [
+        "www.ja-kumamoto.or.jp"
+      ],
+      "scope": "熊本県の資料に記載されたJA・産地",
+      "include": "/wp/news/",
+      "terms": [
+        "出荷",
+        "収穫",
+        "生育",
+        "作柄",
+        "品質"
+      ]
+    },
+    {
+      "id": "ja-kumamoto-news",
+      "name": "JAグループ熊本・新着情報",
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "url": "https://www.ja-kumamoto.or.jp/topics/",
+      "hosts": [
+        "www.ja-kumamoto.or.jp"
+      ],
+      "scope": "熊本県の資料に記載されたJA・産地",
+      "include": "/wp/news/",
+      "terms": [
+        "出荷",
+        "収穫",
+        "生育",
+        "作柄",
+        "品質"
+      ]
+    },
+    {
+      "id": "iwate-fisheries",
+      "name": "岩手県水産技術センター",
+      "categories": [
+        "fish"
+      ],
+      "url": "https://www2.suigi.pref.iwate.jp/research",
+      "hosts": [
+        "www2.suigi.pref.iwate.jp"
+      ],
+      "scope": "岩手県・三陸の資料に記載された海域と漁業",
+      "include": "/research/",
+      "terms": [
+        "漁況",
+        "水揚",
+        "来遊",
+        "回帰",
+        "養殖",
+        "資源調査"
+      ]
+    },
+    {
+      "id": "hokkaido-fisheries",
+      "name": "北海道立総合研究機構・水産研究本部",
+      "categories": [
+        "fish"
+      ],
+      "url": "https://www.hro.or.jp/fisheries/news/archives/page/1.html",
+      "hosts": [
+        "www.hro.or.jp"
+      ],
+      "scope": "北海道の資料に記載された海域・漁業・調査",
+      "include": "/fisheries/",
+      "terms": [
+        "漁況",
+        "水揚",
+        "来遊",
+        "回帰",
+        "ホタテガイ情報",
+        "資源調査"
+      ]
+    },
+    {
+      "id": "fra-resources",
+      "name": "水産研究・教育機構・公式発表",
+      "categories": [
+        "fish"
+      ],
+      "url": "https://www.fra.go.jp/home/kenkyushokai/press/pr2026/index.html",
+      "hosts": [
+        "www.fra.go.jp"
+      ],
+      "scope": "資料に記載の魚種・海域・対象期間",
+      "include": "/home/kenkyushokai/press/pr",
+      "terms": [
+        "漁況",
+        "来遊",
+        "資源動向",
+        "回帰",
+        "養殖",
+        "漁獲"
+      ]
+    }
+  ],
+  "foods": [
+    {
+      "foodId": "v-001",
+      "name": "キャベツ",
+      "category": "vegetable",
+      "aliases": [
+        "キャベツ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-002",
+      "name": "はくさい",
+      "category": "vegetable",
+      "aliases": [
+        "はくさい",
+        "白菜"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-003",
+      "name": "だいこん",
+      "category": "vegetable",
+      "aliases": [
+        "だいこん",
+        "大根"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-004",
+      "name": "にんじん",
+      "category": "vegetable",
+      "aliases": [
+        "にんじん",
+        "人参"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-005",
+      "name": "ほうれんそう",
+      "category": "vegetable",
+      "aliases": [
+        "ほうれんそう"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-006",
+      "name": "小松菜",
+      "category": "vegetable",
+      "aliases": [
+        "小松菜",
+        "こまつな",
+        "コマツナ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-007",
+      "name": "ブロッコリー",
+      "category": "vegetable",
+      "aliases": [
+        "ブロッコリー"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-008",
+      "name": "カリフラワー",
+      "category": "vegetable",
+      "aliases": [
+        "カリフラワー"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-009",
+      "name": "レタス",
+      "category": "vegetable",
+      "aliases": [
+        "レタス"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-010",
+      "name": "トマト",
+      "category": "vegetable",
+      "aliases": [
+        "トマト"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-011",
+      "name": "ミニトマト",
+      "category": "vegetable",
+      "aliases": [
+        "ミニトマト"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-012",
+      "name": "きゅうり",
+      "category": "vegetable",
+      "aliases": [
+        "きゅうり"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-013",
+      "name": "なす",
+      "category": "vegetable",
+      "aliases": [
+        "なす"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-014",
+      "name": "ピーマン",
+      "category": "vegetable",
+      "aliases": [
+        "ピーマン"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-015",
+      "name": "パプリカ",
+      "category": "vegetable",
+      "aliases": [
+        "パプリカ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-016",
+      "name": "とうもろこし",
+      "category": "vegetable",
+      "aliases": [
+        "とうもろこし"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-017",
+      "name": "オクラ",
+      "category": "vegetable",
+      "aliases": [
+        "オクラ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-018",
+      "name": "ゴーヤ",
+      "category": "vegetable",
+      "aliases": [
+        "ゴーヤ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-019",
+      "name": "かぼちゃ",
+      "category": "vegetable",
+      "aliases": [
+        "かぼちゃ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-020",
+      "name": "さつまいも",
+      "category": "vegetable",
+      "aliases": [
+        "さつまいも",
+        "かんしょ",
+        "サツマイモ",
+        "サツマ芋"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-021",
+      "name": "じゃがいも",
+      "category": "vegetable",
+      "aliases": [
+        "じゃがいも",
+        "ばれいしょ",
+        "馬鈴薯",
+        "ジャガイモ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-022",
+      "name": "さといも",
+      "category": "vegetable",
+      "aliases": [
+        "さといも"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-023",
+      "name": "ながいも",
+      "category": "vegetable",
+      "aliases": [
+        "ながいも",
+        "長芋",
+        "ナガイモ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-024",
+      "name": "れんこん",
+      "category": "vegetable",
+      "aliases": [
+        "れんこん"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-025",
+      "name": "ごぼう",
+      "category": "vegetable",
+      "aliases": [
+        "ごぼう"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-026",
+      "name": "かぶ",
+      "category": "vegetable",
+      "aliases": [
+        "かぶ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-027",
+      "name": "たまねぎ",
+      "category": "vegetable",
+      "aliases": [
+        "たまねぎ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-028",
+      "name": "長ねぎ",
+      "category": "vegetable",
+      "aliases": [
+        "長ねぎ",
+        "ねぎ",
+        "ネギ",
+        "長ネギ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-029",
+      "name": "にら",
+      "category": "vegetable",
+      "aliases": [
+        "にら",
+        "ニラ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-030",
+      "name": "しょうが",
+      "category": "vegetable",
+      "aliases": [
+        "しょうが",
+        "生姜",
+        "ショウガ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-031",
+      "name": "みょうが",
+      "category": "vegetable",
+      "aliases": [
+        "みょうが"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-032",
+      "name": "アスパラガス",
+      "category": "vegetable",
+      "aliases": [
+        "アスパラガス"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-033",
+      "name": "たけのこ",
+      "category": "vegetable",
+      "aliases": [
+        "たけのこ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-034",
+      "name": "ふき",
+      "category": "vegetable",
+      "aliases": [
+        "ふき"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-035",
+      "name": "菜の花",
+      "category": "vegetable",
+      "aliases": [
+        "菜の花"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-036",
+      "name": "そらまめ",
+      "category": "vegetable",
+      "aliases": [
+        "そらまめ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-037",
+      "name": "えだまめ",
+      "category": "vegetable",
+      "aliases": [
+        "えだまめ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-038",
+      "name": "さやえんどう",
+      "category": "vegetable",
+      "aliases": [
+        "さやえんどう"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-039",
+      "name": "いんげん",
+      "category": "vegetable",
+      "aliases": [
+        "いんげん",
+        "さやいんげん",
+        "サヤインゲン"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-040",
+      "name": "しいたけ",
+      "category": "vegetable",
+      "aliases": [
+        "しいたけ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-041",
+      "name": "まいたけ",
+      "category": "vegetable",
+      "aliases": [
+        "まいたけ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-042",
+      "name": "しめじ",
+      "category": "vegetable",
+      "aliases": [
+        "しめじ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-043",
+      "name": "えのきたけ",
+      "category": "vegetable",
+      "aliases": [
+        "えのきたけ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-044",
+      "name": "春菊",
+      "category": "vegetable",
+      "aliases": [
+        "春菊",
+        "しゅんぎく",
+        "シュンギク"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-045",
+      "name": "水菜",
+      "category": "vegetable",
+      "aliases": [
+        "水菜",
+        "みずな",
+        "ミズナ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-046",
+      "name": "セロリ",
+      "category": "vegetable",
+      "aliases": [
+        "セロリ",
+        "セルリー"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-047",
+      "name": "チンゲンサイ",
+      "category": "vegetable",
+      "aliases": [
+        "チンゲンサイ",
+        "ちんげんさい"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-048",
+      "name": "ズッキーニ",
+      "category": "vegetable",
+      "aliases": [
+        "ズッキーニ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-049",
+      "name": "にんにく",
+      "category": "vegetable",
+      "aliases": [
+        "にんにく"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-050",
+      "name": "らっきょう",
+      "category": "vegetable",
+      "aliases": [
+        "らっきょう"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-051",
+      "name": "さやいんげん",
+      "category": "vegetable",
+      "aliases": [
+        "さやいんげん",
+        "いんげん",
+        "インゲン"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-052",
+      "name": "新しょうが",
+      "category": "vegetable",
+      "aliases": [
+        "新しょうが",
+        "新生姜",
+        "新ショウガ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "v-053",
+      "name": "栗かぼちゃ",
+      "category": "vegetable",
+      "aliases": [
+        "栗かぼちゃ"
+      ],
+      "sourceIds": [
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-054",
+      "name": "りんご",
+      "category": "fruit",
+      "aliases": [
+        "りんご"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-055",
+      "name": "みかん",
+      "category": "fruit",
+      "aliases": [
+        "みかん",
+        "ミカン",
+        "温州みかん",
+        "南柑20号",
+        "興津早生",
+        "日南1号"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-056",
+      "name": "いよかん",
+      "category": "fruit",
+      "aliases": [
+        "いよかん"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-057",
+      "name": "デコポン",
+      "category": "fruit",
+      "aliases": [
+        "デコポン",
+        "不知火",
+        "しらぬい"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-058",
+      "name": "はっさく",
+      "category": "fruit",
+      "aliases": [
+        "はっさく"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-059",
+      "name": "ゆず",
+      "category": "fruit",
+      "aliases": [
+        "ゆず",
+        "柚子",
+        "ユズ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-060",
+      "name": "レモン",
+      "category": "fruit",
+      "aliases": [
+        "レモン",
+        "檸檬",
+        "れもん"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-061",
+      "name": "すだち",
+      "category": "fruit",
+      "aliases": [
+        "すだち",
+        "スダチ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-062",
+      "name": "かぼす",
+      "category": "fruit",
+      "aliases": [
+        "かぼす",
+        "カボス"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-063",
+      "name": "かき",
+      "category": "fruit",
+      "aliases": [
+        "かき",
+        "柿",
+        "カキ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-064",
+      "name": "ぶどう",
+      "category": "fruit",
+      "aliases": [
+        "ぶどう"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-065",
+      "name": "シャインマスカット",
+      "category": "fruit",
+      "aliases": [
+        "シャインマスカット"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-066",
+      "name": "巨峰",
+      "category": "fruit",
+      "aliases": [
+        "巨峰"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-067",
+      "name": "なし",
+      "category": "fruit",
+      "aliases": [
+        "なし",
+        "日本なし",
+        "日本ナシ",
+        "ニホンナシ",
+        "和梨",
+        "梨"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-068",
+      "name": "洋なし",
+      "category": "fruit",
+      "aliases": [
+        "洋なし",
+        "西洋なし",
+        "西洋ナシ",
+        "ラ・フランス"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-069",
+      "name": "くり",
+      "category": "fruit",
+      "aliases": [
+        "くり",
+        "栗",
+        "クリ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-070",
+      "name": "いちじく",
+      "category": "fruit",
+      "aliases": [
+        "いちじく"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-071",
+      "name": "キウイフルーツ",
+      "category": "fruit",
+      "aliases": [
+        "キウイフルーツ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-072",
+      "name": "いちご",
+      "category": "fruit",
+      "aliases": [
+        "いちご"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-073",
+      "name": "もも",
+      "category": "fruit",
+      "aliases": [
+        "もも"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-074",
+      "name": "すもも",
+      "category": "fruit",
+      "aliases": [
+        "すもも"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-075",
+      "name": "さくらんぼ",
+      "category": "fruit",
+      "aliases": [
+        "さくらんぼ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-076",
+      "name": "あんず",
+      "category": "fruit",
+      "aliases": [
+        "あんず"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-077",
+      "name": "びわ",
+      "category": "fruit",
+      "aliases": [
+        "びわ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-078",
+      "name": "うめ",
+      "category": "fruit",
+      "aliases": [
+        "うめ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-079",
+      "name": "すいか",
+      "category": "fruit",
+      "aliases": [
+        "すいか"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-080",
+      "name": "メロン",
+      "category": "fruit",
+      "aliases": [
+        "メロン"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-081",
+      "name": "ブルーベリー",
+      "category": "fruit",
+      "aliases": [
+        "ブルーベリー"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-082",
+      "name": "ラズベリー",
+      "category": "fruit",
+      "aliases": [
+        "ラズベリー"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-083",
+      "name": "マンゴー",
+      "category": "fruit",
+      "aliases": [
+        "マンゴー"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-084",
+      "name": "パイナップル",
+      "category": "fruit",
+      "aliases": [
+        "パイナップル"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-085",
+      "name": "いちご（夏秋）",
+      "category": "fruit",
+      "aliases": [
+        "いちご（夏秋）",
+        "夏秋いちご",
+        "夏秋イチゴ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-086",
+      "name": "ぽんかん",
+      "category": "fruit",
+      "aliases": [
+        "ぽんかん",
+        "ポンカン"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-087",
+      "name": "きんかん",
+      "category": "fruit",
+      "aliases": [
+        "きんかん"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-088",
+      "name": "グレープフルーツ",
+      "category": "fruit",
+      "aliases": [
+        "グレープフルーツ",
+        "グレープフル－ツ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-089",
+      "name": "日向夏",
+      "category": "fruit",
+      "aliases": [
+        "日向夏"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-090",
+      "name": "ざくろ",
+      "category": "fruit",
+      "aliases": [
+        "ざくろ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-091",
+      "name": "ドラゴンフルーツ",
+      "category": "fruit",
+      "aliases": [
+        "ドラゴンフルーツ"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-092",
+      "name": "プルーン",
+      "category": "fruit",
+      "aliases": [
+        "プルーン"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-093",
+      "name": "柚香",
+      "category": "fruit",
+      "aliases": [
+        "柚香"
+      ],
+      "sourceIds": [
+        "kochi-fruit",
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
+      ]
+    },
+    {
+      "foodId": "f-094",
+      "name": "サンマ",
+      "category": "fish",
+      "aliases": [
+        "サンマ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-095",
+      "name": "カツオ",
+      "category": "fish",
+      "aliases": [
+        "カツオ",
+        "かつお",
+        "鰹"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-096",
+      "name": "戻りガツオ",
+      "category": "fish",
+      "aliases": [
+        "戻りガツオ",
+        "戻りカツオ",
+        "戻り鰹"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-097",
+      "name": "サバ",
+      "category": "fish",
+      "aliases": [
+        "サバ",
+        "さば",
+        "鯖",
+        "マサバ",
+        "ゴマサバ",
+        "サバ類"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-098",
+      "name": "アジ",
+      "category": "fish",
+      "aliases": [
+        "アジ",
+        "あじ",
+        "鯵",
+        "マアジ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-099",
+      "name": "イワシ",
+      "category": "fish",
+      "aliases": [
+        "イワシ",
+        "いわし",
+        "鰯",
+        "マイワシ",
+        "カタクチイワシ",
+        "ウルメイワシ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-100",
+      "name": "サケ",
+      "category": "fish",
+      "aliases": [
+        "サケ",
+        "さけ",
+        "鮭",
+        "秋サケ",
+        "シロザケ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-101",
+      "name": "ブリ",
+      "category": "fish",
+      "aliases": [
+        "ブリ",
+        "ぶり",
+        "鰤"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-102",
+      "name": "マグロ",
+      "category": "fish",
+      "aliases": [
+        "マグロ",
+        "まぐろ",
+        "鮪",
+        "クロマグロ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-103",
+      "name": "マダイ",
+      "category": "fish",
+      "aliases": [
+        "マダイ",
+        "真鯛"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-104",
+      "name": "ヒラメ",
+      "category": "fish",
+      "aliases": [
+        "ヒラメ",
+        "ひらめ",
+        "平目"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-105",
+      "name": "カレイ",
+      "category": "fish",
+      "aliases": [
+        "カレイ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-106",
+      "name": "タラ",
+      "category": "fish",
+      "aliases": [
+        "タラ",
+        "たら",
+        "マダラ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-107",
+      "name": "サワラ",
+      "category": "fish",
+      "aliases": [
+        "サワラ",
+        "さわら"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-108",
+      "name": "スズキ",
+      "category": "fish",
+      "aliases": [
+        "スズキ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-109",
+      "name": "イサキ",
+      "category": "fish",
+      "aliases": [
+        "イサキ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-110",
+      "name": "キンメダイ",
+      "category": "fish",
+      "aliases": [
+        "キンメダイ",
+        "金目鯛"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-111",
+      "name": "カンパチ",
+      "category": "fish",
+      "aliases": [
+        "カンパチ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-112",
+      "name": "ハモ",
+      "category": "fish",
+      "aliases": [
+        "ハモ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-113",
+      "name": "シラス",
+      "category": "fish",
+      "aliases": [
+        "シラス",
+        "しらす"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-114",
+      "name": "ホッケ",
+      "category": "fish",
+      "aliases": [
+        "ホッケ",
+        "ほっけ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-115",
+      "name": "ニシン",
+      "category": "fish",
+      "aliases": [
+        "ニシン"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-116",
+      "name": "ハタハタ",
+      "category": "fish",
+      "aliases": [
+        "ハタハタ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-117",
+      "name": "アユ",
+      "category": "fish",
+      "aliases": [
+        "アユ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-118",
+      "name": "ウナギ",
+      "category": "fish",
+      "aliases": [
+        "ウナギ",
+        "うなぎ",
+        "鰻"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-119",
+      "name": "アンコウ",
+      "category": "fish",
+      "aliases": [
+        "アンコウ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-120",
+      "name": "フグ",
+      "category": "fish",
+      "aliases": [
+        "フグ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-121",
+      "name": "カキ",
+      "category": "fish",
+      "aliases": [
+        "カキ",
+        "牡蠣",
+        "ムキカキ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-122",
+      "name": "ホタテ",
+      "category": "fish",
+      "aliases": [
+        "ホタテ",
+        "ホタテガイ",
+        "帆立"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-123",
+      "name": "アサリ",
+      "category": "fish",
+      "aliases": [
+        "アサリ",
+        "あさり"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-124",
+      "name": "ハマグリ",
+      "category": "fish",
+      "aliases": [
+        "ハマグリ",
+        "はまぐり"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-125",
+      "name": "シジミ",
+      "category": "fish",
+      "aliases": [
+        "シジミ",
+        "しじみ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-126",
+      "name": "ズワイガニ",
+      "category": "fish",
+      "aliases": [
+        "ズワイガニ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-127",
+      "name": "タラバガニ",
+      "category": "fish",
+      "aliases": [
+        "タラバガニ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-128",
+      "name": "ワタリガニ",
+      "category": "fish",
+      "aliases": [
+        "ワタリガニ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-129",
+      "name": "クルマエビ",
+      "category": "fish",
+      "aliases": [
+        "クルマエビ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-130",
+      "name": "甘エビ",
+      "category": "fish",
+      "aliases": [
+        "甘エビ",
+        "アマエビ",
+        "甘えび",
+        "ホッコクアカエビ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-131",
+      "name": "桜エビ",
+      "category": "fish",
+      "aliases": [
+        "桜エビ",
+        "サクラエビ",
+        "桜えび"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-132",
+      "name": "スルメイカ",
+      "category": "fish",
+      "aliases": [
+        "スルメイカ",
+        "スルメ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-133",
+      "name": "ヤリイカ",
+      "category": "fish",
+      "aliases": [
+        "ヤリイカ",
+        "槍烏賊"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-134",
+      "name": "アオリイカ",
+      "category": "fish",
+      "aliases": [
+        "アオリイカ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-135",
+      "name": "タコ",
+      "category": "fish",
+      "aliases": [
+        "タコ",
+        "たこ",
+        "蛸"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-136",
+      "name": "ウニ",
+      "category": "fish",
+      "aliases": [
+        "ウニ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-137",
+      "name": "イクラ",
+      "category": "fish",
+      "aliases": [
+        "イクラ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-138",
+      "name": "シイラ",
+      "category": "fish",
+      "aliases": [
+        "シイラ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-139",
+      "name": "メカジキ",
+      "category": "fish",
+      "aliases": [
+        "メカジキ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-140",
+      "name": "銀だら",
+      "category": "fish",
+      "aliases": [
+        "銀だら",
+        "ギンダラ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-141",
+      "name": "エビ",
+      "category": "fish",
+      "aliases": [
+        "エビ",
+        "えび",
+        "海老"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-142",
+      "name": "サザエ",
+      "category": "fish",
+      "aliases": [
+        "サザエ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-143",
+      "name": "アワビ",
+      "category": "fish",
+      "aliases": [
+        "アワビ"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    },
+    {
+      "foodId": "f-144",
+      "name": "ハマチ",
+      "category": "fish",
+      "aliases": [
+        "ハマチ",
+        "はまち"
+      ],
+      "sourceIds": [
+        "iwate-fisheries",
+        "hokkaido-fisheries",
+        "fra-resources"
+      ]
+    }
+  ]
+}

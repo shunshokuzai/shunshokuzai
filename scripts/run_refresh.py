@@ -33,19 +33,16 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
     if daily_history=='error':status['history']='error'
     scheduled=force_gemini or local.weekday() in (1,3,5)  # Tue/Thu/Sat, manual verification override
     key=ai_key if ai_key is not None else os.getenv('GEMINI_API_KEY','')
-    if scheduled:
-        env=os.environ.copy()
-        if key:env['GEMINI_API_KEY']=key
-        if not key:env['SOURCES_ONLY']='true'
-        status['topics']=run_step('update_topics.py',env)
-        saved=json.loads(DATA.read_text(encoding='utf-8'))['metadata']
-        status['gemini']=('api_key_missing' if not key else
-                          saved.get('topicGeminiStateLastRun','error') if status['topics']=='ok' else 'error')
-    else:
-        status['topics']='not_scheduled';status['gemini']='not_scheduled'
+    env=os.environ.copy()
+    if key:env['GEMINI_API_KEY']=key
+    if not scheduled or not key:env['SOURCES_ONLY']='true'
+    status['topics']=run_step('update_topics.py',env)
+    saved=json.loads(DATA.read_text(encoding='utf-8'))['metadata']
+    status['gemini']=('not_scheduled' if not scheduled else 'api_key_missing' if not key else
+                      saved.get('topicGeminiStateLastRun','error') if status['topics']=='ok' else 'error')
     obj=json.loads(DATA.read_text(encoding='utf-8'))
     meta=obj['metadata']
-    meta['version']='0.10.0'
+    meta['version']='0.11.0'
     meta['lastAutomaticCheckAt']=now_iso()
     meta['autoRefreshStatus']=status
     meta['autoRefreshConfigured']=True
