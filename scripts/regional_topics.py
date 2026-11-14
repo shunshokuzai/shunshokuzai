@@ -118,7 +118,7 @@ def alic_month_items(html,foods,today):
  """
  if today.year==2026 and today.month==11:return alic_items(html,foods,today)
  soup=BeautifulSoup(html,'html.parser')
- text=unicodedata.normalize('NFKC',soup.get_text('',strip=True))
+ text=unicodedata.normalize('NFKC',soup.get_text(' ',strip=True))
  issue=f'{today.year}年{today.month}月号'
  if issue not in text:raise ValueError('Current ALIC issue not confirmed')
  byname={f['name']:f for f in foods if f['category']=='vegetable'}

@@ -324,6 +324,7 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
    outcomes[result]=outcomes.get(result,0)+1
    prior.update({'parserVersion':PARSER_VERSION,'lastCheckedAt':now_iso(),'status':result,'fingerprint':hashlib.sha256(raw).hexdigest(),
     'foodIds':list(set(entry['foodIds']+[i['food']['id'] for i in found])),
+    'recordYear':today.year,'summaryRequirements':{i['reportKey']+'-'+i['food']['id']:{'foodId':i['food']['id'],'fingerprint':hashlib.sha256(i['excerpt'].encode('utf-8')).hexdigest(),'requireAi':i.get('requireAi',False)} for i in found},
     'retryAfter':(today+dt.timedelta(days=3 if found else 7)).isoformat()})
    for fid in prior['foodIds']:
     row=state['foods'][fid];row['lastArticleCheckedAt']=now_iso();row['lastArticleResult']=result
@@ -341,12 +342,20 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
  return items,errors
 
 def publish_monitor(obj,state,today):
- rows={}
+ rows={};pending={}
+ published={t['id']:t for t in obj['topics']}
+ for article in state.get('articles',{}).values():
+  if article.get('recordYear')!=today.year:continue
+  for ident,need in article.get('summaryRequirements',{}).items():
+   topic=published.get(ident,{})
+   if need['requireAi'] and not (topic.get('aiGenerated') and topic.get('sourceFingerprint')==need['fingerprint']):
+    pending[need['foodId']]=pending.get(need['foodId'],0)+1
  for food in obj['foods']:
   source=state.get('foods',{}).get(food['id'],{})
   latest=[t for t in obj['topics'] if t.get('foodId')==food['id'] and t.get('yearSpecific') and t.get('sources')]
   latest.sort(key=lambda t:t.get('publishedAt') or t.get('sourceUpdatedAt') or '',reverse=True)
   rows[food['id']]={k:source.get(k) for k in ('sourceIds','lastAttemptAt','lastIndexCheckedAt','lastArticleCheckedAt','lastArticleResult','lastEvidenceFoundAt','indexStatus','coverage','candidateCount','checkedSourceIds')}
+  rows[food['id']]['pendingAiSourceCount']=pending.get(food['id'],0)
   rows[food['id']]['hasCollectedYearSpecificSource']=bool(latest)
   rows[food['id']]['lastSourcePublicationAt']=latest[0].get('publishedAt') if latest else None
  obj['metadata']['foodResearchStatus']=rows

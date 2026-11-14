@@ -148,3 +148,13 @@ class ContinuousTopicTests(unittest.TestCase):
   foods=[{'id':'onion','name':'たまねぎ','category':'vegetable'},{'id':'leek','name':'長ねぎ','category':'vegetable'}]
   items=alic_month_items(html,foods,dt.date(2026,12,5))
   self.assertEqual([i['food']['id'] for i in items],['onion'])
+
+ def test_found_but_not_yet_summarized_is_not_reported_as_missing(self):
+  from topic_discovery import publish_monitor
+  obj={'foods':[{'id':'x','name':'くり'}],'topics':[],'metadata':{}}
+  state={'foods':{},'articles':{'url':{'recordYear':2026,'summaryRequirements':{'report-x':{'foodId':'x','fingerprint':'abc','requireAi':True}}}}}
+  publish_monitor(obj,state,self.today)
+  self.assertEqual(obj['metadata']['foodResearchStatus']['x']['pendingAiSourceCount'],1)
+  obj['topics']=[{'id':'report-x','foodId':'x','aiGenerated':True,'sourceFingerprint':'abc','yearSpecific':True,'sources':[{}]}]
+  publish_monitor(obj,state,self.today)
+  self.assertEqual(obj['metadata']['foodResearchStatus']['x']['pendingAiSourceCount'],0)
