@@ -116,6 +116,7 @@ def publication_date(soup,title):
  return None
 
 def article_items(raw,entry,source,foods,today):
+ if isinstance(raw,str):raw=raw.encode('utf-8')
  if raw.startswith(b'%PDF'):
   # General PDF tables require a dedicated parser; never turn table cells
   # into supply news. PDF links are retained in the source queue for maintenance.
@@ -217,6 +218,7 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
   if relevant:
    row['lastIndexCheckedAt']=now_iso();row['checkedSourceIds']=relevant
    row['candidateCount']=sum(food['foodId'] in x['foodIds'] for x in queue)
+  row['checkedSourceIds']=relevant
   row['indexStatus']='ok' if len(relevant)==len(food['sourceIds']) else 'partial' if relevant else 'error'
   row['coverage']='source_pending' if row.get('candidateCount') else 'no_matching_link' if relevant else 'source_unavailable'
  articles=state['articles']
@@ -260,7 +262,7 @@ def publish_monitor(obj,state,today):
   source=state.get('foods',{}).get(food['id'],{})
   latest=[t for t in obj['topics'] if t.get('foodId')==food['id'] and t.get('yearSpecific') and t.get('sources')]
   latest.sort(key=lambda t:t.get('publishedAt') or t.get('sourceUpdatedAt') or '',reverse=True)
-  rows[food['id']]={k:source.get(k) for k in ('lastAttemptAt','lastIndexCheckedAt','lastArticleCheckedAt','lastArticleResult','lastEvidenceFoundAt','indexStatus','coverage','candidateCount','checkedSourceIds')}
+  rows[food['id']]={k:source.get(k) for k in ('sourceIds','lastAttemptAt','lastIndexCheckedAt','lastArticleCheckedAt','lastArticleResult','lastEvidenceFoundAt','indexStatus','coverage','candidateCount','checkedSourceIds')}
   rows[food['id']]['hasCollectedYearSpecificSource']=bool(latest)
   rows[food['id']]['lastSourcePublicationAt']=latest[0].get('publishedAt') if latest else None
  obj['metadata']['foodResearchStatus']=rows

@@ -85,3 +85,10 @@ test('classification includes both boundaries in normal and ignores stale values
   assert.equal(ctx.status({normalRatio:null})[1],'demo');
   assert.equal(ctx.status({normalRatio:85,classificationUncertain:true})[1],'demo');
 });
+
+test("annual crop observations stay visible until year end without relabelling next year",()=>{
+ const ctx=topicContext();
+ const topic={id:"annual",foodId:"f",yearSpecific:true,sourceFamily:"kochi",sourceUpdatedAt:"2026-10-09",seasonalRecord:true,reportYear:2026,sources:[{}]};
+ assert.equal(ctx.activeFoodTopics([topic],"f","2026-12-30").length,1);
+ assert.equal(ctx.activeFoodTopics([topic],"f","2027-01-01").length,0);
+});
