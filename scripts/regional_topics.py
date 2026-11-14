@@ -109,9 +109,51 @@ def latest_apple_items(foods,today):
   if items:return items
  return []
 
+
+def alic_month_items(html,foods,today):
+ """Roll the monthly source forward; public summaries require AI or prepared facts.
+
+ Future issues never reuse November's prepared prose. Copyrighted full
+ paragraphs stay in memory only; no full article is persisted or republished.
+ """
+ if today.year==2026 and today.month==11:return alic_items(html,foods,today)
+ soup=BeautifulSoup(html,'html.parser')
+ text=unicodedata.normalize('NFKC',soup.get_text(' ',strip=True))
+ issue=f'{today.year}年{today.month}月号'
+ if issue not in text:raise ValueError('Current ALIC issue not confirmed')
+ byname={f['name']:f for f in foods if f['category']=='vegetable'}
+ labels={'セロリ':'セロリ(セルリー)','さつまいも':'かんしょ','じゃがいも':'ばれいしょ','長ねぎ':'ねぎ'}
+ prefixes={name:labels.get(name,name)+'は' for name in byname}
+ # Include the footer as an explicit stop; never collect unrelated site text.
+ positions=[]
+ for name,prefix in prefixes.items():
+  match=re.search(r'(?<![ぁ-ゖァ-ヺ一-龥])'+re.escape(prefix),text)
+  if match:positions.append((match.start(),name,prefix))
+ positions.sort()
+ out=[]
+ url=f'https://vegetable.alic.go.jp/yasaijoho/jyukyu/{today:%y%m}_jyukyu1_2.html'
+ for index,(start,name,prefix) in enumerate(positions):
+  end=positions[index+1][0] if index+1<len(positions) else text.find('(執筆者',start)
+  if end<0:continue
+  block=text[start:end]
+  if not 40<=len(block)<=4000 or not re.search('生育|出荷|収穫|作柄',block):continue
+  out.append({'food':byname[name],'url':url,'publishedAt':None,
+   'reportKey':'alic-'+today.strftime('%Y-%m'),'sourceFamily':'alic-monthly-vegetable',
+   'sourceName':'農畜産業振興機構','sourceTitle':'野菜情報'+issue+'・首都圏の需要を中心とした見通し',
+   'observedPeriod':f'{today.year}年{today.month}月の見通し（刊行時点）',
+   'periodStart':today.replace(day=1).isoformat(),
+   'periodEnd':f'{today.year}-{today.month:02}-{__import__("calendar").monthrange(today.year,today.month)[1]}',
+   'isForecast':True,'scope':'資料に記載された主産地・首都圏向け需要',
+   'reportType':'産地の作柄・出荷見通し','excerpt':issue+'\n'+block,
+   'requireAi':True,'publicExcerpt':block[:24]+'…',
+   'evidenceSections':[{'label':'原文冒頭（全文は出典へ）','text':block[:24]+'…'}],
+   'limitations':'刊行時点の見通しで、現在の確定実績ではありません。対象産地を全国へ一般化できません。公表日の詳細は未確認です。'})
+ return out
+
+
 def regional_items(foods,today):
  items=[];errors=[]
- for name,url,parser in [('ALIC',ALIC_URL,alic_items)]:
+ for name,url,parser in [('ALIC',f'https://vegetable.alic.go.jp/yasaijoho/jyukyu/{today:%y%m}_jyukyu1_2.html',alic_month_items)]:
   try:items.extend(parser(fetch(url,timeout=25),foods,today))
   except Exception as error:errors.append(name+': '+type(error).__name__+': '+str(error)[:100])
  try:items.extend(latest_apple_items(foods,today))

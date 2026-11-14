@@ -25,7 +25,7 @@ from update_data import BASE, DATA, fetch, now_iso, normalize, save
 API = 'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent'
 MODEL = 'gemini-3.1-flash-lite'
 MAFF_DOMAIN = 'www.maff.go.jp'
-SUMMARY_VERSION = 5
+SUMMARY_VERSION = 6
 
 
 def recent_forecast_url(today, getter=fetch):
@@ -163,8 +163,11 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
     topics = list(obj['topics'])
     attempts = 0; success = 0; changed = 0; failures = 0
     blocked = False
+    attempted_foods=set()
     for item in items:
         f = item['food']; ident = f"{item.get('reportKey') or 'forecast-'+item['publishedAt']}-{f['id']}"
+        if item.get('requireAi') and not key and not (next((t for t in topics if t['id']==ident and t.get('aiGenerated')),None)):
+            continue
         fingerprint = hashlib.sha256(item['excerpt'].encode('utf-8')).hexdigest()
         old = next((t for t in topics if t['id'] == ident), None)
         if old and 'sourceFingerprint' not in old:
@@ -175,7 +178,8 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
         # run, without producing duplicate articles for the same report.
         unchanged = old and old.get('sourceFingerprint') == fingerprint
         skip_ai = unchanged and (old.get('aiGenerated') or not key or blocked or attempts >= request_limit)
-        if skip_ai and old.get('summaryVersion') == SUMMARY_VERSION:
+        metadata_same = old and all(old.get(k)==item.get(k) for k in ('sourceUpdatedAt','seasonalRecord','reportYear','sourceFamily')) and old.get('scope')==item.get('scope','資料に記載の対象地域')
+        if skip_ai and old.get('summaryVersion') == SUMMARY_VERSION and metadata_same:
             continue
         summary = old['summary'] if unchanged and old.get('aiGenerated') else (item.get('summaryExcerpt') or extract_summary(item['excerpt']))
         generated = bool(unchanged and old.get('aiGenerated'))
@@ -188,7 +192,9 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
         if item.get('preparedSummary'):
             summary = validate_summary(item['preparedSummary'], item['excerpt'])
             generated = True; provider = item['summaryProvider']
-        if not item.get('preparedSummary') and not skip_ai and key and not blocked and attempts < request_limit:
+        if not item.get('preparedSummary') and not skip_ai and key and not blocked and attempts < request_limit and f['id'] not in attempted_foods:
+            attempted_foods.add(f['id'])
+            obj['metadata'].setdefault('aiFoodLastAttemptAt',{})[f['id']]=now_iso()
             if on_attempt:on_attempt()
             attempts += 1
             try:
@@ -201,6 +207,8 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
                 print('WARN Gemini summarize', f['name'], type(exc).__name__,
                       str(exc)[:110] if not isinstance(exc,urllib.error.HTTPError) else f'HTTP {exc.code}',
                       file=sys.stderr)
+        if item.get('requireAi') and not generated:
+            continue
         new = {
             'id':ident, 'foodId':f['id'],
             'title':item.get('title') or f"{f['name']}：{item.get('observedPeriod') or '生育・出荷の公的情報'}",
@@ -215,6 +223,8 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
             'sourceFingerprint':fingerprint,
             'sourceFamily': item.get('sourceFamily'), 'isForecast': item.get('isForecast',False),
             'periodStart': item.get('periodStart'), 'periodEnd': item.get('periodEnd'),
+            'sourceUpdatedAt':item.get('sourceUpdatedAt'),'seasonalRecord':item.get('seasonalRecord'),
+            'reportYear':item.get('reportYear'),
             'summaryVersion': SUMMARY_VERSION,
             'sourceExcerpt': item.get('publicExcerpt',item['excerpt']),
             'scope': item.get('scope', '資料に記載の対象地域'),
@@ -276,7 +286,15 @@ def main():
     from regional_topics import regional_items
     regional,errors=regional_items(obj['foods'],today)
     items.extend(regional);source_errors.extend(errors)
-    if not items:raise ValueError('No validated current public source rows; previous topics retained')
+    from topic_discovery import collect,publish_monitor,load_state
+    discovered,errors=collect(obj,today,limit=min(24,max(0,int(os.getenv('MAX_DISCOVERY_ARTICLES','8')))))
+    items.extend(discovered);source_errors.extend(errors)
+    if not items and not obj['metadata'].get('topicDiscoveryLastRun',{}).get('checkedIndexes'):
+        raise ValueError('All topic sources unavailable; previous topics retained')
+    # New foods precede already-covered foods, and existing AI texts are reused.
+    covered={t['foodId'] for t in obj['topics'] if t.get('yearSpecific')}
+    last_ai=obj['metadata'].get('aiFoodLastAttemptAt',{})
+    items.sort(key=lambda item:(not item.get('requireAi',False),item['food']['id'] in covered,last_ai.get(item['food']['id'],'')))
     reserved=0
     def reserve_attempt():
         nonlocal reserved
@@ -286,6 +304,7 @@ def main():
         # already used quota on the next run.
         save(obj)
     result=merge_report(obj,items,key,args.model,limit,on_attempt=reserve_attempt)
+    publish_monitor(obj,load_state(),today)
     obj['metadata']['aiRequestBudget']={'date':today.isoformat(),'attempted':used+result['aiAttempted'],'dailyLimit':6}
     obj['metadata']['topicSourceErrorsLastRun']=source_errors
     print('SOURCE WARNINGS',json.dumps(source_errors,ensure_ascii=False))
