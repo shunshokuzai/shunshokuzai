@@ -48,6 +48,7 @@ jobs:
       - name: Verify expanded public topic sources without Gemini requests
         env:
           SOURCES_ONLY: 'true'
+          MAX_DISCOVERY_ARTICLES: '24'
         run: python -u scripts/update_topics.py --live
       - name: Backfill official five-year history without AI
         run: python -u scripts/backfill_history.py --live --limit 600

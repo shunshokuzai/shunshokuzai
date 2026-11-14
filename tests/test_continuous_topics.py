@@ -142,3 +142,9 @@ class ContinuousTopicTests(unittest.TestCase):
    self.assertEqual(result['gemini'],'not_scheduled')
    env=next(env for script,env in calls if script=='update_topics.py')
    self.assertEqual(env['SOURCES_ONLY'],'true')
+
+ def test_monthly_leek_does_not_match_inside_onion(self):
+  html='<h1>野菜情報2026年12月号</h1><p>たまねぎは北海道産の出荷が増え、12月の生育は順調とされています。産地では天候に注意して出荷を進める予定です。</p><p>（執筆者：担当者）</p>'
+  foods=[{'id':'onion','name':'たまねぎ','category':'vegetable'},{'id':'leek','name':'長ねぎ','category':'vegetable'}]
+  items=alic_month_items(html,foods,dt.date(2026,12,5))
+  self.assertEqual([i['food']['id'] for i in items],['onion'])

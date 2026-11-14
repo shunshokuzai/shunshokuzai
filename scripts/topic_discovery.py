@@ -309,7 +309,7 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
   prior=articles.get(entry['url'],{})
   url_date=re.search(r'/(20\d{2})/(\d{2})/(\d{2})/',entry['url'])
   forecast_rank=-int(''.join(url_date.groups())) if url_date and entry['sourceId']=='jafic-forecasts' else 0
-  return (0 if entry['sourceId']=='jafic-forecasts' else 1 if any(f.get('name')=='くり' and f['foodId'] in ids for f in foods) else 2,
+  return (0 if entry['sourceId']=='jafic-forecasts' else 1 if entry['sourceId']=='kochi-fruit' else 2 if any(f.get('name')=='くり' and f['foodId'] in ids for f in foods) else 3,
           -missing,prior.get('lastCheckedAt',''),forecast_rank,entry['url'])
  pending=[q for q in queue if (articles.get(q['url'],{}).get('parserVersion')!=PARSER_VERSION or articles.get(q['url'],{}).get('retryAfter','')<=date)]
  pending.sort(key=priority);attempts=0;outcomes={}

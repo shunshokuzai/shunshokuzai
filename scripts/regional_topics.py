@@ -125,7 +125,11 @@ def alic_month_items(html,foods,today):
  labels={'セロリ':'セロリ(セルリー)','さつまいも':'かんしょ','じゃがいも':'ばれいしょ','長ねぎ':'ねぎ'}
  prefixes={name:labels.get(name,name)+'は' for name in byname}
  # Include the footer as an explicit stop; never collect unrelated site text.
- positions=sorted((text.find(prefix),name,prefix) for name,prefix in prefixes.items() if text.find(prefix)>=0)
+ positions=[]
+ for name,prefix in prefixes.items():
+  match=re.search(r'(?<![ぁ-ゖァ-ヺ一-龥])'+re.escape(prefix),text)
+  if match:positions.append((match.start(),name,prefix))
+ positions.sort()
  out=[]
  url=f'https://vegetable.alic.go.jp/yasaijoho/jyukyu/{today:%y%m}_jyukyu1_2.html'
  for index,(start,name,prefix) in enumerate(positions):
