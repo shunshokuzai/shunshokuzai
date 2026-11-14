@@ -22,7 +22,7 @@ from update_data import BASE,USER_AGENT,now_iso
 CATALOG=BASE/'data/topic_catalog.json'
 STATE=BASE/'data/topic_monitor.json'
 VERSION=1
-PARSER_VERSION=2
+PARSER_VERSION=3
 
 def compact(value):
  return re.sub(r'\s+',' ',unicodedata.normalize('NFKC',str(value))).strip()
@@ -89,6 +89,9 @@ def discover_links(html,source,foods,today):
   if re.search('入札|採用|募集|研究報告|研究成果|レシピ|栽培方法',title):continue
   found[url]={'url':url,'title':title[:240],'foodIds':[f['foodId'] for f in candidates],
               'sourceId':source['id']}
+ if source['id']=='jafic-forecasts':
+  ranked=sorted(found.values(),key=lambda x:x['url'],reverse=True)
+  return ranked[:1]
  return list(found.values())[:160]
 
 def publication_date(soup,title):
@@ -115,6 +118,28 @@ def publication_date(soup,title):
    try:return dt.date(year,month,day)
    except ValueError:return None
  return None
+
+
+def chestnut_weights(soup,year):
+ """Read only the declared weight/specific-gravity table and named varieties."""
+ found={}
+ for table in soup.find_all('table'):
+  header=compact(table.get_text(' ',strip=True))
+  if '1果重' not in header or '比重' not in header:continue
+  variety=None
+  for row in table.find_all('tr'):
+   cells=[compact(c.get_text(' ',strip=True)) for c in row.find_all(['td','th'],recursive=False)]
+   if not cells:continue
+   if cells[0] in ('ぽろたん','筑波'):variety=cells[0]
+   if not variety or len(cells)<4:continue
+   label=next((c for c in cells[:2] if c in (str(year),'平年')),None)
+   if not label:continue
+   try:weight,gravity=map(float,cells[-2:])
+   except ValueError:continue
+   if 1<=weight<=100 and .5<=gravity<=2:found.setdefault(variety,{})[label]=weight
+ return [f'{name}の1果重は{values[str(year)]:g}g（資料の平年値{values["平年"]:g}g）'
+         for name,values in found.items() if str(year) in values and '平年' in values]
+
 
 def article_items(raw,entry,source,foods,today):
  if isinstance(raw,str):raw=raw.encode('utf-8')
@@ -153,7 +178,7 @@ def article_items(raw,entry,source,foods,today):
   else:
    chosen=[]
    for paragraph in paragraphs:
-    if 24<=len(paragraph)<=1600 and food in matching_foods(paragraph,foods) and re.search(r'生育|出荷|収穫|作柄|肥大|着色|水揚|漁獲|来遊|回帰|漁況|へい死',paragraph):
+    if 24<=len(paragraph)<=1600 and food in matching_foods(paragraph,foods) and re.search(r'生育|出荷|収穫|作柄|品質|肥大|着色|水揚|漁獲|来遊|回帰|漁況|へい死',paragraph):
      if re.search('レシピ|お問い合わせ|関連リンク',paragraph):continue
      chosen.append(paragraph)
    excerpt='\n'.join(dict.fromkeys(chosen))[:1200]
@@ -163,7 +188,13 @@ def article_items(raw,entry,source,foods,today):
   years=re.findall(r'20\d{2}',excerpt)
   if years and str(today.year) not in years and any(int(y)<today.year for y in years):continue
   digest=hashlib.sha256(entry['url'].encode()).hexdigest()[:12]
-  short='。'.join(excerpt.split('。')[:3]).strip('。')+'。'
+  sentences=[s for s in excerpt.split('。') if s.strip()]
+  if kochi:
+   weights=chestnut_weights(soup,today.year) if food['name']=='くり' else []
+   if weights:excerpt+='\n1果重の表より: '+'。'.join(weights)+'。'
+   selected=[s for s in sentences if '収穫' in s or '肥大' in s]+[s for s in sentences if '収穫' not in s and '肥大' not in s]
+   short='。'.join(selected[:2]+weights).strip('。')+'。'
+  else:short='。'.join(sentences[:3]).strip('。')+'。'
   if len(short)>330:short=short[:short.rfind('。',0,330)+1] or short[:160]+'…'
   items.append({'food':{'id':food['foodId'],'name':food['name']},'url':entry['url'],
    'publishedAt':published,'sourceUpdatedAt':updated,

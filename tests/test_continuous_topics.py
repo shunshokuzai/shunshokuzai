@@ -107,3 +107,11 @@ class ContinuousTopicTests(unittest.TestCase):
   self.assertEqual(items[0]['publishedAt'],'2026-09-02')
   self.assertTrue(items[0]['requireAi'])
   self.assertLessEqual(len(items[0]['publicExcerpt']),25)
+
+ def test_chestnut_weight_table_keeps_year_and_variety_separate(self):
+  from topic_discovery import chestnut_weights
+  from bs4 import BeautifulSoup
+  html='<table><tr><th>品種 年次 1果重(g) 比重</th></tr><tr><td>ぽろたん</td><td>2026</td><td>8/25</td><td>25.3</td><td>1.071</td></tr><tr><td>2025</td><td>9/3</td><td>31.7</td><td>1.049</td></tr><tr><td>平年</td><td>8/31</td><td>28.5</td><td>1.072</td></tr></table>'
+  weights=chestnut_weights(BeautifulSoup(html,'html.parser'),2026)
+  self.assertEqual(weights,['ぽろたんの1果重は25.3g（資料の平年値28.5g）'])
+  self.assertNotIn('31.7',weights[0])
