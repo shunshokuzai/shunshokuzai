@@ -62,7 +62,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/estat_daily.json data/market_history.json data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
+          git add data/topic_monitor.json data/estat_daily.json data/market_history.json data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
           if ! git diff --cached --quiet; then
             git commit -m 'data: retain validated official market history'
             git push
