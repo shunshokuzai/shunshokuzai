@@ -5,10 +5,10 @@
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
     "version": "0.10.0",
-    "lastCheckedAt": "2026-11-14T06:19:39+00:00",
+    "lastCheckedAt": "2026-11-14T06:26:31+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-14T06:20:26+00:00",
+    "updatedAt": "2026-11-14T06:26:36+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -73,15 +73,15 @@
       "topics": "ok",
       "gemini": "ok"
     },
-    "lastFishCheckedAt": "2026-11-14T06:19:44+00:00",
+    "lastFishCheckedAt": "2026-11-14T06:26:36+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
-    "lastTopicAttemptAt": "2026-11-14T06:20:26+00:00",
+    "lastTopicAttemptAt": "2026-11-14T06:27:11+00:00",
     "lastAutomaticCheckAt": "2026-11-14T02:17:58+00:00",
     "lastFishSuccessAt": "2026-11-14T02:17:58+00:00",
     "lastGeminiSuccessAt": "2026-11-14T02:17:58+00:00",
-    "topicSourceCountLastRun": 54,
-    "topicAddedLastRun": 1,
+    "topicSourceCountLastRun": 55,
+    "topicAddedLastRun": 0,
     "topicGeminiSucceededLastRun": 0,
     "topicGeminiFailedLastRun": 0,
     "lastVegetableFruitSuccessAt": "2026-11-14T02:17:58+00:00",
@@ -536,7 +536,7 @@
         }
       }
     ],
-    "longHistoryUpdatedAt": "2026-11-14T06:20:28+00:00",
+    "longHistoryUpdatedAt": "2026-11-14T06:27:14+00:00",
     "historyBackfillLastRun": {
       "attempted": 0,
       "succeeded": 0,
@@ -6134,12 +6134,15 @@
       }
     ],
     "topicDiscoveryLastRun": {
-      "checkedAt": "2026-11-14T06:20:26+00:00",
+      "checkedAt": "2026-11-14T06:27:11+00:00",
       "registeredFoods": 144,
       "checkedIndexes": 8,
       "totalIndexes": 8,
       "articleAttempts": 8,
-      "sourceItems": 7,
+      "articleOutcomes": {
+        "source_text_found": 8
+      },
+      "sourceItems": 8,
       "errors": []
     },
     "foodResearchStatus": {
@@ -6149,8 +6152,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6159,8 +6162,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6171,8 +6174,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6181,8 +6184,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6193,8 +6196,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6203,8 +6206,8 @@
         "candidateCount": 1,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6215,8 +6218,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6225,8 +6228,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6237,8 +6240,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6247,8 +6250,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6259,8 +6262,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6269,8 +6272,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6281,8 +6284,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6291,8 +6294,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6303,8 +6306,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6313,8 +6316,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -6325,8 +6328,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6335,8 +6338,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6347,8 +6350,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6357,8 +6360,8 @@
         "candidateCount": 6,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6369,8 +6372,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6379,8 +6382,8 @@
         "candidateCount": 11,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -6391,8 +6394,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6401,8 +6404,8 @@
         "candidateCount": 5,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6413,8 +6416,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6423,8 +6426,8 @@
         "candidateCount": 3,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6435,8 +6438,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6445,8 +6448,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6457,8 +6460,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6467,8 +6470,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6479,8 +6482,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6489,8 +6492,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6501,8 +6504,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6511,8 +6514,8 @@
         "candidateCount": 2,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6523,8 +6526,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6533,8 +6536,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6545,8 +6548,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6555,8 +6558,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -6567,8 +6570,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6577,8 +6580,8 @@
         "candidateCount": 1,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -6589,8 +6592,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6599,8 +6602,8 @@
         "candidateCount": 1,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6611,8 +6614,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6621,8 +6624,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6633,8 +6636,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6643,8 +6646,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6655,8 +6658,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6665,8 +6668,8 @@
         "candidateCount": 3,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -6677,8 +6680,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6687,8 +6690,8 @@
         "candidateCount": 1,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -6699,8 +6702,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6709,8 +6712,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6721,8 +6724,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6731,8 +6734,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6743,8 +6746,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6753,8 +6756,8 @@
         "candidateCount": 1,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-10-30"
@@ -6765,8 +6768,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6775,8 +6778,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6787,18 +6790,18 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": "2026-11-14T06:20:24+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-14T06:20:24+00:00",
         "indexStatus": "ok",
-        "coverage": "evidence_found",
+        "coverage": "source_pending",
         "candidateCount": 1,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6809,8 +6812,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6819,8 +6822,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6831,18 +6834,18 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
-        "lastArticleCheckedAt": null,
-        "lastArticleResult": null,
-        "lastEvidenceFoundAt": null,
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
+        "lastArticleCheckedAt": "2026-11-14T06:27:05+00:00",
+        "lastArticleResult": "source_text_found",
+        "lastEvidenceFoundAt": "2026-11-14T06:27:05+00:00",
         "indexStatus": "ok",
-        "coverage": "source_pending",
+        "coverage": "evidence_found",
         "candidateCount": 3,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6853,18 +6856,18 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
-        "lastArticleCheckedAt": "2026-11-14T06:20:26+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
+        "lastArticleCheckedAt": "2026-11-14T06:27:09+00:00",
         "lastArticleResult": "source_text_found",
-        "lastEvidenceFoundAt": "2026-11-14T06:20:26+00:00",
+        "lastEvidenceFoundAt": "2026-11-14T06:27:09+00:00",
         "indexStatus": "ok",
         "coverage": "evidence_found",
         "candidateCount": 4,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6875,8 +6878,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6885,8 +6888,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6897,8 +6900,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6907,8 +6910,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6919,18 +6922,18 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
-        "lastArticleCheckedAt": null,
-        "lastArticleResult": null,
-        "lastEvidenceFoundAt": null,
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
+        "lastArticleCheckedAt": "2026-11-14T06:27:11+00:00",
+        "lastArticleResult": "source_text_found",
+        "lastEvidenceFoundAt": "2026-11-14T06:27:11+00:00",
         "indexStatus": "ok",
-        "coverage": "source_pending",
+        "coverage": "evidence_found",
         "candidateCount": 1,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6941,8 +6944,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6951,8 +6954,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6963,8 +6966,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6973,8 +6976,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -6985,8 +6988,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -6995,8 +6998,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7007,8 +7010,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7017,8 +7020,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7029,8 +7032,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7039,8 +7042,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7051,8 +7054,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7061,8 +7064,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7073,8 +7076,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7083,8 +7086,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7095,8 +7098,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7105,8 +7108,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7117,8 +7120,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7127,8 +7130,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7139,8 +7142,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7149,8 +7152,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -7161,8 +7164,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7171,8 +7174,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7183,8 +7186,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7193,8 +7196,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7205,8 +7208,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7215,8 +7218,8 @@
         "candidateCount": 4,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7227,8 +7230,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7237,8 +7240,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7249,8 +7252,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7259,8 +7262,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7271,8 +7274,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7281,8 +7284,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7293,8 +7296,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7303,8 +7306,8 @@
         "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7316,8 +7319,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7327,8 +7330,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": "2026-11-12"
@@ -7340,8 +7343,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7351,8 +7354,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -7364,8 +7367,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7375,8 +7378,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7388,8 +7391,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7399,8 +7402,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7412,8 +7415,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7423,8 +7426,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7436,8 +7439,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7447,8 +7450,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7460,8 +7463,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7471,8 +7474,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7484,8 +7487,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7495,8 +7498,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7508,8 +7511,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7519,8 +7522,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7532,8 +7535,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7543,8 +7546,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -7556,8 +7559,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7567,8 +7570,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7580,8 +7583,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7591,8 +7594,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7604,8 +7607,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7615,8 +7618,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7628,8 +7631,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7639,8 +7642,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7652,8 +7655,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7663,8 +7666,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -7676,19 +7679,19 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": "2026-11-14T06:20:23+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-14T06:20:23+00:00",
         "indexStatus": "ok",
-        "coverage": "evidence_found",
+        "coverage": "source_pending",
         "candidateCount": 8,
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -7700,8 +7703,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7711,8 +7714,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7724,8 +7727,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7735,8 +7738,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7748,8 +7751,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7759,8 +7762,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -7772,8 +7775,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7783,8 +7786,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7796,8 +7799,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7807,8 +7810,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7820,8 +7823,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7831,8 +7834,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7844,8 +7847,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7855,8 +7858,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7868,8 +7871,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7879,8 +7882,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7892,8 +7895,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7903,8 +7906,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7916,19 +7919,19 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
-        "lastArticleCheckedAt": null,
-        "lastArticleResult": null,
-        "lastEvidenceFoundAt": null,
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
+        "lastArticleCheckedAt": "2026-11-14T06:27:10+00:00",
+        "lastArticleResult": "source_text_found",
+        "lastEvidenceFoundAt": "2026-11-14T06:27:10+00:00",
         "indexStatus": "ok",
-        "coverage": "source_pending",
+        "coverage": "evidence_found",
         "candidateCount": 6,
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7940,8 +7943,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7951,8 +7954,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
@@ -7964,8 +7967,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7975,8 +7978,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -7988,8 +7991,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7999,8 +8002,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8012,8 +8015,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8023,8 +8026,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8036,8 +8039,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8047,8 +8050,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8060,8 +8063,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8071,8 +8074,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8084,8 +8087,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8095,8 +8098,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8108,8 +8111,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8119,8 +8122,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8132,8 +8135,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8143,8 +8146,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8156,8 +8159,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8167,8 +8170,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8180,8 +8183,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8191,8 +8194,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8204,8 +8207,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8215,8 +8218,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8228,8 +8231,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8239,8 +8242,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8252,8 +8255,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8263,8 +8266,8 @@
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
-          "ja-kumamoto",
-          "ja-kumamoto-news"
+          "ja-kumamoto-news",
+          "ja-kumamoto"
         ],
         "hasCollectedYearSpecificSource": false,
         "lastSourcePublicationAt": null
@@ -8276,14 +8279,14 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
-        "lastArticleCheckedAt": null,
-        "lastArticleResult": null,
-        "lastEvidenceFoundAt": null,
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
+        "lastArticleCheckedAt": "2026-11-14T06:27:04+00:00",
+        "lastArticleResult": "source_text_found",
+        "lastEvidenceFoundAt": "2026-11-14T06:27:04+00:00",
         "indexStatus": "ok",
-        "coverage": "source_pending",
-        "candidateCount": 7,
+        "coverage": "evidence_found",
+        "candidateCount": 8,
         "checkedSourceIds": [
           "hokkaido-fisheries",
           "fra-resources",
@@ -8300,8 +8303,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8324,8 +8327,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8348,8 +8351,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": "2026-11-14T06:20:18+00:00",
         "lastArticleResult": "dedicated_forecast_parser_needed",
         "lastEvidenceFoundAt": null,
@@ -8372,8 +8375,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8396,8 +8399,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8420,8 +8423,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8444,8 +8447,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8468,8 +8471,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8492,8 +8495,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8516,8 +8519,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8540,8 +8543,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8564,8 +8567,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8588,8 +8591,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8612,8 +8615,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8636,8 +8639,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8660,8 +8663,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8684,8 +8687,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8708,8 +8711,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8732,8 +8735,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8756,8 +8759,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8780,8 +8783,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8804,8 +8807,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8828,8 +8831,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8852,8 +8855,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": "2026-11-14T06:13:22+00:00",
         "lastArticleResult": "food_specific_evidence_missing",
         "lastEvidenceFoundAt": null,
@@ -8876,8 +8879,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8900,8 +8903,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8924,8 +8927,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8948,8 +8951,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": "2026-11-14T06:13:22+00:00",
         "lastArticleResult": "current_publication_date_unconfirmed",
         "lastEvidenceFoundAt": null,
@@ -8972,8 +8975,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8996,8 +8999,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9020,8 +9023,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9044,8 +9047,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9068,8 +9071,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9092,8 +9095,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9116,8 +9119,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9140,8 +9143,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": "2026-11-14T06:13:22+00:00",
         "lastArticleResult": "current_publication_date_unconfirmed",
         "lastEvidenceFoundAt": null,
@@ -9164,8 +9167,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9188,8 +9191,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9212,8 +9215,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9236,8 +9239,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9260,8 +9263,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9284,8 +9287,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9308,8 +9311,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9332,8 +9335,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9356,8 +9359,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9380,8 +9383,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9404,8 +9407,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9428,8 +9431,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9452,8 +9455,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9476,8 +9479,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-14T06:20:17+00:00",
-        "lastIndexCheckedAt": "2026-11-14T06:20:17+00:00",
+        "lastAttemptAt": "2026-11-14T06:27:03+00:00",
+        "lastIndexCheckedAt": "2026-11-14T06:27:03+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
