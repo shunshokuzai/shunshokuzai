@@ -163,6 +163,7 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
     topics = list(obj['topics'])
     attempts = 0; success = 0; changed = 0; failures = 0
     blocked = False
+    attempted_foods=set()
     for item in items:
         f = item['food']; ident = f"{item.get('reportKey') or 'forecast-'+item['publishedAt']}-{f['id']}"
         if item.get('requireAi') and not key and not (next((t for t in topics if t['id']==ident and t.get('aiGenerated')),None)):
@@ -191,7 +192,9 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
         if item.get('preparedSummary'):
             summary = validate_summary(item['preparedSummary'], item['excerpt'])
             generated = True; provider = item['summaryProvider']
-        if not item.get('preparedSummary') and not skip_ai and key and not blocked and attempts < request_limit:
+        if not item.get('preparedSummary') and not skip_ai and key and not blocked and attempts < request_limit and f['id'] not in attempted_foods:
+            attempted_foods.add(f['id'])
+            obj['metadata'].setdefault('aiFoodLastAttemptAt',{})[f['id']]=now_iso()
             if on_attempt:on_attempt()
             attempts += 1
             try:
@@ -290,7 +293,8 @@ def main():
         raise ValueError('All topic sources unavailable; previous topics retained')
     # New foods precede already-covered foods, and existing AI texts are reused.
     covered={t['foodId'] for t in obj['topics'] if t.get('yearSpecific')}
-    items.sort(key=lambda item:item['food']['id'] in covered)
+    last_ai=obj['metadata'].get('aiFoodLastAttemptAt',{})
+    items.sort(key=lambda item:(not item.get('requireAi',False),item['food']['id'] in covered,last_ai.get(item['food']['id'],'')))
     reserved=0
     def reserve_attempt():
         nonlocal reserved

@@ -115,3 +115,30 @@ class ContinuousTopicTests(unittest.TestCase):
   weights=chestnut_weights(BeautifulSoup(html,'html.parser'),2026)
   self.assertEqual(weights,['ぽろたんの1果重は25.3g（資料の平年値28.5g）'])
   self.assertNotIn('31.7',weights[0])
+
+ def test_ai_budget_is_not_spent_twice_on_the_same_food_in_one_run(self):
+  obj={'topics':[],'metadata':{}}
+  base={'food':{'id':'chestnut','name':'くり'},'publishedAt':'2026-11-01','excerpt':'栗の出荷が始まり、品質は例年並みと報告されています。産地の出荷は今後も続く見通しです。','requireAi':True}
+  items=[{**base,'url':'https://official.test/one','reportKey':'one'},{**base,'url':'https://official.test/two','reportKey':'two'}]
+  with patch('update_topics.ai_summarize',return_value='栗の品質は例年並みと報告されており、産地では出荷が始まっています。今後も出荷が続く見通しです。') as mocked:
+   result=merge_report(obj,items,'test','test',6)
+  self.assertEqual(result['aiAttempted'],1)
+  self.assertEqual(mocked.call_count,1)
+  self.assertEqual(len(obj['topics']),1)
+
+ def test_discovery_runs_without_user_action_on_a_non_ai_day(self):
+  import run_refresh
+  with tempfile.TemporaryDirectory() as folder:
+   path=Path(folder)/'seed.json'
+   obj={'foods':[],'prices':[],'topics':[],'metadata':{}}
+   path.write_text(json.dumps(obj),encoding='utf-8')
+   calls=[]
+   def step(script,env=None):
+    calls.append((script,env))
+    return 'ok'
+   with patch.object(run_refresh,'DATA',path),patch.object(run_refresh,'run_step',side_effect=step),patch.object(run_refresh,'save'):
+    result=run_refresh.run_pipeline(today=dt.datetime(2026,11,16,10,23),ai_key='test-key')
+   self.assertEqual(result['topics'],'ok')
+   self.assertEqual(result['gemini'],'not_scheduled')
+   env=next(env for script,env in calls if script=='update_topics.py')
+   self.assertEqual(env['SOURCES_ONLY'],'true')

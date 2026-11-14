@@ -2,7 +2,7 @@ name: Update food prices, Gemini topics, and publish site
 on:
   push:
     branches: [main]
-    paths: ['scripts/**', 'tests/**', 'app.js', 'styles.css', 'index.html', 'requirements.txt', '.github/workflows/update.yml']
+    paths: ['data/topic_catalog.json', 'scripts/**', 'tests/**', 'app.js', 'styles.css', 'index.html', 'requirements.txt', '.github/workflows/update.yml']
   schedule:
     # 10:23 JST daily (best effort, not guaranteed)
     - cron: '23 1 * * *'

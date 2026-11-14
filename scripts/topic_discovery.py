@@ -91,7 +91,9 @@ def discover_links(html,source,foods,today):
               'sourceId':source['id']}
  if source['id']=='jafic-forecasts':
   ranked=sorted(found.values(),key=lambda x:x['url'],reverse=True)
-  return ranked[:1]
+  saury=[x for x in ranked if 'サンマ中短期漁況予報' in x['title']]
+  others=[x for x in ranked if 'サンマ中短期漁況予報' not in x['title']]
+  return saury[:1]+others[:8]
  return list(found.values())[:160]
 
 def publication_date(soup,title):
@@ -245,7 +247,7 @@ def jafic_items(raw,entry,source,foods,today,getter=read_public):
   'sourceName':source['name'],'sourceTitle':title,'title':'サンマ：道東・三陸・常磐の中短期漁況予報',
   'observedPeriod':f'{year}年{month}月{ten}旬～{eyear}年{emonth}月{eten}旬の予報',
   'periodStart':start.isoformat(),'periodEnd':end.isoformat(),'isForecast':True,
-  'scope':source['scope'],'reportType':'海域別の来遊量予報',
+  'scope':'道東・三陸・常磐海域（対象漁業・魚群の詳細はPDF参照）','reportType':'海域別の来遊量予報',
   'excerpt':f'公表日:{date.year}年{date.month}月{date.day}日。予測期間:{start.isoformat()}～{end.isoformat()}。'+block,
   'requireAi':True,'publicExcerpt':block[:24]+'…',
   'evidenceSections':[{'label':'予報冒頭の一部（全文はPDFへ）','text':block[:24]+'…'}],
@@ -307,7 +309,7 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
   return (0 if entry['sourceId']=='jafic-forecasts' else 1 if any(f.get('name')=='くり' and f['foodId'] in ids for f in foods) else 2,
           -missing,prior.get('lastCheckedAt',''),forecast_rank,entry['url'])
  pending=[q for q in queue if (articles.get(q['url'],{}).get('parserVersion')!=PARSER_VERSION or articles.get(q['url'],{}).get('retryAfter','')<=date)]
- pending.sort(key=priority);attempts=0
+ pending.sort(key=priority);attempts=0;outcomes={}
  for entry in pending:
   if attempts>=limit or time.monotonic()-started>=seconds:break
   source=sources[entry['sourceId']];choices=[f for f in foods if source['id'] in f['sourceIds']]
@@ -316,6 +318,7 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
    raw=getter(entry['url'],source)
    found,result=(jafic_items(raw,entry,source,choices,today,getter) if source['id']=='jafic-forecasts' else article_items(raw,entry,source,choices,today))
    items.extend(found)
+   outcomes[result]=outcomes.get(result,0)+1
    prior.update({'parserVersion':PARSER_VERSION,'lastCheckedAt':now_iso(),'status':result,'fingerprint':hashlib.sha256(raw).hexdigest(),
     'foodIds':list(set(entry['foodIds']+[i['food']['id'] for i in found])),
     'retryAfter':(today+dt.timedelta(days=3 if found else 7)).isoformat()})
@@ -328,7 +331,7 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
   save_state(state,path)
  obj['metadata']['topicDiscoverySources']=[{'id':s['id'],'name':s['name'],'url':source_url(s,today)} for s in sources.values()]
  state['lastRun']={'checkedAt':now_iso(),'registeredFoods':len(foods),'checkedIndexes':len(checked),
-  'totalIndexes':len(sources),'articleAttempts':attempts,'sourceItems':len(items),'errors':errors}
+  'totalIndexes':len(sources),'articleAttempts':attempts,'articleOutcomes':outcomes,'sourceItems':len(items),'errors':errors}
  save_state(state,path);obj['metadata']['topicDiscoveryLastRun']=state['lastRun']
  publish_monitor(obj,state,today)
  print('CONTINUOUS TOPIC DISCOVERY',json.dumps(state['lastRun'],ensure_ascii=False),flush=True)

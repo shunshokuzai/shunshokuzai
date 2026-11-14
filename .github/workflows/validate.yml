@@ -2,7 +2,7 @@ name: Validate code and official price sources
 on:
   push:
     branches: ['codex/**']
-    paths: ['scripts/**', 'tests/**', 'app.js', 'requirements.txt', '.github/workflows/validate.yml']
+    paths: ['data/topic_catalog.json', 'scripts/**', 'tests/**', 'app.js', 'requirements.txt', '.github/workflows/validate.yml']
   pull_request:
     branches: [main]
 permissions:
