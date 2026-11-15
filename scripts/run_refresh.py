@@ -28,6 +28,7 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
     status={}
     status['vegetableFruit']=run_step('update_data.py')
     status['fish']=run_step('update_fish.py')
+    status['retail']=run_step('retail_prices.py')
     status['history']=run_step('backfill_history.py')
     daily_history=run_step('estat_history.py')
     if daily_history=='error':status['history']='error'
@@ -42,7 +43,7 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
                       saved.get('topicGeminiStateLastRun','error') if status['topics']=='ok' else 'error')
     obj=json.loads(DATA.read_text(encoding='utf-8'))
     meta=obj['metadata']
-    meta['version']='0.11.0'
+    meta['version']='0.12.0'
     meta['lastAutomaticCheckAt']=now_iso()
     meta['autoRefreshStatus']=status
     meta['autoRefreshConfigured']=True

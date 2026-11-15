@@ -23,8 +23,8 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
       - run: python scripts/preflight.py
-      - run: node --check app.js && node --check search.js
-      - run: node --test tests/test_ui.cjs
+      - run: node --check app.js && node --check search.js && node --check shopping.js
+      - run: node --test tests/test_ui.cjs tests/test_shopping.cjs
   official-prices:
     if: github.event_name == 'push'
     needs: tests
@@ -45,6 +45,8 @@ jobs:
         run: python -u scripts/audit_sources.py
       - name: Verify official data without Gemini requests
         run: python -u scripts/verify_prices.py
+      - name: Verify official retail observations and source specifications
+        run: python -u scripts/retail_prices.py --live
       - name: Verify expanded public topic sources without Gemini requests
         env:
           SOURCES_ONLY: 'true'
@@ -63,7 +65,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/topic_monitor.json data/estat_daily.json data/market_history.json data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
+          git add data/retail_prices.json data/topic_monitor.json data/estat_daily.json data/market_history.json data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
           if ! git diff --cached --quiet; then
             git commit -m 'data: retain validated official market history'
             git push
