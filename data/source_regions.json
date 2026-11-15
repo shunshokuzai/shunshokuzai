@@ -276,6 +276,580 @@
         }
       ],
       "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "ほうれんそう": {
+      "basis": "2025年産・ほうれんそうの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "群馬",
+          "share": 12.1,
+          "harvestTonnes": 23000
+        },
+        {
+          "name": "茨城",
+          "share": 10.0,
+          "harvestTonnes": 18900
+        },
+        {
+          "name": "千葉",
+          "share": 9.5,
+          "harvestTonnes": 18000
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "かぶ": {
+      "basis": "2025年産・かぶの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "千葉",
+          "share": 26.7,
+          "harvestTonnes": 24200
+        },
+        {
+          "name": "埼玉",
+          "share": 15.5,
+          "harvestTonnes": 14000
+        },
+        {
+          "name": "青森",
+          "share": 6.0,
+          "harvestTonnes": 5480
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "ごぼう": {
+      "basis": "2025年産・ごぼうの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "青森",
+          "share": 42.2,
+          "harvestTonnes": 46000
+        },
+        {
+          "name": "茨城",
+          "share": 11.8,
+          "harvestTonnes": 12900
+        },
+        {
+          "name": "北海道",
+          "share": 8.9,
+          "harvestTonnes": 9700
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "れんこん": {
+      "basis": "2025年産・れんこんの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "茨城",
+          "share": 49.3,
+          "harvestTonnes": 26200
+        },
+        {
+          "name": "佐賀",
+          "share": 10.7,
+          "harvestTonnes": 5700
+        },
+        {
+          "name": "徳島",
+          "share": 8.5,
+          "harvestTonnes": 4520
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "ながいも": {
+      "basis": "2025年産・ながいもの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "北海道",
+          "share": 56.4,
+          "harvestTonnes": 70100
+        },
+        {
+          "name": "青森",
+          "share": 30.1,
+          "harvestTonnes": 37500
+        },
+        {
+          "name": "長野",
+          "share": 5.0,
+          "harvestTonnes": 6280
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "小松菜": {
+      "basis": "2025年産・こまつなの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "茨城",
+          "share": 25.4,
+          "harvestTonnes": 30700
+        },
+        {
+          "name": "埼玉",
+          "share": 10.5,
+          "harvestTonnes": 12700
+        },
+        {
+          "name": "福岡",
+          "share": 10.2,
+          "harvestTonnes": 12300
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "チンゲンサイ": {
+      "basis": "2025年産・ちんげんさいの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "茨城",
+          "share": 28.9,
+          "harvestTonnes": 10600
+        },
+        {
+          "name": "静岡",
+          "share": 18.1,
+          "harvestTonnes": 6650
+        },
+        {
+          "name": "群馬",
+          "share": 6.6,
+          "harvestTonnes": 2430
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "ふき": {
+      "basis": "2025年産・ふきの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "愛知",
+          "share": 43.2,
+          "harvestTonnes": 2340
+        },
+        {
+          "name": "群馬",
+          "share": 14.3,
+          "harvestTonnes": 775
+        },
+        {
+          "name": "大阪",
+          "share": 12.3,
+          "harvestTonnes": 668
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "春菊": {
+      "basis": "2025年産・しゅんぎくの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "大阪",
+          "share": 12.0,
+          "harvestTonnes": 2710
+        },
+        {
+          "name": "茨城",
+          "share": 10.0,
+          "harvestTonnes": 2260
+        },
+        {
+          "name": "千葉",
+          "share": 9.7,
+          "harvestTonnes": 2200
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "水菜": {
+      "basis": "2025年産・みずなの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "茨城",
+          "share": 49.0,
+          "harvestTonnes": 16400
+        },
+        {
+          "name": "福岡",
+          "share": 10.4,
+          "harvestTonnes": 3480
+        },
+        {
+          "name": "京都",
+          "share": 5.8,
+          "harvestTonnes": 1930
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "セロリ": {
+      "basis": "2025年産・セルリーの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "長野",
+          "share": 43.1,
+          "harvestTonnes": 12200
+        },
+        {
+          "name": "静岡",
+          "share": 18.8,
+          "harvestTonnes": 5330
+        },
+        {
+          "name": "福岡",
+          "share": 12.4,
+          "harvestTonnes": 3520
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "アスパラガス": {
+      "basis": "2025年産・アスパラガスの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "北海道",
+          "share": 13.6,
+          "harvestTonnes": 2820
+        },
+        {
+          "name": "佐賀",
+          "share": 9.1,
+          "harvestTonnes": 1890
+        },
+        {
+          "name": "熊本",
+          "share": 8.5,
+          "harvestTonnes": 1760
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "カリフラワー": {
+      "basis": "2025年産・カリフラワーの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "長野",
+          "share": 12.7,
+          "harvestTonnes": 2380
+        },
+        {
+          "name": "熊本",
+          "share": 12.3,
+          "harvestTonnes": 2310
+        },
+        {
+          "name": "茨城",
+          "share": 11.4,
+          "harvestTonnes": 2140
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "ブロッコリー": {
+      "basis": "2025年産・ブロッコリーの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "北海道",
+          "share": 16.6,
+          "harvestTonnes": 28400
+        },
+        {
+          "name": "埼玉",
+          "share": 8.5,
+          "harvestTonnes": 14600
+        },
+        {
+          "name": "愛知",
+          "share": 8.4,
+          "harvestTonnes": 14400
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "にら": {
+      "basis": "2025年産・にらの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "高知",
+          "share": 29.8,
+          "harvestTonnes": 15600
+        },
+        {
+          "name": "栃木",
+          "share": 14.6,
+          "harvestTonnes": 7610
+        },
+        {
+          "name": "茨城",
+          "share": 13.1,
+          "harvestTonnes": 6840
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "にんにく": {
+      "basis": "2025年産・にんにくの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "青森",
+          "share": 62.0,
+          "harvestTonnes": 9360
+        },
+        {
+          "name": "北海道",
+          "share": 5.4,
+          "harvestTonnes": 813
+        },
+        {
+          "name": "香川",
+          "share": 3.4,
+          "harvestTonnes": 513
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "かぼちゃ": {
+      "basis": "2025年産・かぼちゃの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "北海道",
+          "share": 50.9,
+          "harvestTonnes": 84300
+        },
+        {
+          "name": "長野",
+          "share": 4.4,
+          "harvestTonnes": 7320
+        },
+        {
+          "name": "群馬",
+          "share": 3.8,
+          "harvestTonnes": 6340
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "とうもろこし": {
+      "basis": "2025年産・スイートコーンの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "北海道",
+          "share": 38.9,
+          "harvestTonnes": 78700
+        },
+        {
+          "name": "千葉",
+          "share": 7.5,
+          "harvestTonnes": 15100
+        },
+        {
+          "name": "茨城",
+          "share": 7.3,
+          "harvestTonnes": 14700
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "さやいんげん": {
+      "basis": "2025年産・さやいんげんの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "千葉",
+          "share": 16.8,
+          "harvestTonnes": 4440
+        },
+        {
+          "name": "福島",
+          "share": 8.8,
+          "harvestTonnes": 2310
+        },
+        {
+          "name": "北海道",
+          "share": 8.1,
+          "harvestTonnes": 2130
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "さやえんどう": {
+      "basis": "2025年産・さやえんどうの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "鹿児島",
+          "share": 26.5,
+          "harvestTonnes": 4530
+        },
+        {
+          "name": "愛知",
+          "share": 8.7,
+          "harvestTonnes": 1490
+        },
+        {
+          "name": "福島",
+          "share": 5.9,
+          "harvestTonnes": 1010
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "そらまめ": {
+      "basis": "2025年産・そらまめの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "鹿児島",
+          "share": 20.6,
+          "harvestTonnes": 2240
+        },
+        {
+          "name": "千葉",
+          "share": 15.8,
+          "harvestTonnes": 1720
+        },
+        {
+          "name": "茨城",
+          "share": 11.9,
+          "harvestTonnes": 1300
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "えだまめ": {
+      "basis": "2025年産・えだまめの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "北海道",
+          "share": 12.0,
+          "harvestTonnes": 6930
+        },
+        {
+          "name": "群馬",
+          "share": 11.6,
+          "harvestTonnes": 6680
+        },
+        {
+          "name": "千葉",
+          "share": 10.3,
+          "harvestTonnes": 5980
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "しょうが": {
+      "basis": "2025年産・しょうがの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "高知",
+          "share": 45.0,
+          "harvestTonnes": 18100
+        },
+        {
+          "name": "千葉",
+          "share": 12.0,
+          "harvestTonnes": 4810
+        },
+        {
+          "name": "熊本",
+          "share": 7.8,
+          "harvestTonnes": 3150
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "いちご": {
+      "basis": "2025年産・いちごの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "栃木",
+          "share": 18.0,
+          "harvestTonnes": 28800
+        },
+        {
+          "name": "福岡",
+          "share": 9.7,
+          "harvestTonnes": 15500
+        },
+        {
+          "name": "熊本",
+          "share": 6.7,
+          "harvestTonnes": 10700
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "メロン": {
+      "basis": "2025年産・メロンの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "茨城",
+          "share": 25.8,
+          "harvestTonnes": 34100
+        },
+        {
+          "name": "熊本",
+          "share": 15.0,
+          "harvestTonnes": 19900
+        },
+        {
+          "name": "北海道",
+          "share": 14.7,
+          "harvestTonnes": 19400
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "すいか": {
+      "basis": "2025年産・すいかの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "熊本",
+          "share": 13.3,
+          "harvestTonnes": 39400
+        },
+        {
+          "name": "千葉",
+          "share": 12.3,
+          "harvestTonnes": 36500
+        },
+        {
+          "name": "山形",
+          "share": 10.3,
+          "harvestTonnes": 30500
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
     }
-  }
+  },
+  "vegetableCheckedAt": "2026-11-15",
+  "vegetableSourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
 }
