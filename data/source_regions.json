@@ -1,0 +1,281 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-11-15",
+  "profiles": {
+    "みかん": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "和歌山"
+        },
+        {
+          "name": "静岡"
+        },
+        {
+          "name": "愛媛"
+        },
+        {
+          "name": "熊本"
+        },
+        {
+          "name": "佐賀"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "りんご": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "青森"
+        },
+        {
+          "name": "長野"
+        },
+        {
+          "name": "岩手"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "なし": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "千葉"
+        },
+        {
+          "name": "茨城"
+        },
+        {
+          "name": "福島"
+        },
+        {
+          "name": "栃木"
+        },
+        {
+          "name": "長野"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "洋なし": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "山形"
+        },
+        {
+          "name": "青森"
+        },
+        {
+          "name": "新潟"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "かき": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "和歌山"
+        },
+        {
+          "name": "奈良"
+        },
+        {
+          "name": "福岡"
+        },
+        {
+          "name": "岐阜"
+        },
+        {
+          "name": "新潟"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "びわ": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "長崎"
+        },
+        {
+          "name": "千葉"
+        },
+        {
+          "name": "鹿児島"
+        },
+        {
+          "name": "香川"
+        },
+        {
+          "name": "愛媛"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "もも": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "山梨"
+        },
+        {
+          "name": "福島"
+        },
+        {
+          "name": "長野"
+        },
+        {
+          "name": "山形"
+        },
+        {
+          "name": "和歌山"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "すもも": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "山梨"
+        },
+        {
+          "name": "長野"
+        },
+        {
+          "name": "山形"
+        },
+        {
+          "name": "和歌山"
+        },
+        {
+          "name": "青森"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "さくらんぼ": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "山形"
+        },
+        {
+          "name": "北海道"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "うめ": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "和歌山"
+        },
+        {
+          "name": "群馬"
+        },
+        {
+          "name": "山梨"
+        },
+        {
+          "name": "宮城"
+        },
+        {
+          "name": "神奈川"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "ぶどう": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "山梨"
+        },
+        {
+          "name": "長野"
+        },
+        {
+          "name": "岡山"
+        },
+        {
+          "name": "山形"
+        },
+        {
+          "name": "福岡"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "くり": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "茨城"
+        },
+        {
+          "name": "熊本"
+        },
+        {
+          "name": "愛媛"
+        },
+        {
+          "name": "岐阜"
+        },
+        {
+          "name": "栃木"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "パイナップル": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "沖縄"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    },
+    "キウイフルーツ": {
+      "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
+      "year": 2024,
+      "regions": [
+        {
+          "name": "愛媛"
+        },
+        {
+          "name": "和歌山"
+        },
+        {
+          "name": "福岡"
+        },
+        {
+          "name": "神奈川"
+        },
+        {
+          "name": "群馬"
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925"
+    }
+  }
+}

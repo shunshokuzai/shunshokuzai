@@ -16,7 +16,8 @@
       "include": "/info/dtl.php",
       "terms": [
         "生育調査"
-      ]
+      ],
+      "region": "高知"
     },
     {
       "id": "kochi-agriculture",
@@ -37,7 +38,8 @@
         "収穫",
         "肥大",
         "普及活動情勢"
-      ]
+      ],
+      "region": "高知"
     },
     {
       "id": "ja-kumamoto",
@@ -58,7 +60,8 @@
         "生育",
         "作柄",
         "品質"
-      ]
+      ],
+      "region": "熊本"
     },
     {
       "id": "ja-kumamoto-news",
@@ -79,7 +82,8 @@
         "生育",
         "作柄",
         "品質"
-      ]
+      ],
+      "region": "熊本"
     },
     {
       "id": "iwate-fisheries",
@@ -100,7 +104,8 @@
         "回帰",
         "養殖",
         "資源調査"
-      ]
+      ],
+      "region": "岩手"
     },
     {
       "id": "hokkaido-fisheries",
@@ -121,7 +126,8 @@
         "回帰",
         "ホタテガイ情報",
         "資源調査"
-      ]
+      ],
+      "region": "北海道"
     },
     {
       "id": "fra-resources",
@@ -142,7 +148,8 @@
         "回帰",
         "養殖",
         "漁獲"
-      ]
+      ],
+      "region": "海域"
     },
     {
       "id": "jafic-forecasts",
@@ -160,7 +167,317 @@
         "漁況予報",
         "来遊",
         "漁海況"
-      ]
+      ],
+      "region": "海域"
+    },
+    {
+      "id": "alic-regions",
+      "name": "農畜産業振興機構・ベジ探（主要産地の作柄調査）",
+      "url": "https://vegetan.alic.go.jp/trend/y2026.html",
+      "parser": "alic",
+      "hosts": [
+        "vegetan.alic.go.jp"
+      ],
+      "include": "/trend/",
+      "region": "各主要産地",
+      "foodNames": [
+        "キャベツ",
+        "きゅうり",
+        "さといも",
+        "だいこん",
+        "たまねぎ",
+        "トマト",
+        "なす",
+        "にんじん",
+        "長ねぎ",
+        "はくさい",
+        "じゃがいも",
+        "ピーマン",
+        "ほうれんそう",
+        "レタス",
+        "ブロッコリー"
+      ],
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "terms": [
+        "生育",
+        "作柄",
+        "農業",
+        "出荷",
+        "収穫",
+        "肥大",
+        "熟度",
+        "果樹"
+      ],
+      "scope": "各主要産地・資料に記載の調査産地、試験樹"
+    },
+    {
+      "id": "nagano-fruit",
+      "name": "長野県果樹試験場・定例調査",
+      "url": "https://www.pref.nagano.lg.jp/kajushiken/chosa/teirei/index.html",
+      "parser": "nagano",
+      "hosts": [
+        "www.pref.nagano.lg.jp"
+      ],
+      "include": "/kajushiken/",
+      "region": "長野",
+      "foodNames": [
+        "りんご",
+        "もも",
+        "ぶどう",
+        "巨峰",
+        "シャインマスカット"
+      ],
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "terms": [
+        "生育",
+        "作柄",
+        "農業",
+        "出荷",
+        "収穫",
+        "肥大",
+        "熟度",
+        "果樹"
+      ],
+      "scope": "長野・資料に記載の調査産地、試験樹"
+    },
+    {
+      "id": "yamanashi-fruit",
+      "name": "山梨県果樹試験場・生育調査",
+      "url": "https://www.pref.yamanashi.jp/kajushiken/kajyuseiiku.html",
+      "parser": "yamanashi",
+      "hosts": [
+        "www.pref.yamanashi.jp"
+      ],
+      "include": "/kajushiken/",
+      "region": "山梨",
+      "foodNames": [
+        "もも",
+        "すもも",
+        "さくらんぼ",
+        "ぶどう",
+        "巨峰",
+        "シャインマスカット"
+      ],
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "terms": [
+        "生育",
+        "作柄",
+        "農業",
+        "出荷",
+        "収穫",
+        "肥大",
+        "熟度",
+        "果樹"
+      ],
+      "scope": "山梨・資料に記載の調査産地、試験樹"
+    },
+    {
+      "id": "wakayama-citrus",
+      "name": "和歌山県果樹試験場・カンキツ生育概況",
+      "url": "https://www.pref.wakayama.lg.jp/prefg/070100/070109/gaiyou/002/gaikyo/gaikyo.html",
+      "parser": "wakayama",
+      "hosts": [
+        "www.pref.wakayama.lg.jp"
+      ],
+      "include": "/prefg/",
+      "region": "和歌山",
+      "foodNames": [
+        "みかん"
+      ],
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "terms": [
+        "生育",
+        "作柄",
+        "農業",
+        "出荷",
+        "収穫",
+        "肥大",
+        "熟度",
+        "果樹"
+      ],
+      "scope": "和歌山・資料に記載の調査産地、試験樹"
+    },
+    {
+      "id": "fukushima-agriculture",
+      "name": "福島県・農業技術情報",
+      "url": "https://www.pref.fukushima.lg.jp/sec/36021a/nogyo-nousin-gijyutu03.html",
+      "hosts": [
+        "www.pref.fukushima.lg.jp"
+      ],
+      "include": "/uploaded/attachment/",
+      "region": "福島",
+      "foodNames": [
+        "りんご",
+        "なし",
+        "もも",
+        "すもも",
+        "ぶどう",
+        "きゅうり",
+        "トマト"
+      ],
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "terms": [
+        "生育",
+        "作柄",
+        "農業",
+        "出荷",
+        "収穫",
+        "肥大",
+        "熟度",
+        "果樹"
+      ],
+      "scope": "福島・資料に記載の調査産地、試験樹"
+    },
+    {
+      "id": "ehime-agriculture",
+      "name": "愛媛県・今月の天候と農作業",
+      "url": "https://www.pref.ehime.jp/page/11505.html",
+      "hosts": [
+        "www.pref.ehime.jp"
+      ],
+      "include": "/uploaded/",
+      "region": "愛媛",
+      "foodNames": [
+        "みかん",
+        "いよかん",
+        "デコポン",
+        "キウイフルーツ",
+        "くり",
+        "さといも",
+        "たまねぎ"
+      ],
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "terms": [
+        "生育",
+        "作柄",
+        "農業",
+        "出荷",
+        "収穫",
+        "肥大",
+        "熟度",
+        "果樹"
+      ],
+      "scope": "愛媛・資料に記載の調査産地、試験樹"
+    },
+    {
+      "id": "ibaraki-fruit",
+      "name": "茨城県・果樹リアルタイム情報",
+      "url": "https://www.pref.ibaraki.jp/nourinsuisan/hokunourin/miyanofu/keiei/real-time/kajyu.html",
+      "hosts": [
+        "www.pref.ibaraki.jp"
+      ],
+      "include": "/nourinsuisan/",
+      "region": "茨城",
+      "foodNames": [
+        "くり",
+        "なし",
+        "りんご",
+        "もも",
+        "ぶどう"
+      ],
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "terms": [
+        "生育",
+        "作柄",
+        "農業",
+        "出荷",
+        "収穫",
+        "肥大",
+        "熟度",
+        "果樹"
+      ],
+      "scope": "茨城・資料に記載の調査産地、試験樹"
+    },
+    {
+      "id": "chiba-agriculture",
+      "name": "千葉県・生産振興課の新着情報",
+      "url": "https://www.pref.chiba.lg.jp/seisan/shinchaku.html",
+      "hosts": [
+        "www.pref.chiba.lg.jp"
+      ],
+      "include": "/seisan/",
+      "region": "千葉",
+      "foodNames": [
+        "だいこん",
+        "にんじん",
+        "キャベツ",
+        "長ねぎ",
+        "レタス",
+        "なし",
+        "さつまいも"
+      ],
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "terms": [
+        "生育",
+        "作柄",
+        "農業",
+        "出荷",
+        "収穫",
+        "肥大",
+        "熟度",
+        "果樹"
+      ],
+      "scope": "千葉・資料に記載の調査産地、試験樹"
+    },
+    {
+      "id": "gunma-agriculture",
+      "name": "群馬県・農業農村の動き",
+      "url": "https://www.pref.gunma.jp/site/houdou/",
+      "hosts": [
+        "www.pref.gunma.jp"
+      ],
+      "include": "/site/houdou/",
+      "region": "群馬",
+      "foodNames": [
+        "キャベツ",
+        "きゅうり",
+        "ほうれんそう",
+        "なす",
+        "トマト",
+        "えだまめ",
+        "長ねぎ",
+        "レタス",
+        "いちご"
+      ],
+      "categories": [
+        "vegetable",
+        "fruit"
+      ],
+      "terms": [
+        "生育",
+        "作柄",
+        "農業",
+        "出荷",
+        "収穫",
+        "肥大",
+        "熟度",
+        "果樹"
+      ],
+      "scope": "群馬・資料に記載の調査産地、試験樹"
     }
   ],
   "foods": [
@@ -174,7 +491,10 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions",
+        "chiba-agriculture",
+        "gunma-agriculture"
       ]
     },
     {
@@ -188,7 +508,8 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions"
       ]
     },
     {
@@ -202,7 +523,9 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions",
+        "chiba-agriculture"
       ]
     },
     {
@@ -216,7 +539,9 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions",
+        "chiba-agriculture"
       ]
     },
     {
@@ -229,7 +554,9 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions",
+        "gunma-agriculture"
       ]
     },
     {
@@ -257,7 +584,8 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions"
       ]
     },
     {
@@ -283,7 +611,10 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions",
+        "chiba-agriculture",
+        "gunma-agriculture"
       ]
     },
     {
@@ -296,7 +627,10 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions",
+        "fukushima-agriculture",
+        "gunma-agriculture"
       ]
     },
     {
@@ -322,7 +656,10 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions",
+        "fukushima-agriculture",
+        "gunma-agriculture"
       ]
     },
     {
@@ -335,7 +672,9 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions",
+        "gunma-agriculture"
       ]
     },
     {
@@ -348,7 +687,8 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions"
       ]
     },
     {
@@ -429,7 +769,8 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "chiba-agriculture"
       ]
     },
     {
@@ -445,7 +786,8 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions"
       ]
     },
     {
@@ -458,7 +800,9 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions",
+        "ehime-agriculture"
       ]
     },
     {
@@ -525,7 +869,9 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions",
+        "ehime-agriculture"
       ]
     },
     {
@@ -541,7 +887,10 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "alic-regions",
+        "chiba-agriculture",
+        "gunma-agriculture"
       ]
     },
     {
@@ -661,7 +1010,8 @@
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "gunma-agriculture"
       ]
     },
     {
@@ -895,7 +1245,10 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "nagano-fruit",
+        "fukushima-agriculture",
+        "ibaraki-fruit"
       ]
     },
     {
@@ -914,7 +1267,9 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "wakayama-citrus",
+        "ehime-agriculture"
       ]
     },
     {
@@ -928,7 +1283,8 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "ehime-agriculture"
       ]
     },
     {
@@ -944,7 +1300,8 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "ehime-agriculture"
       ]
     },
     {
@@ -1050,7 +1407,11 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "nagano-fruit",
+        "yamanashi-fruit",
+        "fukushima-agriculture",
+        "ibaraki-fruit"
       ]
     },
     {
@@ -1064,7 +1425,9 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "nagano-fruit",
+        "yamanashi-fruit"
       ]
     },
     {
@@ -1078,7 +1441,9 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "nagano-fruit",
+        "yamanashi-fruit"
       ]
     },
     {
@@ -1097,7 +1462,10 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "fukushima-agriculture",
+        "ibaraki-fruit",
+        "chiba-agriculture"
       ]
     },
     {
@@ -1130,7 +1498,9 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "ehime-agriculture",
+        "ibaraki-fruit"
       ]
     },
     {
@@ -1158,7 +1528,8 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "ehime-agriculture"
       ]
     },
     {
@@ -1172,7 +1543,8 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "gunma-agriculture"
       ]
     },
     {
@@ -1186,7 +1558,11 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "nagano-fruit",
+        "yamanashi-fruit",
+        "fukushima-agriculture",
+        "ibaraki-fruit"
       ]
     },
     {
@@ -1200,7 +1576,9 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "yamanashi-fruit",
+        "fukushima-agriculture"
       ]
     },
     {
@@ -1214,7 +1592,8 @@
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
-        "ja-kumamoto-news"
+        "ja-kumamoto-news",
+        "yamanashi-fruit"
       ]
     },
     {

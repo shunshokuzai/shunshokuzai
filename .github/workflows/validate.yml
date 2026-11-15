@@ -2,7 +2,7 @@ name: Validate code and official price sources
 on:
   push:
     branches: ['codex/**']
-    paths: ['data/topic_catalog.json', 'scripts/**', 'tests/**', 'app.js', 'requirements.txt', '.github/workflows/validate.yml']
+    paths: ['data/source_regions.json', 'data/recipes.json', 'shopping.js', 'data/topic_catalog.json', 'scripts/**', 'tests/**', 'app.js', 'requirements.txt', '.github/workflows/validate.yml']
   pull_request:
     branches: [main]
 permissions:
@@ -65,7 +65,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/retail_prices.json data/topic_monitor.json data/estat_daily.json data/market_history.json data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
+          git add data/source_regions.json data/retail_prices.json data/topic_monitor.json data/estat_daily.json data/market_history.json data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
           if ! git diff --cached --quiet; then
             git commit -m 'data: retain validated official market history'
             git push
