@@ -1,11 +1,16 @@
 import datetime as dt,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from cause_assessment import regional_cause,assess
+from cause_assessment import regional_cause,assess,migrate_legacy
 from regional_discovery import parse_alic
 from update_topics import merge_report
 
 class CauseTests(unittest.TestCase):
+ def test_old_table_caption_migration_preserves_source_dates_without_inventing_causes(self):
+  t={'summary':'2026年10月21日の渥美の調査。作況：豊作、生育進度：遅い、出荷進度：遅い、作付面積・前年比：前年並み。地域の調査値であり、全国の作柄を示すものではありません。','sourceFamily':'regional-alic-regions-x','retrievedAt':'2026-11-12','periodEnd':'2026-10-21'}
+  self.assertEqual(migrate_legacy([t]),1);self.assertEqual(t['retrievedAt'],'2026-11-12');self.assertEqual(t['periodEnd'],'2026-10-21')
+  self.assertEqual(t['causeAssessment']['status'],'unconfirmed');self.assertNotIn('作況：',t['summary']);self.assertIn('豊作',t['summary']);self.assertNotIn('雨',t['summary'])
+  self.assertEqual(migrate_legacy([t]),0)
  def test_explicit_wet_damage_has_limited_scope(self):
   c=regional_cause({'生育状況':'9月期の雨の影響の湿害によって、活着不良や生育ムラのあるほ場が一部で見られる。'})
   self.assertEqual(c['status'],'documented');self.assertIn('一部',c['text']);self.assertNotIn('関東',c['text'])

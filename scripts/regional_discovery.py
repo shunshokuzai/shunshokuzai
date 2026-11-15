@@ -3,7 +3,7 @@ import datetime as dt,hashlib,io,re,unicodedata
 from concurrent.futures import ThreadPoolExecutor,as_completed
 from urllib.parse import urljoin,urlparse
 from bs4 import BeautifulSoup
-from cause_assessment import regional_cause
+from cause_assessment import regional_cause,progress_text
 
 def clean(v):return re.sub(r'\s+',' ',unicodedata.normalize('NFKC',str(v or ''))).strip()
 def jpdate(text):
@@ -103,11 +103,7 @@ def parse_alic(raw,entry,source,foods,today):
    if value:sections[label].append(value)
  sections={k:' '.join(v) for k,v in sections.items()}
  cause=regional_cause(sections)
- condition=[]
- for key,noun in [('生育進度[平年比]','生育'),('出荷進度[平年比]','出荷')]:
-  value=pairs.get(key)
-  if value and value not in ('-','―','—','－'):condition.append(noun+'は'+('平年より'+value if value!='平年並み' else '平年並み'))
- summary=f'{date.year}年{date.month}月{date.day}日の{entry["region"]}・{place}の調査では、'+'、'.join(condition)+'状況です。'
+ summary=f'{date.year}年{date.month}月{date.day}日の{entry["region"]}・{place}の調査では、'+progress_text(pairs.get('生育進度[平年比]'),pairs.get('出荷進度[平年比]'))
  summary+=cause['text']
  if pairs.get('作況[平年比]'):summary+='調査表の作況評価は「'+pairs['作況[平年比]']+'」です。'
  out=[]

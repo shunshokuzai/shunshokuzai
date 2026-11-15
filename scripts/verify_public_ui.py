@@ -133,6 +133,10 @@ def run():
    page.locator('#retailRegion').select_option('national')
    expect(coverage).to_contain_text('全地域合計 '+str(stats['totalFoods'])+'品目')
    expect(coverage).to_contain_text('全国平均：'+str(stats['selectedFoods'])+'品目')
+   expect(page.locator('#retailResults .retail-row-value > strong')).to_have_count(stats['selectedFoods'])
+   for region in ('city-13100','city-39201','city-38201'):
+    page.locator('#retailRegion').select_option(region)
+    expect(page.locator('#retailResults .retail-row-value > strong')).to_have_count(stats['byRegion'][region])
    page.locator('#retailRegion').select_option('city-38201')
    expect(coverage).to_contain_text('松山市：'+str(stats['byRegion']['city-38201'])+'品目')
    page.locator('#retailSearch').fill('きゃべつ')

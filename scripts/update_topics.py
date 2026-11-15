@@ -161,9 +161,9 @@ def requests_used_today(metadata,today):
 
 def merge_report(obj, items, key, model, request_limit, on_attempt=None):
     """Publish each source item, try AI for up to the explicit free-tier budget."""
-    from cause_assessment import assess
+    from cause_assessment import assess,migrate_legacy
     topics = list(obj['topics'])
-    attempts = 0; success = 0; changed = 0; failures = 0
+    attempts = 0; success = 0; changed = migrate_legacy(topics); failures = 0
     blocked = False
     attempted_foods=set()
     for item in items:
