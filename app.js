@@ -36,7 +36,7 @@ return year+'-'+String(mon).padStart(2,'0')+'-'+new Date(Date.UTC(year,mon,0)).g
 const candidates=topics.filter(t=>{
 if(t.foodId!==foodId||!t.yearSpecific||!t.sources?.length)return false;
 const date=topicDate(t);if(!date||date>today)return false;
-if(t.seasonalRecord&&t.reportYear===Number(today.slice(0,4)))return true;
+if(t.seasonalRecord)return t.reportYear===Number(today.slice(0,4));
 const forecast=t.isForecast||/予報|見通し/.test(t.observedPeriod||'');
 if(forecast){const end=forecastEnd(t);return end?end>=today:date.slice(0,4)===today.slice(0,4)}
 return Date.parse(today)-Date.parse(date)<=65*86400000;
