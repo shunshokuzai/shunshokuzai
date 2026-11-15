@@ -58,6 +58,7 @@ def run_pipeline(today=None,ai_key=None,force_gemini=False):
         details[name]={'status':status[name],'checkedAt':now_iso(),'activePriceCount':len(prices),
                        'referenceRatioCount':sum(p.get('normalRatio') is not None for p in prices),
                        'chartPointCount':sum(len(p.get('history',[])) for p in prices)}
+    details['retail']={'status':obj.get('retail',{}).get('status',status.get('retail')),'checkedAt':now_iso(),'recordCount':len(obj.get('retail',{}).get('records',[])),'foodCount':len({r['foodId'] for r in obj.get('retail',{}).get('records',[])}),'regionCount':len(obj.get('retail',{}).get('regions',[])),'sourceFailureCount':len(obj.get('retail',{}).get('errors',[]))}
     details['topics']={'status':status.get('topics'),'checkedAt':now_iso(),
                       'sourceItemCount':meta.get('topicSourceCountLastRun',0),
                       'addedOrUpdatedCount':meta.get('topicAddedLastRun',0),

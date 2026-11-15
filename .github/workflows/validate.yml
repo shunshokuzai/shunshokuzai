@@ -70,3 +70,30 @@ jobs:
             git commit -m 'data: retain validated official market history'
             git push
           fi
+
+  browser-preview:
+    if: github.event_name == 'push'
+    needs: official-prices
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          pip install 'playwright==1.65.1'
+          python -m playwright install --with-deps chromium
+      - name: Check the complete candidate app before deployment
+        run: |
+          python scripts/build_site.py
+          python -m http.server 8765 --directory site > /tmp/shun-preview.log 2>&1 &
+          PUBLIC_APP_URL=http://127.0.0.1:8765/ python -u scripts/verify_public_ui.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: candidate-app-ui
+          path: ui-results
+          retention-days: 7
