@@ -3,7 +3,7 @@
 This development audit also retains validated observations in the candidate
 dataset. Routine discovery keeps updating the same stable report IDs later.
 """
-import argparse,datetime as dt,json
+import argparse,datetime as dt,json,time
 from update_data import DATA,BASE,fetch,save
 from update_topics import merge_report
 from regional_discovery import parse_alic
@@ -23,7 +23,15 @@ def main():
   food=next(f for f in obj['foods'] if f['name']==name);url='https://vegetan.alic.go.jp/trend/y2026/'+path
   old=next((t for t in obj['topics'] if t['foodId']==food['id'] and any(s['url']==url for s in t.get('sources',[]))),{})
   entry={'url':url,'title':name+'・'+region+'の生育調査','region':region,'foodIds':[food['id']],'fiscalYear':2026,'sourceUpdatedAt':old.get('sourceUpdatedAt')}
-  found,status=parse_alic(fetch(url,timeout=20),entry,source,[{'foodId':food['id'],'name':name}],today)
+  print('CHECK CAUSE SOURCE',url,flush=True)
+  for attempt in range(3):
+   try:
+    raw=fetch(url,timeout=20);break
+   except OSError as error:
+    print('CAUSE SOURCE RETRY',url,type(error).__name__,attempt+1,flush=True)
+    if attempt==2:raise
+    time.sleep(1+attempt)
+  found,status=parse_alic(raw,entry,source,[{'foodId':food['id'],'name':name}],today)
   assert len(found)==1,(url,status)
   item=found[0];c=item['causeAssessment']
   if item['periodEnd']==regression_date:assert c['status']==expected,(url,c)

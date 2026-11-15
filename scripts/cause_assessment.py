@@ -20,7 +20,7 @@ def regional_cause(sections):
    recovery='ただし、調査時点ではその影響から回復しつつあります。' if '回復' in sentence else ''
    return {'status':'documented','text':'雨が続いて日射が足りなかったため、作柄が悪化し、玉が大きくなりにくい状態になりました。'+recovery,'basis':'最新調査の「生育状況」に長雨・日照不足と作柄、小玉への影響の記載'}
   if re.search(r'(大雨|長雨).{0,30}(影響|ため).{0,20}根傷み',sentence):
-   return {'status':'documented','text':'雨の影響で根が傷んだことが、生育不良の背景として報告されています。根の状態が悪化すると水分や養分を吸収しにくくなると考えられますが、この仕組み自体はアプリによる一般的な解釈です。','basis':'最新調査の「生育状況」に雨と根傷みの関係の記載'}
+   return {'status':'documented','text':'雨の影響で根が傷んだことが、産地の生育状況として報告されています。根傷みがどの程度生育や出荷に影響したかは、この説明だけでは数量的に示せません。','basis':'最新調査の「生育状況」に雨と根傷みの関係の記載'}
   if re.search(r'(降雨|雨).{0,12}(ため|影響).{0,12}定植作業.{0,8}遅',sentence):
    return {'status':'documented','text':'雨が続いて畑に苗を植える作業が遅れたことが、出典で説明されています。','basis':'最新調査の「生育状況」に降雨と定植作業の遅れの記載'}
  # Association is explicitly a tentative interpretation, never a factual cause.
