@@ -22,7 +22,7 @@ from update_data import BASE,USER_AGENT,now_iso
 CATALOG=BASE/'data/topic_catalog.json'
 STATE=BASE/'data/topic_monitor.json'
 VERSION=1
-PARSER_VERSION=3
+PARSER_VERSION=4
 
 def compact(value):
  return re.sub(r'\s+',' ',unicodedata.normalize('NFKC',str(value))).strip()
@@ -71,6 +71,7 @@ def read_public(url,source,timeout=20,limit=3_000_000):
  return data
 
 def source_url(source,today):
+ if source.get('parser')=='alic':return re.sub(r'/y\d{4}\.html',f'/y{today.year-int(today.month<4)}.html',source['url'])
  if source['id']=='fra-resources':
   return re.sub(r'/pr\d{4}/',f'/pr{today.year}/',source['url'])
  return source['url']
@@ -268,6 +269,15 @@ def load_state(path=STATE):
 def save_state(state,path=STATE):
  atomic_text(path,json.dumps(state,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
 
+def fair_queue(entries,priority):
+ groups={}
+ for entry in sorted(entries,key=priority):groups.setdefault(entry['sourceId'],[]).append(entry)
+ ordered=sorted(groups.values(),key=lambda g:priority(g[0]));out=[]
+ while ordered:
+  for group in ordered:out.append(group.pop(0))
+  ordered=[g for g in ordered if g]
+ return out
+
 def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=None):
  catalog=catalog or json.loads(CATALOG.read_text(encoding='utf-8'))
  state=load_state(path);started=time.monotonic();items=[];errors=[];checked=[];queue=[]
@@ -278,7 +288,13 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
    raw=getter(url,source)
    if not raw or b'<html' not in raw[:2000].lower():raise ValueError('Index HTML missing')
    choices=[f for f in foods if source['id'] in f['sourceIds']]
-   links=discover_links(raw,source,choices,today)
+   if source.get('parser'):
+    from regional_discovery import links as regional_links
+    previous=state.get('sources',{}).get(source['id'],{})
+    effective={**source,'url':url,'_previousLinks':previous.get('links',[]),'_previousAt':previous.get('checkedAt','')}
+    links=regional_links(raw,effective,choices,today,getter,matching_foods)
+    source['_indexWarnings']=effective.get('_indexWarnings',[])
+   else:links=discover_links(raw,source,choices,today)
    return source,{'checkedAt':now_iso(),'status':'ok','url':url,'candidateCount':len(links),'links':links},None
   except Exception as error:return source,None,type(error).__name__
  with ThreadPoolExecutor(max_workers=2) as pool:
@@ -290,6 +306,7 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
     errors.append(sid+': '+error)
    else:
     state['sources'][sid]=result;checked.append(sid);queue.extend(result['links'])
+    errors.extend(sid+' child index: '+e for e in source.get('_indexWarnings',[]))
  # Fair rotation: source checks are recorded for every food, while body checks
  # have separate timestamps. No source match is not labelled successful coverage.
  for food in foods:
@@ -306,20 +323,25 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
  queue=list({q['url']:q for q in queue}.values())
  def priority(entry):
   ids=entry['foodIds'];missing=sum(not any(t.get('foodId')==f and t.get('yearSpecific') for t in obj['topics']) for f in ids)
-  prior=articles.get(entry['url'],{})
-  url_date=re.search(r'/(20\d{2})/(\d{2})/(\d{2})/',entry['url'])
-  forecast_rank=-int(''.join(url_date.groups())) if url_date and entry['sourceId']=='jafic-forecasts' else 0
-  return (0 if entry['sourceId']=='jafic-forecasts' else 1 if entry['sourceId']=='kochi-fruit' else 2 if any(f.get('name')=='くり' and f['foodId'] in ids for f in foods) else 3,
-          -missing,prior.get('lastCheckedAt',''),forecast_rank,entry['url'])
+  prior=articles.get(entry['url'],{});region=entry.get('region',sources[entry['sourceId']].get('region',''))
+  plans=obj.get('metadata',{}).get('foodSourcePlan',{})
+  major=any(region in [r['name'] for r in plans.get(fid,{}).get('regions',[])+plans.get(fid,{}).get('seasonalRegions',[])] for fid in ids)
+  return (bool(prior.get('lastCheckedAt')),-missing,not major,prior.get('lastCheckedAt',''),-int((entry.get('sourceUpdatedAt') or '0').replace('-','')),entry['url'])
  pending=[q for q in queue if (articles.get(q['url'],{}).get('parserVersion')!=PARSER_VERSION or articles.get(q['url'],{}).get('retryAfter','')<=date)]
- pending.sort(key=priority);attempts=0;outcomes={}
+ pending=fair_queue(pending,priority);attempts=0;outcomes={};source_attempts={}
  for entry in pending:
   if attempts>=limit or time.monotonic()-started>=seconds:break
-  source=sources[entry['sourceId']];choices=[f for f in foods if source['id'] in f['sourceIds']]
+  source=sources[entry['sourceId']]
+  if source_attempts.get(source['id'],0)>=source.get('maxArticlesPerRun',limit):continue
+  source_attempts[source['id']]=source_attempts.get(source['id'],0)+1
+  choices=[f for f in foods if source['id'] in f['sourceIds']]
   attempts+=1;prior=articles.setdefault(entry['url'],{})
   try:
    raw=getter(entry['url'],source)
-   found,result=(jafic_items(raw,entry,source,choices,today,getter) if source['id']=='jafic-forecasts' else article_items(raw,entry,source,choices,today))
+   if source.get('parser'):
+    from regional_discovery import parse as regional_parse
+    found,result=regional_parse(raw,entry,source,choices,today)
+   else:found,result=(jafic_items(raw,entry,source,choices,today,getter) if source['id']=='jafic-forecasts' else article_items(raw,entry,source,choices,today))
    items.extend(found)
    outcomes[result]=outcomes.get(result,0)+1
    prior.update({'parserVersion':PARSER_VERSION,'lastCheckedAt':now_iso(),'status':result,'fingerprint':hashlib.sha256(raw).hexdigest(),

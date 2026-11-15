@@ -228,12 +228,13 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
             'summaryVersion': SUMMARY_VERSION,
             'sourceExcerpt': item.get('publicExcerpt',item['excerpt']),
             'scope': item.get('scope', '資料に記載の対象地域'),
+            'geographicLevel':item.get('geographicLevel'), 'region':item.get('region'),
             'reportType': item.get('reportType', '公的資料の記述'),
             'evidenceSections': item.get('evidenceSections', [{'label': '原文の該当箇所', 'text': item['excerpt']}]),
             'limitations': item.get('limitations', '品目全体の全国的な状況を保証する資料ではありません。'),
             'automaticChecks': ['数値の原文照合', '見通しの断定化チェック'] if generated else item.get('nonAiChecks',['原文抜粋']),
             'aiGenerated':generated, 'summaryProvider':provider if generated else None,
-            'tag':provider+'要約（一次資料から・独立検証前）' if generated else item.get('nonAiTag','公的原文を短く抜粋（Gemini未使用）'),
+            'tag':provider+'要約（一次資料から・自動チェック）' if generated else item.get('nonAiTag','公的原文を短く抜粋（Gemini未使用）'),
             'retrievedAt':now_iso(),
         }
         topics = [t for t in topics if t['id'] != ident]
@@ -266,9 +267,12 @@ def main():
     limit=min(limit,max(0,6-used))
     if os.getenv('SOURCES_ONLY','').lower()=='true':key=''
     items=[];source_errors=[]
+    from production_regions import prepare_plan,monthly_origins
+    prepare_plan(obj,today)
     try:
         url,html,published=recent_forecast_url(today)
         items.extend(forecast_items(html,obj['foods'],url,published))
+        monthly_origins(obj,html,url)
     except Exception as error:
         source_errors.append('MAFF forecast: '+type(error).__name__)
     from official_topics import weekly_items

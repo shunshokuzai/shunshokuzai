@@ -22,6 +22,7 @@ def run():
    response=page.goto(URL,wait_until='networkidle',timeout=60000)
    assert response and response.status==200
    expect(page.get_by_role('heading',name='今年の生育・出荷・漁況',exact=True)).to_be_visible()
+   expect(page.get_by_role('heading',name='旬の豆知識',exact=True)).to_have_count(0)
    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), 'Homepage overflows viewport'
    expect(page.locator('.mini-insight')).to_contain_text('別工程による内容検証は未実施')
    page.screenshot(path=str(OUT/(label+'-home.png')))
@@ -112,9 +113,58 @@ def run():
    overview=page.get_by_text('全'+str(len(ids))+'品目の調査状況を見る',exact=True)
    overview.click()
    expect(page.locator('table').filter(has=page.get_by_role('columnheader',name='新着一覧の最終確認')).locator('tbody tr')).to_have_count(len(ids))
+
+   # Newly shipped views: scope separation, source-linked retail and recipes.
+   expect(page.get_by_role('heading',name='旬の豆知識',exact=True)).to_have_count(0)
+   if mobile:page.locator('#mobileMenu').click()
+   page.locator('.nav-item[data-page="topics"]').click()
+   page.locator('[data-topic-scope="national_outlook"]').click()
+   expect(page.locator('.topic-row').first).to_be_visible()
+   for ident in page.locator('.topic-row').evaluate_all('(els)=>els.map(e=>e.dataset.topic)'):
+    scope=page.evaluate('(id)=>window.SHUN_SHOPPING.topicLevel(window.SHUN_DATA.topics.find(t=>t.id===id))',ident)
+    assert scope=='national_outlook',scope
+   page.locator('[data-topic-scope="regional"]').click()
+   expect(page.locator('.topic-row').first).to_be_visible()
+   if mobile:page.locator('#mobileMenu').click()
+   page.locator('.nav-item[data-page="prices"]').click()
+   page.locator('[data-price-mode="retail"]').click()
+   page.locator('#retailRegion').select_option('city-38201')
+   page.locator('#retailSearch').fill('きゃべつ')
+   expect(page.locator('#retailResults .retail-food-row')).to_have_count(1)
+   page.locator('#retailResults .retail-food-row').click()
+   retail=page.locator('#retailReferencePanel')
+   expect(retail).to_contain_text('松山市')
+   expect(retail).to_contain_text('調査期間')
+   expect(retail).to_contain_text('規格')
+   expect(retail.locator('.retail-price strong').first).to_be_visible()
+   assert all(urlparse(a.get_attribute('href')).scheme=='https' for a in retail.locator('a').all())
+   page.screenshot(path=str(OUT/(label+'-retail.png')))
+   page.locator('#closeDetail').click()
+   page.locator('#retailSearch').fill('くり')
+   page.locator('#retailResults [data-detail="f-069"]').click()
+   expect(page.locator('#retailReferencePanel')).to_contain_text('未取得')
+   page.get_by_text('主要産地と調査先の配分',exact=True).click()
+   for region in ('茨城','熊本','愛媛'):expect(page.locator('.source-plan')).to_contain_text(region)
+   page.locator('#closeDetail').click()
+   if mobile:page.locator('#mobileMenu').click()
+   page.locator('.nav-item[data-page="recipes"]').click()
+   expect(page.locator('.recipe-card').first).to_be_visible()
+   assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),'Recipe view overflows'
+   page.locator('[data-recipe]').first.click()
+   expect(page.get_by_role('heading',name='作り方',exact=True)).to_be_visible()
+   assert page.locator('.recipe-ingredients>li').count()>=2
+   actual=page.locator('.recipe-ingredients').inner_text()
+   ratios=[float(x) for x in re.findall(r'平年比\s*(\d+(?:\.\d+)?)%',actual)]
+   assert len(ratios)>=2 and all(0<x<100 for x in ratios),actual
+   assert page.locator('.recipe-steps>li').count()>=3
+   page.screenshot(path=str(OUT/(label+'-recipe.png')))
+   page.locator('#closeDetail').click()
+   page.locator('#recipeQuick').check()
+   assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
+
    assert not errors,errors
    results.append({'viewport':label,'size':[width,height],'javascriptErrors':errors,
-     'checked':['scoped crop summary','2021/2022 graph data','daily CSV provenance','saury forecast','salmon observations','hiragana search','viewport overflow']})
+     'checked':['scoped crop summary','2021/2022 graph data','daily CSV provenance','saury forecast','salmon observations','hiragana search','viewport overflow','region-specific retail','two discounted main ingredients','recipe steps','major-region sources','no general-trivia section']})
    context.close()
   browser.close()
  (OUT/'result.json').write_text(json.dumps({'url':URL,'results':results},ensure_ascii=False,indent=2),encoding='utf-8')
