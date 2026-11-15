@@ -46,7 +46,7 @@ jobs:
       - name: Verify official data without Gemini requests
         run: python -u scripts/verify_prices.py
       - name: Verify official retail observations and source specifications
-        run: python -u scripts/retail_prices.py --live
+        run: python -u scripts/retail_prices.py --live --require-cities
       - name: Verify expanded public topic sources without Gemini requests
         env:
           SOURCES_ONLY: 'true'

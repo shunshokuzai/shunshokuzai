@@ -31,7 +31,7 @@ def candidates(html):
    node=node.parent
    if node is None:break
    text=norm(node.get_text(' ',strip=True))
-   if '主要品目の都市別小売価格' in text and '1001' in text and '2183' in text:
+   if '主要品目の都市別小売価格' in re.sub(r'\s+','',text) and '1001' in text and '2183' in text:
     dates=re.findall(r'20\d{2}-\d{2}-\d{2}',text)
     url=urllib.parse.urljoin(INDEX,a['href'])
     out[url]={'url':url,'publishedAt':dates[-1] if dates else None,'text':text}
@@ -162,8 +162,9 @@ def refresh(obj,today,getter=get,path=STATE):
  return payload
 def main():
  import argparse
- p=argparse.ArgumentParser();p.add_argument('--live',action='store_true');args=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--live',action='store_true');p.add_argument('--require-cities',action='store_true');args=p.parse_args()
  if not args.live:return
  obj=json.loads(DATA.read_text(encoding='utf-8'));result=refresh(obj,dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date());save(obj)
+ if args.require_cities and (len(result['regions'])<10 or not any(r.get('sourceGroup')=='city' for r in result['records'])):raise RuntimeError('City retail verification required')
  if result['status']=='error':raise RuntimeError('All retail sources unavailable; old data retained')
 if __name__=='__main__':main()
