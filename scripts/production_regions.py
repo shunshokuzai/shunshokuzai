@@ -37,14 +37,18 @@ def vegetable_profiles(raw,url,foods):
 def prepare_plan(obj,today,getter=get,path=PATH):
  state=json.loads(path.read_text(encoding='utf-8'));warnings=[]
  previous=state.get('vegetableCheckedAt','')
- if not previous or (today-dt.date.fromisoformat(previous)).days>=30:
+ if not previous or state.get('vegetablePlanVersion')!=2 or (today-dt.date.fromisoformat(previous)).days>=30:
   try:
    soup=BeautifulSoup(getter(VEG),'html.parser')
-   link=next((a for a in soup.select('a[href]') if 'files/data?' in a['href'] and 'e-stat.go.jp' in a['href']),None)
-   if link is None:raise ValueError('Latest crop workbook link missing')
-   url=link['href'];profiles=vegetable_profiles(getter(url),url,obj['foods'])
+   urls=list(dict.fromkeys(a['href'] for a in soup.select('a[href]') if 'files/data?' in a['href'] and 'e-stat.go.jp' in a['href']))[:3]
+   if not urls:raise ValueError('Latest crop workbooks missing')
+   profiles={}
+   for url in urls:
+    try:profiles.update(vegetable_profiles(getter(url),url,obj['foods']))
+    except Exception as e:warnings.append('Crop workbook: '+type(e).__name__)
+   url=urls[0]
    if len(profiles)<15:raise ValueError('Too few verified production profiles')
-   state['profiles'].update(profiles);state['vegetableCheckedAt']=today.isoformat()
+   state['profiles'].update(profiles);state['vegetableCheckedAt']=today.isoformat();state['vegetablePlanVersion']=2
    state['vegetableSourceUrl']=url
    atomic_text(path,json.dumps(state,ensure_ascii=False,indent=2)+'\n')
   except Exception as e:warnings.append(type(e).__name__+': '+str(e)[:160])
@@ -53,6 +57,9 @@ def prepare_plan(obj,today,getter=get,path=PATH):
   parent={'シャインマスカット':'ぶどう','巨峰':'ぶどう','栗かぼちゃ':'かぼちゃ','いちご（夏秋）':'いちご','いんげん':'さやいんげん'}.get(f['name'],f['name'])
   plan=dict(state['profiles'].get(parent,{}))
   if parent!=f['name'] and plan:plan['basis']+='。'+parent+'全体の参考値であり品種別順位ではありません'
+  if f['category']=='fish' and not plan:
+   reports=[t for t in obj['topics'] if t.get('foodId')==f['id'] and t.get('yearSpecific') and t.get('scope') and any('fra.go.jp' in s.get('url','') or 'jafic.or.jp' in s.get('url','') for s in t.get('sources',[])) and (not t.get('periodEnd') or t['periodEnd']>=today.isoformat())]
+   if reports:plan={'basis':'公的水産資料で確認した対象海域・地域（漁獲量順位ではありません）','regions':[{'name':scope} for scope in dict.fromkeys(t['scope'] for t in reports)],'sourceUrl':reports[0]['sources'][0]['url']}
   plans[f['id']]={**plan,'regions':plan.get('regions',[]),'checkedAt':now_iso()}
  obj['metadata']['foodSourcePlan']=plans
  obj['metadata']['sourcePlanningWarnings']=warnings
