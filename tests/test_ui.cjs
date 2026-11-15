@@ -92,3 +92,9 @@ test("annual crop observations stay visible until year end without relabelling n
  assert.equal(ctx.activeFoodTopics([topic],"f","2026-12-30").length,1);
  assert.equal(ctx.activeFoodTopics([topic],"f","2027-01-01").length,0);
 });
+
+test('late-year crop observations never carry over as this year in January',()=>{
+ const ctx=topicContext(),topic={id:'crop',foodId:'f',yearSpecific:true,seasonalRecord:true,reportYear:2026,sourceUpdatedAt:'2026-12-20',sources:[{}]};
+ assert.equal(ctx.activeFoodTopics([topic],'f','2026-12-31').length,1);
+ assert.equal(ctx.activeFoodTopics([topic],'f','2027-01-01').length,0);
+});
