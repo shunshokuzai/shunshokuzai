@@ -52,6 +52,8 @@ jobs:
           SOURCES_ONLY: 'true'
           MAX_DISCOVERY_ARTICLES: '24'
         run: python -u scripts/update_topics.py --live
+      - name: Verify and retain cause explanations against the actual reported source pages
+        run: python -u scripts/verify_cause_sources.py --live
       - name: Verify source allocation, retail provenance and recipe ingredients
         run: python scripts/verify_extensions.py
       - name: Backfill official five-year history without AI

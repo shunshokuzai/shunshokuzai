@@ -26,6 +26,12 @@ function retailForFood(records,foodId,region){
  return records.filter(r=>r.foodId===foodId&&r.regionId===region&&Number.isFinite(r.price)&&r.price>0)
  .sort((a,b)=>String(b.observationEnd).localeCompare(String(a.observationEnd))||String(a.specification).localeCompare(String(b.specification),'ja'));
 }
+function retailCoverage(records,region,foodId){
+ const valid=records.filter(r=>(!foodId||r.foodId===foodId)&&Number.isFinite(r.price)&&r.price>0);
+ const byRegion=new Map();
+ for(const r of valid){if(!byRegion.has(r.regionId))byRegion.set(r.regionId,new Set());byRegion.get(r.regionId).add(r.foodId);}
+ return {totalFoods:new Set(valid.map(r=>r.foodId)).size,selectedFoods:byRegion.get(region)?.size||0,byRegion:Object.fromEntries([...byRegion].map(([k,v])=>[k,v.size])),cityCount:[...byRegion.keys()].filter(k=>k!=='national').length};
+}
 function topicLevel(t){
  if(t.geographicLevel)return t.geographicLevel;
  const u=t.sources?.[0]?.url||'';
@@ -34,5 +40,5 @@ function topicLevel(t){
  if(/fra.go.jp|jafic.or.jp/.test(u))return 'sea_area';
  return 'regional';
 }
-return {observationEnd,eligiblePrice,eligibleRecipes,retailForFood,topicLevel};
+return {observationEnd,eligiblePrice,eligibleRecipes,retailForFood,retailCoverage,topicLevel};
 });

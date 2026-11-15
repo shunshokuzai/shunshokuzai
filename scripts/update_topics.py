@@ -25,7 +25,7 @@ from update_data import BASE, DATA, fetch, now_iso, normalize, save
 API = 'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent'
 MODEL = 'gemini-3.1-flash-lite'
 MAFF_DOMAIN = 'www.maff.go.jp'
-SUMMARY_VERSION = 6
+SUMMARY_VERSION = 7
 
 
 def recent_forecast_url(today, getter=fetch):
@@ -124,7 +124,8 @@ def ai_summarize(excerpt, key, model=MODEL, timeout=40):
     """Summarize an observed public source. No tools, paid-only search or URLs."""
     prompt = ('以下は公的機関が実際に公表した文章です。記載されている事実だけを使い、'
         '食材の生育・入荷・市場動向について100～150字程度で要約してください。'
-        '主産地、生育または入荷の現状、変動理由、今後の見通しのうち原文にある項目を優先する。'
+        '主産地、生育または入荷の現状と、その原因・背景を必ず説明する。原因の記載がない場合は「原因は資料から確認できない」と書く。'
+        '原文が明示する因果関係を優先し、天候と生育が併記されるだけなら原因と断定しない。今後の見通しは未確定と分かる表現にする。'
         '市場への入荷量を全国の収穫量・漁獲量と言い換えない。来遊量の予報を確定した漁獲量と言い換えない。前週比と前年比を混同しない。'
         '見通しを確定した結果のように書かない。資料にない数値や地域、原因を加えない。'
         '余計な挨拶・注釈・Markdownは付けない。\n\n' + excerpt)
@@ -160,6 +161,7 @@ def requests_used_today(metadata,today):
 
 def merge_report(obj, items, key, model, request_limit, on_attempt=None):
     """Publish each source item, try AI for up to the explicit free-tier budget."""
+    from cause_assessment import assess
     topics = list(obj['topics'])
     attempts = 0; success = 0; changed = 0; failures = 0
     blocked = False
@@ -192,7 +194,7 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
         if item.get('preparedSummary'):
             summary = validate_summary(item['preparedSummary'], item['excerpt'])
             generated = True; provider = item['summaryProvider']
-        if not item.get('preparedSummary') and not skip_ai and key and not blocked and attempts < request_limit and f['id'] not in attempted_foods:
+        if not item.get('preparedSummary') and not item.get('shortSummary') and not skip_ai and key and not blocked and attempts < request_limit and f['id'] not in attempted_foods:
             attempted_foods.add(f['id'])
             obj['metadata'].setdefault('aiFoodLastAttemptAt',{})[f['id']]=now_iso()
             if on_attempt:on_attempt()
@@ -226,6 +228,7 @@ def merge_report(obj, items, key, model, request_limit, on_attempt=None):
             'sourceUpdatedAt':item.get('sourceUpdatedAt'),'seasonalRecord':item.get('seasonalRecord'),
             'reportYear':item.get('reportYear'),
             'summaryVersion': SUMMARY_VERSION,
+            'causeAssessment': assess(item),
             'sourceExcerpt': item.get('publicExcerpt',item['excerpt']),
             'scope': item.get('scope', '資料に記載の対象地域'),
             'geographicLevel':item.get('geographicLevel'), 'region':item.get('region'),
