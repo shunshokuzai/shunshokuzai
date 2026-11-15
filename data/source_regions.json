@@ -848,8 +848,119 @@
         }
       ],
       "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+    },
+    "たまねぎ": {
+      "basis": "2025年産・たまねぎの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "北海道",
+          "share": 59.4,
+          "harvestTonnes": 547700
+        },
+        {
+          "name": "兵庫",
+          "share": 8.9,
+          "harvestTonnes": 82200
+        },
+        {
+          "name": "佐賀",
+          "share": 8.6,
+          "harvestTonnes": 79100
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040442808&ext=xls"
+    },
+    "きゅうり": {
+      "basis": "2025年産・きゅうりの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "宮崎",
+          "share": 11.0,
+          "harvestTonnes": 54700
+        },
+        {
+          "name": "群馬",
+          "share": 10.2,
+          "harvestTonnes": 50900
+        },
+        {
+          "name": "埼玉",
+          "share": 8.0,
+          "harvestTonnes": 40100
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040442808&ext=xls"
+    },
+    "なす": {
+      "basis": "2025年産・なすの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "高知",
+          "share": 13.8,
+          "harvestTonnes": 37900
+        },
+        {
+          "name": "熊本",
+          "share": 11.9,
+          "harvestTonnes": 32700
+        },
+        {
+          "name": "群馬",
+          "share": 10.3,
+          "harvestTonnes": 28300
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040442808&ext=xls"
+    },
+    "トマト": {
+      "basis": "2025年産・トマトの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "熊本",
+          "share": 19.3,
+          "harvestTonnes": 123700
+        },
+        {
+          "name": "北海道",
+          "share": 8.7,
+          "harvestTonnes": 55900
+        },
+        {
+          "name": "愛知",
+          "share": 6.7,
+          "harvestTonnes": 42800
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040442808&ext=xls"
+    },
+    "ピーマン": {
+      "basis": "2025年産・ピーマンの都道府県別収穫量上位3県（過年度の産地構成）",
+      "year": 2025,
+      "regions": [
+        {
+          "name": "茨城",
+          "share": 22.9,
+          "harvestTonnes": 30900
+        },
+        {
+          "name": "宮崎",
+          "share": 17.7,
+          "harvestTonnes": 23800
+        },
+        {
+          "name": "鹿児島",
+          "share": 9.0,
+          "harvestTonnes": 12100
+        }
+      ],
+      "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040442808&ext=xls"
     }
   },
   "vegetableCheckedAt": "2026-11-15",
-  "vegetableSourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls"
+  "vegetableSourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
+  "vegetablePlanVersion": 2
 }
