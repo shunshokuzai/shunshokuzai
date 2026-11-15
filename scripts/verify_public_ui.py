@@ -22,6 +22,7 @@ def run():
    response=page.goto(URL,wait_until='networkidle',timeout=60000)
    assert response and response.status==200
    expect(page.get_by_role('heading',name='今年の生育・出荷・漁況',exact=True)).to_be_visible()
+   expect(page.get_by_role('heading',name='旬の豆知識',exact=True)).to_have_count(0)
    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), 'Homepage overflows viewport'
    expect(page.locator('.mini-insight')).to_contain_text('別工程による内容検証は未実施')
    page.screenshot(path=str(OUT/(label+'-home.png')))
