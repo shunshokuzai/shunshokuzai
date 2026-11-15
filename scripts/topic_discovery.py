@@ -22,7 +22,7 @@ from update_data import BASE,USER_AGENT,now_iso
 CATALOG=BASE/'data/topic_catalog.json'
 STATE=BASE/'data/topic_monitor.json'
 VERSION=1
-PARSER_VERSION=4
+PARSER_VERSION=5
 
 def compact(value):
  return re.sub(r'\s+',' ',unicodedata.normalize('NFKC',str(value))).strip()

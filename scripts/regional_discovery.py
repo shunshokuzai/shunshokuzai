@@ -3,6 +3,7 @@ import datetime as dt,hashlib,io,re,unicodedata
 from concurrent.futures import ThreadPoolExecutor,as_completed
 from urllib.parse import urljoin,urlparse
 from bs4 import BeautifulSoup
+from cause_assessment import regional_cause,progress_text
 
 def clean(v):return re.sub(r'\s+',' ',unicodedata.normalize('NFKC',str(v or ''))).strip()
 def jpdate(text):
@@ -89,8 +90,29 @@ def parse_alic(raw,entry,source,foods,today):
   if value and value not in ('-','―','—','－') and len(value)<30:fields.append(key+'：'+value)
  if len(fields)<2:return [],'insufficient_structured_observations'
  place=pairs.get('調査産地',entry['region'])
- summary=date.strftime('%Y年%m月%d日')+'の'+place+'の調査。'+'、'.join(fields)+'。地域の調査値であり、全国の作柄を示すものではありません。'
- return [make_item(f,entry,source,today,summary,date.isoformat()+'の産地調査',date.isoformat(),summary) for f in foods if f['foodId'] in entry['foodIds']],'source_text_found'
+ # Stop before the next survey. The page contains several dates and photo
+ # captions; neither older surveys nor photo plots explain the latest area.
+ sections={};label=None
+ for node in heading.next_elements:
+  if node is heading:continue
+  if getattr(node,'name',None) in ('h3','h4'):break
+  if getattr(node,'name',None)=='h5':
+   label=clean(node.get_text());sections.setdefault(label,[])
+  elif label and getattr(node,'name',None)=='p':
+   value=clean(node.get_text(' ',strip=True))
+   if value:sections[label].append(value)
+ sections={k:' '.join(v) for k,v in sections.items()}
+ cause=regional_cause(sections)
+ summary=f'{date.year}年{date.month}月{date.day}日の{entry["region"]}・{place}の調査では、'+progress_text(pairs.get('生育進度[平年比]'),pairs.get('出荷進度[平年比]'))
+ summary+=cause['text']
+ if pairs.get('作況[平年比]'):summary+='調査表の作況評価は「'+pairs['作況[平年比]']+'」です。'
+ out=[]
+ for f in foods:
+  if f['foodId'] not in entry['foodIds']:continue
+  item=make_item(f,entry,source,today,summary,date.isoformat()+'の産地調査',date.isoformat(),summary)
+  item.update({'summaryExcerpt':summary,'causeAssessment':cause,'evidenceSections':[{'label':'最新の調査表の項目（整理）','text':'、'.join(fields)},{'label':'原因の説明に使った箇所','text':cause['basis']}],'nonAiTag':'産地調査の表・原因説明を整理（AI未使用）','nonAiChecks':['対象年・最新調査日・産地を照合','因果表現の限定ルールで整理（認識できない原因は保留）']})
+  out.append(item)
+ return out,'source_text_found'
 def parse_inline(raw,entry,source,foods,today):
  soup=BeautifulSoup(raw,'html.parser');text=clean(soup.get_text(' ',strip=True))
  if not re.search(r'令和'+str(today.year-2018)+r'年|'+str(today.year)+r'年',text):return [],'report_year_unconfirmed'

@@ -1,5 +1,10 @@
 const {test}=require('node:test'),assert=require('node:assert/strict');
 const S=require('../shopping.js'),recipes=require('../data/recipes.json');
+test('retail coverage distinguishes union, selected region and multiple specifications',()=>{
+ const rows=[{foodId:'a',regionId:'national',price:10},{foodId:'a',regionId:'city-1',price:20},{foodId:'b',regionId:'city-1',price:30},{foodId:'b',regionId:'city-1',price:40},{foodId:'b',regionId:'city-2',price:50},{foodId:'c',regionId:'city-2',price:null}];
+ const c=S.retailCoverage(rows,'national');assert.equal(c.totalFoods,2);assert.equal(c.selectedFoods,1);assert.equal(c.byRegion['city-1'],2);assert.equal(c.cityCount,2);
+ assert.equal(S.retailCoverage(rows,'city-1','b').cityCount,2);assert.equal(S.retailCoverage(rows,'city-9').selectedFoods,0);
+});
 const p=(id,ratio=80)=>({foodId:id,normalRatio:ratio,normalRatioRange:[ratio-.2,ratio+.2],historicalSampleCount:5,historyPeriods:[[2026,10,3]],sourceUrl:'https://www.maff.go.jp/example',period:'2026年10月下旬'});
 test('recipe eligibility uses 100 percent rather than the blue 85 percent threshold',()=>{assert(S.eligiblePrice(p('a',99),'2026-11-15'));assert(!S.eligiblePrice(p('a',100),'2026-11-15'));});
 test('uncertainty crossing 100 percent and insufficient comparison years are excluded',()=>{assert(!S.eligiblePrice({...p('a'),normalRatioRange:[79,100]},'2026-11-15'));assert(!S.eligiblePrice({...p('a'),historicalSampleCount:2},'2026-11-15'));});
