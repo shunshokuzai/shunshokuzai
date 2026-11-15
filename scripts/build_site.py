@@ -10,6 +10,8 @@ def versioned_html(html, directory):
     # A new HTML page must not execute a previously cached app/data bundle.
     # Content hashes also refresh data.js after every successful daily update.
     for filename in ('styles.css', 'data.js', 'app.js', 'food-art.js', 'search.js', 'shopping.js'):
+        if f'"{filename}"' not in html:
+            continue
         digest = hashlib.sha256((directory/filename).read_bytes()).hexdigest()[:12]
         html = html.replace(f'"{filename}"', f'"{filename}?v={digest}"')
     return html
