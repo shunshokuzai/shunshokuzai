@@ -290,7 +290,8 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
    choices=[f for f in foods if source['id'] in f['sourceIds']]
    if source.get('parser'):
     from regional_discovery import links as regional_links
-    effective={**source,'url':url}
+    previous=state.get('sources',{}).get(source['id'],{})
+    effective={**source,'url':url,'_previousLinks':previous.get('links',[]),'_previousAt':previous.get('checkedAt','')}
     links=regional_links(raw,effective,choices,today,getter,matching_foods)
     source['_indexWarnings']=effective.get('_indexWarnings',[])
    else:links=discover_links(raw,source,choices,today)
@@ -325,12 +326,15 @@ def collect(obj,today,limit=8,seconds=210,getter=read_public,path=STATE,catalog=
   prior=articles.get(entry['url'],{});region=entry.get('region',sources[entry['sourceId']].get('region',''))
   plans=obj.get('metadata',{}).get('foodSourcePlan',{})
   major=any(region in [r['name'] for r in plans.get(fid,{}).get('regions',[])+plans.get(fid,{}).get('seasonalRegions',[])] for fid in ids)
-  return (bool(prior.get('lastCheckedAt')),-missing,not major,prior.get('lastCheckedAt',''),entry['url'])
+  return (bool(prior.get('lastCheckedAt')),-missing,not major,prior.get('lastCheckedAt',''),-int((entry.get('sourceUpdatedAt') or '0').replace('-','')),entry['url'])
  pending=[q for q in queue if (articles.get(q['url'],{}).get('parserVersion')!=PARSER_VERSION or articles.get(q['url'],{}).get('retryAfter','')<=date)]
- pending=fair_queue(pending,priority);attempts=0;outcomes={}
+ pending=fair_queue(pending,priority);attempts=0;outcomes={};source_attempts={}
  for entry in pending:
   if attempts>=limit or time.monotonic()-started>=seconds:break
-  source=sources[entry['sourceId']];choices=[f for f in foods if source['id'] in f['sourceIds']]
+  source=sources[entry['sourceId']]
+  if source_attempts.get(source['id'],0)>=source.get('maxArticlesPerRun',limit):continue
+  source_attempts[source['id']]=source_attempts.get(source['id'],0)+1
+  choices=[f for f in foods if source['id'] in f['sourceIds']]
   attempts+=1;prior=articles.setdefault(entry['url'],{})
   try:
    raw=getter(entry['url'],source)

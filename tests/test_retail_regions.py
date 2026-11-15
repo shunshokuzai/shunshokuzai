@@ -48,6 +48,13 @@ class RegionalTests(unittest.TestCase):
   rows=[{'sourceId':'kochi','url':'k'+str(i)} for i in range(5)]+[{'sourceId':'nagano','url':'n'},{'sourceId':'alic','url':'a'}]
   ordered=discovery.fair_queue(rows,lambda x:x['url'])
   self.assertEqual(len({x['sourceId'] for x in ordered[:3]}),3)
+ def test_unchanged_regional_index_reuses_verified_links_without_another_request(self):
+  html='<div><a href="/trend/y2026/s09.html">ねぎ</a><p>2026年11月12日更新</p></div>'
+  cached={'url':'https://vegetan.alic.go.jp/trend/y2026/s09/p12.html','title':'長ねぎ・千葉','sourceId':'alic','sourceUpdatedAt':'2026-11-12','foodIds':['v-028'],'region':'千葉','fiscalYear':2026}
+  source={'id':'alic','parser':'alic','url':'https://vegetan.alic.go.jp/trend/y2026.html','_previousLinks':[cached],'_previousAt':'2026-11-14T00:00:00'}
+  def getter(*args):raise AssertionError('Unchanged index was downloaded again')
+  out=regional.links(html.encode(),source,[{'foodId':'v-028','name':'長ねぎ'}],dt.date(2026,11,15),getter,lambda text,foods:foods)
+  self.assertEqual(out,[cached])
  def test_alic_latest_survey_is_kept_separate_from_previous_survey(self):
   html='<h2>令和8年度</h2><h4>第3回（調査日：11月6日）</h4><table><tr><th>調査産地</th><td>JAちばみどり管内</td></tr><tr><th>作況[平年比]</th><td>不良</td><th>生育進度[平年比]</th><td>遅い</td></tr></table><h4>第2回（調査日：9月14日）</h4><p>平年並み</p>'
   food={'foodId':'v-028','name':'長ねぎ'};entry={'url':'https://vegetan.alic.go.jp/trend/y2026/s09/p12.html','title':'長ねぎ・千葉','region':'千葉','foodIds':['v-028'],'fiscalYear':2026,'sourceUpdatedAt':'2026-11-12'};source={'id':'alic','name':'ALIC','parser':'alic','region':'千葉'}
