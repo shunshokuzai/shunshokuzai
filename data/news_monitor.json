@@ -30,6 +30,36 @@
       "lastAttemptAt": "2026-11-18T00:54:57+00:00",
       "status": "ok",
       "candidates": 0
+    },
+    "sakuranbo": {
+      "checkedAt": "2026-11-18T01:01:51+00:00",
+      "lastAttemptAt": "2026-11-18T01:01:51+00:00",
+      "status": "ok",
+      "candidates": 2
+    },
+    "fnn": {
+      "checkedAt": "2026-11-18T01:01:51+00:00",
+      "lastAttemptAt": "2026-11-18T01:01:51+00:00",
+      "status": "ok",
+      "candidates": 2
+    },
+    "itv": {
+      "checkedAt": "2026-11-18T01:01:55+00:00",
+      "lastAttemptAt": "2026-11-18T01:01:55+00:00",
+      "status": "ok",
+      "candidates": 0
+    },
+    "tys": {
+      "checkedAt": "2026-11-18T01:01:55+00:00",
+      "lastAttemptAt": "2026-11-18T01:01:55+00:00",
+      "status": "ok",
+      "candidates": 0
+    },
+    "sbc": {
+      "checkedAt": "2026-11-18T01:01:57+00:00",
+      "lastAttemptAt": "2026-11-18T01:01:57+00:00",
+      "status": "ok",
+      "candidates": 1
     }
   },
   "articles": {
@@ -156,14 +186,77 @@
       "status": "unavailable",
       "error": "HTTPError",
       "retryAfter": "2026-11-19"
+    },
+    "news-c5d9313e84f2199c": {
+      "id": "news-c5d9313e84f2199c",
+      "url": "https://newsdig.tbs.co.jp/articles/sbc/3088625",
+      "title": "まるで宝さがし!「掘り出すまで、何が出てくるかわからない...」長野市松代町、特産のナガイモ収穫「形も、大きさも、申し分なしです!」",
+      "publisher": "信越放送",
+      "lastAttemptAt": "2026-11-18T01:01:57+00:00",
+      "publishedAt": "2026-11-17",
+      "fingerprint": "9031d84aa7f0384139422a1818e985d16ab6cf69a963899c2a284d1eb1c7202d",
+      "lastCheckedAt": "2026-11-18T01:02:00+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
+    },
+    "news-99a9548911c90a56": {
+      "id": "news-99a9548911c90a56",
+      "url": "https://www.fnn.jp/articles/-/1154074",
+      "title": "冬の野菜「大根」が“空洞化” 寒暖差で生育不良 出荷量減少で11月は高値傾向続くか 人気メニュー「ブリ大根」も値上げ",
+      "publisher": "FNNプライムオンライン（各局の取材）",
+      "lastAttemptAt": "2026-11-18T01:02:00+00:00",
+      "publishedAt": "2026-11-18",
+      "fingerprint": "ab1ebe71802895218b83a431f62db6568f4cd45eff630e40c0ea4a429a942eb7",
+      "lastCheckedAt": "2026-11-18T01:02:01+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
+    },
+    "news-5b47ee078934f985": {
+      "id": "news-5b47ee078934f985",
+      "url": "https://www.fnn.jp/articles/-/1154408",
+      "title": "白菜の高値続く 出荷量減 鍋シーズン直撃 今後は",
+      "publisher": "FNNプライムオンライン（各局の取材）",
+      "lastAttemptAt": "2026-11-18T01:02:01+00:00",
+      "publishedAt": "2026-11-18",
+      "fingerprint": "63f9543f9fedafc13ad6e36f85fa79af35b5a7e1a99f7aedc273b84b8e4968f3",
+      "lastCheckedAt": "2026-11-18T01:02:02+00:00",
+      "status": "attribution_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
+    },
+    "news-f77367b0b5c74562": {
+      "id": "news-f77367b0b5c74562",
+      "url": "https://www.sakuranbo.co.jp/news/2026/11/12/2026111200000007.html",
+      "title": "さくらんぼテレビ公式SNSアカウント",
+      "publisher": "さくらんぼテレビ",
+      "lastAttemptAt": "2026-11-18T01:02:02+00:00",
+      "publishedAt": "2026-11-12",
+      "fingerprint": "5da82be3aa39c0d1292b419852b05dfda82f3f79d5ef75f7db4974b7243c8ef7",
+      "lastCheckedAt": "2026-11-18T01:02:02+00:00",
+      "status": "attribution_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
+    },
+    "news-d449da62bed956a9": {
+      "id": "news-d449da62bed956a9",
+      "url": "https://www.sakuranbo.co.jp/news/2026/11/17/2026111700000006.html",
+      "title": "さくらんぼテレビ公式SNSアカウント",
+      "publisher": "さくらんぼテレビ",
+      "lastAttemptAt": "2026-11-18T01:02:02+00:00",
+      "publishedAt": "2026-11-17",
+      "fingerprint": "262ffe5f0bb33e6fb2035c17fe4b7d226d978b615d6a2dab898d2d4c3c337656",
+      "lastCheckedAt": "2026-11-18T01:02:03+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-18T00:55:10+00:00",
-    "articleAttempts": 8,
-    "sourceItems": 8,
-    "errors": [
-      "sakuranbo: HTTPError"
-    ]
+    "checkedAt": "2026-11-18T01:02:03+00:00",
+    "articleAttempts": 5,
+    "sourceItems": 0,
+    "errors": []
   }
 }
