@@ -121,3 +121,17 @@
 .empty-inline{font-size:13px;line-height:1.8;color:#687361}
 .source-plan{margin:16px 0;overflow-wrap:anywhere}
 @media(max-width:640px){.recipe-grid{grid-template-columns:1fr}.retail-panel{padding:16px}.retail-food-row{padding-left:12px;padding-right:12px;gap:8px}.retail-food-row .food-label{min-width:0}.retail-row-value strong{font-size:15px}.retail-row-value small{max-width:145px}.retail-region-control{width:100%}.retail-region-control select{flex:1}.recipe-ingredients,.recipe-steps{padding-left:22px}}
+/* News provenance uses the same cards and green accents as the food views. */
+.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.news-card{padding:22px;margin:0;min-width:0;overflow-wrap:anywhere}
+.news-card h2{font-size:18px;line-height:1.65;margin:10px 0}
+.news-card h2 a{color:#315a31;text-decoration:none}
+.news-card h2 a:hover{text-decoration:underline}
+.news-byline{font-size:12px;color:#65735f;margin:0}
+.news-uses{border-top:1px solid #e6ebdf;padding-top:12px;margin-top:15px}
+.news-uses>strong{font-size:13px}.news-uses>div{margin-top:10px}
+.news-uses p{margin:6px 0}.news-review{font-size:13px;line-height:1.8;margin-top:15px}
+.news-review summary{cursor:pointer;color:#315a31}.news-review ul{padding-left:20px}
+.news-toolbar{flex-wrap:wrap}.news-toolbar .search-box{flex:1;min-width:180px}
+.news-toolbar .select{max-width:100%}.topic-cause h4{margin:0 0 8px}
+@media(max-width:680px){.news-grid{grid-template-columns:1fr}.news-card{padding:18px}.news-card h2{font-size:17px}.news-toolbar .search-box{flex-basis:100%;min-width:0}}

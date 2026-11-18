@@ -2,7 +2,7 @@ name: Update food prices, Gemini topics, and publish site
 on:
   push:
     branches: [main]
-    paths: ['data/topic_catalog.json', 'data/recipes.json', 'shopping.js', 'scripts/**', 'tests/**', 'app.js', 'styles.css', 'index.html', 'requirements.txt', '.github/workflows/update.yml']
+    paths: ['data/topic_catalog.json', 'data/recipes.json', 'shopping.js', 'news.js', 'data/news_sources.json', 'scripts/**', 'tests/**', 'app.js', 'styles.css', 'index.html', 'requirements.txt', '.github/workflows/update.yml']
   schedule:
     # 10:23 JST daily (best effort, not guaranteed)
     - cron: '23 1 * * *'
@@ -34,7 +34,7 @@ jobs:
       - name: Unit tests
         run: python -m unittest discover -s tests -p 'test_*.py' -v
       - name: Price display tests
-        run: node --test tests/test_ui.cjs tests/test_shopping.cjs
+        run: node --test tests/test_ui.cjs tests/test_shopping.cjs tests/test_news.cjs
       - name: Check official markets and Gemini sources (Tue/Thu/Sat for AI)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -52,7 +52,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/source_regions.json data/retail_prices.json data/topic_monitor.json data/estat_daily.json data/seed.json data/market_history.json data.js '旬食材まるわかり_プロトタイプ.html'
+          git add data/news_monitor.json data/source_regions.json data/retail_prices.json data/topic_monitor.json data/estat_daily.json data/seed.json data/market_history.json data.js '旬食材まるわかり_プロトタイプ.html'
           if ! git diff --cached --quiet; then
             git commit -m 'data: refresh market statistics and source-linked topics'
             git push
