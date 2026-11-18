@@ -14,32 +14,32 @@
       "candidates": 0
     },
     "hbc": {
-      "checkedAt": "2026-11-18T00:54:55+00:00",
-      "lastAttemptAt": "2026-11-18T00:54:55+00:00",
+      "checkedAt": "2026-11-18T01:13:22+00:00",
+      "lastAttemptAt": "2026-11-18T01:13:22+00:00",
       "status": "ok",
       "candidates": 0
     },
     "atv": {
-      "checkedAt": "2026-11-18T00:54:56+00:00",
-      "lastAttemptAt": "2026-11-18T00:54:56+00:00",
+      "checkedAt": "2026-11-18T01:13:23+00:00",
+      "lastAttemptAt": "2026-11-18T01:13:23+00:00",
       "status": "ok",
       "candidates": 0
     },
     "mbs": {
-      "checkedAt": "2026-11-18T00:54:57+00:00",
-      "lastAttemptAt": "2026-11-18T00:54:57+00:00",
+      "checkedAt": "2026-11-18T01:13:25+00:00",
+      "lastAttemptAt": "2026-11-18T01:13:25+00:00",
       "status": "ok",
       "candidates": 0
     },
     "sakuranbo": {
-      "checkedAt": "2026-11-18T01:01:51+00:00",
-      "lastAttemptAt": "2026-11-18T01:01:51+00:00",
+      "checkedAt": "2026-11-18T01:13:24+00:00",
+      "lastAttemptAt": "2026-11-18T01:13:24+00:00",
       "status": "ok",
       "candidates": 2
     },
     "fnn": {
-      "checkedAt": "2026-11-18T01:01:51+00:00",
-      "lastAttemptAt": "2026-11-18T01:01:51+00:00",
+      "checkedAt": "2026-11-18T01:13:25+00:00",
+      "lastAttemptAt": "2026-11-18T01:13:25+00:00",
       "status": "ok",
       "candidates": 2
     },
@@ -285,8 +285,8 @@
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-18T01:05:08+00:00",
-    "articleAttempts": 1,
+    "checkedAt": "2026-11-18T01:13:25+00:00",
+    "articleAttempts": 0,
     "sourceItems": 0,
     "errors": []
   }
