@@ -2,14 +2,14 @@
   "version": 1,
   "sources": {
     "ncc": {
-      "checkedAt": "2026-11-18T00:54:54+00:00",
-      "lastAttemptAt": "2026-11-18T00:54:54+00:00",
+      "checkedAt": "2026-11-18T01:05:04+00:00",
+      "lastAttemptAt": "2026-11-18T01:05:04+00:00",
       "status": "ok",
       "candidates": 0
     },
     "htb": {
-      "checkedAt": "2026-11-18T00:54:54+00:00",
-      "lastAttemptAt": "2026-11-18T00:54:54+00:00",
+      "checkedAt": "2026-11-18T01:05:04+00:00",
+      "lastAttemptAt": "2026-11-18T01:05:04+00:00",
       "status": "ok",
       "candidates": 0
     },
@@ -60,6 +60,24 @@
       "lastAttemptAt": "2026-11-18T01:01:57+00:00",
       "status": "ok",
       "candidates": 1
+    },
+    "kutv": {
+      "checkedAt": "2026-11-18T01:04:59+00:00",
+      "lastAttemptAt": "2026-11-18T01:04:59+00:00",
+      "status": "ok",
+      "candidates": 0
+    },
+    "uty": {
+      "checkedAt": "2026-11-18T01:05:00+00:00",
+      "lastAttemptAt": "2026-11-18T01:05:00+00:00",
+      "status": "ok",
+      "candidates": 1
+    },
+    "mro": {
+      "checkedAt": "2026-11-18T01:05:02+00:00",
+      "lastAttemptAt": "2026-11-18T01:05:02+00:00",
+      "status": "ok",
+      "candidates": 0
     }
   },
   "articles": {
@@ -251,11 +269,24 @@
       "status": "current_context_missing",
       "foodIds": [],
       "retryAfter": "2026-11-21"
+    },
+    "news-8ecdeb5b3bd7b9ed": {
+      "id": "news-8ecdeb5b3bd7b9ed",
+      "url": "https://newsdig.tbs.co.jp/articles/uty/2946124",
+      "title": "「さらに広がるのが怖い」ブドウが腐る病気 長雨の影響でブドウ農家は苦悩 200kg被害の農家も 山梨",
+      "publisher": "テレビ山梨",
+      "lastAttemptAt": "2026-11-18T01:05:04+00:00",
+      "publishedAt": "2026-09-15",
+      "fingerprint": "64b9d965a1d8b0ca5065f4befd86d4805b3afdf393e80137661f12cce9a9a879",
+      "lastCheckedAt": "2026-11-18T01:05:08+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-18T01:02:03+00:00",
-    "articleAttempts": 5,
+    "checkedAt": "2026-11-18T01:05:08+00:00",
+    "articleAttempts": 1,
     "sourceItems": 0,
     "errors": []
   }
