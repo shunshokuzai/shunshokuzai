@@ -128,7 +128,10 @@ def focus_text(text,food,foods):
  sentences=[s+'。' for s in text.split('。') if s]
  selected=[]
  for i,s in enumerate(sentences):
-  if food not in matching_foods(s,foods):continue
+  matches=food_matches(s,foods)
+  # A sentence comparing different foods needs an explicit per-food review;
+  # do not attach one crop's weather or one fish's mechanism to another.
+  if food not in matches or any(f['foodId']!=food['foodId'] for f in matches):continue
   selected.append(s)
   if i+1<len(sentences):
    other=matching_foods(sentences[i+1],foods)
@@ -137,6 +140,7 @@ def focus_text(text,food,foods):
 def automatic_items(text,title,published,url,source,foods,today):
  """Unreviewed new articles need an attributed source and a free-budget AI pass."""
  if published.year!=today.year:return [],'past_year_article'
+ if len(food_matches(title,foods))>1:return [],'multiple_foods_need_review'
  if not re.search(r'によると|によりますと|研究員|教授|試験場|JA|ＪＡ|漁協|生産者|農家|園主',text):return [],'attribution_missing'
  out=[]
  # A publication date near the headline cannot establish the crop year.
@@ -153,7 +157,7 @@ def automatic_items(text,title,published,url,source,foods,today):
    'reportKey':ident,'sourceFamily':ident,'sourceName':source['name'],'sourceTitle':title,'title':food['name']+'：'+title,
    'observedPeriod':str(today.year)+'年の状況（記事が取材した時点）','periodStart':None,'periodEnd':published.isoformat(),
    'reportYear':today.year,'seasonalRecord':True,'scope':'記事に記載の産地・海域（原文参照）','geographicLevel':'regional',
-   'sourceType':'news','newsArticleId':ident,'reportType':'報道機関の取材','excerpt':excerpt,'publicExcerpt':excerpt[:24]+'…','requireAi':True,
+   'sourceType':'news','newsArticleId':ident,'reportType':'報道機関の取材','excerpt':'対象食材：'+food['name']+'。この食材の説明だけを要約し、他の食材の原因を移さない。\n'+excerpt,'publicExcerpt':excerpt[:24]+'…','requireAi':True,
    'evidenceSections':[{'label':'原文冒頭（全文は記事へ）','text':excerpt[:24]+'…'}],
    'newsReview':{'method':'automatic_source_checks','checkedAt':now_iso(),'facts':[],
     'checks':['原文本文・公表日・今年への言及・取材先の記載を確認','要約の数値・見通し表現を自動照合。意味全体の独立検証は未実施'],

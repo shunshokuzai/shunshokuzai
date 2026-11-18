@@ -1,12 +1,19 @@
 import datetime as dt,json,sys,tempfile,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from news_sources import canonical,identity,article_text,automatic_items,build_ledger,parse_date,make_item,food_matches
+from news_sources import canonical,identity,article_text,automatic_items,build_ledger,parse_date,make_item,food_matches,focus_text
 from cause_assessment import assess
 from update_topics import merge_report
 
 FOOD={'foodId':'f','name':'みかん','aliases':['みかん','ミカン'],'category':'fruit'}
 class NewsTests(unittest.TestCase):
+ def test_multi_food_story_waits_for_per_food_review_instead_of_reusing_one_cause(self):
+  apple={'foodId':'a','name':'りんご','aliases':['りんご'],'category':'fruit'}
+  out,status=automatic_items('今年のみかんとりんごを農家に取材しました。'*10,'みかんとりんごの収穫',dt.date(2026,11,4),'https://example.com/a',{'name':'TV'},[FOOD,apple],dt.date(2026,11,18))
+  self.assertEqual(out,[]);self.assertEqual(status,'multiple_foods_need_review')
+ def test_other_foods_causal_clause_is_not_evidence_for_the_target_food(self):
+  apple={'foodId':'a','name':'りんご','aliases':['りんご'],'category':'fruit'}
+  self.assertEqual(focus_text('みかんは順調だが、りんごは高温の影響で着色が遅れている。',FOOD,[FOOD,apple]),'')
  def test_kaki_fruit_and_oyster_are_not_interchanged(self):
   foods=[{'foodId':'fruit','name':'かき','aliases':['かき','柿'],'category':'fruit'},{'foodId':'fish','name':'カキ','aliases':['カキ','牡蠣'],'category':'fish'}]
   self.assertEqual([f['foodId'] for f in food_matches('カキの養殖と水揚げ',foods)],['fish'])
