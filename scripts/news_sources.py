@@ -23,6 +23,14 @@ def canonical(url):
  path=re.sub(r'/+$','',p.path)
  return urlunparse(('https',p.netloc.lower(),path,'',urlencode(sorted(query)),''))
 def identity(url):return 'news-'+hashlib.sha256(canonical(url).encode()).hexdigest()[:16]
+def food_matches(text,foods):
+ result=matching_foods(text,foods)
+ names={f['name'] for f in result}
+ if {'かき','カキ'}.issubset(names):
+  fruit=bool(re.search('柿|果樹|柿園|富有|次郎',text));shell=bool(re.search('牡蠣|貝|養殖|水揚げ',text))
+  if fruit!=shell:result=[f for f in result if f['name']!=('カキ' if fruit else 'かき')]
+  else:result=[f for f in result if f['name'] not in ('かき','カキ')]
+ return result
 def load_state(path=STATE):
  try:return json.loads(path.read_text(encoding='utf-8'))
  except (FileNotFoundError,json.JSONDecodeError):return {'version':VERSION,'sources':{},'articles':{}}
@@ -65,9 +73,10 @@ def article_text(raw,foods):
  for tag in soup.find_all('script',type='application/ld+json'):
   if re.search(r'"isAccessibleForFree"\s*:\s*(?:false|"false")',tag.get_text(),re.I):raise ValueError('restricted_article')
  for tag in soup.select('script,style,nav,footer,aside'):tag.decompose()
- headings=[h for h in soup.find_all(['h1','h2','h3']) if matching_foods(clean(h.get_text()),foods)]
+ headings=[h for h in soup.find_all(['h1','h2','h3']) if food_matches(clean(h.get_text()),foods)]
  if not headings:raise ValueError('food_heading_missing')
  heading=headings[0];title=clean(heading.get_text(' ',strip=True))
+ if re.search(r'^(?:【|\[|\()?\s*(?:PR|広告|提供)(?:】|\]|\)|\s)',title,re.I):raise ValueError('sponsored_article')
  root=soup.find('article') or soup.select_one('[itemprop="articleBody"],.article-body,.article_body,.article-content,.news-text,.newsTxt,.detail-body') or soup
  text=clean(root.get_text(' ',strip=True));position=text.find(title)
  if position<0:
@@ -96,7 +105,7 @@ def source_entries(raw,source,foods):
  for a in soup.select('a[href]'):
   url=urljoin(source['index'],a['href']);title=clean(a.get_text(' ',strip=True))
   if urlparse(url).scheme!='https' or urlparse(url).hostname not in source['hosts'] or source['include'] not in url:continue
-  chosen=matching_foods(title,foods)
+  chosen=food_matches(title,foods)
   if not chosen or not re.search('生育|出荷|収穫|不作|豊作|不漁|豊漁|水揚|漁|高温|少雨|長雨|日照|海水温|品質|小玉|大玉|肥大|果樹',title):continue
   url=canonical(url);out[url]={'url':url,'sourceId':source['id'],'title':title,'foodIds':[f['foodId'] for f in chosen]}
  return list(out.values())[:30]
@@ -127,13 +136,14 @@ def focus_text(text,food,foods):
  return ''.join(dict.fromkeys(selected))[:3200]
 def automatic_items(text,title,published,url,source,foods,today):
  """Unreviewed new articles need an attributed source and a free-budget AI pass."""
+ if published.year!=today.year:return [],'past_year_article'
  if not re.search(r'によると|によりますと|研究員|教授|試験場|JA|ＪＡ|漁協|生産者|農家|園主',text):return [],'attribution_missing'
  out=[]
  # A publication date near the headline cannot establish the crop year.
  front=text[:len(title)+120].replace(title,'',1)
  front=re.sub(r'20\d{2}[年/.-]\s*\d{1,2}[月/.-]\s*\d{1,2}日?','',front)
  body=front+text[len(title)+120:]
- for food in matching_foods(title,foods):
+ for food in food_matches(title,foods):
   excerpt=focus_text(body,food,foods)
   if len(excerpt)<60 or not re.search('今年|ことし|今季|今シーズン|'+str(today.year),excerpt):continue
   # Old-year research in a newly published article is background, not this crop.
@@ -158,7 +168,15 @@ def collect(obj,today,limit=6,seconds=150,getter=read_public,path=STATE,config=N
  # cannot occupy the whole discovery budget. One article can support two foods.
  for url,p in profiles.items():queue.append({'url':url,'sourceId':p['sourceId'],'title':p['title'],'reviewed':True})
  def index(source):
-  return source,source_entries(getter(source['index'],source),source,foods)
+  raw=getter(source['index'],source);entries=source_entries(raw,source,foods)
+  soup=BeautifulSoup(raw,'html.parser')
+  # One public listing provides more headlines than the homepage, without
+  # an unbounded pagination sweep.
+  more=next((urljoin(source['index'],a['href']) for a in soup.select('a[href]') if clean(a.get_text()) in ('新着記事一覧へ','新着一覧へ','もっと見る') and urljoin(source['index'],a['href']).startswith(source['index']) and urljoin(source['index'],a['href'])!=source['index']),None)
+  if more:
+   try:entries.extend(source_entries(getter(more,source),source,foods))
+   except Exception:pass
+  return source,list({e['url']:e for e in entries}.values())
  # Rotate five regional publisher indexes per run, instead of downloading
  # every portal repeatedly. Explicit source-reviewed articles remain queued.
  selected=sorted(sources.values(),key=lambda s:state['sources'].get(s['id'],{}).get('lastAttemptAt',''))[:5]

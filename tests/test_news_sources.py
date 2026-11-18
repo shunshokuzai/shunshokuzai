@@ -1,12 +1,20 @@
 import datetime as dt,json,sys,tempfile,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from news_sources import canonical,identity,article_text,automatic_items,build_ledger,parse_date,make_item
+from news_sources import canonical,identity,article_text,automatic_items,build_ledger,parse_date,make_item,food_matches
 from cause_assessment import assess
 from update_topics import merge_report
 
 FOOD={'foodId':'f','name':'みかん','aliases':['みかん','ミカン'],'category':'fruit'}
 class NewsTests(unittest.TestCase):
+ def test_kaki_fruit_and_oyster_are_not_interchanged(self):
+  foods=[{'foodId':'fruit','name':'かき','aliases':['かき','柿'],'category':'fruit'},{'foodId':'fish','name':'カキ','aliases':['カキ','牡蠣'],'category':'fish'}]
+  self.assertEqual([f['foodId'] for f in food_matches('カキの養殖と水揚げ',foods)],['fish'])
+  self.assertEqual([f['foodId'] for f in food_matches('柿の収穫と果樹の生育',foods)],['fruit'])
+  self.assertEqual(food_matches('カキの品質',foods),[])
+ def test_last_year_this_year_wording_is_not_relabelled_in_january(self):
+  out,status=automatic_items('今年のみかんについて農家に取材しました。'*10,'みかんの収穫',dt.date(2026,12,20),'https://example.com/a',{'name':'TV'},[FOOD],dt.date(2027,1,2))
+  self.assertEqual(out,[]);self.assertEqual(status,'past_year_article')
  def test_tracking_and_pagination_are_one_article(self):
   self.assertEqual(identity('https://example.com/a?utm_source=x&page=2'),identity('https://example.com/a?display=1'))
  def test_publication_date_is_the_article_date_not_the_current_navigation_date(self):
