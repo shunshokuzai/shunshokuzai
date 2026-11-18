@@ -214,6 +214,7 @@ def collect(obj,today,limit=6,seconds=150,getter=read_public,path=STATE,config=N
      found=[make_item(profile,f,text,published,title) for f in foods if f['name'] in profile['foodNames']];status='source_reviewed'
      prior['reviewedFingerprint']=fingerprint
    else:found,status=automatic_items(text,title,published,entry['url'],source,foods,today)
+   for item in found:item['newsBodyFingerprint']=fingerprint
    items.extend(found);prior.update({'title':title,'publishedAt':published.isoformat(),'fingerprint':fingerprint,'lastCheckedAt':now_iso(),'status':status,'foodIds':[i['food']['id'] for i in found],
     'retryAfter':(today+dt.timedelta(days=0 if any(i.get('requireAi') for i in found) else 3)).isoformat()})
   except Exception as error:
@@ -239,7 +240,9 @@ def build_ledger(obj,state=None):
   row['uses'].append({'topicId':t['id'],'foodId':t['foodId'],'scope':t.get('scope'),'observedPeriod':t.get('observedPeriod'),'causeStatus':t.get('causeAssessment',{}).get('status','unconfirmed')})
  for ident,p in state.get('articles',{}).items():
   if ident in articles:
-   articles[ident]['lastCheckedAt']=p.get('lastCheckedAt');articles[ident]['latestSourceStatus']=p.get('status');articles[ident]['sourceChanged']=p.get('reviewChanged',False);continue
+   row=articles[ident];row['lastCheckedAt']=p.get('lastCheckedAt');row['latestSourceStatus']=p.get('status')
+   row['sourceChanged']=bool(p.get('reviewChanged') and any(next(t for t in obj['topics'] if t['id']==u['topicId']).get('newsBodyFingerprint')!=p.get('fingerprint') for u in row['uses']))
+   continue
   articles[ident]={k:p[k] for k in ('id','url','title','publisher','publishedAt','lastCheckedAt','foodIds') if k in p}
   articles[ident]['status']='pending' if p.get('status') in ('source_reviewed','awaiting_summary') else 'unavailable' if p.get('status')=='unavailable' else 'held'
   articles[ident]['uses']=[];articles[ident]['reason']=p.get('error') or p.get('status')

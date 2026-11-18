@@ -37,6 +37,12 @@ class NewsTests(unittest.TestCase):
  def test_news_ledger_cannot_claim_a_fetched_article_was_used(self):
   obj={'topics':[]};state={'articles':{'n':{'id':'n','url':'https://example.com/a','status':'awaiting_summary','foodIds':['f']}},'lastRun':{}}
   rows=build_ledger(obj,state)['articles'];self.assertEqual(rows[0]['status'],'pending');self.assertEqual(rows[0]['uses'],[])
+ def test_changed_article_is_flagged_until_the_published_summary_matches_its_version(self):
+  topic={'id':'t','foodId':'f','sourceType':'news','newsArticleId':'n','newsBodyFingerprint':'old','sources':[{'url':'https://example.com/a','name':'TV','title':'みかん'}],'publishedAt':'2026-11-04','newsReview':{'checks':['本文確認']}}
+  obj={'topics':[topic]};state={'articles':{'n':{'reviewChanged':True,'fingerprint':'new','status':'awaiting_summary'}},'lastRun':{}}
+  self.assertTrue(build_ledger(obj,state)['articles'][0]['sourceChanged'])
+  topic['newsBodyFingerprint']='new'
+  self.assertFalse(build_ledger(obj,state)['articles'][0]['sourceChanged'])
  def test_fruit_and_fish_sources_get_causes_without_being_maff(self):
   a=assess({'url':'https://example.com/a','excerpt':'少雨の影響でみかんは小玉となっている。','food':{'category':'fruit'}})
   self.assertEqual(a['status'],'documented');self.assertIn('水分',a['text'])
