@@ -2,26 +2,26 @@
   "version": 1,
   "sources": {
     "ncc": {
-      "checkedAt": "2026-11-18T01:05:04+00:00",
-      "lastAttemptAt": "2026-11-18T01:05:04+00:00",
+      "checkedAt": "2026-11-18T02:26:35+00:00",
+      "lastAttemptAt": "2026-11-18T02:26:35+00:00",
       "status": "ok",
       "candidates": 0
     },
     "htb": {
-      "checkedAt": "2026-11-18T01:05:04+00:00",
-      "lastAttemptAt": "2026-11-18T01:05:04+00:00",
+      "checkedAt": "2026-11-18T02:26:35+00:00",
+      "lastAttemptAt": "2026-11-18T02:26:35+00:00",
       "status": "ok",
       "candidates": 0
     },
     "hbc": {
-      "checkedAt": "2026-11-18T01:13:22+00:00",
-      "lastAttemptAt": "2026-11-18T01:13:22+00:00",
+      "checkedAt": "2026-11-18T02:26:38+00:00",
+      "lastAttemptAt": "2026-11-18T02:26:38+00:00",
       "status": "ok",
       "candidates": 0
     },
     "atv": {
-      "checkedAt": "2026-11-18T01:13:23+00:00",
-      "lastAttemptAt": "2026-11-18T01:13:23+00:00",
+      "checkedAt": "2026-11-18T02:26:38+00:00",
+      "lastAttemptAt": "2026-11-18T02:26:38+00:00",
       "status": "ok",
       "candidates": 0
     },
@@ -74,8 +74,8 @@
       "candidates": 1
     },
     "mro": {
-      "checkedAt": "2026-11-18T01:05:02+00:00",
-      "lastAttemptAt": "2026-11-18T01:05:02+00:00",
+      "checkedAt": "2026-11-18T02:26:34+00:00",
+      "lastAttemptAt": "2026-11-18T02:26:34+00:00",
       "status": "ok",
       "candidates": 0
     }
@@ -285,7 +285,7 @@
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-18T01:16:32+00:00",
+    "checkedAt": "2026-11-18T02:26:38+00:00",
     "articleAttempts": 0,
     "sourceItems": 0,
     "errors": []
