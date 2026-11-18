@@ -182,6 +182,32 @@ def run():
    page.locator('#recipeQuick').check()
    assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
 
+   # The dashboard lists exactly the articles linked to published summaries.
+   if mobile:page.locator('#mobileMenu').click()
+   page.locator('.nav-item[data-page="news"]').click()
+   expect(page.get_by_role('heading',name='要約に使ったニュース',exact=True)).to_be_visible()
+   used=page.evaluate("window.SHUN_NEWS.articles(window.SHUN_DATA).filter(r=>r.status==='used')")
+   assert len(used)>=3,'No real news-source dashboard content'
+   expect(page.locator('#newsResults .news-card')).to_have_count(len(used))
+   assert all(urlparse(a.get_attribute('href')).scheme=='https' for a in page.locator('#newsResults h2 a').all())
+   assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),'News dashboard overflows'
+   page.locator('#newsCategory').select_option('fruit')
+   fruit_count=page.evaluate("window.SHUN_NEWS.articles(window.SHUN_DATA).filter(r=>r.status==='used'&&r.foodIds.some(id=>window.SHUN_DATA.foods.find(f=>f.id===id)?.category==='fruit')).length")
+   expect(page.locator('#newsResults .news-card')).to_have_count(fruit_count)
+   page.locator('#newsCategory').select_option('fish')
+   expect(page.locator('#newsResults .news-card').first).to_be_visible()
+   page.locator('#newsResults [data-topic]').first.click()
+   expect(page.locator('#detailContent .topic-cause').first).to_contain_text('推測')
+   expect(page.locator('#detailContent .detail-summary')).to_contain_text('推測')
+   page.locator('#closeDetail').click()
+   page.locator('#newsCategory').select_option('all')
+   page.locator('#newsSearch').fill('HTB')
+   expect(page.locator('#newsResults .news-card').first).to_contain_text('HTB')
+   page.locator('#newsSearch').fill('')
+   page.screenshot(path=str(OUT/(label+'-news-dashboard.png')))
+   page.locator('#newsStatus').select_option('pending')
+   expect(page.locator('#newsResults .news-uses')).to_have_count(0)
+
    assert not errors,errors
    results.append({'viewport':label,'size':[width,height],'javascriptErrors':errors,
      'checked':['scoped crop summary','2021/2022 graph data','daily CSV provenance','saury forecast','salmon observations','hiragana search','viewport overflow','region-specific retail','two discounted main ingredients','recipe steps','major-region sources','no general-trivia section']})

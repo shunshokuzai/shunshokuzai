@@ -2,7 +2,7 @@ name: Validate code and official price sources
 on:
   push:
     branches: ['codex/**']
-    paths: ['data/recipes.json', 'shopping.js', 'data/topic_catalog.json', 'scripts/**', 'tests/**', 'app.js', 'requirements.txt', '.github/workflows/validate.yml']
+    paths: ['data/recipes.json', 'shopping.js', 'news.js', 'data/news_sources.json', 'data/topic_catalog.json', 'scripts/**', 'tests/**', 'app.js', 'requirements.txt', '.github/workflows/validate.yml']
   pull_request:
     branches: [main]
 permissions:
@@ -23,8 +23,8 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
       - run: python scripts/preflight.py
-      - run: node --check app.js && node --check search.js && node --check shopping.js
-      - run: node --test tests/test_ui.cjs tests/test_shopping.cjs
+      - run: node --check app.js && node --check search.js && node --check shopping.js && node --check news.js
+      - run: node --test tests/test_ui.cjs tests/test_shopping.cjs tests/test_news.cjs
   official-prices:
     if: github.event_name == 'push'
     needs: tests
@@ -50,8 +50,11 @@ jobs:
       - name: Verify expanded public topic sources without Gemini requests
         env:
           SOURCES_ONLY: 'true'
-          MAX_DISCOVERY_ARTICLES: '24'
+          MAX_DISCOVERY_ARTICLES: '16'
+          MAX_NEWS_ARTICLES: '12'
         run: python -u scripts/update_topics.py --live
+      - name: Verify actual news use and fruit/fish cause provenance
+        run: python scripts/verify_news.py
       - name: Verify and retain cause explanations against the actual reported source pages
         run: python -u scripts/verify_cause_sources.py --live
       - name: Verify source allocation, retail provenance and recipe ingredients
@@ -69,7 +72,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/source_regions.json data/retail_prices.json data/topic_monitor.json data/estat_daily.json data/market_history.json data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
+          git add data/news_monitor.json data/source_regions.json data/retail_prices.json data/topic_monitor.json data/estat_daily.json data/market_history.json data/seed.json data.js '旬食材まるわかり_プロトタイプ.html'
           if ! git diff --cached --quiet; then
             git commit -m 'data: retain validated official market history'
             git push

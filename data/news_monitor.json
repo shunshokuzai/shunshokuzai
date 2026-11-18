@@ -1,0 +1,293 @@
+{
+  "version": 1,
+  "sources": {
+    "ncc": {
+      "checkedAt": "2026-11-18T01:05:04+00:00",
+      "lastAttemptAt": "2026-11-18T01:05:04+00:00",
+      "status": "ok",
+      "candidates": 0
+    },
+    "htb": {
+      "checkedAt": "2026-11-18T01:05:04+00:00",
+      "lastAttemptAt": "2026-11-18T01:05:04+00:00",
+      "status": "ok",
+      "candidates": 0
+    },
+    "hbc": {
+      "checkedAt": "2026-11-18T01:13:22+00:00",
+      "lastAttemptAt": "2026-11-18T01:13:22+00:00",
+      "status": "ok",
+      "candidates": 0
+    },
+    "atv": {
+      "checkedAt": "2026-11-18T01:13:23+00:00",
+      "lastAttemptAt": "2026-11-18T01:13:23+00:00",
+      "status": "ok",
+      "candidates": 0
+    },
+    "mbs": {
+      "checkedAt": "2026-11-18T01:13:25+00:00",
+      "lastAttemptAt": "2026-11-18T01:13:25+00:00",
+      "status": "ok",
+      "candidates": 0
+    },
+    "sakuranbo": {
+      "checkedAt": "2026-11-18T01:13:24+00:00",
+      "lastAttemptAt": "2026-11-18T01:13:24+00:00",
+      "status": "ok",
+      "candidates": 2
+    },
+    "fnn": {
+      "checkedAt": "2026-11-18T01:13:25+00:00",
+      "lastAttemptAt": "2026-11-18T01:13:25+00:00",
+      "status": "ok",
+      "candidates": 2
+    },
+    "itv": {
+      "checkedAt": "2026-11-18T01:01:55+00:00",
+      "lastAttemptAt": "2026-11-18T01:01:55+00:00",
+      "status": "ok",
+      "candidates": 0
+    },
+    "tys": {
+      "checkedAt": "2026-11-18T01:01:55+00:00",
+      "lastAttemptAt": "2026-11-18T01:01:55+00:00",
+      "status": "ok",
+      "candidates": 0
+    },
+    "sbc": {
+      "checkedAt": "2026-11-18T01:01:57+00:00",
+      "lastAttemptAt": "2026-11-18T01:01:57+00:00",
+      "status": "ok",
+      "candidates": 1
+    },
+    "kutv": {
+      "checkedAt": "2026-11-18T01:04:59+00:00",
+      "lastAttemptAt": "2026-11-18T01:04:59+00:00",
+      "status": "ok",
+      "candidates": 0
+    },
+    "uty": {
+      "checkedAt": "2026-11-18T01:05:00+00:00",
+      "lastAttemptAt": "2026-11-18T01:05:00+00:00",
+      "status": "ok",
+      "candidates": 1
+    },
+    "mro": {
+      "checkedAt": "2026-11-18T01:05:02+00:00",
+      "lastAttemptAt": "2026-11-18T01:05:02+00:00",
+      "status": "ok",
+      "candidates": 0
+    }
+  },
+  "articles": {
+    "news-831a612e0f0127f6": {
+      "id": "news-831a612e0f0127f6",
+      "url": "https://newsdig.tbs.co.jp/articles/-/3062066",
+      "title": "青森が誇る“秋の恵み”が全国へ 県産リンゴを届ける「りんごゆうパック」の出発式 第1便で300箱が全国へと発送 生産者「今年はどの品種もおいしく出来上がっている」「たくさんの人にリンゴのおいしさを知ってもらえれば」",
+      "publisher": "青森テレビ",
+      "lastAttemptAt": "2026-11-18T00:54:57+00:00",
+      "reviewedFingerprint": "dc54ddcfdc1c13a857fdcae375de391ff68a6995dc304043eda98cdbcbe715af",
+      "publishedAt": "2026-11-04",
+      "fingerprint": "dc54ddcfdc1c13a857fdcae375de391ff68a6995dc304043eda98cdbcbe715af",
+      "lastCheckedAt": "2026-11-18T00:54:59+00:00",
+      "status": "source_reviewed",
+      "foodIds": [
+        "f-054"
+      ],
+      "retryAfter": "2026-11-21"
+    },
+    "news-96a383c34f80c831": {
+      "id": "news-96a383c34f80c831",
+      "url": "https://newsdig.tbs.co.jp/articles/hbc/3088850",
+      "title": "「サーモンショック」からさらに半減か...秋サケの網には南方系のシイラ ふ化場は存続の危機 海水温上昇で稚魚が育たず 北海道",
+      "publisher": "HBC北海道放送",
+      "lastAttemptAt": "2026-11-18T00:54:59+00:00",
+      "reviewedFingerprint": "2be4a0d242caaae9322af1d0284eced9cde46b13d83981d2a6cb5c9bc50cb5af",
+      "publishedAt": "2026-11-16",
+      "fingerprint": "2be4a0d242caaae9322af1d0284eced9cde46b13d83981d2a6cb5c9bc50cb5af",
+      "lastCheckedAt": "2026-11-18T00:55:02+00:00",
+      "status": "source_reviewed",
+      "foodIds": [
+        "f-100"
+      ],
+      "retryAfter": "2026-11-21"
+    },
+    "news-ace021c0c92d7996": {
+      "id": "news-ace021c0c92d7996",
+      "url": "https://newsdig.tbs.co.jp/articles/mbs/3049656",
+      "title": "【カメムシ大発生】例年の6倍飛来した地域も...柿農家は悲鳴「収穫量が半減」「商品にならない」高温傾向・暖冬で各地に『注意報』来年も多くなる可能性",
+      "publisher": "MBSニュース",
+      "lastAttemptAt": "2026-11-18T00:55:02+00:00",
+      "reviewedFingerprint": "42daad32b0b5e1740eb36a3a42126b1ef9fee6696cb02a4047cfb2f16f716a43",
+      "publishedAt": "2026-11-01",
+      "fingerprint": "42daad32b0b5e1740eb36a3a42126b1ef9fee6696cb02a4047cfb2f16f716a43",
+      "lastCheckedAt": "2026-11-18T00:55:04+00:00",
+      "status": "source_reviewed",
+      "foodIds": [
+        "f-063"
+      ],
+      "retryAfter": "2026-11-21"
+    },
+    "news-c459b99f43861e98": {
+      "id": "news-c459b99f43861e98",
+      "url": "https://www.fnn.jp/articles/-/1147542",
+      "title": "11月なのに半袖 都心など季節外れの「夏日」も週末は“立冬寒波” 北日本は“冬の嵐” 長雨でシャインマスカット生育遅れも「甘い」",
+      "publisher": "FNNプライムオンライン（各局の取材）",
+      "lastAttemptAt": "2026-11-18T00:55:04+00:00",
+      "reviewedFingerprint": "e03d7879ee149ebbbc09f3ae2b614974c60360b579d85de3c48343bd8037e31d",
+      "publishedAt": "2026-11-06",
+      "fingerprint": "e03d7879ee149ebbbc09f3ae2b614974c60360b579d85de3c48343bd8037e31d",
+      "lastCheckedAt": "2026-11-18T00:55:05+00:00",
+      "status": "source_reviewed",
+      "foodIds": [
+        "f-065",
+        "f-071"
+      ],
+      "retryAfter": "2026-11-21"
+    },
+    "news-fd2223cbe1cf829e": {
+      "id": "news-fd2223cbe1cf829e",
+      "url": "https://www.htb.co.jp/news/archives_40407.html",
+      "title": "なぜ?記録的不漁のサンマが根室港へ押し寄せ...釣り人「2時間半で150匹」 水温変化が原因か",
+      "publisher": "HTB北海道ニュース",
+      "lastAttemptAt": "2026-11-18T00:55:05+00:00",
+      "reviewedFingerprint": "6e2e1b5c5ad2559d84b477ec3f1786d8cc8c02fdc708ec569c5855cab7bc0793",
+      "publishedAt": "2026-11-10",
+      "fingerprint": "6e2e1b5c5ad2559d84b477ec3f1786d8cc8c02fdc708ec569c5855cab7bc0793",
+      "lastCheckedAt": "2026-11-18T00:55:07+00:00",
+      "status": "source_reviewed",
+      "foodIds": [
+        "f-094"
+      ],
+      "retryAfter": "2026-11-21"
+    },
+    "news-7ccfbb26e06eaa45": {
+      "id": "news-7ccfbb26e06eaa45",
+      "url": "https://www.htb.co.jp/news/archives_40451.html",
+      "title": "【豊漁】石狩湾のワタリガニ サケにサンマと記録的不漁続くも販路拡大で水産業の救世主となるか",
+      "publisher": "HTB北海道ニュース",
+      "lastAttemptAt": "2026-11-18T00:55:07+00:00",
+      "reviewedFingerprint": "192d35217b584164606fd7b965e282607edd86c609e53efacb8d79e67187b7f4",
+      "publishedAt": "2026-11-12",
+      "fingerprint": "192d35217b584164606fd7b965e282607edd86c609e53efacb8d79e67187b7f4",
+      "lastCheckedAt": "2026-11-18T00:55:08+00:00",
+      "status": "source_reviewed",
+      "foodIds": [
+        "f-128"
+      ],
+      "retryAfter": "2026-11-21"
+    },
+    "news-9ae46d96df445c37": {
+      "id": "news-9ae46d96df445c37",
+      "url": "https://www.ncctv.co.jp/news/article/17043505",
+      "title": "夏の極端気象が農産物を直撃 葉物野菜高騰・ミカンは小ぶり傾向",
+      "publisher": "NCC長崎文化放送",
+      "lastAttemptAt": "2026-11-18T00:55:08+00:00",
+      "reviewedFingerprint": "141612ad2daf2dc7a6abf28bb4d9b99496084303e74cbc9b89b1686904c1f18c",
+      "publishedAt": "2026-11-14",
+      "fingerprint": "141612ad2daf2dc7a6abf28bb4d9b99496084303e74cbc9b89b1686904c1f18c",
+      "lastCheckedAt": "2026-11-18T00:55:09+00:00",
+      "status": "source_reviewed",
+      "foodIds": [
+        "f-055"
+      ],
+      "retryAfter": "2026-11-21"
+    },
+    "news-d3fc0bf14b3a52c2": {
+      "id": "news-d3fc0bf14b3a52c2",
+      "url": "https://www.sakuranbo.co.jp/news/2026/10/19/2026101900000007.html",
+      "title": "秋の味覚ラ・フランス　約1800トンの出荷見込む　山形",
+      "publisher": "さくらんぼテレビ",
+      "lastAttemptAt": "2026-11-18T00:55:09+00:00",
+      "lastCheckedAt": "2026-11-18T00:55:10+00:00",
+      "status": "unavailable",
+      "error": "HTTPError",
+      "retryAfter": "2026-11-19"
+    },
+    "news-c5d9313e84f2199c": {
+      "id": "news-c5d9313e84f2199c",
+      "url": "https://newsdig.tbs.co.jp/articles/sbc/3088625",
+      "title": "まるで宝さがし!「掘り出すまで、何が出てくるかわからない...」長野市松代町、特産のナガイモ収穫「形も、大きさも、申し分なしです!」",
+      "publisher": "信越放送",
+      "lastAttemptAt": "2026-11-18T01:01:57+00:00",
+      "publishedAt": "2026-11-17",
+      "fingerprint": "9031d84aa7f0384139422a1818e985d16ab6cf69a963899c2a284d1eb1c7202d",
+      "lastCheckedAt": "2026-11-18T01:02:00+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
+    },
+    "news-99a9548911c90a56": {
+      "id": "news-99a9548911c90a56",
+      "url": "https://www.fnn.jp/articles/-/1154074",
+      "title": "冬の野菜「大根」が“空洞化” 寒暖差で生育不良 出荷量減少で11月は高値傾向続くか 人気メニュー「ブリ大根」も値上げ",
+      "publisher": "FNNプライムオンライン（各局の取材）",
+      "lastAttemptAt": "2026-11-18T01:02:00+00:00",
+      "publishedAt": "2026-11-18",
+      "fingerprint": "ab1ebe71802895218b83a431f62db6568f4cd45eff630e40c0ea4a429a942eb7",
+      "lastCheckedAt": "2026-11-18T01:02:01+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
+    },
+    "news-5b47ee078934f985": {
+      "id": "news-5b47ee078934f985",
+      "url": "https://www.fnn.jp/articles/-/1154408",
+      "title": "白菜の高値続く 出荷量減 鍋シーズン直撃 今後は",
+      "publisher": "FNNプライムオンライン（各局の取材）",
+      "lastAttemptAt": "2026-11-18T01:02:01+00:00",
+      "publishedAt": "2026-11-18",
+      "fingerprint": "63f9543f9fedafc13ad6e36f85fa79af35b5a7e1a99f7aedc273b84b8e4968f3",
+      "lastCheckedAt": "2026-11-18T01:02:02+00:00",
+      "status": "attribution_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
+    },
+    "news-f77367b0b5c74562": {
+      "id": "news-f77367b0b5c74562",
+      "url": "https://www.sakuranbo.co.jp/news/2026/11/12/2026111200000007.html",
+      "title": "さくらんぼテレビ公式SNSアカウント",
+      "publisher": "さくらんぼテレビ",
+      "lastAttemptAt": "2026-11-18T01:02:02+00:00",
+      "publishedAt": "2026-11-12",
+      "fingerprint": "5da82be3aa39c0d1292b419852b05dfda82f3f79d5ef75f7db4974b7243c8ef7",
+      "lastCheckedAt": "2026-11-18T01:02:02+00:00",
+      "status": "attribution_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
+    },
+    "news-d449da62bed956a9": {
+      "id": "news-d449da62bed956a9",
+      "url": "https://www.sakuranbo.co.jp/news/2026/11/17/2026111700000006.html",
+      "title": "さくらんぼテレビ公式SNSアカウント",
+      "publisher": "さくらんぼテレビ",
+      "lastAttemptAt": "2026-11-18T01:02:02+00:00",
+      "publishedAt": "2026-11-17",
+      "fingerprint": "262ffe5f0bb33e6fb2035c17fe4b7d226d978b615d6a2dab898d2d4c3c337656",
+      "lastCheckedAt": "2026-11-18T01:02:03+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
+    },
+    "news-8ecdeb5b3bd7b9ed": {
+      "id": "news-8ecdeb5b3bd7b9ed",
+      "url": "https://newsdig.tbs.co.jp/articles/uty/2946124",
+      "title": "「さらに広がるのが怖い」ブドウが腐る病気 長雨の影響でブドウ農家は苦悩 200kg被害の農家も 山梨",
+      "publisher": "テレビ山梨",
+      "lastAttemptAt": "2026-11-18T01:05:04+00:00",
+      "publishedAt": "2026-09-15",
+      "fingerprint": "64b9d965a1d8b0ca5065f4befd86d4805b3afdf393e80137661f12cce9a9a879",
+      "lastCheckedAt": "2026-11-18T01:05:08+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-21"
+    }
+  },
+  "lastRun": {
+    "checkedAt": "2026-11-18T01:13:25+00:00",
+    "articleAttempts": 0,
+    "sourceItems": 0,
+    "errors": []
+  }
+}

@@ -64,4 +64,28 @@ def assess(item):
    for sentence in re.split('。',section.get('text','')):
     if re.search(r'(影響(?:により|で)|により|のため|による)',sentence) and len(sentence)<420:
      return {'status':'documented','text':'出典の説明：'+sentence.strip()+'。','basis':section.get('label','資料の該当箇所')+'（出典の記述。見通し・懸念を含む場合は未確定）'}
- return unknown()
+ # Fruit/fish source prose used to fall through solely because its publisher
+ # was not MAFF. Recognize explicit links, retaining attribution/uncertainty.
+ text=unicodedata.normalize('NFKC',item.get('causeEvidence') or item.get('excerpt',''))
+ causes=[('水不足|少雨|干ばつ|乾燥','水分の不足'),('日照不足|日照時間.{0,4}少','日照の不足'),('高温|猛暑|暑さ','高温'),('低温|気温.{0,4}低下','気温の低下'),('長雨|多雨|降水量.{0,4}多','雨の多さ'),('海水温.{0,8}(上昇|高)|高水温','海水温の上昇'),('親潮.{0,6}(弱|勢力)','親潮の変化')]
+ effects=[('小玉|小ぶり|肥大.{0,5}(鈍|不良)|大きくなら','果実が大きくなりにくいこと'),('着色不良|色づき.{0,4}(遅|悪)','色づきの遅れ'),('生育.{0,5}遅|仕上がり.{0,5}遅','生育の遅れ'),('裂果|割れ','果実が割れる被害'),('来遊.{0,5}遅|回遊.{0,5}変|分布.{0,5}変','来遊や分布の変化'),('稚魚.{0,12}(育|生残|生存)','稚魚の育ち・生残への影響')]
+ for sentence in re.split('[。\n]',text):
+  sentence=re.sub(r'\s+','',sentence)
+  if not re.search('影響|によ|ため|要因|原因|招|つなが',sentence):continue
+  if re.search('影響.{0,8}(ない|なし|認められず)|原因.{0,6}(ではない|ではなく)|関連.{0,5}(ない|不明)',sentence):continue
+  for cp,cn in causes:
+   cm=re.search(cp,sentence)
+   if not cm:continue
+   for ep,en in effects:
+    em=re.search(ep,sentence)
+    if not em or abs(cm.start()-em.start())>100:continue
+    hypothetical=bool(re.search('可能性|考えられ|とみられ|推測|かもしれ',sentence))
+    forecast=bool(re.search('懸念|おそれ|恐れ|見込|予測',sentence))
+    status='source_hypothesis' if hypothetical else 'documented'
+    explanation=('推測（出典の見解）：' if hypothetical else '出典は、')+cn+'と'+en+'を関連付けています。'
+    if forecast:explanation+='これは懸念・見通しの説明で、起きた被害を確定したものではありません。'
+    return {'status':status,'text':explanation,'basis':'この食材の出典本文にある原因・背景の記述（自動抽出）'}
+ result=unknown()
+ if item.get('food',{}).get('category') in ('fruit','fish') or '熟度' in item.get('reportType','') or '速報' in item.get('reportType',''):
+  result['text']='この資料は観測値や見通しを中心とした情報で、変化の原因までは確認できていません。原因を説明する産地・海域の取材は、別の資料として掲載します。'
+ return result
