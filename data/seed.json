@@ -5,10 +5,10 @@
     "topicsStatus": "source_first",
     "catalogStatus": "seasonal_guide",
     "version": "0.12.0",
-    "lastCheckedAt": "2026-11-18T02:24:29+00:00",
+    "lastCheckedAt": "2026-11-19T02:24:05+00:00",
     "lastPricePublishedAt": null,
     "lastTopicPublishedAt": null,
-    "updatedAt": "2026-11-18T02:26:38+00:00",
+    "updatedAt": "2026-11-19T02:25:55+00:00",
     "sources": [
       {
         "name": "農林水産省 青果物卸売市場調査（旬別結果）",
@@ -56,7 +56,7 @@
         "purpose": "ふじの熟度調査と収穫情報"
       }
     ],
-    "lastTopicRetrievedAt": "2026-11-18T02:26:38+00:00",
+    "lastTopicRetrievedAt": "2026-11-19T02:25:55+00:00",
     "dataCutoffAt": "2026-10-30",
     "priceObservationPeriod": "2026年11月上旬",
     "priceSourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
@@ -72,52 +72,51 @@
       "retail": "ok",
       "history": "ok",
       "topics": "ok",
-      "gemini": "not_scheduled"
+      "gemini": "ok"
     },
-    "lastFishCheckedAt": "2026-11-18T02:24:35+00:00",
+    "lastFishCheckedAt": "2026-11-19T02:24:11+00:00",
     "topicCursor": 6,
     "topicCursorMonth": "2026-11",
-    "lastTopicAttemptAt": "2026-11-18T02:26:38+00:00",
-    "lastAutomaticCheckAt": "2026-11-18T02:26:39+00:00",
-    "lastFishSuccessAt": "2026-11-18T02:26:39+00:00",
-    "lastGeminiSuccessAt": "2026-11-17T02:28:05+00:00",
-    "topicSourceCountLastRun": 52,
-    "topicAddedLastRun": 1,
-    "topicGeminiSucceededLastRun": 0,
+    "lastTopicAttemptAt": "2026-11-19T02:25:55+00:00",
+    "lastAutomaticCheckAt": "2026-11-19T02:25:56+00:00",
+    "lastFishSuccessAt": "2026-11-19T02:25:56+00:00",
+    "lastGeminiSuccessAt": "2026-11-19T02:25:56+00:00",
+    "topicSourceCountLastRun": 53,
+    "topicAddedLastRun": 9,
+    "topicGeminiSucceededLastRun": 6,
     "topicGeminiFailedLastRun": 0,
-    "lastVegetableFruitSuccessAt": "2026-11-18T02:26:39+00:00",
+    "lastVegetableFruitSuccessAt": "2026-11-19T02:25:56+00:00",
     "produceReferenceRatioCount": 56,
     "fishReferenceRatioCount": 11,
     "aiRequestBudget": {
-      "date": "2026-11-18",
-      "attempted": 0,
+      "date": "2026-11-19",
+      "attempted": 6,
       "dailyLimit": 6
     },
     "topicSourceErrorsLastRun": [
       "alic-regions article: URLError",
-      "alic-regions article: URLError",
-      "alic-regions article: URLError"
+      "sakuranbo: HTTPError"
     ],
-    "topicGeminiStateLastRun": "sources_only",
-    "lastTopicsSuccessAt": "2026-11-18T02:26:39+00:00",
+    "topicGeminiStateLastRun": "ok",
+    "lastTopicsSuccessAt": "2026-11-19T02:25:56+00:00",
     "lastStepResults": {
       "vegetableFruit": {
         "status": "ok",
-        "checkedAt": "2026-11-18T02:26:39+00:00",
+        "checkedAt": "2026-11-19T02:25:56+00:00",
         "activePriceCount": 58,
         "referenceRatioCount": 56,
         "chartPointCount": 696
       },
       "fish": {
         "status": "ok",
-        "checkedAt": "2026-11-18T02:26:39+00:00",
+        "checkedAt": "2026-11-19T02:25:56+00:00",
         "activePriceCount": 11,
         "referenceRatioCount": 11,
         "chartPointCount": 88
       },
       "retail": {
         "status": "ok",
-        "checkedAt": "2026-11-18T02:26:39+00:00",
+        "checkedAt": "2026-11-19T02:25:56+00:00",
         "recordCount": 3508,
         "foodCount": 47,
         "regionCount": 81,
@@ -125,16 +124,16 @@
       },
       "topics": {
         "status": "ok",
-        "checkedAt": "2026-11-18T02:26:39+00:00",
-        "sourceItemCount": 52,
-        "addedOrUpdatedCount": 1,
-        "sourceFailureCount": 3,
-        "aiState": "not_scheduled",
-        "aiRequestsToday": 0
+        "checkedAt": "2026-11-19T02:25:56+00:00",
+        "sourceItemCount": 53,
+        "addedOrUpdatedCount": 9,
+        "sourceFailureCount": 2,
+        "aiState": "ok",
+        "aiRequestsToday": 6
       },
       "history": {
         "status": "ok",
-        "checkedAt": "2026-11-18T02:26:39+00:00",
+        "checkedAt": "2026-11-19T02:25:56+00:00",
         "attempted": 0,
         "succeeded": 0,
         "failed": 0,
@@ -1383,9 +1382,95 @@
             }
           }
         }
+      },
+      {
+        "checkedAt": "2026-11-19T02:25:56+00:00",
+        "steps": {
+          "vegetableFruit": {
+            "status": "ok",
+            "checkedAt": "2026-11-19T02:25:56+00:00",
+            "activePriceCount": 58,
+            "referenceRatioCount": 56,
+            "chartPointCount": 696
+          },
+          "fish": {
+            "status": "ok",
+            "checkedAt": "2026-11-19T02:25:56+00:00",
+            "activePriceCount": 11,
+            "referenceRatioCount": 11,
+            "chartPointCount": 88
+          },
+          "retail": {
+            "status": "ok",
+            "checkedAt": "2026-11-19T02:25:56+00:00",
+            "recordCount": 3508,
+            "foodCount": 47,
+            "regionCount": 81,
+            "sourceFailureCount": 0
+          },
+          "topics": {
+            "status": "ok",
+            "checkedAt": "2026-11-19T02:25:56+00:00",
+            "sourceItemCount": 53,
+            "addedOrUpdatedCount": 9,
+            "sourceFailureCount": 2,
+            "aiState": "ok",
+            "aiRequestsToday": 6
+          },
+          "history": {
+            "status": "ok",
+            "checkedAt": "2026-11-19T02:25:56+00:00",
+            "attempted": 0,
+            "succeeded": 0,
+            "failed": 0,
+            "cachedReports": {
+              "produce": 211,
+              "fish": 305
+            },
+            "dailyFallback": {
+              "attempted": 0,
+              "succeeded": 0,
+              "failed": 0,
+              "state": "validated",
+              "addedPeriods": 0,
+              "validation": [
+                {
+                  "stamp": [
+                    2023,
+                    10,
+                    1
+                  ],
+                  "foods": 53,
+                  "maxDifferenceYenKg": 0.6,
+                  "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23101h_syuyo.csv"
+                },
+                {
+                  "stamp": [
+                    2023,
+                    10,
+                    2
+                  ],
+                  "foods": 54,
+                  "maxDifferenceYenKg": 0.6,
+                  "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23102h_syuyo.csv"
+                },
+                {
+                  "stamp": [
+                    2023,
+                    10,
+                    3
+                  ],
+                  "foods": 54,
+                  "maxDifferenceYenKg": 0.6,
+                  "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2023/csv/23103h_syuyo.csv"
+                }
+              ]
+            }
+          }
+        }
       }
     ],
-    "longHistoryUpdatedAt": "2026-11-18T02:24:52+00:00",
+    "longHistoryUpdatedAt": "2026-11-19T02:24:27+00:00",
     "historyBackfillLastRun": {
       "attempted": 0,
       "succeeded": 0,
@@ -7028,18 +7113,17 @@
       }
     ],
     "topicDiscoveryLastRun": {
-      "checkedAt": "2026-11-18T02:26:30+00:00",
+      "checkedAt": "2026-11-19T02:25:37+00:00",
       "registeredFoods": 144,
       "checkedIndexes": 17,
       "totalIndexes": 17,
       "articleAttempts": 8,
       "articleOutcomes": {
-        "source_text_found": 5
+        "source_text_found": 6,
+        "current_publication_date_unconfirmed": 1
       },
-      "sourceItems": 5,
+      "sourceItems": 6,
       "errors": [
-        "alic-regions article: URLError",
-        "alic-regions article: URLError",
         "alic-regions article: URLError"
       ]
     },
@@ -7053,8 +7137,8 @@
           "chiba-agriculture",
           "gunma-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:13:12+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:13:12+00:00",
@@ -7080,8 +7164,8 @@
           "ja-kumamoto-news",
           "alic-regions"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T13:42:58+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-15T13:42:58+00:00",
@@ -7106,14 +7190,14 @@
           "alic-regions",
           "chiba-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
-        "lastArticleCheckedAt": "2026-11-18T01:13:18+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
+        "lastArticleCheckedAt": "2026-11-19T02:25:37+00:00",
         "lastArticleResult": "source_text_found",
-        "lastEvidenceFoundAt": "2026-11-18T01:13:18+00:00",
+        "lastEvidenceFoundAt": "2026-11-19T02:25:37+00:00",
         "indexStatus": "ok",
-        "coverage": "source_pending",
-        "candidateCount": 7,
+        "coverage": "evidence_found",
+        "candidateCount": 9,
         "checkedSourceIds": [
           "kochi-agriculture",
           "ja-kumamoto-news",
@@ -7123,7 +7207,7 @@
         ],
         "pendingAiSourceCount": 1,
         "hasCollectedYearSpecificSource": true,
-        "lastSourcePublicationAt": null
+        "lastSourcePublicationAt": "2026-11-04"
       },
       "v-004": {
         "sourceIds": [
@@ -7133,8 +7217,8 @@
           "alic-regions",
           "chiba-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T14:45:46+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-15T14:45:46+00:00",
@@ -7160,13 +7244,13 @@
           "alic-regions",
           "gunma-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
-        "lastArticleCheckedAt": "2026-11-18T01:01:00+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
+        "lastArticleCheckedAt": "2026-11-19T02:25:10+00:00",
         "lastArticleResult": "source_text_found",
-        "lastEvidenceFoundAt": "2026-11-18T01:01:00+00:00",
+        "lastEvidenceFoundAt": "2026-11-19T02:25:10+00:00",
         "indexStatus": "ok",
-        "coverage": "source_pending",
+        "coverage": "evidence_found",
         "candidateCount": 6,
         "checkedSourceIds": [
           "kochi-agriculture",
@@ -7185,8 +7269,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7209,8 +7293,8 @@
           "ja-kumamoto-news",
           "alic-regions"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T13:53:02+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-15T13:53:02+00:00",
@@ -7233,8 +7317,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7259,13 +7343,13 @@
           "chiba-agriculture",
           "gunma-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T02:25:33+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T02:25:33+00:00",
         "indexStatus": "ok",
-        "coverage": "evidence_found",
+        "coverage": "source_pending",
         "candidateCount": 10,
         "checkedSourceIds": [
           "kochi-agriculture",
@@ -7288,14 +7372,14 @@
           "fukushima-agriculture",
           "gunma-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
-        "lastArticleCheckedAt": "2026-11-18T01:15:50+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
+        "lastArticleCheckedAt": "2026-11-19T02:25:36+00:00",
         "lastArticleResult": "source_text_found",
-        "lastEvidenceFoundAt": "2026-11-18T01:15:50+00:00",
+        "lastEvidenceFoundAt": "2026-11-19T02:25:36+00:00",
         "indexStatus": "ok",
-        "coverage": "source_pending",
-        "candidateCount": 18,
+        "coverage": "evidence_found",
+        "candidateCount": 17,
         "checkedSourceIds": [
           "kochi-agriculture",
           "ja-kumamoto-news",
@@ -7304,7 +7388,7 @@
           "fukushima-agriculture",
           "gunma-agriculture"
         ],
-        "pendingAiSourceCount": 3,
+        "pendingAiSourceCount": 2,
         "hasCollectedYearSpecificSource": true,
         "lastSourcePublicationAt": null
       },
@@ -7314,8 +7398,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:13:20+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:13:20+00:00",
@@ -7340,8 +7424,8 @@
           "fukushima-agriculture",
           "gunma-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:16:17+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:16:17+00:00",
@@ -7368,13 +7452,13 @@
           "alic-regions",
           "gunma-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T02:26:14+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T02:26:14+00:00",
         "indexStatus": "ok",
-        "coverage": "evidence_found",
+        "coverage": "source_pending",
         "candidateCount": 11,
         "checkedSourceIds": [
           "kochi-agriculture",
@@ -7394,8 +7478,8 @@
           "ja-kumamoto-news",
           "alic-regions"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:16:19+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:16:19+00:00",
@@ -7418,8 +7502,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7441,8 +7525,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7464,8 +7548,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T00:54:51+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T00:54:51+00:00",
@@ -7487,8 +7571,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7510,8 +7594,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7534,14 +7618,14 @@
           "ja-kumamoto-news",
           "chiba-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T02:19:25+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-15T02:19:25+00:00",
         "indexStatus": "ok",
-        "coverage": "source_pending",
-        "candidateCount": 1,
+        "coverage": "no_matching_link",
+        "candidateCount": 0,
         "checkedSourceIds": [
           "kochi-agriculture",
           "ja-kumamoto-news",
@@ -7559,8 +7643,8 @@
           "ja-kumamoto-news",
           "alic-regions"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:04:53+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:04:53+00:00",
@@ -7585,8 +7669,8 @@
           "alic-regions",
           "ehime-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7610,8 +7694,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7633,8 +7717,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:13:09+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:13:09+00:00",
@@ -7656,8 +7740,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T12:50:55+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-15T12:50:55+00:00",
@@ -7679,8 +7763,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7704,8 +7788,8 @@
           "alic-regions",
           "ehime-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T13:28:25+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-15T13:28:25+00:00",
@@ -7732,8 +7816,8 @@
           "chiba-agriculture",
           "gunma-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-16T02:30:41+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-16T02:30:41+00:00",
@@ -7758,8 +7842,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7781,8 +7865,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T00:54:21+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T00:54:21+00:00",
@@ -7804,8 +7888,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7827,8 +7911,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:04:54+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:04:54+00:00",
@@ -7850,8 +7934,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-17T02:27:47+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-17T02:27:47+00:00",
@@ -7873,8 +7957,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7896,8 +7980,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7919,8 +8003,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-17T02:27:51+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-17T02:27:51+00:00",
@@ -7943,8 +8027,8 @@
           "ja-kumamoto-news",
           "gunma-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7967,8 +8051,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -7990,8 +8074,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8013,8 +8097,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8036,8 +8120,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8059,8 +8143,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8082,8 +8166,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8105,8 +8189,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8128,8 +8212,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8151,8 +8235,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8174,8 +8258,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8197,8 +8281,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8220,8 +8304,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:16:16+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:16:16+00:00",
@@ -8243,8 +8327,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8266,8 +8350,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8289,8 +8373,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8312,8 +8396,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8339,8 +8423,8 @@
           "fukushima-agriculture",
           "ibaraki-fruit"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8369,8 +8453,8 @@
           "wakayama-citrus",
           "ehime-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:13:11+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:13:11+00:00",
@@ -8397,8 +8481,8 @@
           "ja-kumamoto-news",
           "ehime-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8424,8 +8508,8 @@
           "ja-kumamoto-news",
           "ehime-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8450,8 +8534,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8475,8 +8559,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:01:05+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:01:05+00:00",
@@ -8500,8 +8584,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:01:28+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:01:28+00:00",
@@ -8525,8 +8609,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8550,8 +8634,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8575,14 +8659,14 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
-        "lastArticleCheckedAt": "2026-11-15T12:53:21+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
+        "lastArticleCheckedAt": "2026-11-19T02:25:11+00:00",
         "lastArticleResult": "source_text_found",
-        "lastEvidenceFoundAt": "2026-11-15T12:53:21+00:00",
+        "lastEvidenceFoundAt": "2026-11-19T02:25:11+00:00",
         "indexStatus": "ok",
-        "coverage": "source_pending",
-        "candidateCount": 2,
+        "coverage": "evidence_found",
+        "candidateCount": 4,
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
@@ -8604,8 +8688,8 @@
           "fukushima-agriculture",
           "ibaraki-fruit"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T00:54:25+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T00:54:25+00:00",
@@ -8635,14 +8719,14 @@
           "nagano-fruit",
           "yamanashi-fruit"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T02:25:36+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T02:25:36+00:00",
         "indexStatus": "ok",
-        "coverage": "evidence_found",
-        "candidateCount": 6,
+        "coverage": "source_pending",
+        "candidateCount": 5,
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
@@ -8664,8 +8748,8 @@
           "nagano-fruit",
           "yamanashi-fruit"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T00:54:25+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T00:54:25+00:00",
@@ -8694,14 +8778,14 @@
           "ibaraki-fruit",
           "chiba-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:15:53+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:15:53+00:00",
         "indexStatus": "ok",
         "coverage": "source_pending",
-        "candidateCount": 7,
+        "candidateCount": 5,
         "checkedSourceIds": [
           "kochi-agriculture",
           "kochi-fruit",
@@ -8722,8 +8806,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8749,8 +8833,8 @@
           "ehime-agriculture",
           "ibaraki-fruit"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:04:48+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:04:48+00:00",
@@ -8762,8 +8846,8 @@
           "kochi-fruit",
           "ja-kumamoto-news",
           "ja-kumamoto",
-          "ehime-agriculture",
-          "ibaraki-fruit"
+          "ibaraki-fruit",
+          "ehime-agriculture"
         ],
         "pendingAiSourceCount": 4,
         "hasCollectedYearSpecificSource": true,
@@ -8776,8 +8860,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:13:16+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:13:16+00:00",
@@ -8802,8 +8886,8 @@
           "ja-kumamoto-news",
           "ehime-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8829,8 +8913,8 @@
           "ja-kumamoto-news",
           "gunma-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T13:52:40+00:00",
         "lastArticleResult": "food_specific_evidence_missing",
         "lastEvidenceFoundAt": "2026-11-15T13:52:38+00:00",
@@ -8859,8 +8943,8 @@
           "fukushima-agriculture",
           "ibaraki-fruit"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T14:32:41+00:00",
         "lastArticleResult": "structured_observation_missing",
         "lastEvidenceFoundAt": null,
@@ -8890,8 +8974,8 @@
           "yamanashi-fruit",
           "fukushima-agriculture"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:13:19+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:13:19+00:00",
@@ -8918,8 +9002,8 @@
           "ja-kumamoto-news",
           "yamanashi-fruit"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T14:32:41+00:00",
         "lastArticleResult": "structured_observation_missing",
         "lastEvidenceFoundAt": null,
@@ -8944,8 +9028,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -8969,8 +9053,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:13:08+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:13:08+00:00",
@@ -8994,8 +9078,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9019,8 +9103,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:04:20+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:04:20+00:00",
@@ -9044,13 +9128,13 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T02:25:57+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T02:25:57+00:00",
         "indexStatus": "ok",
-        "coverage": "evidence_found",
+        "coverage": "source_pending",
         "candidateCount": 5,
         "checkedSourceIds": [
           "kochi-agriculture",
@@ -9069,8 +9153,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9094,8 +9178,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9119,8 +9203,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:15:52+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:15:52+00:00",
@@ -9144,8 +9228,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9169,8 +9253,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9194,8 +9278,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T00:54:53+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T00:54:53+00:00",
@@ -9219,8 +9303,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9244,8 +9328,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9269,8 +9353,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9294,8 +9378,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9319,8 +9403,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9344,8 +9428,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9369,8 +9453,8 @@
           "ja-kumamoto",
           "ja-kumamoto-news"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9394,8 +9478,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:13:14+00:00",
         "lastArticleResult": "current_publication_date_unconfirmed",
         "lastEvidenceFoundAt": "2026-11-18T00:54:49+00:00",
@@ -9419,8 +9503,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T00:54:53+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T00:54:53+00:00",
@@ -9444,8 +9528,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9469,8 +9553,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-17T02:27:46+00:00",
         "lastArticleResult": "current_publication_date_unconfirmed",
         "lastEvidenceFoundAt": null,
@@ -9494,8 +9578,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9519,8 +9603,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:01:04+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:01:04+00:00",
@@ -9544,8 +9628,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T14:33:42+00:00",
         "lastArticleResult": "current_publication_date_unconfirmed",
         "lastEvidenceFoundAt": null,
@@ -9569,8 +9653,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:13:11+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:13:11+00:00",
@@ -9594,8 +9678,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9619,8 +9703,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9644,8 +9728,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9669,8 +9753,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9694,8 +9778,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9719,8 +9803,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9744,8 +9828,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9769,8 +9853,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9794,8 +9878,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9819,8 +9903,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9844,8 +9928,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9869,8 +9953,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9894,8 +9978,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9919,8 +10003,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9944,8 +10028,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9969,8 +10053,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -9994,8 +10078,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T14:32:43+00:00",
         "lastArticleResult": "food_specific_evidence_missing",
         "lastEvidenceFoundAt": null,
@@ -10019,8 +10103,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10044,8 +10128,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10069,8 +10153,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10094,8 +10178,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T14:32:43+00:00",
         "lastArticleResult": "current_publication_date_unconfirmed",
         "lastEvidenceFoundAt": null,
@@ -10119,8 +10203,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10144,8 +10228,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10169,8 +10253,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10194,8 +10278,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10219,8 +10303,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10244,8 +10328,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10269,8 +10353,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10294,8 +10378,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-15T14:33:13+00:00",
         "lastArticleResult": "current_publication_date_unconfirmed",
         "lastEvidenceFoundAt": null,
@@ -10319,8 +10403,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10344,8 +10428,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": "2026-11-18T01:04:51+00:00",
         "lastArticleResult": "source_text_found",
         "lastEvidenceFoundAt": "2026-11-18T01:04:51+00:00",
@@ -10369,8 +10453,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10394,8 +10478,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10419,8 +10503,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10444,8 +10528,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10469,8 +10553,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10494,8 +10578,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10519,8 +10603,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10544,8 +10628,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10569,8 +10653,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10594,8 +10678,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10619,8 +10703,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10644,8 +10728,8 @@
           "fra-resources",
           "jafic-forecasts"
         ],
-        "lastAttemptAt": "2026-11-18T02:25:32+00:00",
-        "lastIndexCheckedAt": "2026-11-18T02:25:32+00:00",
+        "lastAttemptAt": "2026-11-19T02:25:09+00:00",
+        "lastIndexCheckedAt": "2026-11-19T02:25:09+00:00",
         "lastArticleCheckedAt": null,
         "lastArticleResult": null,
         "lastEvidenceFoundAt": null,
@@ -10665,8 +10749,8 @@
     },
     "retailLastRun": {
       "version": 1,
-      "lastAttemptAt": "2026-11-18T02:24:49+00:00",
-      "lastSuccessAt": "2026-11-18T02:24:49+00:00",
+      "lastAttemptAt": "2026-11-19T02:24:23+00:00",
+      "lastSuccessAt": "2026-11-19T02:24:23+00:00",
       "status": "ok",
       "errors": [],
       "counts": {
@@ -10677,7 +10761,7 @@
     "foodSourcePlan": {
       "v-001": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "千葉",
@@ -10701,7 +10785,7 @@
       },
       "v-002": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "茨城",
@@ -10717,7 +10801,7 @@
       },
       "v-003": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "千葉",
@@ -10737,7 +10821,7 @@
       },
       "v-004": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "千葉",
@@ -10776,7 +10860,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "群馬",
@@ -10811,7 +10895,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-007": {
         "basis": "2025年産・ブロッコリーの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -10834,7 +10918,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "埼玉",
@@ -10877,11 +10961,11 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-009": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "茨城",
@@ -10912,7 +10996,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040442808&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "熊本",
@@ -10936,7 +11020,7 @@
       },
       "v-011": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-012": {
         "basis": "2025年産・きゅうりの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -10959,7 +11043,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040442808&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "宮崎",
@@ -11002,7 +11086,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040442808&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "高知",
@@ -11041,7 +11125,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040442808&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "茨城",
@@ -11061,7 +11145,7 @@
       },
       "v-015": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-016": {
         "basis": "2025年産・スイートコーンの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11084,15 +11168,15 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-017": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-018": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-019": {
         "basis": "2025年産・かぼちゃの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11115,15 +11199,15 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-020": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-021": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "北海道",
@@ -11135,7 +11219,7 @@
       },
       "v-022": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "埼玉",
@@ -11170,7 +11254,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-024": {
         "basis": "2025年産・れんこんの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11193,7 +11277,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-025": {
         "basis": "2025年産・ごぼうの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11216,7 +11300,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-026": {
         "basis": "2025年産・かぶの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11239,7 +11323,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-027": {
         "basis": "2025年産・たまねぎの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11262,7 +11346,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040442808&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "北海道",
@@ -11274,7 +11358,7 @@
       },
       "v-028": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00",
+        "checkedAt": "2026-11-19T02:24:28+00:00",
         "seasonalRegions": [
           {
             "name": "秋田",
@@ -11317,7 +11401,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-030": {
         "basis": "2025年産・しょうがの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11340,11 +11424,11 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-031": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-032": {
         "basis": "2025年産・アスパラガスの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11367,11 +11451,11 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-033": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-034": {
         "basis": "2025年産・ふきの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11394,11 +11478,11 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-035": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-036": {
         "basis": "2025年産・そらまめの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11421,7 +11505,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-037": {
         "basis": "2025年産・えだまめの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11444,7 +11528,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-038": {
         "basis": "2025年産・さやえんどうの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11467,7 +11551,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-039": {
         "basis": "2025年産・さやいんげんの都道府県別収穫量上位3県（過年度の産地構成）。さやいんげん全体の参考値であり品種別順位ではありません",
@@ -11490,23 +11574,23 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-040": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-041": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-042": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-043": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-044": {
         "basis": "2025年産・しゅんぎくの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11529,7 +11613,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-045": {
         "basis": "2025年産・みずなの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11552,7 +11636,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-046": {
         "basis": "2025年産・セルリーの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11575,7 +11659,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-047": {
         "basis": "2025年産・ちんげんさいの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11598,11 +11682,11 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-048": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-049": {
         "basis": "2025年産・にんにくの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11625,11 +11709,11 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-050": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-051": {
         "basis": "2025年産・さやいんげんの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11652,11 +11736,11 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-052": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "v-053": {
         "basis": "2025年産・かぼちゃの都道府県別収穫量上位3県（過年度の産地構成）。かぼちゃ全体の参考値であり品種別順位ではありません",
@@ -11679,7 +11763,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-054": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -11696,7 +11780,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-055": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -11719,35 +11803,35 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-056": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-057": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-058": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-059": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-060": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-061": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-062": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-063": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -11770,7 +11854,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-064": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -11793,7 +11877,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-065": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）。ぶどう全体の参考値であり品種別順位ではありません",
@@ -11816,7 +11900,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-066": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）。ぶどう全体の参考値であり品種別順位ではありません",
@@ -11839,7 +11923,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-067": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -11862,7 +11946,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-068": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -11879,7 +11963,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-069": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -11902,11 +11986,11 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-070": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-071": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -11929,7 +12013,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-072": {
         "basis": "2025年産・いちごの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -11952,7 +12036,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-073": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -11975,7 +12059,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-074": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -11998,7 +12082,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-075": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -12012,11 +12096,11 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-076": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-077": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -12039,7 +12123,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-078": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -12062,7 +12146,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-079": {
         "basis": "2025年産・すいかの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -12085,7 +12169,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-080": {
         "basis": "2025年産・メロンの都道府県別収穫量上位3県（過年度の産地構成）",
@@ -12108,19 +12192,19 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-081": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-082": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-083": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-084": {
         "basis": "2024年産果樹生産出荷統計・収穫量の主産県（過年度の産地構成）",
@@ -12131,7 +12215,7 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040387925",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-085": {
         "basis": "2025年産・いちごの都道府県別収穫量上位3県（過年度の産地構成）。いちご全体の参考値であり品種別順位ではありません",
@@ -12154,39 +12238,39 @@
           }
         ],
         "sourceUrl": "https://www.e-stat.go.jp/stat-search/files/data?sinfid=000040475795&ext=xls",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-086": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-087": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-088": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-089": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-090": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-091": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-092": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-093": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-094": {
         "basis": "公的水産資料で確認した対象海域・地域（漁獲量順位ではありません）",
@@ -12196,7 +12280,7 @@
           }
         ],
         "sourceUrl": "https://www.jafic.or.jp/information/2026/11/09/post-5/",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-095": {
         "basis": "公的水産資料で確認した対象海域・地域（漁獲量順位ではありません）",
@@ -12209,11 +12293,11 @@
           }
         ],
         "sourceUrl": "https://www.fra.go.jp/home/kenkyushokai/press/pr2026/fri_20260629_katsuo.html",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-096": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-097": {
         "basis": "公的水産資料で確認した対象海域・地域（漁獲量順位ではありません）",
@@ -12226,7 +12310,7 @@
           }
         ],
         "sourceUrl": "https://www.fra.go.jp/home/kenkyushokai/press/pr2026/fri_20261028_ukiuo-tsushima-1st.html",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-098": {
         "basis": "公的水産資料で確認した対象海域・地域（漁獲量順位ではありません）",
@@ -12239,7 +12323,7 @@
           }
         ],
         "sourceUrl": "https://www.fra.go.jp/home/kenkyushokai/press/pr2026/fri_20261028_ukiuo-tsushima-1st.html",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-099": {
         "basis": "公的水産資料で確認した対象海域・地域（漁獲量順位ではありません）",
@@ -12255,11 +12339,11 @@
           }
         ],
         "sourceUrl": "https://www.fra.go.jp/home/kenkyushokai/press/pr2026/fri_20260630_katakuchi-2nd.html",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-100": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-101": {
         "basis": "公的水産資料で確認した対象海域・地域（漁獲量順位ではありません）",
@@ -12272,127 +12356,127 @@
           }
         ],
         "sourceUrl": "https://www.fra.go.jp/home/kenkyushokai/press/pr2026/fri_20261111_buri.html",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-102": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-103": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-104": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-105": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-106": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-107": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-108": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-109": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-110": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-111": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-112": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-113": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-114": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-115": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-116": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-117": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-118": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-119": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-120": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-121": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-122": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-123": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-124": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-125": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-126": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-127": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-128": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-129": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-130": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-131": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-132": {
         "basis": "公的水産資料で確認した対象海域・地域（漁獲量順位ではありません）",
@@ -12405,55 +12489,55 @@
           }
         ],
         "sourceUrl": "https://www.fra.go.jp/home/kenkyushokai/press/pr2026/fri_20260930_surume-pac-2nd.html",
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-133": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-134": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-135": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-136": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-137": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-138": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-139": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-140": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-141": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-142": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-143": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       },
       "f-144": {
         "regions": [],
-        "checkedAt": "2026-11-18T02:24:53+00:00"
+        "checkedAt": "2026-11-19T02:24:28+00:00"
       }
     },
     "sourcePlanningWarnings": [],
@@ -12464,13 +12548,21 @@
       "f-055": "2026-11-17T02:27:57+00:00",
       "v-021": "2026-11-17T02:27:59+00:00",
       "v-022": "2026-11-17T02:28:01+00:00",
-      "v-027": "2026-11-17T02:28:03+00:00"
+      "v-027": "2026-11-17T02:28:03+00:00",
+      "f-063": "2026-11-19T02:25:47+00:00",
+      "v-003": "2026-11-19T02:25:48+00:00",
+      "v-010": "2026-11-19T02:25:49+00:00",
+      "f-094": "2026-11-19T02:25:50+00:00",
+      "f-095": "2026-11-19T02:25:52+00:00",
+      "f-097": "2026-11-19T02:25:53+00:00"
     },
     "newsDiscoveryLastRun": {
-      "checkedAt": "2026-11-18T02:26:38+00:00",
-      "articleAttempts": 0,
+      "checkedAt": "2026-11-19T02:25:47+00:00",
+      "articleAttempts": 1,
       "sourceItems": 0,
-      "errors": []
+      "errors": [
+        "sakuranbo: HTTPError"
+      ]
     }
   },
   "foods": [
@@ -14490,7 +14582,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -16910,7 +17002,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -19330,7 +19422,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -21750,7 +21842,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -24170,7 +24262,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -26590,7 +26682,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -29010,7 +29102,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -31430,7 +31522,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -33850,7 +33942,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -36270,7 +36362,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -38690,7 +38782,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -41110,7 +41202,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -43530,7 +43622,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -45951,7 +46043,7 @@
       "periodStart": "2026-10-11",
       "periodEnd": "2026-10-20",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "statisticalItem": "ふき",
@@ -48178,7 +48270,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -50598,7 +50690,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -53018,7 +53110,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -55438,7 +55530,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -57858,7 +57950,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -60278,7 +60370,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -62698,7 +62790,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -65118,7 +65210,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -67538,7 +67630,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -69958,7 +70050,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -72378,7 +72470,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -74798,7 +74890,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -77218,7 +77310,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -79638,7 +79730,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -81183,7 +81275,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -83603,7 +83695,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -86023,7 +86115,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -88443,7 +88535,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -90863,7 +90955,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -93283,7 +93375,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -95703,7 +95795,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -98123,7 +98215,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -100543,7 +100635,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -102963,7 +103055,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -105383,7 +105475,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -107803,7 +107895,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -110223,7 +110315,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -112643,7 +112735,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -115063,7 +115155,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -117080,7 +117172,7 @@
       "periodStart": "2026-10-11",
       "periodEnd": "2026-10-20",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "statisticalItem": "西洋なし（国産果実）",
@@ -118661,7 +118753,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -120632,7 +120724,7 @@
       "periodStart": "2026-10-11",
       "periodEnd": "2026-10-20",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "statisticalItem": "もも（国産果実）",
@@ -122414,7 +122506,7 @@
       "periodStart": "2026-10-11",
       "periodEnd": "2026-10-20",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "statisticalItem": "すもも（国産果実）",
@@ -123811,7 +123903,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -126201,7 +126293,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -127939,7 +128031,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -128378,7 +128470,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -129400,7 +129492,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -131820,7 +131912,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -134240,7 +134332,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -136660,7 +136752,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -137841,7 +137933,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -140261,7 +140353,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -142681,7 +142773,7 @@
       "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26111h_syuyo.csv",
       "period": "2026年11月 上旬",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "sample": false,
       "market": "主要卸売市場計",
       "priceStatistic": "主要卸売市場計・卸売平均価格（円/kg）",
@@ -144279,7 +144371,7 @@
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "statisticalItem": "サンマ",
       "brandDetail": "岩 手 生・130-140g/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -145585,7 +145677,7 @@
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "statisticalItem": "サバ",
       "brandDetail": "三重ほか －・7-10入/5kg",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -149423,7 +149515,7 @@
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "statisticalItem": "アジ",
       "brandDetail": "長 崎 中・180-220g/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -153261,7 +153353,7 @@
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "statisticalItem": "イワシ",
       "brandDetail": "鹿児島 －・60-100g/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -157087,7 +157179,7 @@
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "statisticalItem": "カツオ",
       "brandDetail": "鹿児島 ほ か －・3-4kg/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -160889,7 +160981,7 @@
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "statisticalItem": "マグロ",
       "brandDetail": "各 地 生・-",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -164667,7 +164759,7 @@
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "statisticalItem": "カレイ",
       "brandDetail": "北海道 マ・-",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -168181,7 +168273,7 @@
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "statisticalItem": "キンメダイ",
       "brandDetail": "千葉ほか －・0.5-1.5kg/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -172019,7 +172111,7 @@
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "statisticalItem": "スルメイカ",
       "brandDetail": "青 森 －・20-30入/5kg",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -175857,7 +175949,7 @@
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "statisticalItem": "カキ",
       "brandDetail": "三 陸 －・-",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -177883,7 +177975,7 @@
       "periodStart": "2026-10-23",
       "periodEnd": "2026-10-29",
       "publishedAt": null,
-      "retrievedAt": "2026-11-18",
+      "retrievedAt": "2026-11-19",
       "statisticalItem": "ハマチ",
       "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
       "priceStatistic": "豊洲市場・中値（円/kg）",
@@ -181631,6 +181723,549 @@
     }
   ],
   "topics": [
+    {
+      "id": "regional-alic-regions-002aada42819-v-003",
+      "foodId": "v-003",
+      "title": "だいこん：和歌山の生育観測",
+      "summary": "2026年10月14日の和歌山・和歌山の調査では、生育は平年より早く進んでいます。原因は未確認です。取得・整理できた根拠だけでは、現在の状態に至った理由を特定できません。資料に原因の記載がない場合と、アプリがまだ読み取れていない場合があります。別の地域の天候を原因として補っていません。調査表の作況評価は「-」です。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農畜産業振興機構・ベジ探（主要産地の作柄調査）",
+          "title": "だいこん・和歌山県の生育調査",
+          "url": "https://vegetan.alic.go.jp/trend/y2026/s04/p30.html",
+          "publishedAt": null,
+          "type": "official"
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026-10-14の産地調査",
+      "sourceFingerprint": "2bbc3e79bbc58f56010b88d757d30d24b674190db77cc65f1dcf76b49e4cd4b3",
+      "sourceFamily": "regional-alic-regions-002aada42819",
+      "isForecast": false,
+      "periodStart": "2026-10-14",
+      "periodEnd": "2026-10-14",
+      "sourceUpdatedAt": "2026-10-28",
+      "seasonalRecord": true,
+      "reportYear": 2026,
+      "summaryVersion": 8,
+      "causeAssessment": {
+        "status": "unconfirmed",
+        "text": "原因は未確認です。取得・整理できた根拠だけでは、現在の状態に至った理由を特定できません。資料に原因の記載がない場合と、アプリがまだ読み取れていない場合があります。別の地域の天候を原因として補っていません。",
+        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
+      },
+      "causeIncludedInSummary": true,
+      "sourceType": "official",
+      "newsArticleId": null,
+      "newsReview": null,
+      "newsBodyFingerprint": null,
+      "sourceExcerpt": "2026年10月14日の和歌山・和歌山の調査では",
+      "scope": "和歌山・資料の調査産地／試験樹",
+      "geographicLevel": "regional",
+      "region": "和歌山",
+      "reportType": "主要産地の地域観測（全国の作柄ではありません）",
+      "evidenceSections": [
+        {
+          "label": "最新の調査表の項目（整理）",
+          "text": "生育進度：早い、作付面積・前年比：増加"
+        },
+        {
+          "label": "原因の説明に使った箇所",
+          "text": "原因を示す同じ産地・対象期間の記述を確認できず"
+        }
+      ],
+      "limitations": "資料の調査地点・品種の観測です。県全体や全国の収量・品質を代表するとは限りません。",
+      "automaticChecks": [
+        "対象年・最新調査日・産地を照合",
+        "因果表現の限定ルールで整理（認識できない原因は保留）"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "産地調査の表・原因説明を整理（AI未使用）",
+      "retrievedAt": "2026-11-19T02:25:55+00:00"
+    },
+    {
+      "id": "regional-alic-regions-fd1924c2a8f5-v-003",
+      "foodId": "v-003",
+      "title": "だいこん：石川の生育観測",
+      "summary": "2026年10月5日の石川・JA金沢市の調査では、生育は平年並みに進んでいます。出荷は平年並みに進んでいます。原因は未確認です。取得・整理できた根拠だけでは、現在の状態に至った理由を特定できません。資料に原因の記載がない場合と、アプリがまだ読み取れていない場合があります。別の地域の天候を原因として補っていません。調査表の作況評価は「平年並み」です。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農畜産業振興機構・ベジ探（主要産地の作柄調査）",
+          "title": "だいこん・石川県の生育調査",
+          "url": "https://vegetan.alic.go.jp/trend/y2026/s04/p17.html",
+          "publishedAt": null,
+          "type": "official"
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026-10-05の産地調査",
+      "sourceFingerprint": "39533c9527dabe009d65f3d94b0115dbdf572456102191b882e4eb9c08644e4b",
+      "sourceFamily": "regional-alic-regions-fd1924c2a8f5",
+      "isForecast": false,
+      "periodStart": "2026-10-05",
+      "periodEnd": "2026-10-05",
+      "sourceUpdatedAt": "2026-10-28",
+      "seasonalRecord": true,
+      "reportYear": 2026,
+      "summaryVersion": 8,
+      "causeAssessment": {
+        "status": "unconfirmed",
+        "text": "原因は未確認です。取得・整理できた根拠だけでは、現在の状態に至った理由を特定できません。資料に原因の記載がない場合と、アプリがまだ読み取れていない場合があります。別の地域の天候を原因として補っていません。",
+        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
+      },
+      "causeIncludedInSummary": true,
+      "sourceType": "official",
+      "newsArticleId": null,
+      "newsReview": null,
+      "newsBodyFingerprint": null,
+      "sourceExcerpt": "2026年10月5日の石川・JA金沢市の調査では",
+      "scope": "石川・資料の調査産地／試験樹",
+      "geographicLevel": "regional",
+      "region": "石川",
+      "reportType": "主要産地の地域観測（全国の作柄ではありません）",
+      "evidenceSections": [
+        {
+          "label": "最新の調査表の項目（整理）",
+          "text": "作況：平年並み、生育進度：平年並み、出荷進度：平年並み、作付面積・前年比：増加"
+        },
+        {
+          "label": "原因の説明に使った箇所",
+          "text": "原因を示す同じ産地・対象期間の記述を確認できず"
+        }
+      ],
+      "limitations": "資料の調査地点・品種の観測です。県全体や全国の収量・品質を代表するとは限りません。",
+      "automaticChecks": [
+        "対象年・最新調査日・産地を照合",
+        "因果表現の限定ルールで整理（認識できない原因は保留）"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "産地調査の表・原因説明を整理（AI未使用）",
+      "retrievedAt": "2026-11-19T02:25:55+00:00"
+    },
+    {
+      "id": "regional-alic-regions-a00eb07cf79b-v-005",
+      "foodId": "v-005",
+      "title": "ほうれんそう：福井の生育観測",
+      "summary": "2026年11月18日の福井・福井市の調査では、生育は平年並みに進んでいます。出荷は平年並みに進んでいます。原因は未確認です。取得・整理できた根拠だけでは、現在の状態に至った理由を特定できません。資料に原因の記載がない場合と、アプリがまだ読み取れていない場合があります。別の地域の天候を原因として補っていません。調査表の作況評価は「平年並み」です。",
+      "kind": "official_excerpt",
+      "verified": true,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "農畜産業振興機構・ベジ探（主要産地の作柄調査）",
+          "title": "ほうれんそう・福井県の生育調査",
+          "url": "https://vegetan.alic.go.jp/trend/y2026/s13/p18.html",
+          "publishedAt": null,
+          "type": "official"
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026-11-18の産地調査",
+      "sourceFingerprint": "0b2c19ca68a23d1a5bdc6bbe825a847d10c0e9a278aa94b283cdc7f4c00896fb",
+      "sourceFamily": "regional-alic-regions-a00eb07cf79b",
+      "isForecast": false,
+      "periodStart": "2026-11-18",
+      "periodEnd": "2026-11-18",
+      "sourceUpdatedAt": "2026-11-19",
+      "seasonalRecord": true,
+      "reportYear": 2026,
+      "summaryVersion": 8,
+      "causeAssessment": {
+        "status": "unconfirmed",
+        "text": "原因は未確認です。取得・整理できた根拠だけでは、現在の状態に至った理由を特定できません。資料に原因の記載がない場合と、アプリがまだ読み取れていない場合があります。別の地域の天候を原因として補っていません。",
+        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
+      },
+      "causeIncludedInSummary": true,
+      "sourceType": "official",
+      "newsArticleId": null,
+      "newsReview": null,
+      "newsBodyFingerprint": null,
+      "sourceExcerpt": "2026年11月18日の福井・福井市の調査では、",
+      "scope": "福井・資料の調査産地／試験樹",
+      "geographicLevel": "regional",
+      "region": "福井",
+      "reportType": "主要産地の地域観測（全国の作柄ではありません）",
+      "evidenceSections": [
+        {
+          "label": "最新の調査表の項目（整理）",
+          "text": "作況：平年並み、生育進度：平年並み、出荷進度：平年並み、作付面積・前年比：減少"
+        },
+        {
+          "label": "原因の説明に使った箇所",
+          "text": "原因を示す同じ産地・対象期間の記述を確認できず"
+        }
+      ],
+      "limitations": "資料の調査地点・品種の観測です。県全体や全国の収量・品質を代表するとは限りません。",
+      "automaticChecks": [
+        "対象年・最新調査日・産地を照合",
+        "因果表現の限定ルールで整理（認識できない原因は保留）"
+      ],
+      "aiGenerated": false,
+      "summaryProvider": null,
+      "tag": "産地調査の表・原因説明を整理（AI未使用）",
+      "retrievedAt": "2026-11-19T02:25:55+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-2-f-097",
+      "foodId": "f-097",
+      "title": "サバ：2026年11月第2週の入荷・市場動向",
+      "summary": "サバは三重と千葉を主産地として入荷している。入荷量は前週比で6％増加し、価格は0.5割強安となった。数量や価格の変動に関する原因は資料から確認できない。今後の入荷量や価格の見通しについては不透明な状況である。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "publishedAt": null,
+          "type": "official"
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "f94554472f0cb9403262d285e5ae1f243dcdf8c230c6a3e6fb887aa75caeae6b",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "sourceUpdatedAt": null,
+      "seasonalRecord": null,
+      "reportYear": null,
+      "summaryVersion": 8,
+      "causeAssessment": {
+        "status": "unconfirmed",
+        "text": "この資料は観測値や見通しを中心とした情報で、変化の原因までは確認できていません。原因を説明する産地・海域の取材は、別の資料として掲載します。",
+        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
+      },
+      "causeIncludedInSummary": false,
+      "sourceType": "official",
+      "newsArticleId": null,
+      "newsReview": null,
+      "newsBodyFingerprint": null,
+      "sourceExcerpt": "サバは三重と千葉主体に入荷。前週に比べ数量は6%増加、価格は0.5割強安。",
+      "scope": "東京都豊洲市場",
+      "geographicLevel": null,
+      "region": null,
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "サバは三重と千葉主体に入荷。前週に比べ数量は6%増加、価格は0.5割強安。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・自動チェック）",
+      "retrievedAt": "2026-11-19T02:25:55+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-2-f-095",
+      "foodId": "f-095",
+      "title": "カツオ：2026年11月第2週の入荷・市場動向",
+      "summary": "カツオは鹿児島と宮城を主産地として入荷している。入荷量は前週比で38%減少し、価格は2割弱上昇した。数量減少や価格変動の原因は資料から確認できない。今後の入荷量や価格の推移については、現時点で不透明な状況である。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "publishedAt": null,
+          "type": "official"
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "2f5b876f741d702f65615899e0d287dfc0cc05cdbcb917315a94056f9be6f2f5",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "sourceUpdatedAt": null,
+      "seasonalRecord": null,
+      "reportYear": null,
+      "summaryVersion": 8,
+      "causeAssessment": {
+        "status": "unconfirmed",
+        "text": "この資料は観測値や見通しを中心とした情報で、変化の原因までは確認できていません。原因を説明する産地・海域の取材は、別の資料として掲載します。",
+        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
+      },
+      "causeIncludedInSummary": false,
+      "sourceType": "official",
+      "newsArticleId": null,
+      "newsReview": null,
+      "newsBodyFingerprint": null,
+      "sourceExcerpt": "カツオは鹿児島と宮城主体に入荷。前週に比べ数量は38%減少、価格は2割弱高。",
+      "scope": "東京都豊洲市場",
+      "geographicLevel": null,
+      "region": null,
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "カツオは鹿児島と宮城主体に入荷。前週に比べ数量は38%減少、価格は2割弱高。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・自動チェック）",
+      "retrievedAt": "2026-11-19T02:25:53+00:00"
+    },
+    {
+      "id": "tokyo-fish-2026-11-2-f-094",
+      "foodId": "f-094",
+      "title": "サンマ：2026年11月第2週の入荷・市場動向",
+      "summary": "サンマは岩手県を主産地として入荷している。前週比で入荷量は約3倍に増加し、これに伴い生サンマの価格はわずかに下落した。入荷量増加の原因は資料から確認できない。今後の市場動向については、入荷量や価格がどのように推移するかは不透明な状況である。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "東京都中央卸売市場・週間市況（水産）",
+          "title": "2026年11月第2週の週間市況",
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
+          "publishedAt": null,
+          "type": "official"
+        }
+      ],
+      "publishedAt": null,
+      "observedPeriod": "2026年11月第2週",
+      "sourceFingerprint": "b6a2e179bf2a289a73b647af96e829bd1fdb102decab5a777e640eeb57aa38c8",
+      "sourceFamily": "tokyo-fish",
+      "isForecast": false,
+      "periodStart": "2026-11-06",
+      "periodEnd": "2026-11-12",
+      "sourceUpdatedAt": null,
+      "seasonalRecord": null,
+      "reportYear": null,
+      "summaryVersion": 8,
+      "causeAssessment": {
+        "status": "unconfirmed",
+        "text": "この資料は観測値や見通しを中心とした情報で、変化の原因までは確認できていません。原因を説明する産地・海域の取材は、別の資料として掲載します。",
+        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
+      },
+      "causeIncludedInSummary": false,
+      "sourceType": "official",
+      "newsArticleId": null,
+      "newsReview": null,
+      "newsBodyFingerprint": null,
+      "sourceExcerpt": "サンマは岩手主体に入荷。前週に比べ数量は約3倍に増加、生サンマの価格はわずかに下落。",
+      "scope": "東京都豊洲市場",
+      "geographicLevel": null,
+      "region": null,
+      "reportType": "市場への入荷・取引の実績",
+      "evidenceSections": [
+        {
+          "label": "入荷・市場動向（原文）",
+          "text": "サンマは岩手主体に入荷。前週に比べ数量は約3倍に増加、生サンマの価格はわずかに下落。"
+        }
+      ],
+      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・自動チェック）",
+      "retrievedAt": "2026-11-19T02:25:52+00:00"
+    },
+    {
+      "id": "discovery-ja-kumamoto-96b793b837f5-v-010",
+      "foodId": "v-010",
+      "title": "トマト：西日本有数の産地 阿蘇の夏秋トマト初出荷 JA阿蘇",
+      "summary": "JA阿蘇中部地区で5月中旬、夏秋トマトの出荷が始まった。同地区は冷涼な気候と昼夜の寒暖差を生かした高冷地栽培で知られる。今シーズンは色づきや品質が良好で、生産者は本格的な出荷に向け作業を進めている。今後の入荷量は、生産者が栽培管理を徹底していることから、順調に推移していくものとみられる。なお、生育状況の背景にある具体的な天候要因などは資料から確認できない。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "JAグループ熊本・旬の農産物",
+          "title": "西日本有数の産地 阿蘇の夏秋トマト初出荷 JA阿蘇",
+          "url": "https://www.ja-kumamoto.or.jp/wp/news/janews/2026/06/41892",
+          "publishedAt": "2026-06-17",
+          "type": "official"
+        }
+      ],
+      "publishedAt": "2026-06-17",
+      "observedPeriod": "2026年6月17日公表の資料（詳細な対象期間は原文参照）",
+      "sourceFingerprint": "acb7f99b22ec15c118eac139c0295242d06e91a75b47185c7129db02c3499539",
+      "sourceFamily": "discovery-ja-kumamoto-96b793b837f5",
+      "isForecast": false,
+      "periodStart": null,
+      "periodEnd": null,
+      "sourceUpdatedAt": null,
+      "seasonalRecord": true,
+      "reportYear": 2026,
+      "summaryVersion": 8,
+      "causeAssessment": {
+        "status": "unconfirmed",
+        "text": "原因は未確認です。取得・整理できた根拠だけでは、現在の状態に至った理由を特定できません。資料に原因の記載がない場合と、アプリがまだ読み取れていない場合があります。別の地域の天候を原因として補っていません。",
+        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
+      },
+      "causeIncludedInSummary": false,
+      "sourceType": "official",
+      "newsArticleId": null,
+      "newsReview": null,
+      "newsBodyFingerprint": null,
+      "sourceExcerpt": "JA阿蘇中部地区で5月中旬、夏秋トマトの出荷が始…",
+      "scope": "熊本県の資料に記載されたJA・産地",
+      "geographicLevel": null,
+      "region": null,
+      "reportType": "産地・海域の生育、出荷または漁況に関する記述",
+      "evidenceSections": [
+        {
+          "label": "出典の記述（対象条件は原文参照）",
+          "text": "JA阿蘇中部地区で5月中旬、夏秋トマトの出荷が始…"
+        }
+      ],
+      "limitations": "記載の産地・品種・調査樹・海域に限った情報です。全国の収穫量・漁獲量を示すものではありません。公表日と情報の対象期間は一致するとは限りません。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・自動チェック）",
+      "retrievedAt": "2026-11-19T02:25:50+00:00"
+    },
+    {
+      "id": "discovery-ja-kumamoto-773471c21930-v-003",
+      "foodId": "v-003",
+      "title": "だいこん：小国郷で秋冬ダイコン出荷最盛期 JA阿蘇",
+      "summary": "熊本県のJA阿蘇小国郷管内で秋冬ダイコンの出荷が最盛期を迎え、連日約18トンが近隣市場へ出荷されている。2026年産は台風の影響が少なく生育は順調で、9月上旬までに播種を終えたこともあり品質は良好である。夏場の干ばつで一時出荷量は減少したが、今後は前年を上回る収量が見込まれるものの、天候等の影響により変動する可能性がある。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "JAグループ熊本・旬の農産物",
+          "title": "小国郷で秋冬ダイコン出荷最盛期 JA阿蘇",
+          "url": "https://www.ja-kumamoto.or.jp/wp/news/janews/2026/11/43597",
+          "publishedAt": "2026-11-04",
+          "type": "official"
+        }
+      ],
+      "publishedAt": "2026-11-04",
+      "observedPeriod": "2026年11月4日公表の資料（詳細な対象期間は原文参照）",
+      "sourceFingerprint": "48b20020dd289077da14045fb147e7ea98eeefec3d39b4e7368321a90362a414",
+      "sourceFamily": "discovery-ja-kumamoto-773471c21930",
+      "isForecast": false,
+      "periodStart": null,
+      "periodEnd": null,
+      "sourceUpdatedAt": null,
+      "seasonalRecord": true,
+      "reportYear": 2026,
+      "summaryVersion": 8,
+      "causeAssessment": {
+        "status": "unconfirmed",
+        "text": "原因は未確認です。取得・整理できた根拠だけでは、現在の状態に至った理由を特定できません。資料に原因の記載がない場合と、アプリがまだ読み取れていない場合があります。別の地域の天候を原因として補っていません。",
+        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
+      },
+      "causeIncludedInSummary": false,
+      "sourceType": "official",
+      "newsArticleId": null,
+      "newsReview": null,
+      "newsBodyFingerprint": null,
+      "sourceExcerpt": "県内有数のダイコン産地、JA阿蘇小国郷営農センタ…",
+      "scope": "熊本県の資料に記載されたJA・産地",
+      "geographicLevel": null,
+      "region": null,
+      "reportType": "産地・海域の生育、出荷または漁況に関する記述",
+      "evidenceSections": [
+        {
+          "label": "出典の記述（対象条件は原文参照）",
+          "text": "県内有数のダイコン産地、JA阿蘇小国郷営農センタ…"
+        }
+      ],
+      "limitations": "記載の産地・品種・調査樹・海域に限った情報です。全国の収穫量・漁獲量を示すものではありません。公表日と情報の対象期間は一致するとは限りません。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・自動チェック）",
+      "retrievedAt": "2026-11-19T02:25:49+00:00"
+    },
+    {
+      "id": "discovery-ja-kumamoto-0763e64589ff-f-063",
+      "foodId": "f-063",
+      "title": "かき：シャキシャキ食感と強い甘みの「大秋柿」出荷スタート JAくま",
+      "summary": "JAくま管内で太秋柿の出荷が始まった。10月26日には5戸の生産者から約700キロが持ち込まれ、選果を経て熊本の市場へ出荷された。今年は高温による影響が懸念されていたものの、剪定講習会や鳥獣対策の実施により品質は良好に保たれている。今後の出荷量については、質の良い柿を消費者に届けるべく確保に努める方針だが、具体的な見通しは不透明である。",
+      "kind": "ai_source_summary",
+      "verified": false,
+      "yearSpecific": true,
+      "sources": [
+        {
+          "name": "JAグループ熊本・旬の農産物",
+          "title": "シャキシャキ食感と強い甘みの「大秋柿」出荷スタート JAくま",
+          "url": "https://www.ja-kumamoto.or.jp/wp/news/janews/2026/10/43563",
+          "publishedAt": "2026-10-29",
+          "type": "official"
+        }
+      ],
+      "publishedAt": "2026-10-29",
+      "observedPeriod": "2026年10月29日公表の資料（詳細な対象期間は原文参照）",
+      "sourceFingerprint": "b4e21b4d20f34129e5911e9336fc195795d949e6fd4d2b819bca4bcedbfef746",
+      "sourceFamily": "discovery-ja-kumamoto-0763e64589ff",
+      "isForecast": false,
+      "periodStart": null,
+      "periodEnd": null,
+      "sourceUpdatedAt": null,
+      "seasonalRecord": true,
+      "reportYear": 2026,
+      "summaryVersion": 8,
+      "causeAssessment": {
+        "status": "unconfirmed",
+        "text": "原因は未確認です。取得・整理できた根拠だけでは、現在の状態に至った理由を特定できません。資料に原因の記載がない場合と、アプリがまだ読み取れていない場合があります。別の地域の天候を原因として補っていません。",
+        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
+      },
+      "causeIncludedInSummary": false,
+      "sourceType": "official",
+      "newsArticleId": null,
+      "newsReview": null,
+      "newsBodyFingerprint": null,
+      "sourceExcerpt": "JAくま管内ではシャキシャキとした梨のような食感…",
+      "scope": "熊本県の資料に記載されたJA・産地",
+      "geographicLevel": null,
+      "region": null,
+      "reportType": "産地・海域の生育、出荷または漁況に関する記述",
+      "evidenceSections": [
+        {
+          "label": "出典の記述（対象条件は原文参照）",
+          "text": "JAくま管内ではシャキシャキとした梨のような食感…"
+        }
+      ],
+      "limitations": "記載の産地・品種・調査樹・海域に限った情報です。全国の収穫量・漁獲量を示すものではありません。公表日と情報の対象期間は一致するとは限りません。",
+      "automaticChecks": [
+        "数値の原文照合",
+        "見通しの断定化チェック"
+      ],
+      "aiGenerated": true,
+      "summaryProvider": "Gemini",
+      "tag": "Gemini要約（一次資料から・自動チェック）",
+      "retrievedAt": "2026-11-19T02:25:48+00:00"
+    },
     {
       "id": "regional-alic-regions-96cf40120c03-v-009",
       "foodId": "v-009",
@@ -185570,177 +186205,6 @@
       "retrievedAt": "2026-11-18T00:55:10+00:00"
     },
     {
-      "id": "tokyo-fish-2026-11-2-f-097",
-      "foodId": "f-097",
-      "title": "サバ：2026年11月第2週の入荷・市場動向",
-      "summary": "サバは三重と千葉主体に入荷。前週に比べ数量は6%増加、価格は0.5割強安。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（水産）",
-          "title": "2026年11月第2週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
-          "publishedAt": null,
-          "type": "official"
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第2週",
-      "sourceFingerprint": "f94554472f0cb9403262d285e5ae1f243dcdf8c230c6a3e6fb887aa75caeae6b",
-      "sourceFamily": "tokyo-fish",
-      "isForecast": false,
-      "periodStart": "2026-11-06",
-      "periodEnd": "2026-11-12",
-      "sourceUpdatedAt": null,
-      "seasonalRecord": null,
-      "reportYear": null,
-      "summaryVersion": 8,
-      "causeAssessment": {
-        "status": "unconfirmed",
-        "text": "この資料は観測値や見通しを中心とした情報で、変化の原因までは確認できていません。原因を説明する産地・海域の取材は、別の資料として掲載します。",
-        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
-      },
-      "causeIncludedInSummary": false,
-      "sourceType": "official",
-      "newsArticleId": null,
-      "newsReview": null,
-      "sourceExcerpt": "サバは三重と千葉主体に入荷。前週に比べ数量は6%増加、価格は0.5割強安。",
-      "scope": "東京都豊洲市場",
-      "geographicLevel": null,
-      "region": null,
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "サバは三重と千葉主体に入荷。前週に比べ数量は6%増加、価格は0.5割強安。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "summaryProvider": null,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-18T00:55:10+00:00"
-    },
-    {
-      "id": "tokyo-fish-2026-11-2-f-095",
-      "foodId": "f-095",
-      "title": "カツオ：2026年11月第2週の入荷・市場動向",
-      "summary": "カツオは鹿児島と宮城主体に入荷。前週に比べ数量は38%減少、価格は2割弱高。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（水産）",
-          "title": "2026年11月第2週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
-          "publishedAt": null,
-          "type": "official"
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第2週",
-      "sourceFingerprint": "2f5b876f741d702f65615899e0d287dfc0cc05cdbcb917315a94056f9be6f2f5",
-      "sourceFamily": "tokyo-fish",
-      "isForecast": false,
-      "periodStart": "2026-11-06",
-      "periodEnd": "2026-11-12",
-      "sourceUpdatedAt": null,
-      "seasonalRecord": null,
-      "reportYear": null,
-      "summaryVersion": 8,
-      "causeAssessment": {
-        "status": "unconfirmed",
-        "text": "この資料は観測値や見通しを中心とした情報で、変化の原因までは確認できていません。原因を説明する産地・海域の取材は、別の資料として掲載します。",
-        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
-      },
-      "causeIncludedInSummary": false,
-      "sourceType": "official",
-      "newsArticleId": null,
-      "newsReview": null,
-      "sourceExcerpt": "カツオは鹿児島と宮城主体に入荷。前週に比べ数量は38%減少、価格は2割弱高。",
-      "scope": "東京都豊洲市場",
-      "geographicLevel": null,
-      "region": null,
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "カツオは鹿児島と宮城主体に入荷。前週に比べ数量は38%減少、価格は2割弱高。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "summaryProvider": null,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-18T00:55:10+00:00"
-    },
-    {
-      "id": "tokyo-fish-2026-11-2-f-094",
-      "foodId": "f-094",
-      "title": "サンマ：2026年11月第2週の入荷・市場動向",
-      "summary": "サンマは岩手主体に入荷。前週に比べ数量は約3倍に増加、生サンマの価格はわずかに下落。",
-      "kind": "official_excerpt",
-      "verified": true,
-      "yearSpecific": true,
-      "sources": [
-        {
-          "name": "東京都中央卸売市場・週間市況（水産）",
-          "title": "2026年11月第2週の週間市況",
-          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026112-pdf",
-          "publishedAt": null,
-          "type": "official"
-        }
-      ],
-      "publishedAt": null,
-      "observedPeriod": "2026年11月第2週",
-      "sourceFingerprint": "b6a2e179bf2a289a73b647af96e829bd1fdb102decab5a777e640eeb57aa38c8",
-      "sourceFamily": "tokyo-fish",
-      "isForecast": false,
-      "periodStart": "2026-11-06",
-      "periodEnd": "2026-11-12",
-      "sourceUpdatedAt": null,
-      "seasonalRecord": null,
-      "reportYear": null,
-      "summaryVersion": 8,
-      "causeAssessment": {
-        "status": "unconfirmed",
-        "text": "この資料は観測値や見通しを中心とした情報で、変化の原因までは確認できていません。原因を説明する産地・海域の取材は、別の資料として掲載します。",
-        "basis": "原因を示す同じ産地・対象期間の記述を確認できず"
-      },
-      "causeIncludedInSummary": false,
-      "sourceType": "official",
-      "newsArticleId": null,
-      "newsReview": null,
-      "sourceExcerpt": "サンマは岩手主体に入荷。前週に比べ数量は約3倍に増加、生サンマの価格はわずかに下落。",
-      "scope": "東京都豊洲市場",
-      "geographicLevel": null,
-      "region": null,
-      "reportType": "市場への入荷・取引の実績",
-      "evidenceSections": [
-        {
-          "label": "入荷・市場動向（原文）",
-          "text": "サンマは岩手主体に入荷。前週に比べ数量は約3倍に増加、生サンマの価格はわずかに下落。"
-        }
-      ],
-      "limitations": "市場の入荷・取引状況です。全国の漁獲量や資源量を直接示す資料ではありません。",
-      "automaticChecks": [
-        "原文抜粋"
-      ],
-      "aiGenerated": false,
-      "summaryProvider": null,
-      "tag": "公的原文を短く抜粋（Gemini未使用）",
-      "retrievedAt": "2026-11-18T00:55:10+00:00"
-    },
-    {
       "id": "forecast-2026-10-30-v-014",
       "foodId": "v-014",
       "title": "ピーマン：2026年11月の見通し",
@@ -189155,8 +189619,8 @@
   ],
   "retail": {
     "version": 1,
-    "lastAttemptAt": "2026-11-18T02:24:49+00:00",
-    "lastSuccessAt": "2026-11-18T02:24:49+00:00",
+    "lastAttemptAt": "2026-11-19T02:24:23+00:00",
+    "lastSuccessAt": "2026-11-19T02:24:23+00:00",
     "status": "ok",
     "records": [
       {
@@ -253510,13 +253974,15 @@
         "url": "https://www.sakuranbo.co.jp/news/2026/10/19/2026101900000007.html",
         "title": "秋の味覚ラ・フランス　約1800トンの出荷見込む　山形",
         "publisher": "さくらんぼテレビ",
-        "lastCheckedAt": "2026-11-18T00:55:10+00:00",
+        "lastCheckedAt": "2026-11-19T02:25:47+00:00",
         "status": "unavailable",
         "uses": [],
         "reason": "HTTPError"
       }
     ],
-    "lastCheckedAt": "2026-11-18T02:26:38+00:00",
-    "sourceErrors": []
+    "lastCheckedAt": "2026-11-19T02:25:47+00:00",
+    "sourceErrors": [
+      "sakuranbo: HTTPError"
+    ]
   }
 }

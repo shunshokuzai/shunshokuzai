@@ -26,32 +26,32 @@
       "candidates": 0
     },
     "mbs": {
-      "checkedAt": "2026-11-18T01:13:25+00:00",
-      "lastAttemptAt": "2026-11-18T01:13:25+00:00",
+      "checkedAt": "2026-11-19T02:25:41+00:00",
+      "lastAttemptAt": "2026-11-19T02:25:41+00:00",
       "status": "ok",
       "candidates": 0
     },
     "sakuranbo": {
-      "checkedAt": "2026-11-18T01:13:24+00:00",
-      "lastAttemptAt": "2026-11-18T01:13:24+00:00",
+      "checkedAt": "2026-11-19T02:25:39+00:00",
+      "lastAttemptAt": "2026-11-19T02:25:39+00:00",
       "status": "ok",
       "candidates": 2
     },
     "fnn": {
-      "checkedAt": "2026-11-18T01:13:25+00:00",
-      "lastAttemptAt": "2026-11-18T01:13:25+00:00",
+      "checkedAt": "2026-11-19T02:25:41+00:00",
+      "lastAttemptAt": "2026-11-19T02:25:41+00:00",
       "status": "ok",
-      "candidates": 2
+      "candidates": 0
     },
     "itv": {
-      "checkedAt": "2026-11-18T01:16:26+00:00",
-      "lastAttemptAt": "2026-11-18T01:16:26+00:00",
+      "checkedAt": "2026-11-19T02:25:45+00:00",
+      "lastAttemptAt": "2026-11-19T02:25:45+00:00",
       "status": "ok",
       "candidates": 0
     },
     "tys": {
-      "checkedAt": "2026-11-18T01:16:26+00:00",
-      "lastAttemptAt": "2026-11-18T01:16:26+00:00",
+      "checkedAt": "2026-11-19T02:25:46+00:00",
+      "lastAttemptAt": "2026-11-19T02:25:46+00:00",
       "status": "ok",
       "candidates": 0
     },
@@ -199,11 +199,11 @@
       "url": "https://www.sakuranbo.co.jp/news/2026/10/19/2026101900000007.html",
       "title": "秋の味覚ラ・フランス　約1800トンの出荷見込む　山形",
       "publisher": "さくらんぼテレビ",
-      "lastAttemptAt": "2026-11-18T00:55:09+00:00",
-      "lastCheckedAt": "2026-11-18T00:55:10+00:00",
+      "lastAttemptAt": "2026-11-19T02:25:46+00:00",
+      "lastCheckedAt": "2026-11-19T02:25:47+00:00",
       "status": "unavailable",
       "error": "HTTPError",
-      "retryAfter": "2026-11-19"
+      "retryAfter": "2026-11-20"
     },
     "news-c5d9313e84f2199c": {
       "id": "news-c5d9313e84f2199c",
@@ -285,9 +285,11 @@
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-18T02:26:38+00:00",
-    "articleAttempts": 0,
+    "checkedAt": "2026-11-19T02:25:47+00:00",
+    "articleAttempts": 1,
     "sourceItems": 0,
-    "errors": []
+    "errors": [
+      "sakuranbo: HTTPError"
+    ]
   }
 }
