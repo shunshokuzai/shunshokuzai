@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "lastAttemptAt": "2026-11-19T02:24:23+00:00",
+  "lastAttemptAt": "2026-11-20T02:25:39+00:00",
   "lastSuccessAt": "2026-11-19T02:24:23+00:00",
-  "status": "ok",
+  "status": "partial",
   "records": [
     {
       "foodId": "f-102",
@@ -63467,9 +63467,10 @@
       "name": "那覇市"
     }
   ],
-  "errors": [],
+  "errors": [
+    "city: ValueError: Local-brand exceptions file not found"
+  ],
   "counts": {
-    "city": 3500,
     "national": 8
   }
 }

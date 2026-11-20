@@ -2,8 +2,8 @@
   "version": 1,
   "sources": {
     "ncc": {
-      "checkedAt": "2026-11-18T02:26:35+00:00",
-      "lastAttemptAt": "2026-11-18T02:26:35+00:00",
+      "checkedAt": "2026-11-20T02:27:38+00:00",
+      "lastAttemptAt": "2026-11-20T02:27:38+00:00",
       "status": "ok",
       "candidates": 0
     },
@@ -56,26 +56,26 @@
       "candidates": 0
     },
     "sbc": {
-      "checkedAt": "2026-11-18T01:16:30+00:00",
-      "lastAttemptAt": "2026-11-18T01:16:30+00:00",
+      "checkedAt": "2026-11-20T02:27:30+00:00",
+      "lastAttemptAt": "2026-11-20T02:27:30+00:00",
       "status": "ok",
       "candidates": 1
     },
     "kutv": {
-      "checkedAt": "2026-11-18T01:16:29+00:00",
-      "lastAttemptAt": "2026-11-18T01:16:29+00:00",
+      "checkedAt": "2026-11-20T02:27:30+00:00",
+      "lastAttemptAt": "2026-11-20T02:27:30+00:00",
       "status": "ok",
       "candidates": 0
     },
     "uty": {
-      "checkedAt": "2026-11-18T01:16:32+00:00",
-      "lastAttemptAt": "2026-11-18T01:16:32+00:00",
+      "checkedAt": "2026-11-20T02:27:33+00:00",
+      "lastAttemptAt": "2026-11-20T02:27:33+00:00",
       "status": "ok",
       "candidates": 1
     },
     "mro": {
-      "checkedAt": "2026-11-18T02:26:34+00:00",
-      "lastAttemptAt": "2026-11-18T02:26:34+00:00",
+      "checkedAt": "2026-11-20T02:27:34+00:00",
+      "lastAttemptAt": "2026-11-20T02:27:34+00:00",
       "status": "ok",
       "candidates": 0
     }
@@ -199,11 +199,11 @@
       "url": "https://www.sakuranbo.co.jp/news/2026/10/19/2026101900000007.html",
       "title": "秋の味覚ラ・フランス　約1800トンの出荷見込む　山形",
       "publisher": "さくらんぼテレビ",
-      "lastAttemptAt": "2026-11-19T02:25:46+00:00",
-      "lastCheckedAt": "2026-11-19T02:25:47+00:00",
+      "lastAttemptAt": "2026-11-20T02:27:38+00:00",
+      "lastCheckedAt": "2026-11-20T02:27:39+00:00",
       "status": "unavailable",
       "error": "HTTPError",
-      "retryAfter": "2026-11-20"
+      "retryAfter": "2026-11-21"
     },
     "news-c5d9313e84f2199c": {
       "id": "news-c5d9313e84f2199c",
@@ -282,11 +282,24 @@
       "status": "current_context_missing",
       "foodIds": [],
       "retryAfter": "2026-11-21"
+    },
+    "news-bd62d61ce150571e": {
+      "id": "news-bd62d61ce150571e",
+      "url": "https://newsdig.tbs.co.jp/articles/sbc/3097712",
+      "title": "「細長い根が、ねずみのしっぽみたい...」長野・坂城町の伝統野菜「ねずみ大根」収穫期...おろした大根の絞り汁を使った料理「おしぼりうどん」辛さはガツン!でも、みそでマイルド",
+      "publisher": "信越放送",
+      "lastAttemptAt": "2026-11-20T02:27:39+00:00",
+      "publishedAt": "2026-11-19",
+      "fingerprint": "dbaaa3bd3472c689e2243e46527c98050c49bc785af42ceb2dc6c69fdc90f48e",
+      "lastCheckedAt": "2026-11-20T02:27:42+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-23"
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-19T02:25:47+00:00",
-    "articleAttempts": 1,
+    "checkedAt": "2026-11-20T02:27:42+00:00",
+    "articleAttempts": 2,
     "sourceItems": 0,
     "errors": [
       "sakuranbo: HTTPError"
