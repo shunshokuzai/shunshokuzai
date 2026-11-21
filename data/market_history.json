@@ -55616,6 +55616,115 @@
           "pieceWeightSpec": "-"
         }
       }
+    },
+    "2026-11-3": {
+      "stamp": [
+        2026,
+        11,
+        3
+      ],
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026113-pdf",
+      "values": {
+        "マグロ": {
+          "price": 4190,
+          "yearAgoRatio": 84,
+          "previousRatio": 83,
+          "brandLabel": "生",
+          "brandDetail": "各 地 生・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "アジ": {
+          "price": 670,
+          "yearAgoRatio": 117,
+          "previousRatio": 85,
+          "brandLabel": "中",
+          "brandDetail": "鳥取ほか 中・180-220g/尾",
+          "pieceWeightKg": 0.2,
+          "pieceWeightSpec": "180-220g/尾"
+        },
+        "サバ": {
+          "price": 691,
+          "yearAgoRatio": 119,
+          "previousRatio": 98,
+          "brandLabel": "－",
+          "brandDetail": "富山ほか －・7-10入/5kg",
+          "pieceWeightKg": 0.58823529,
+          "pieceWeightSpec": "7-10入/5kg"
+        },
+        "イワシ": {
+          "price": 670,
+          "yearAgoRatio": 159,
+          "previousRatio": 89,
+          "brandLabel": "－",
+          "brandDetail": "鹿児島 －・60-100g/尾",
+          "pieceWeightKg": 0.08,
+          "pieceWeightSpec": "60-100g/尾"
+        },
+        "スルメイカ": {
+          "price": 1210,
+          "yearAgoRatio": 86,
+          "previousRatio": 96,
+          "brandLabel": "－",
+          "brandDetail": "青 森 －・20-30入/5kg",
+          "pieceWeightKg": 0.2,
+          "pieceWeightSpec": "20-30入/5kg"
+        },
+        "サンマ": {
+          "price": 907,
+          "yearAgoRatio": 145,
+          "previousRatio": 62,
+          "brandLabel": "生",
+          "brandDetail": "岩 手 生・130-140g/尾",
+          "pieceWeightKg": 0.135,
+          "pieceWeightSpec": "130-140g/尾"
+        },
+        "カレイ": {
+          "price": 702,
+          "yearAgoRatio": 139,
+          "previousRatio": 93,
+          "brandLabel": "マ",
+          "brandDetail": "北海道 マ・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "ハマチ": {
+          "price": 1728,
+          "yearAgoRatio": 86,
+          "previousRatio": 100,
+          "brandLabel": "野〆",
+          "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
+          "pieceWeightKg": 5.5,
+          "pieceWeightSpec": "5-6kg/尾"
+        },
+        "カツオ": {
+          "price": 1728,
+          "yearAgoRatio": 148,
+          "previousRatio": 103,
+          "brandLabel": "－",
+          "brandDetail": "鹿児島 ほ か －・3-4kg/尾",
+          "pieceWeightKg": 3.5,
+          "pieceWeightSpec": "3-4kg/尾"
+        },
+        "キンメダイ": {
+          "price": 2203,
+          "yearAgoRatio": 104,
+          "previousRatio": 93,
+          "brandLabel": "－",
+          "brandDetail": "東京ほか －・0.5-1.5kg/尾",
+          "pieceWeightKg": 1.0,
+          "pieceWeightSpec": "0.5-1.5kg/尾"
+        },
+        "カキ": {
+          "price": 4424,
+          "yearAgoRatio": 119,
+          "previousRatio": 100,
+          "brandLabel": "－",
+          "brandDetail": "三 陸 －・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        }
+      }
     }
   },
   "backfillFailures": {}

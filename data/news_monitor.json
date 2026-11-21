@@ -8,32 +8,32 @@
       "candidates": 0
     },
     "htb": {
-      "checkedAt": "2026-11-18T02:26:35+00:00",
-      "lastAttemptAt": "2026-11-18T02:26:35+00:00",
+      "checkedAt": "2026-11-21T02:22:22+00:00",
+      "lastAttemptAt": "2026-11-21T02:22:22+00:00",
       "status": "ok",
       "candidates": 0
     },
     "hbc": {
-      "checkedAt": "2026-11-18T02:26:38+00:00",
-      "lastAttemptAt": "2026-11-18T02:26:38+00:00",
+      "checkedAt": "2026-11-21T02:22:24+00:00",
+      "lastAttemptAt": "2026-11-21T02:22:24+00:00",
       "status": "ok",
       "candidates": 0
     },
     "atv": {
-      "checkedAt": "2026-11-18T02:26:38+00:00",
-      "lastAttemptAt": "2026-11-18T02:26:38+00:00",
+      "checkedAt": "2026-11-21T02:22:26+00:00",
+      "lastAttemptAt": "2026-11-21T02:22:26+00:00",
       "status": "ok",
-      "candidates": 0
+      "candidates": 1
     },
     "mbs": {
-      "checkedAt": "2026-11-19T02:25:41+00:00",
-      "lastAttemptAt": "2026-11-19T02:25:41+00:00",
+      "checkedAt": "2026-11-21T02:22:28+00:00",
+      "lastAttemptAt": "2026-11-21T02:22:28+00:00",
       "status": "ok",
       "candidates": 0
     },
     "sakuranbo": {
-      "checkedAt": "2026-11-19T02:25:39+00:00",
-      "lastAttemptAt": "2026-11-19T02:25:39+00:00",
+      "checkedAt": "2026-11-21T02:22:25+00:00",
+      "lastAttemptAt": "2026-11-21T02:22:25+00:00",
       "status": "ok",
       "candidates": 2
     },
@@ -86,97 +86,97 @@
       "url": "https://newsdig.tbs.co.jp/articles/-/3062066",
       "title": "青森が誇る“秋の恵み”が全国へ 県産リンゴを届ける「りんごゆうパック」の出発式 第1便で300箱が全国へと発送 生産者「今年はどの品種もおいしく出来上がっている」「たくさんの人にリンゴのおいしさを知ってもらえれば」",
       "publisher": "青森テレビ",
-      "lastAttemptAt": "2026-11-18T00:54:57+00:00",
+      "lastAttemptAt": "2026-11-21T02:22:28+00:00",
       "reviewedFingerprint": "dc54ddcfdc1c13a857fdcae375de391ff68a6995dc304043eda98cdbcbe715af",
       "publishedAt": "2026-11-04",
       "fingerprint": "dc54ddcfdc1c13a857fdcae375de391ff68a6995dc304043eda98cdbcbe715af",
-      "lastCheckedAt": "2026-11-18T00:54:59+00:00",
+      "lastCheckedAt": "2026-11-21T02:22:31+00:00",
       "status": "source_reviewed",
       "foodIds": [
         "f-054"
       ],
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-24"
     },
     "news-96a383c34f80c831": {
       "id": "news-96a383c34f80c831",
       "url": "https://newsdig.tbs.co.jp/articles/hbc/3088850",
       "title": "「サーモンショック」からさらに半減か...秋サケの網には南方系のシイラ ふ化場は存続の危機 海水温上昇で稚魚が育たず 北海道",
       "publisher": "HBC北海道放送",
-      "lastAttemptAt": "2026-11-18T00:54:59+00:00",
+      "lastAttemptAt": "2026-11-21T02:22:31+00:00",
       "reviewedFingerprint": "2be4a0d242caaae9322af1d0284eced9cde46b13d83981d2a6cb5c9bc50cb5af",
       "publishedAt": "2026-11-16",
       "fingerprint": "2be4a0d242caaae9322af1d0284eced9cde46b13d83981d2a6cb5c9bc50cb5af",
-      "lastCheckedAt": "2026-11-18T00:55:02+00:00",
+      "lastCheckedAt": "2026-11-21T02:22:33+00:00",
       "status": "source_reviewed",
       "foodIds": [
         "f-100"
       ],
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-24"
     },
     "news-ace021c0c92d7996": {
       "id": "news-ace021c0c92d7996",
       "url": "https://newsdig.tbs.co.jp/articles/mbs/3049656",
       "title": "【カメムシ大発生】例年の6倍飛来した地域も...柿農家は悲鳴「収穫量が半減」「商品にならない」高温傾向・暖冬で各地に『注意報』来年も多くなる可能性",
       "publisher": "MBSニュース",
-      "lastAttemptAt": "2026-11-18T00:55:02+00:00",
+      "lastAttemptAt": "2026-11-21T02:22:33+00:00",
       "reviewedFingerprint": "42daad32b0b5e1740eb36a3a42126b1ef9fee6696cb02a4047cfb2f16f716a43",
       "publishedAt": "2026-11-01",
       "fingerprint": "42daad32b0b5e1740eb36a3a42126b1ef9fee6696cb02a4047cfb2f16f716a43",
-      "lastCheckedAt": "2026-11-18T00:55:04+00:00",
+      "lastCheckedAt": "2026-11-21T02:22:36+00:00",
       "status": "source_reviewed",
       "foodIds": [
         "f-063"
       ],
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-24"
     },
     "news-c459b99f43861e98": {
       "id": "news-c459b99f43861e98",
       "url": "https://www.fnn.jp/articles/-/1147542",
       "title": "11月なのに半袖 都心など季節外れの「夏日」も週末は“立冬寒波” 北日本は“冬の嵐” 長雨でシャインマスカット生育遅れも「甘い」",
       "publisher": "FNNプライムオンライン（各局の取材）",
-      "lastAttemptAt": "2026-11-18T00:55:04+00:00",
+      "lastAttemptAt": "2026-11-21T02:22:36+00:00",
       "reviewedFingerprint": "e03d7879ee149ebbbc09f3ae2b614974c60360b579d85de3c48343bd8037e31d",
       "publishedAt": "2026-11-06",
       "fingerprint": "e03d7879ee149ebbbc09f3ae2b614974c60360b579d85de3c48343bd8037e31d",
-      "lastCheckedAt": "2026-11-18T00:55:05+00:00",
+      "lastCheckedAt": "2026-11-21T02:22:37+00:00",
       "status": "source_reviewed",
       "foodIds": [
         "f-065",
         "f-071"
       ],
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-24"
     },
     "news-fd2223cbe1cf829e": {
       "id": "news-fd2223cbe1cf829e",
       "url": "https://www.htb.co.jp/news/archives_40407.html",
       "title": "なぜ?記録的不漁のサンマが根室港へ押し寄せ...釣り人「2時間半で150匹」 水温変化が原因か",
       "publisher": "HTB北海道ニュース",
-      "lastAttemptAt": "2026-11-18T00:55:05+00:00",
+      "lastAttemptAt": "2026-11-21T02:22:37+00:00",
       "reviewedFingerprint": "6e2e1b5c5ad2559d84b477ec3f1786d8cc8c02fdc708ec569c5855cab7bc0793",
       "publishedAt": "2026-11-10",
       "fingerprint": "6e2e1b5c5ad2559d84b477ec3f1786d8cc8c02fdc708ec569c5855cab7bc0793",
-      "lastCheckedAt": "2026-11-18T00:55:07+00:00",
+      "lastCheckedAt": "2026-11-21T02:22:38+00:00",
       "status": "source_reviewed",
       "foodIds": [
         "f-094"
       ],
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-24"
     },
     "news-7ccfbb26e06eaa45": {
       "id": "news-7ccfbb26e06eaa45",
       "url": "https://www.htb.co.jp/news/archives_40451.html",
       "title": "【豊漁】石狩湾のワタリガニ サケにサンマと記録的不漁続くも販路拡大で水産業の救世主となるか",
       "publisher": "HTB北海道ニュース",
-      "lastAttemptAt": "2026-11-18T00:55:07+00:00",
+      "lastAttemptAt": "2026-11-21T02:22:38+00:00",
       "reviewedFingerprint": "192d35217b584164606fd7b965e282607edd86c609e53efacb8d79e67187b7f4",
       "publishedAt": "2026-11-12",
       "fingerprint": "192d35217b584164606fd7b965e282607edd86c609e53efacb8d79e67187b7f4",
-      "lastCheckedAt": "2026-11-18T00:55:08+00:00",
+      "lastCheckedAt": "2026-11-21T02:22:39+00:00",
       "status": "source_reviewed",
       "foodIds": [
         "f-128"
       ],
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-24"
     },
     "news-9ae46d96df445c37": {
       "id": "news-9ae46d96df445c37",
@@ -298,11 +298,9 @@
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-20T02:27:42+00:00",
-    "articleAttempts": 2,
-    "sourceItems": 0,
-    "errors": [
-      "sakuranbo: HTTPError"
-    ]
+    "checkedAt": "2026-11-21T02:22:39+00:00",
+    "articleAttempts": 6,
+    "sourceItems": 7,
+    "errors": []
   }
 }
