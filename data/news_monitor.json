@@ -2,20 +2,20 @@
   "version": 1,
   "sources": {
     "ncc": {
-      "checkedAt": "2026-11-20T02:27:38+00:00",
-      "lastAttemptAt": "2026-11-20T02:27:38+00:00",
+      "checkedAt": "2026-11-23T02:28:18+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:18+00:00",
       "status": "ok",
       "candidates": 0
     },
     "htb": {
-      "checkedAt": "2026-11-21T02:22:22+00:00",
-      "lastAttemptAt": "2026-11-21T02:22:22+00:00",
+      "checkedAt": "2026-11-23T02:28:16+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:16+00:00",
       "status": "ok",
       "candidates": 0
     },
     "hbc": {
-      "checkedAt": "2026-11-21T02:22:24+00:00",
-      "lastAttemptAt": "2026-11-21T02:22:24+00:00",
+      "checkedAt": "2026-11-23T02:28:19+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:19+00:00",
       "status": "ok",
       "candidates": 0
     },
@@ -68,14 +68,14 @@
       "candidates": 0
     },
     "uty": {
-      "checkedAt": "2026-11-20T02:27:33+00:00",
-      "lastAttemptAt": "2026-11-20T02:27:33+00:00",
+      "checkedAt": "2026-11-23T02:28:15+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:15+00:00",
       "status": "ok",
       "candidates": 1
     },
     "mro": {
-      "checkedAt": "2026-11-20T02:27:34+00:00",
-      "lastAttemptAt": "2026-11-20T02:27:34+00:00",
+      "checkedAt": "2026-11-23T02:28:15+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:15+00:00",
       "status": "ok",
       "candidates": 0
     }
@@ -199,11 +199,11 @@
       "url": "https://www.sakuranbo.co.jp/news/2026/10/19/2026101900000007.html",
       "title": "秋の味覚ラ・フランス　約1800トンの出荷見込む　山形",
       "publisher": "さくらんぼテレビ",
-      "lastAttemptAt": "2026-11-22T02:23:44+00:00",
-      "lastCheckedAt": "2026-11-22T02:23:45+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:19+00:00",
+      "lastCheckedAt": "2026-11-23T02:28:20+00:00",
       "status": "unavailable",
       "error": "HTTPError",
-      "retryAfter": "2026-11-23"
+      "retryAfter": "2026-11-24"
     },
     "news-c5d9313e84f2199c": {
       "id": "news-c5d9313e84f2199c",
@@ -275,13 +275,13 @@
       "url": "https://newsdig.tbs.co.jp/articles/uty/2946124",
       "title": "「さらに広がるのが怖い」ブドウが腐る病気 長雨の影響でブドウ農家は苦悩 200kg被害の農家も 山梨",
       "publisher": "テレビ山梨",
-      "lastAttemptAt": "2026-11-18T01:05:04+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:20+00:00",
       "publishedAt": "2026-09-15",
       "fingerprint": "64b9d965a1d8b0ca5065f4befd86d4805b3afdf393e80137661f12cce9a9a879",
-      "lastCheckedAt": "2026-11-18T01:05:08+00:00",
-      "status": "current_context_missing",
+      "lastCheckedAt": "2026-11-23T02:28:23+00:00",
+      "status": "multiple_foods_need_review",
       "foodIds": [],
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-26"
     },
     "news-bd62d61ce150571e": {
       "id": "news-bd62d61ce150571e",
@@ -326,9 +326,9 @@
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-22T02:23:52+00:00",
-    "articleAttempts": 4,
-    "sourceItems": 2,
+    "checkedAt": "2026-11-23T02:28:23+00:00",
+    "articleAttempts": 2,
+    "sourceItems": 0,
     "errors": [
       "sakuranbo: HTTPError"
     ]

@@ -2,7 +2,7 @@
   "version": 1,
   "sources": {
     "kochi-agriculture": {
-      "checkedAt": "2026-11-22T02:23:15+00:00",
+      "checkedAt": "2026-11-23T02:27:53+00:00",
       "status": "ok",
       "url": "https://www.nogyo.tosa.pref.kochi.lg.jp/",
       "candidateCount": 1,
@@ -18,7 +18,7 @@
       ]
     },
     "kochi-fruit": {
-      "checkedAt": "2026-11-22T02:23:15+00:00",
+      "checkedAt": "2026-11-23T02:27:53+00:00",
       "status": "ok",
       "url": "https://www.nogyo.tosa.pref.kochi.lg.jp/info/list.php?mode=new&sid=2013",
       "candidateCount": 7,
@@ -82,7 +82,7 @@
       ]
     },
     "ja-kumamoto": {
-      "checkedAt": "2026-11-22T02:23:17+00:00",
+      "checkedAt": "2026-11-23T02:27:55+00:00",
       "status": "ok",
       "url": "https://www.ja-kumamoto.or.jp/agriculture/community/",
       "candidateCount": 67,
@@ -626,7 +626,7 @@
       ]
     },
     "ja-kumamoto-news": {
-      "checkedAt": "2026-11-22T02:23:16+00:00",
+      "checkedAt": "2026-11-23T02:27:55+00:00",
       "status": "ok",
       "url": "https://www.ja-kumamoto.or.jp/topics/",
       "candidateCount": 23,
@@ -818,7 +818,7 @@
       ]
     },
     "hokkaido-fisheries": {
-      "checkedAt": "2026-11-22T02:23:18+00:00",
+      "checkedAt": "2026-11-23T02:27:56+00:00",
       "status": "ok",
       "url": "https://www.hro.or.jp/fisheries/news/archives/page/1.html",
       "candidateCount": 4,
@@ -856,7 +856,7 @@
       ]
     },
     "fra-resources": {
-      "checkedAt": "2026-11-22T02:23:18+00:00",
+      "checkedAt": "2026-11-23T02:27:56+00:00",
       "status": "ok",
       "url": "https://www.fra.go.jp/home/kenkyushokai/press/pr2026/index.html",
       "candidateCount": 8,
@@ -928,7 +928,7 @@
       ]
     },
     "iwate-fisheries": {
-      "checkedAt": "2026-11-22T02:23:18+00:00",
+      "checkedAt": "2026-11-23T02:27:57+00:00",
       "status": "ok",
       "url": "https://www2.suigi.pref.iwate.jp/research",
       "candidateCount": 20,
@@ -1074,7 +1074,7 @@
       ]
     },
     "jafic-forecasts": {
-      "checkedAt": "2026-11-22T02:23:19+00:00",
+      "checkedAt": "2026-11-23T02:27:57+00:00",
       "status": "ok",
       "url": "https://www.jafic.or.jp/information/",
       "candidateCount": 2,
@@ -1098,7 +1098,7 @@
       ]
     },
     "nagano-fruit": {
-      "checkedAt": "2026-11-22T02:23:20+00:00",
+      "checkedAt": "2026-11-23T02:27:58+00:00",
       "status": "ok",
       "url": "https://www.pref.nagano.lg.jp/kajushiken/chosa/teirei/index.html",
       "candidateCount": 2,
@@ -1128,7 +1128,7 @@
       ]
     },
     "yamanashi-fruit": {
-      "checkedAt": "2026-11-22T02:23:21+00:00",
+      "checkedAt": "2026-11-23T02:27:59+00:00",
       "status": "ok",
       "url": "https://www.pref.yamanashi.jp/kajushiken/kajyuseiiku.html",
       "candidateCount": 1,
@@ -1150,7 +1150,7 @@
       ]
     },
     "wakayama-citrus": {
-      "checkedAt": "2026-11-22T02:23:22+00:00",
+      "checkedAt": "2026-11-23T02:28:00+00:00",
       "status": "ok",
       "url": "https://www.pref.wakayama.lg.jp/prefg/070100/070109/gaiyou/002/gaikyo/gaikyo.html",
       "candidateCount": 1,
@@ -1167,21 +1167,21 @@
       ]
     },
     "fukushima-agriculture": {
-      "checkedAt": "2026-11-22T02:23:22+00:00",
+      "checkedAt": "2026-11-23T02:28:00+00:00",
       "status": "ok",
       "url": "https://www.pref.fukushima.lg.jp/sec/36021a/nogyo-nousin-gijyutu03.html",
       "candidateCount": 0,
       "links": []
     },
     "ehime-agriculture": {
-      "checkedAt": "2026-11-22T02:23:23+00:00",
+      "checkedAt": "2026-11-23T02:28:01+00:00",
       "status": "ok",
       "url": "https://www.pref.ehime.jp/page/11505.html",
       "candidateCount": 0,
       "links": []
     },
     "alic-regions": {
-      "checkedAt": "2026-11-22T02:23:20+00:00",
+      "checkedAt": "2026-11-23T02:27:58+00:00",
       "status": "ok",
       "url": "https://vegetan.alic.go.jp/trend/y2026.html",
       "candidateCount": 114,
@@ -2443,21 +2443,21 @@
       ]
     },
     "chiba-agriculture": {
-      "checkedAt": "2026-11-22T02:23:24+00:00",
+      "checkedAt": "2026-11-23T02:28:02+00:00",
       "status": "ok",
       "url": "https://www.pref.chiba.lg.jp/seisan/shinchaku.html",
       "candidateCount": 0,
       "links": []
     },
     "ibaraki-fruit": {
-      "checkedAt": "2026-11-22T02:23:25+00:00",
+      "checkedAt": "2026-11-23T02:28:01+00:00",
       "status": "ok",
       "url": "https://www.pref.ibaraki.jp/nourinsuisan/hokunourin/miyanofu/keiei/real-time/kajyu.html",
       "candidateCount": 0,
       "links": []
     },
     "gunma-agriculture": {
-      "checkedAt": "2026-11-22T02:23:25+00:00",
+      "checkedAt": "2026-11-23T02:28:02+00:00",
       "status": "ok",
       "url": "https://www.pref.gunma.jp/site/houdou/",
       "candidateCount": 0,
@@ -2580,13 +2580,13 @@
       "summaryRequirements": {}
     },
     "https://www.hro.or.jp/fisheries/research/wakkanai/surveys-knowledge-of-fish/f1hig40000000not/inpvt40000000cxm.html": {
-      "lastCheckedAt": "2026-11-15T14:33:13+00:00",
+      "lastCheckedAt": "2026-11-23T02:28:05+00:00",
       "status": "current_publication_date_unconfirmed",
       "fingerprint": "f2457e3f3677bf51b0b3de4d0c0ecd4fdd390c41fcbdcfadd54e34d696b1385d",
       "foodIds": [
         "f-130"
       ],
-      "retryAfter": "2026-11-22",
+      "retryAfter": "2026-11-30",
       "parserVersion": 5,
       "recordYear": 2026,
       "summaryRequirements": {}
@@ -2785,7 +2785,7 @@
     },
     "https://www.nogyo.tosa.pref.kochi.lg.jp/info/dtl.php?ID=5789": {
       "parserVersion": 5,
-      "lastCheckedAt": "2026-11-18T00:54:53+00:00",
+      "lastCheckedAt": "2026-11-23T02:28:10+00:00",
       "status": "source_text_found",
       "fingerprint": "555cd9d47680893bbae3f1dda97286cd77980e3c5195f2ccb6777d4a0a9ae6d2",
       "foodIds": [
@@ -2799,7 +2799,7 @@
           "requireAi": false
         }
       },
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-26"
     },
     "https://www.nogyo.tosa.pref.kochi.lg.jp/info/dtl.php?ID=5792": {
       "parserVersion": 5,
@@ -2821,7 +2821,7 @@
     },
     "https://www.nogyo.tosa.pref.kochi.lg.jp/info/dtl.php?ID=8478": {
       "parserVersion": 5,
-      "lastCheckedAt": "2026-11-18T01:01:30+00:00",
+      "lastCheckedAt": "2026-11-23T02:28:10+00:00",
       "status": "source_text_found",
       "fingerprint": "88cf7fd80d3f6bee98dcad172b2ef28725b392fbefb0675b78c84198c611aefe",
       "foodIds": [
@@ -2829,13 +2829,13 @@
       ],
       "recordYear": 2026,
       "summaryRequirements": {
-        "discovery-kochi-fruit-513e304d4080-f-067": {
+        "discovery-kochi-agriculture-513e304d4080-f-067": {
           "foodId": "f-067",
-          "fingerprint": "72ea465c7d28b226a509614b77448afbfa533fc922f3a5cd8fa7761e38272760",
+          "fingerprint": "d0e8d905522308d2d95db7ecbbf8db0cccaca4769e44637c70dcb1911c937c7b",
           "requireAi": false
         }
       },
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-26"
     },
     "https://www.nogyo.tosa.pref.kochi.lg.jp/info/dtl.php?ID=5790": {
       "parserVersion": 5,
@@ -3001,7 +3001,7 @@
     },
     "https://www.ja-kumamoto.or.jp/wp/news/janews/2026/06/42083": {
       "parserVersion": 5,
-      "lastCheckedAt": "2026-11-18T01:04:46+00:00",
+      "lastCheckedAt": "2026-11-23T02:28:05+00:00",
       "status": "source_text_found",
       "fingerprint": "97744c95e10375ca06aa60aa56eae5291ddbcf475b29664eab6e8645f34d3856",
       "foodIds": [
@@ -3015,7 +3015,7 @@
           "requireAi": true
         }
       },
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-26"
     },
     "https://www.ja-kumamoto.or.jp/wp/news/janews/2026/06/42086": {
       "parserVersion": 5,
@@ -3163,7 +3163,7 @@
     },
     "https://www.ja-kumamoto.or.jp/wp/news/janews/2026/08/42720": {
       "parserVersion": 5,
-      "lastCheckedAt": "2026-11-18T00:54:51+00:00",
+      "lastCheckedAt": "2026-11-23T02:28:07+00:00",
       "status": "source_text_found",
       "fingerprint": "f770eaa4ad880709ef6b6f721f6e0b96e4112dbd010f5b9a661b2bdb9699b3a2",
       "foodIds": [
@@ -3177,7 +3177,7 @@
           "requireAi": true
         }
       },
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-26"
     },
     "https://www.ja-kumamoto.or.jp/wp/news/janews/2026/08/42726": {
       "parserVersion": 4,
@@ -3289,7 +3289,7 @@
     },
     "https://www.fra.go.jp/home/kenkyushokai/press/pr2026/fri_20260629_katsuo.html": {
       "parserVersion": 5,
-      "lastCheckedAt": "2026-11-18T00:54:53+00:00",
+      "lastCheckedAt": "2026-11-23T02:28:09+00:00",
       "status": "source_text_found",
       "fingerprint": "ee5131b90570c6766f6688efd2fafac10836a51ba1bbb4bc30379f358de0f8dd",
       "foodIds": [
@@ -3303,7 +3303,7 @@
           "requireAi": false
         }
       },
-      "retryAfter": "2026-11-21"
+      "retryAfter": "2026-11-26"
     },
     "https://www.fra.go.jp/home/kenkyushokai/press/pr2026/fri_20260630_katakuchi-2nd.html": {
       "parserVersion": 5,
@@ -4071,13 +4071,13 @@
     },
     "https://www2.suigi.pref.iwate.jp/research/20260819fishery_during-2-2": {
       "parserVersion": 5,
-      "lastCheckedAt": "2026-11-15T14:33:19+00:00",
+      "lastCheckedAt": "2026-11-23T02:28:08+00:00",
       "status": "current_publication_date_unconfirmed",
       "fingerprint": "79556c99ec4de390f3c80187fd4b56e086b79c02bc87177510100cbc0f8077ae",
       "foodIds": [],
       "recordYear": 2026,
       "summaryRequirements": {},
-      "retryAfter": "2026-11-22"
+      "retryAfter": "2026-11-30"
     },
     "https://www2.suigi.pref.iwate.jp/research/20260826fishery_during-2-2": {
       "parserVersion": 5,
@@ -5317,13 +5317,31 @@
         }
       },
       "retryAfter": "2026-11-25"
+    },
+    "https://vegetan.alic.go.jp/trend/y2026/s10/p24.html": {
+      "parserVersion": 5,
+      "lastCheckedAt": "2026-11-23T02:28:03+00:00",
+      "status": "source_text_found",
+      "fingerprint": "c2331b32f048edecad6d9c0a631a5a416ccba30312eddd1088018c4569f01441",
+      "foodIds": [
+        "v-002"
+      ],
+      "recordYear": 2026,
+      "summaryRequirements": {
+        "regional-alic-regions-345e3c80f640-v-002": {
+          "foodId": "v-002",
+          "fingerprint": "fdc26c5f665ce4de3d97d5fc5fa33945fec6998edd0739e454e07fe53d8e4607",
+          "requireAi": false
+        }
+      },
+      "retryAfter": "2026-11-26"
     }
   },
   "foods": {
     "v-001": {
       "foodId": "v-001",
       "name": "キャベツ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
@@ -5332,11 +5350,11 @@
         "chiba-agriculture",
         "gunma-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions",
         "chiba-agriculture",
         "gunma-agriculture"
@@ -5351,31 +5369,31 @@
     "v-002": {
       "foodId": "v-002",
       "name": "はくさい",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news",
         "alic-regions"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions"
       ],
       "candidateCount": 8,
       "indexStatus": "ok",
-      "coverage": "source_pending",
-      "lastArticleCheckedAt": "2026-11-15T13:42:58+00:00",
+      "coverage": "evidence_found",
+      "lastArticleCheckedAt": "2026-11-23T02:28:03+00:00",
       "lastArticleResult": "source_text_found",
-      "lastEvidenceFoundAt": "2026-11-15T13:42:58+00:00"
+      "lastEvidenceFoundAt": "2026-11-23T02:28:03+00:00"
     },
     "v-003": {
       "foodId": "v-003",
       "name": "だいこん",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
@@ -5383,11 +5401,11 @@
         "alic-regions",
         "chiba-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions",
         "chiba-agriculture"
       ],
@@ -5401,7 +5419,7 @@
     "v-004": {
       "foodId": "v-004",
       "name": "にんじん",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
@@ -5409,11 +5427,11 @@
         "alic-regions",
         "chiba-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions",
         "chiba-agriculture"
       ],
@@ -5427,7 +5445,7 @@
     "v-005": {
       "foodId": "v-005",
       "name": "ほうれんそう",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
@@ -5435,11 +5453,11 @@
         "alic-regions",
         "gunma-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions",
         "gunma-agriculture"
       ],
@@ -5453,17 +5471,17 @@
     "v-006": {
       "foodId": "v-006",
       "name": "小松菜",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -5472,18 +5490,18 @@
     "v-007": {
       "foodId": "v-007",
       "name": "ブロッコリー",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news",
         "alic-regions"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions"
       ],
       "candidateCount": 7,
@@ -5496,17 +5514,17 @@
     "v-008": {
       "foodId": "v-008",
       "name": "カリフラワー",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -5515,7 +5533,7 @@
     "v-009": {
       "foodId": "v-009",
       "name": "レタス",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
@@ -5524,11 +5542,11 @@
         "chiba-agriculture",
         "gunma-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions",
         "chiba-agriculture",
         "gunma-agriculture"
@@ -5543,7 +5561,7 @@
     "v-010": {
       "foodId": "v-010",
       "name": "トマト",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
@@ -5552,11 +5570,11 @@
         "fukushima-agriculture",
         "gunma-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions",
         "fukushima-agriculture",
         "gunma-agriculture"
@@ -5571,17 +5589,17 @@
     "v-011": {
       "foodId": "v-011",
       "name": "ミニトマト",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 11,
       "indexStatus": "ok",
@@ -5593,7 +5611,7 @@
     "v-012": {
       "foodId": "v-012",
       "name": "きゅうり",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
@@ -5602,11 +5620,11 @@
         "fukushima-agriculture",
         "gunma-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions",
         "fukushima-agriculture",
         "gunma-agriculture"
@@ -5621,7 +5639,7 @@
     "v-013": {
       "foodId": "v-013",
       "name": "なす",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
@@ -5629,11 +5647,11 @@
         "alic-regions",
         "gunma-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions",
         "gunma-agriculture"
       ],
@@ -5647,18 +5665,18 @@
     "v-014": {
       "foodId": "v-014",
       "name": "ピーマン",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news",
         "alic-regions"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions"
       ],
       "candidateCount": 7,
@@ -5671,17 +5689,17 @@
     "v-015": {
       "foodId": "v-015",
       "name": "パプリカ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -5690,17 +5708,17 @@
     "v-016": {
       "foodId": "v-016",
       "name": "とうもろこし",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -5709,39 +5727,39 @@
     "v-017": {
       "foodId": "v-017",
       "name": "オクラ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 2,
       "indexStatus": "ok",
-      "coverage": "source_pending",
-      "lastArticleCheckedAt": "2026-11-18T00:54:51+00:00",
+      "coverage": "evidence_found",
+      "lastArticleCheckedAt": "2026-11-23T02:28:07+00:00",
       "lastArticleResult": "source_text_found",
-      "lastEvidenceFoundAt": "2026-11-18T00:54:51+00:00"
+      "lastEvidenceFoundAt": "2026-11-23T02:28:07+00:00"
     },
     "v-018": {
       "foodId": "v-018",
       "name": "ゴーヤ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -5750,17 +5768,17 @@
     "v-019": {
       "foodId": "v-019",
       "name": "かぼちゃ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -5769,18 +5787,18 @@
     "v-020": {
       "foodId": "v-020",
       "name": "さつまいも",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news",
         "chiba-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "chiba-agriculture"
       ],
       "candidateCount": 0,
@@ -5793,18 +5811,18 @@
     "v-021": {
       "foodId": "v-021",
       "name": "じゃがいも",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news",
         "alic-regions"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions"
       ],
       "candidateCount": 6,
@@ -5817,7 +5835,7 @@
     "v-022": {
       "foodId": "v-022",
       "name": "さといも",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
@@ -5825,11 +5843,11 @@
         "alic-regions",
         "ehime-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions",
         "ehime-agriculture"
       ],
@@ -5840,17 +5858,17 @@
     "v-023": {
       "foodId": "v-023",
       "name": "ながいも",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -5859,17 +5877,17 @@
     "v-024": {
       "foodId": "v-024",
       "name": "れんこん",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 3,
       "indexStatus": "ok",
@@ -5881,17 +5899,17 @@
     "v-025": {
       "foodId": "v-025",
       "name": "ごぼう",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 1,
       "indexStatus": "ok",
@@ -5903,17 +5921,17 @@
     "v-026": {
       "foodId": "v-026",
       "name": "かぶ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -5922,7 +5940,7 @@
     "v-027": {
       "foodId": "v-027",
       "name": "たまねぎ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
@@ -5930,11 +5948,11 @@
         "alic-regions",
         "ehime-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions",
         "ehime-agriculture"
       ],
@@ -5948,7 +5966,7 @@
     "v-028": {
       "foodId": "v-028",
       "name": "長ねぎ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
@@ -5957,18 +5975,18 @@
         "chiba-agriculture",
         "gunma-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "alic-regions",
         "chiba-agriculture",
         "gunma-agriculture"
       ],
       "candidateCount": 10,
       "indexStatus": "ok",
-      "coverage": "evidence_found",
+      "coverage": "source_pending",
       "lastArticleCheckedAt": "2026-11-22T02:23:26+00:00",
       "lastArticleResult": "source_text_found",
       "lastEvidenceFoundAt": "2026-11-22T02:23:26+00:00"
@@ -5976,17 +5994,17 @@
     "v-029": {
       "foodId": "v-029",
       "name": "にら",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -5995,17 +6013,17 @@
     "v-030": {
       "foodId": "v-030",
       "name": "しょうが",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 1,
       "indexStatus": "ok",
@@ -6017,17 +6035,17 @@
     "v-031": {
       "foodId": "v-031",
       "name": "みょうが",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6036,39 +6054,39 @@
     "v-032": {
       "foodId": "v-032",
       "name": "アスパラガス",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 3,
       "indexStatus": "ok",
       "coverage": "evidence_found",
-      "lastArticleCheckedAt": "2026-11-22T02:23:29+00:00",
+      "lastArticleCheckedAt": "2026-11-23T02:28:05+00:00",
       "lastArticleResult": "source_text_found",
-      "lastEvidenceFoundAt": "2026-11-22T02:23:29+00:00"
+      "lastEvidenceFoundAt": "2026-11-23T02:28:05+00:00"
     },
     "v-033": {
       "foodId": "v-033",
       "name": "たけのこ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 4,
       "indexStatus": "ok",
@@ -6080,17 +6098,17 @@
     "v-034": {
       "foodId": "v-034",
       "name": "ふき",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6099,17 +6117,17 @@
     "v-035": {
       "foodId": "v-035",
       "name": "菜の花",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6118,17 +6136,17 @@
     "v-036": {
       "foodId": "v-036",
       "name": "そらまめ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 1,
       "indexStatus": "ok",
@@ -6140,18 +6158,18 @@
     "v-037": {
       "foodId": "v-037",
       "name": "えだまめ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news",
         "gunma-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "gunma-agriculture"
       ],
       "candidateCount": 0,
@@ -6161,17 +6179,17 @@
     "v-038": {
       "foodId": "v-038",
       "name": "さやえんどう",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6180,17 +6198,17 @@
     "v-039": {
       "foodId": "v-039",
       "name": "いんげん",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6199,17 +6217,17 @@
     "v-040": {
       "foodId": "v-040",
       "name": "しいたけ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6218,17 +6236,17 @@
     "v-041": {
       "foodId": "v-041",
       "name": "まいたけ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6237,17 +6255,17 @@
     "v-042": {
       "foodId": "v-042",
       "name": "しめじ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6256,17 +6274,17 @@
     "v-043": {
       "foodId": "v-043",
       "name": "えのきたけ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6275,17 +6293,17 @@
     "v-044": {
       "foodId": "v-044",
       "name": "春菊",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6294,17 +6312,17 @@
     "v-045": {
       "foodId": "v-045",
       "name": "水菜",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6313,17 +6331,17 @@
     "v-046": {
       "foodId": "v-046",
       "name": "セロリ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6332,17 +6350,17 @@
     "v-047": {
       "foodId": "v-047",
       "name": "チンゲンサイ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6351,17 +6369,17 @@
     "v-048": {
       "foodId": "v-048",
       "name": "ズッキーニ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6370,17 +6388,17 @@
     "v-049": {
       "foodId": "v-049",
       "name": "にんにく",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 4,
       "indexStatus": "ok",
@@ -6392,17 +6410,17 @@
     "v-050": {
       "foodId": "v-050",
       "name": "らっきょう",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6411,17 +6429,17 @@
     "v-051": {
       "foodId": "v-051",
       "name": "さやいんげん",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6430,17 +6448,17 @@
     "v-052": {
       "foodId": "v-052",
       "name": "新しょうが",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6449,17 +6467,17 @@
     "v-053": {
       "foodId": "v-053",
       "name": "栗かぼちゃ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "kochi-agriculture",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6468,7 +6486,7 @@
     "f-054": {
       "foodId": "f-054",
       "name": "りんご",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6478,12 +6496,12 @@
         "fukushima-agriculture",
         "ibaraki-fruit"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "nagano-fruit",
         "fukushima-agriculture",
         "ibaraki-fruit"
@@ -6495,7 +6513,7 @@
     "f-055": {
       "foodId": "f-055",
       "name": "みかん",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6504,12 +6522,12 @@
         "wakayama-citrus",
         "ehime-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "wakayama-citrus",
         "ehime-agriculture"
       ],
@@ -6523,7 +6541,7 @@
     "f-056": {
       "foodId": "f-056",
       "name": "いよかん",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6531,12 +6549,12 @@
         "ja-kumamoto-news",
         "ehime-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "ehime-agriculture"
       ],
       "candidateCount": 0,
@@ -6546,7 +6564,7 @@
     "f-057": {
       "foodId": "f-057",
       "name": "デコポン",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6554,12 +6572,12 @@
         "ja-kumamoto-news",
         "ehime-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "ehime-agriculture"
       ],
       "candidateCount": 0,
@@ -6569,19 +6587,19 @@
     "f-058": {
       "foodId": "f-058",
       "name": "はっさく",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6590,19 +6608,19 @@
     "f-059": {
       "foodId": "f-059",
       "name": "ゆず",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 1,
       "indexStatus": "ok",
@@ -6614,19 +6632,19 @@
     "f-060": {
       "foodId": "f-060",
       "name": "レモン",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 2,
       "indexStatus": "ok",
@@ -6638,19 +6656,19 @@
     "f-061": {
       "foodId": "f-061",
       "name": "すだち",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6659,19 +6677,19 @@
     "f-062": {
       "foodId": "f-062",
       "name": "かぼす",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6680,19 +6698,19 @@
     "f-063": {
       "foodId": "f-063",
       "name": "かき",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 4,
       "indexStatus": "ok",
@@ -6704,7 +6722,7 @@
     "f-064": {
       "foodId": "f-064",
       "name": "ぶどう",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6715,12 +6733,12 @@
         "fukushima-agriculture",
         "ibaraki-fruit"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "nagano-fruit",
         "yamanashi-fruit",
         "fukushima-agriculture",
@@ -6736,7 +6754,7 @@
     "f-065": {
       "foodId": "f-065",
       "name": "シャインマスカット",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6745,12 +6763,12 @@
         "nagano-fruit",
         "yamanashi-fruit"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "nagano-fruit",
         "yamanashi-fruit"
       ],
@@ -6764,7 +6782,7 @@
     "f-066": {
       "foodId": "f-066",
       "name": "巨峰",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6773,12 +6791,12 @@
         "nagano-fruit",
         "yamanashi-fruit"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "nagano-fruit",
         "yamanashi-fruit"
       ],
@@ -6792,7 +6810,7 @@
     "f-067": {
       "foodId": "f-067",
       "name": "なし",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6802,39 +6820,39 @@
         "ibaraki-fruit",
         "chiba-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "fukushima-agriculture",
-        "chiba-agriculture",
-        "ibaraki-fruit"
+        "ibaraki-fruit",
+        "chiba-agriculture"
       ],
       "candidateCount": 5,
       "indexStatus": "ok",
-      "coverage": "source_pending",
-      "lastArticleCheckedAt": "2026-11-18T01:15:53+00:00",
+      "coverage": "evidence_found",
+      "lastArticleCheckedAt": "2026-11-23T02:28:10+00:00",
       "lastArticleResult": "source_text_found",
-      "lastEvidenceFoundAt": "2026-11-18T01:15:53+00:00"
+      "lastEvidenceFoundAt": "2026-11-23T02:28:10+00:00"
     },
     "f-068": {
       "foodId": "f-068",
       "name": "洋なし",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -6843,7 +6861,7 @@
     "f-069": {
       "foodId": "f-069",
       "name": "くり",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6852,18 +6870,18 @@
         "ehime-agriculture",
         "ibaraki-fruit"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
-        "ehime-agriculture",
-        "ibaraki-fruit"
+        "ja-kumamoto-news",
+        "ibaraki-fruit",
+        "ehime-agriculture"
       ],
       "candidateCount": 8,
       "indexStatus": "ok",
-      "coverage": "evidence_found",
+      "coverage": "source_pending",
       "lastArticleCheckedAt": "2026-11-22T02:23:32+00:00",
       "lastArticleResult": "source_text_found",
       "lastEvidenceFoundAt": "2026-11-22T02:23:32+00:00"
@@ -6871,19 +6889,19 @@
     "f-070": {
       "foodId": "f-070",
       "name": "いちじく",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 1,
       "indexStatus": "ok",
@@ -6895,7 +6913,7 @@
     "f-071": {
       "foodId": "f-071",
       "name": "キウイフルーツ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6903,12 +6921,12 @@
         "ja-kumamoto-news",
         "ehime-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "ehime-agriculture"
       ],
       "candidateCount": 0,
@@ -6918,7 +6936,7 @@
     "f-072": {
       "foodId": "f-072",
       "name": "いちご",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6926,12 +6944,12 @@
         "ja-kumamoto-news",
         "gunma-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "gunma-agriculture"
       ],
       "candidateCount": 3,
@@ -6944,7 +6962,7 @@
     "f-073": {
       "foodId": "f-073",
       "name": "もも",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6955,12 +6973,12 @@
         "fukushima-agriculture",
         "ibaraki-fruit"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "nagano-fruit",
         "yamanashi-fruit",
         "fukushima-agriculture",
@@ -6975,7 +6993,7 @@
     "f-074": {
       "foodId": "f-074",
       "name": "すもも",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -6984,12 +7002,12 @@
         "yamanashi-fruit",
         "fukushima-agriculture"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "yamanashi-fruit",
         "fukushima-agriculture"
       ],
@@ -7003,7 +7021,7 @@
     "f-075": {
       "foodId": "f-075",
       "name": "さくらんぼ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
@@ -7011,12 +7029,12 @@
         "ja-kumamoto-news",
         "yamanashi-fruit"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
+        "kochi-agriculture",
         "ja-kumamoto",
+        "ja-kumamoto-news",
         "yamanashi-fruit"
       ],
       "candidateCount": 1,
@@ -7028,19 +7046,19 @@
     "f-076": {
       "foodId": "f-076",
       "name": "あんず",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7049,19 +7067,19 @@
     "f-077": {
       "foodId": "f-077",
       "name": "びわ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 1,
       "indexStatus": "ok",
@@ -7073,19 +7091,19 @@
     "f-078": {
       "foodId": "f-078",
       "name": "うめ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7094,19 +7112,19 @@
     "f-079": {
       "foodId": "f-079",
       "name": "すいか",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 6,
       "indexStatus": "ok",
@@ -7118,19 +7136,19 @@
     "f-080": {
       "foodId": "f-080",
       "name": "メロン",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 5,
       "indexStatus": "ok",
@@ -7142,19 +7160,19 @@
     "f-081": {
       "foodId": "f-081",
       "name": "ブルーベリー",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7163,19 +7181,19 @@
     "f-082": {
       "foodId": "f-082",
       "name": "ラズベリー",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7184,19 +7202,19 @@
     "f-083": {
       "foodId": "f-083",
       "name": "マンゴー",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 1,
       "indexStatus": "ok",
@@ -7208,19 +7226,19 @@
     "f-084": {
       "foodId": "f-084",
       "name": "パイナップル",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7229,19 +7247,19 @@
     "f-085": {
       "foodId": "f-085",
       "name": "いちご（夏秋）",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7250,43 +7268,43 @@
     "f-086": {
       "foodId": "f-086",
       "name": "ぽんかん",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 1,
       "indexStatus": "ok",
-      "coverage": "source_pending",
-      "lastArticleCheckedAt": "2026-11-18T00:54:53+00:00",
+      "coverage": "evidence_found",
+      "lastArticleCheckedAt": "2026-11-23T02:28:10+00:00",
       "lastArticleResult": "source_text_found",
-      "lastEvidenceFoundAt": "2026-11-18T00:54:53+00:00"
+      "lastEvidenceFoundAt": "2026-11-23T02:28:10+00:00"
     },
     "f-087": {
       "foodId": "f-087",
       "name": "きんかん",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7295,19 +7313,19 @@
     "f-088": {
       "foodId": "f-088",
       "name": "グレープフルーツ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7316,19 +7334,19 @@
     "f-089": {
       "foodId": "f-089",
       "name": "日向夏",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7337,19 +7355,19 @@
     "f-090": {
       "foodId": "f-090",
       "name": "ざくろ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7358,19 +7376,19 @@
     "f-091": {
       "foodId": "f-091",
       "name": "ドラゴンフルーツ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7379,19 +7397,19 @@
     "f-092": {
       "foodId": "f-092",
       "name": "プルーン",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7400,19 +7418,19 @@
     "f-093": {
       "foodId": "f-093",
       "name": "柚香",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "kochi-fruit",
         "kochi-agriculture",
         "ja-kumamoto",
         "ja-kumamoto-news"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
-        "kochi-agriculture",
         "kochi-fruit",
-        "ja-kumamoto-news",
-        "ja-kumamoto"
+        "kochi-agriculture",
+        "ja-kumamoto",
+        "ja-kumamoto-news"
       ],
       "candidateCount": 0,
       "indexStatus": "ok",
@@ -7421,18 +7439,18 @@
     "f-094": {
       "foodId": "f-094",
       "name": "サンマ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 8,
@@ -7445,42 +7463,42 @@
     "f-095": {
       "foodId": "f-095",
       "name": "カツオ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 1,
       "indexStatus": "ok",
-      "coverage": "source_pending",
-      "lastArticleCheckedAt": "2026-11-18T00:54:53+00:00",
+      "coverage": "evidence_found",
+      "lastArticleCheckedAt": "2026-11-23T02:28:09+00:00",
       "lastArticleResult": "source_text_found",
-      "lastEvidenceFoundAt": "2026-11-18T00:54:53+00:00"
+      "lastEvidenceFoundAt": "2026-11-23T02:28:09+00:00"
     },
     "f-096": {
       "foodId": "f-096",
       "name": "戻りガツオ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7490,18 +7508,18 @@
     "f-097": {
       "foodId": "f-097",
       "name": "サバ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 2,
@@ -7513,18 +7531,18 @@
     "f-098": {
       "foodId": "f-098",
       "name": "アジ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7534,18 +7552,18 @@
     "f-099": {
       "foodId": "f-099",
       "name": "イワシ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 2,
@@ -7558,18 +7576,18 @@
     "f-100": {
       "foodId": "f-100",
       "name": "サケ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 1,
@@ -7581,18 +7599,18 @@
     "f-101": {
       "foodId": "f-101",
       "name": "ブリ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 1,
@@ -7605,18 +7623,18 @@
     "f-102": {
       "foodId": "f-102",
       "name": "マグロ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7626,18 +7644,18 @@
     "f-103": {
       "foodId": "f-103",
       "name": "マダイ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7647,18 +7665,18 @@
     "f-104": {
       "foodId": "f-104",
       "name": "ヒラメ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7668,18 +7686,18 @@
     "f-105": {
       "foodId": "f-105",
       "name": "カレイ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7689,18 +7707,18 @@
     "f-106": {
       "foodId": "f-106",
       "name": "タラ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7710,18 +7728,18 @@
     "f-107": {
       "foodId": "f-107",
       "name": "サワラ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7731,18 +7749,18 @@
     "f-108": {
       "foodId": "f-108",
       "name": "スズキ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7752,18 +7770,18 @@
     "f-109": {
       "foodId": "f-109",
       "name": "イサキ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7773,18 +7791,18 @@
     "f-110": {
       "foodId": "f-110",
       "name": "キンメダイ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7794,18 +7812,18 @@
     "f-111": {
       "foodId": "f-111",
       "name": "カンパチ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7815,18 +7833,18 @@
     "f-112": {
       "foodId": "f-112",
       "name": "ハモ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7836,18 +7854,18 @@
     "f-113": {
       "foodId": "f-113",
       "name": "シラス",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7857,18 +7875,18 @@
     "f-114": {
       "foodId": "f-114",
       "name": "ホッケ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7878,18 +7896,18 @@
     "f-115": {
       "foodId": "f-115",
       "name": "ニシン",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7899,18 +7917,18 @@
     "f-116": {
       "foodId": "f-116",
       "name": "ハタハタ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7920,18 +7938,18 @@
     "f-117": {
       "foodId": "f-117",
       "name": "アユ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7941,18 +7959,18 @@
     "f-118": {
       "foodId": "f-118",
       "name": "ウナギ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 1,
@@ -7964,18 +7982,18 @@
     "f-119": {
       "foodId": "f-119",
       "name": "アンコウ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -7985,18 +8003,18 @@
     "f-120": {
       "foodId": "f-120",
       "name": "フグ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8006,18 +8024,18 @@
     "f-121": {
       "foodId": "f-121",
       "name": "カキ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8027,18 +8045,18 @@
     "f-122": {
       "foodId": "f-122",
       "name": "ホタテ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 1,
@@ -8050,18 +8068,18 @@
     "f-123": {
       "foodId": "f-123",
       "name": "アサリ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8071,18 +8089,18 @@
     "f-124": {
       "foodId": "f-124",
       "name": "ハマグリ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8092,18 +8110,18 @@
     "f-125": {
       "foodId": "f-125",
       "name": "シジミ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8113,18 +8131,18 @@
     "f-126": {
       "foodId": "f-126",
       "name": "ズワイガニ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8134,18 +8152,18 @@
     "f-127": {
       "foodId": "f-127",
       "name": "タラバガニ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8155,18 +8173,18 @@
     "f-128": {
       "foodId": "f-128",
       "name": "ワタリガニ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8176,18 +8194,18 @@
     "f-129": {
       "foodId": "f-129",
       "name": "クルマエビ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8197,41 +8215,41 @@
     "f-130": {
       "foodId": "f-130",
       "name": "甘エビ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 1,
       "indexStatus": "ok",
       "coverage": "source_pending",
-      "lastArticleCheckedAt": "2026-11-15T14:33:13+00:00",
+      "lastArticleCheckedAt": "2026-11-23T02:28:05+00:00",
       "lastArticleResult": "current_publication_date_unconfirmed"
     },
     "f-131": {
       "foodId": "f-131",
       "name": "桜エビ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8241,18 +8259,18 @@
     "f-132": {
       "foodId": "f-132",
       "name": "スルメイカ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 4,
@@ -8265,18 +8283,18 @@
     "f-133": {
       "foodId": "f-133",
       "name": "ヤリイカ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8286,18 +8304,18 @@
     "f-134": {
       "foodId": "f-134",
       "name": "アオリイカ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8307,18 +8325,18 @@
     "f-135": {
       "foodId": "f-135",
       "name": "タコ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8328,18 +8346,18 @@
     "f-136": {
       "foodId": "f-136",
       "name": "ウニ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8349,18 +8367,18 @@
     "f-137": {
       "foodId": "f-137",
       "name": "イクラ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8370,18 +8388,18 @@
     "f-138": {
       "foodId": "f-138",
       "name": "シイラ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8391,18 +8409,18 @@
     "f-139": {
       "foodId": "f-139",
       "name": "メカジキ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8412,18 +8430,18 @@
     "f-140": {
       "foodId": "f-140",
       "name": "銀だら",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8433,18 +8451,18 @@
     "f-141": {
       "foodId": "f-141",
       "name": "エビ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8454,18 +8472,18 @@
     "f-142": {
       "foodId": "f-142",
       "name": "サザエ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8475,18 +8493,18 @@
     "f-143": {
       "foodId": "f-143",
       "name": "アワビ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8496,18 +8514,18 @@
     "f-144": {
       "foodId": "f-144",
       "name": "ハマチ",
-      "lastAttemptAt": "2026-11-22T02:23:25+00:00",
+      "lastAttemptAt": "2026-11-23T02:28:02+00:00",
       "sourceIds": [
         "iwate-fisheries",
         "hokkaido-fisheries",
         "fra-resources",
         "jafic-forecasts"
       ],
-      "lastIndexCheckedAt": "2026-11-22T02:23:25+00:00",
+      "lastIndexCheckedAt": "2026-11-23T02:28:02+00:00",
       "checkedSourceIds": [
         "hokkaido-fisheries",
-        "iwate-fisheries",
         "fra-resources",
+        "iwate-fisheries",
         "jafic-forecasts"
       ],
       "candidateCount": 0,
@@ -8516,20 +8534,16 @@
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-22T02:23:33+00:00",
+    "checkedAt": "2026-11-23T02:28:10+00:00",
     "registeredFoods": 144,
     "checkedIndexes": 17,
     "totalIndexes": 17,
     "articleAttempts": 8,
     "articleOutcomes": {
-      "source_text_found": 3,
-      "structured_observation_missing": 1,
-      "food_specific_evidence_missing": 1,
-      "current_publication_date_unconfirmed": 1,
-      "dedicated_pdf_parser_needed": 1,
-      "dedicated_forecast_parser_needed": 1
+      "source_text_found": 6,
+      "current_publication_date_unconfirmed": 2
     },
-    "sourceItems": 3,
+    "sourceItems": 6,
     "errors": []
   }
 }
