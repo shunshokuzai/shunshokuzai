@@ -50,32 +50,32 @@
       "candidates": 0
     },
     "tys": {
-      "checkedAt": "2026-11-22T02:23:38+00:00",
-      "lastAttemptAt": "2026-11-22T02:23:38+00:00",
+      "checkedAt": "2026-11-25T02:31:04+00:00",
+      "lastAttemptAt": "2026-11-25T02:31:04+00:00",
       "status": "ok",
-      "candidates": 2
+      "candidates": 1
     },
     "sbc": {
-      "checkedAt": "2026-11-22T02:23:39+00:00",
-      "lastAttemptAt": "2026-11-22T02:23:39+00:00",
+      "checkedAt": "2026-11-25T02:31:03+00:00",
+      "lastAttemptAt": "2026-11-25T02:31:03+00:00",
       "status": "ok",
       "candidates": 0
     },
     "kutv": {
-      "checkedAt": "2026-11-22T02:23:43+00:00",
-      "lastAttemptAt": "2026-11-22T02:23:43+00:00",
+      "checkedAt": "2026-11-25T02:31:07+00:00",
+      "lastAttemptAt": "2026-11-25T02:31:07+00:00",
       "status": "ok",
       "candidates": 0
     },
     "uty": {
-      "checkedAt": "2026-11-23T02:28:15+00:00",
-      "lastAttemptAt": "2026-11-23T02:28:15+00:00",
+      "checkedAt": "2026-11-25T02:31:07+00:00",
+      "lastAttemptAt": "2026-11-25T02:31:07+00:00",
       "status": "ok",
       "candidates": 1
     },
     "mro": {
-      "checkedAt": "2026-11-23T02:28:15+00:00",
-      "lastAttemptAt": "2026-11-23T02:28:15+00:00",
+      "checkedAt": "2026-11-25T02:31:10+00:00",
+      "lastAttemptAt": "2026-11-25T02:31:10+00:00",
       "status": "ok",
       "candidates": 0
     }
@@ -183,27 +183,27 @@
       "url": "https://www.ncctv.co.jp/news/article/17043505",
       "title": "夏の極端気象が農産物を直撃 葉物野菜高騰・ミカンは小ぶり傾向",
       "publisher": "NCC長崎文化放送",
-      "lastAttemptAt": "2026-11-22T02:23:43+00:00",
+      "lastAttemptAt": "2026-11-25T02:31:10+00:00",
       "reviewedFingerprint": "141612ad2daf2dc7a6abf28bb4d9b99496084303e74cbc9b89b1686904c1f18c",
       "publishedAt": "2026-11-14",
       "fingerprint": "141612ad2daf2dc7a6abf28bb4d9b99496084303e74cbc9b89b1686904c1f18c",
-      "lastCheckedAt": "2026-11-22T02:23:44+00:00",
+      "lastCheckedAt": "2026-11-25T02:31:11+00:00",
       "status": "source_reviewed",
       "foodIds": [
         "f-055"
       ],
-      "retryAfter": "2026-11-25"
+      "retryAfter": "2026-11-28"
     },
     "news-d3fc0bf14b3a52c2": {
       "id": "news-d3fc0bf14b3a52c2",
       "url": "https://www.sakuranbo.co.jp/news/2026/10/19/2026101900000007.html",
       "title": "秋の味覚ラ・フランス　約1800トンの出荷見込む　山形",
       "publisher": "さくらんぼテレビ",
-      "lastAttemptAt": "2026-11-23T02:28:19+00:00",
-      "lastCheckedAt": "2026-11-23T02:28:20+00:00",
+      "lastAttemptAt": "2026-11-25T02:31:11+00:00",
+      "lastCheckedAt": "2026-11-25T02:31:11+00:00",
       "status": "unavailable",
       "error": "HTTPError",
-      "retryAfter": "2026-11-24"
+      "retryAfter": "2026-11-26"
     },
     "news-c5d9313e84f2199c": {
       "id": "news-c5d9313e84f2199c",
@@ -301,13 +301,13 @@
       "url": "https://newsdig.tbs.co.jp/articles/tys/3099383",
       "title": "山口県沖に“海のギャング”シャチ出現 地元漁師「何年もやっているけど見たことない」と驚き",
       "publisher": "テレビ山口",
-      "lastAttemptAt": "2026-11-22T02:23:45+00:00",
+      "lastAttemptAt": "2026-11-25T02:31:11+00:00",
       "publishedAt": "2026-11-19",
       "fingerprint": "ef64f2358b706df98c36a98eb58f4298addbdf5c6cc31bda80d1c243c3281d25",
-      "lastCheckedAt": "2026-11-22T02:23:49+00:00",
+      "lastCheckedAt": "2026-11-25T02:31:15+00:00",
       "status": "attribution_missing",
       "foodIds": [],
-      "retryAfter": "2026-11-25"
+      "retryAfter": "2026-11-28"
     },
     "news-ec2de78882009d9a": {
       "id": "news-ec2de78882009d9a",
@@ -326,9 +326,11 @@
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-24T02:29:11+00:00",
-    "articleAttempts": 6,
-    "sourceItems": 7,
-    "errors": []
+    "checkedAt": "2026-11-25T02:31:15+00:00",
+    "articleAttempts": 3,
+    "sourceItems": 1,
+    "errors": [
+      "sakuranbo: HTTPError"
+    ]
   }
 }
