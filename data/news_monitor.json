@@ -2,26 +2,26 @@
   "version": 1,
   "sources": {
     "ncc": {
-      "checkedAt": "2026-11-23T02:28:18+00:00",
-      "lastAttemptAt": "2026-11-23T02:28:18+00:00",
+      "checkedAt": "2026-11-26T02:29:36+00:00",
+      "lastAttemptAt": "2026-11-26T02:29:36+00:00",
       "status": "ok",
       "candidates": 0
     },
     "htb": {
-      "checkedAt": "2026-11-23T02:28:16+00:00",
-      "lastAttemptAt": "2026-11-23T02:28:16+00:00",
+      "checkedAt": "2026-11-26T02:29:33+00:00",
+      "lastAttemptAt": "2026-11-26T02:29:33+00:00",
       "status": "ok",
-      "candidates": 0
+      "candidates": 1
     },
     "hbc": {
-      "checkedAt": "2026-11-23T02:28:19+00:00",
-      "lastAttemptAt": "2026-11-23T02:28:19+00:00",
+      "checkedAt": "2026-11-26T02:29:36+00:00",
+      "lastAttemptAt": "2026-11-26T02:29:36+00:00",
       "status": "ok",
-      "candidates": 0
+      "candidates": 1
     },
     "atv": {
-      "checkedAt": "2026-11-24T02:28:55+00:00",
-      "lastAttemptAt": "2026-11-24T02:28:55+00:00",
+      "checkedAt": "2026-11-26T02:29:40+00:00",
+      "lastAttemptAt": "2026-11-26T02:29:40+00:00",
       "status": "ok",
       "candidates": 0
     },
@@ -32,10 +32,10 @@
       "candidates": 0
     },
     "sakuranbo": {
-      "checkedAt": "2026-11-24T02:28:53+00:00",
-      "lastAttemptAt": "2026-11-24T02:28:53+00:00",
+      "checkedAt": "2026-11-26T02:29:37+00:00",
+      "lastAttemptAt": "2026-11-26T02:29:37+00:00",
       "status": "ok",
-      "candidates": 3
+      "candidates": 2
     },
     "fnn": {
       "checkedAt": "2026-11-24T02:28:56+00:00",
@@ -199,11 +199,11 @@
       "url": "https://www.sakuranbo.co.jp/news/2026/10/19/2026101900000007.html",
       "title": "秋の味覚ラ・フランス　約1800トンの出荷見込む　山形",
       "publisher": "さくらんぼテレビ",
-      "lastAttemptAt": "2026-11-25T02:31:11+00:00",
-      "lastCheckedAt": "2026-11-25T02:31:11+00:00",
+      "lastAttemptAt": "2026-11-26T02:29:40+00:00",
+      "lastCheckedAt": "2026-11-26T02:29:41+00:00",
       "status": "unavailable",
       "error": "HTTPError",
-      "retryAfter": "2026-11-26"
+      "retryAfter": "2026-11-27"
     },
     "news-c5d9313e84f2199c": {
       "id": "news-c5d9313e84f2199c",
@@ -323,12 +323,64 @@
         "f-102"
       ],
       "retryAfter": "2026-11-22"
+    },
+    "news-2333ec809eb6636d": {
+      "id": "news-2333ec809eb6636d",
+      "url": "https://newsdig.tbs.co.jp/articles/hbc/3110252",
+      "title": "秋サケ記録的不漁でふるさと納税イクラ発送不可 630件分の「大粒いくら」 仕入れ価格高騰で確保できず 別品か返金を案内 北海道浦幌町",
+      "publisher": "HBC北海道放送",
+      "lastAttemptAt": "2026-11-26T02:29:41+00:00",
+      "publishedAt": "2026-11-25",
+      "fingerprint": "44303710bbd48165211a9f16a4a771e1471d70c1f40487ef23decf6c59802814",
+      "lastCheckedAt": "2026-11-26T02:29:44+00:00",
+      "status": "multiple_foods_need_review",
+      "foodIds": [],
+      "retryAfter": "2026-11-29"
+    },
+    "news-b5fbe7af50c89ece": {
+      "id": "news-b5fbe7af50c89ece",
+      "url": "https://www.htb.co.jp/news/archives_40625.html",
+      "title": "ふるさと納税返礼品のイクラ、不漁で確保できず 北海道浦幌町が発送取りやめ 昨年度の人気トップ",
+      "publisher": "HTB北海道ニュース",
+      "lastAttemptAt": "2026-11-26T02:29:44+00:00",
+      "publishedAt": "2026-11-25",
+      "fingerprint": "60cf8f7216d3378ad562be0152892fed6802c0a8acd1fa892dbc513a2bb82b88",
+      "lastCheckedAt": "2026-11-26T02:29:45+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-29"
+    },
+    "news-7be3570962629d55": {
+      "id": "news-7be3570962629d55",
+      "url": "https://www.sakuranbo.co.jp/news/2026/11/19/2026111900000006.html",
+      "title": "さくらんぼテレビ公式SNSアカウント",
+      "publisher": "さくらんぼテレビ",
+      "lastAttemptAt": "2026-11-26T02:29:45+00:00",
+      "publishedAt": "2026-11-19",
+      "fingerprint": "5e0363b7a8cdf872760566e7f8f2d5defc921686947aa85f73dfc38aaf5f447e",
+      "lastCheckedAt": "2026-11-26T02:29:46+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-29"
+    },
+    "news-85e9a75ae042d60c": {
+      "id": "news-85e9a75ae042d60c",
+      "url": "https://www.sakuranbo.co.jp/news/2026/11/23/2026112300000005.html",
+      "title": "さくらんぼテレビ公式SNSアカウント",
+      "publisher": "さくらんぼテレビ",
+      "lastAttemptAt": "2026-11-26T02:29:46+00:00",
+      "publishedAt": "2026-11-23",
+      "fingerprint": "fb2633bedda9da694f480a9454fc253bc07d17392518429cd1cbe915da5790e8",
+      "lastCheckedAt": "2026-11-26T02:29:46+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-11-29"
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-25T02:31:15+00:00",
-    "articleAttempts": 3,
-    "sourceItems": 1,
+    "checkedAt": "2026-11-26T02:29:46+00:00",
+    "articleAttempts": 5,
+    "sourceItems": 0,
     "errors": [
       "sakuranbo: HTTPError"
     ]
