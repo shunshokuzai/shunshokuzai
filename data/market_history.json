@@ -25879,6 +25879,74 @@
         "キウイフルーツ": 715.0
       },
       "schemaVersion": 2
+    },
+    "2026-11-2": {
+      "stamp": [
+        2026,
+        11,
+        2
+      ],
+      "sourceUrl": "https://www.maff.go.jp/j/tokei/syohi/shunbetu/2026/csv/26112h_syuyo.csv",
+      "values": {
+        "だいこん": 115.0,
+        "かぶ": 168.0,
+        "にんじん": 167.0,
+        "ごぼう": 290.0,
+        "たけのこ": 2134.0,
+        "れんこん": 430.0,
+        "はくさい": 102.0,
+        "水菜": 532.0,
+        "小松菜": 405.0,
+        "チンゲンサイ": 398.0,
+        "キャベツ": 109.0,
+        "ほうれんそう": 712.0,
+        "長ねぎ": 390.0,
+        "ふき": 473.0,
+        "春菊": 851.0,
+        "にら": 902.0,
+        "セロリ": 320.0,
+        "アスパラガス": 1923.0,
+        "カリフラワー": 262.0,
+        "ブロッコリー": 465.0,
+        "レタス": 248.0,
+        "きゅうり": 506.0,
+        "かぼちゃ": 220.0,
+        "なす": 494.0,
+        "トマト": 539.0,
+        "ミニトマト": 569.0,
+        "ピーマン": 524.0,
+        "とうもろこし": 412.0,
+        "さやいんげん": 911.0,
+        "さやえんどう": 1777.0,
+        "えだまめ": 1337.0,
+        "さつまいも": 312.0,
+        "じゃがいも": 134.0,
+        "さといも": 373.0,
+        "たまねぎ": 84.0,
+        "にんにく": 1163.0,
+        "しょうが": 904.0,
+        "しいたけ": 1067.0,
+        "えのきたけ": 344.0,
+        "しめじ": 607.0,
+        "みかん": 359.0,
+        "りんご": 441.0,
+        "なし": 425.0,
+        "洋なし": 403.0,
+        "かき": 368.0,
+        "もも": 3242.0,
+        "ぶどう": 1560.0,
+        "巨峰": 1556.0,
+        "シャインマスカット": 1591.0,
+        "くり": 1167.0,
+        "いちご": 3079.0,
+        "メロン": 966.0,
+        "すいか": 321.0,
+        "パイナップル": 259.0,
+        "レモン": 432.0,
+        "グレープフルーツ": 336.0,
+        "キウイフルーツ": 707.0
+      },
+      "schemaVersion": 2
     }
   },
   "fish": {
@@ -55719,6 +55787,115 @@
           "price": 4424,
           "yearAgoRatio": 119,
           "previousRatio": 100,
+          "brandLabel": "－",
+          "brandDetail": "三 陸 －・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        }
+      }
+    },
+    "2026-11-4": {
+      "stamp": [
+        2026,
+        11,
+        4
+      ],
+      "sourceUrl": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/2026114-pdf",
+      "values": {
+        "マグロ": {
+          "price": 5009,
+          "yearAgoRatio": 109,
+          "previousRatio": 120,
+          "brandLabel": "生",
+          "brandDetail": "各 地 生・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "アジ": {
+          "price": 756,
+          "yearAgoRatio": 113,
+          "previousRatio": 113,
+          "brandLabel": "中",
+          "brandDetail": "鳥 取 中・180-220g/尾",
+          "pieceWeightKg": 0.2,
+          "pieceWeightSpec": "180-220g/尾"
+        },
+        "サバ": {
+          "price": 875,
+          "yearAgoRatio": 123,
+          "previousRatio": 127,
+          "brandLabel": "－",
+          "brandDetail": "宮 城 －・7-10入/5kg",
+          "pieceWeightKg": 0.58823529,
+          "pieceWeightSpec": "7-10入/5kg"
+        },
+        "イワシ": {
+          "price": 529,
+          "yearAgoRatio": 144,
+          "previousRatio": 79,
+          "brandLabel": "－",
+          "brandDetail": "鹿児島 ほ か －・60-100g/尾",
+          "pieceWeightKg": 0.08,
+          "pieceWeightSpec": "60-100g/尾"
+        },
+        "スルメイカ": {
+          "price": 1231,
+          "yearAgoRatio": 95,
+          "previousRatio": 102,
+          "brandLabel": "－",
+          "brandDetail": "青森ほか －・20-25入/5kg",
+          "pieceWeightKg": 0.22222222,
+          "pieceWeightSpec": "20-25入/5kg"
+        },
+        "サンマ": {
+          "price": 972,
+          "yearAgoRatio": 173,
+          "previousRatio": 107,
+          "brandLabel": "生",
+          "brandDetail": "岩 手 生・110-130g/尾",
+          "pieceWeightKg": 0.12,
+          "pieceWeightSpec": "110-130g/尾"
+        },
+        "カレイ": {
+          "price": 630,
+          "yearAgoRatio": 133,
+          "previousRatio": 90,
+          "brandLabel": "マ",
+          "brandDetail": "北海道 マ・-",
+          "pieceWeightKg": null,
+          "pieceWeightSpec": "-"
+        },
+        "ハマチ": {
+          "price": 1728,
+          "yearAgoRatio": 86,
+          "previousRatio": 100,
+          "brandLabel": "野〆",
+          "brandDetail": "愛媛ほか 野〆・5-6kg/尾",
+          "pieceWeightKg": 5.5,
+          "pieceWeightSpec": "5-6kg/尾"
+        },
+        "カツオ": {
+          "price": 1858,
+          "yearAgoRatio": 113,
+          "previousRatio": 108,
+          "brandLabel": "－",
+          "brandDetail": "鹿児島 －・4-5kg/尾",
+          "pieceWeightKg": 4.5,
+          "pieceWeightSpec": "4-5kg/尾"
+        },
+        "キンメダイ": {
+          "price": 2527,
+          "yearAgoRatio": 130,
+          "previousRatio": 115,
+          "brandLabel": "－",
+          "brandDetail": "東京ほか －・0.5-1.5kg/尾",
+          "pieceWeightKg": 1.0,
+          "pieceWeightSpec": "0.5-1.5kg/尾"
+        },
+        "カキ": {
+          "price": 4226,
+          "yearAgoRatio": 126,
+          "previousRatio": 96,
           "brandLabel": "－",
           "brandDetail": "三 陸 －・-",
           "pieceWeightKg": null,
