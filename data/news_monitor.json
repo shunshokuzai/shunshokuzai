@@ -2,14 +2,14 @@
   "version": 1,
   "sources": {
     "ncc": {
-      "checkedAt": "2026-11-26T02:29:36+00:00",
-      "lastAttemptAt": "2026-11-26T02:29:36+00:00",
+      "checkedAt": "2026-11-28T02:27:12+00:00",
+      "lastAttemptAt": "2026-11-28T02:27:12+00:00",
       "status": "ok",
       "candidates": 0
     },
     "htb": {
-      "checkedAt": "2026-11-26T02:29:33+00:00",
-      "lastAttemptAt": "2026-11-26T02:29:33+00:00",
+      "checkedAt": "2026-11-28T02:27:10+00:00",
+      "lastAttemptAt": "2026-11-28T02:27:10+00:00",
       "status": "ok",
       "candidates": 1
     },
@@ -62,22 +62,22 @@
       "candidates": 1
     },
     "kutv": {
-      "checkedAt": "2026-11-25T02:31:07+00:00",
-      "lastAttemptAt": "2026-11-25T02:31:07+00:00",
+      "checkedAt": "2026-11-28T02:27:08+00:00",
+      "lastAttemptAt": "2026-11-28T02:27:08+00:00",
       "status": "ok",
       "candidates": 0
     },
     "uty": {
-      "checkedAt": "2026-11-25T02:31:07+00:00",
-      "lastAttemptAt": "2026-11-25T02:31:07+00:00",
+      "checkedAt": "2026-11-28T02:27:09+00:00",
+      "lastAttemptAt": "2026-11-28T02:27:09+00:00",
       "status": "ok",
       "candidates": 1
     },
     "mro": {
-      "checkedAt": "2026-11-25T02:31:10+00:00",
-      "lastAttemptAt": "2026-11-25T02:31:10+00:00",
+      "checkedAt": "2026-11-28T02:27:11+00:00",
+      "lastAttemptAt": "2026-11-28T02:27:11+00:00",
       "status": "ok",
-      "candidates": 0
+      "candidates": 2
     }
   },
   "articles": {
@@ -151,16 +151,16 @@
       "url": "https://www.htb.co.jp/news/archives_40407.html",
       "title": "なぜ?記録的不漁のサンマが根室港へ押し寄せ...釣り人「2時間半で150匹」 水温変化が原因か",
       "publisher": "HTB北海道ニュース",
-      "lastAttemptAt": "2026-11-27T02:31:10+00:00",
+      "lastAttemptAt": "2026-11-28T02:27:14+00:00",
       "reviewedFingerprint": "6e2e1b5c5ad2559d84b477ec3f1786d8cc8c02fdc708ec569c5855cab7bc0793",
       "publishedAt": "2026-11-10",
       "fingerprint": "6e2e1b5c5ad2559d84b477ec3f1786d8cc8c02fdc708ec569c5855cab7bc0793",
-      "lastCheckedAt": "2026-11-27T02:31:11+00:00",
+      "lastCheckedAt": "2026-11-28T02:27:14+00:00",
       "status": "unavailable",
       "foodIds": [
         "f-094"
       ],
-      "retryAfter": "2026-11-28",
+      "retryAfter": "2026-11-29",
       "error": "HTTPError"
     },
     "news-7ccfbb26e06eaa45": {
@@ -184,27 +184,27 @@
       "url": "https://www.ncctv.co.jp/news/article/17043505",
       "title": "夏の極端気象が農産物を直撃 葉物野菜高騰・ミカンは小ぶり傾向",
       "publisher": "NCC長崎文化放送",
-      "lastAttemptAt": "2026-11-25T02:31:10+00:00",
+      "lastAttemptAt": "2026-11-28T02:27:12+00:00",
       "reviewedFingerprint": "141612ad2daf2dc7a6abf28bb4d9b99496084303e74cbc9b89b1686904c1f18c",
       "publishedAt": "2026-11-14",
       "fingerprint": "141612ad2daf2dc7a6abf28bb4d9b99496084303e74cbc9b89b1686904c1f18c",
-      "lastCheckedAt": "2026-11-25T02:31:11+00:00",
+      "lastCheckedAt": "2026-11-28T02:27:13+00:00",
       "status": "source_reviewed",
       "foodIds": [
         "f-055"
       ],
-      "retryAfter": "2026-11-28"
+      "retryAfter": "2026-12-01"
     },
     "news-d3fc0bf14b3a52c2": {
       "id": "news-d3fc0bf14b3a52c2",
       "url": "https://www.sakuranbo.co.jp/news/2026/10/19/2026101900000007.html",
       "title": "秋の味覚ラ・フランス　約1800トンの出荷見込む　山形",
       "publisher": "さくらんぼテレビ",
-      "lastAttemptAt": "2026-11-26T02:29:40+00:00",
-      "lastCheckedAt": "2026-11-26T02:29:41+00:00",
+      "lastAttemptAt": "2026-11-28T02:27:13+00:00",
+      "lastCheckedAt": "2026-11-28T02:27:14+00:00",
       "status": "unavailable",
       "error": "HTTPError",
-      "retryAfter": "2026-11-27"
+      "retryAfter": "2026-11-29"
     },
     "news-c5d9313e84f2199c": {
       "id": "news-c5d9313e84f2199c",
@@ -276,13 +276,13 @@
       "url": "https://newsdig.tbs.co.jp/articles/uty/2946124",
       "title": "「さらに広がるのが怖い」ブドウが腐る病気 長雨の影響でブドウ農家は苦悩 200kg被害の農家も 山梨",
       "publisher": "テレビ山梨",
-      "lastAttemptAt": "2026-11-23T02:28:20+00:00",
+      "lastAttemptAt": "2026-11-28T02:27:19+00:00",
       "publishedAt": "2026-09-15",
       "fingerprint": "64b9d965a1d8b0ca5065f4befd86d4805b3afdf393e80137661f12cce9a9a879",
-      "lastCheckedAt": "2026-11-23T02:28:23+00:00",
+      "lastCheckedAt": "2026-11-28T02:27:21+00:00",
       "status": "multiple_foods_need_review",
       "foodIds": [],
-      "retryAfter": "2026-11-26"
+      "retryAfter": "2026-12-01"
     },
     "news-bd62d61ce150571e": {
       "id": "news-bd62d61ce150571e",
@@ -376,13 +376,40 @@
       "status": "current_context_missing",
       "foodIds": [],
       "retryAfter": "2026-11-29"
+    },
+    "news-3b8c52427f40fe1b": {
+      "id": "news-3b8c52427f40fe1b",
+      "url": "https://newsdig.tbs.co.jp/articles/mro/3113969",
+      "title": "「品質や大きさは上々」石川・志賀町の名産「能登志賀ころ柿」の初検査",
+      "publisher": "北陸放送",
+      "lastAttemptAt": "2026-11-28T02:27:14+00:00",
+      "publishedAt": "2026-11-26",
+      "fingerprint": "89b70af88e59b6def7116d2a8cb5965ceaf4c905bb7e3d7a8a539489477e2bb5",
+      "lastCheckedAt": "2026-11-28T02:27:17+00:00",
+      "status": "current_context_missing",
+      "foodIds": [],
+      "retryAfter": "2026-12-01"
+    },
+    "news-2dfc8d7782b6f638": {
+      "id": "news-2dfc8d7782b6f638",
+      "url": "https://newsdig.tbs.co.jp/articles/mro/3117850",
+      "title": "COMPLEXの寄付金で誕生 日本に1隻の台船が「七尾牡蠣」の作業効率大幅向上 ブランド化へ30万個出荷目指す",
+      "publisher": "北陸放送",
+      "lastAttemptAt": "2026-11-28T02:27:17+00:00",
+      "publishedAt": "2026-11-27",
+      "fingerprint": "fa8ffd9d7a3fb828b151291777f04546512e7e96fb3a005f95ad9d8025ec9a25",
+      "lastCheckedAt": "2026-11-28T02:27:19+00:00",
+      "status": "attribution_missing",
+      "foodIds": [],
+      "retryAfter": "2026-12-01"
     }
   },
   "lastRun": {
-    "checkedAt": "2026-11-27T02:31:12+00:00",
+    "checkedAt": "2026-11-28T02:27:21+00:00",
     "articleAttempts": 6,
-    "sourceItems": 6,
+    "sourceItems": 1,
     "errors": [
+      "sakuranbo: HTTPError",
       "htb: HTTPError"
     ]
   }
